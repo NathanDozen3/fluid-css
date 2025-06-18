@@ -1,4 +1,16 @@
-/* Shadow utilities */
+/* ========================================================================
+ * Fluid CSS Utility Classes
+ * ------------------------------------------------------------------------
+ * This file contains single-purpose utility classes for rapid styling.
+ * Each section is documented with usage examples and follows a consistent
+ * naming convention: .utility[-modifier] (e.g., .shadow-sm, .rounded-lg)
+ * ======================================================================== */
+
+/* ------------------------------------------------------------------------
+ * Shadow Utilities
+ * Usage: Add shadow to elements for elevation effects.
+ * Example: <div class="shadow-md"></div>
+ * ------------------------------------------------------------------------ */
 .shadow-sm {
   box-shadow: var(--shadow-sm);
 }
@@ -11,7 +23,19 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Border radius utilities */
+.shadow-xs {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-xl {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* ------------------------------------------------------------------------
+ * Border Radius Utilities
+ * Usage: Control border radius for rounded corners.
+ * Example: <img class="rounded-lg" />
+ * ------------------------------------------------------------------------ */
 .rounded {
   border-radius: var(--radius);
 }
@@ -28,7 +52,21 @@
   border-radius: var(--radius-full);
 }
 
-/* Z-index utilities */
+.rounded-t {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.rounded-b {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+/* ------------------------------------------------------------------------
+ * Z-Index Utilities
+ * Usage: Set stacking order for positioned elements.
+ * Example: <div class="z-10"></div>
+ * ------------------------------------------------------------------------ */
 .z-0 {
   z-index: var(--z-0);
 }
@@ -49,7 +87,11 @@
   z-index: var(--z-auto);
 }
 
-/* Aspect ratio utilities */
+/* ------------------------------------------------------------------------
+ * Aspect Ratio Utilities
+ * Usage: Maintain aspect ratio for media elements.
+ * Example: <div class="aspect-16-9"></div>
+ * ------------------------------------------------------------------------ */
 .aspect-16-9 {
   aspect-ratio: 16 / 9;
 }
@@ -62,7 +104,11 @@
   aspect-ratio: 4 / 3;
 }
 
-/* Text truncation and overflow utilities */
+/* ------------------------------------------------------------------------
+ * Text Truncation & Overflow Utilities
+ * Usage: Truncate text or control overflow.
+ * Example: <span class="truncate"></span>
+ * ------------------------------------------------------------------------ */
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,7 +123,11 @@
   overflow: hidden;
 }
 
-/* Opacity utilities */
+/* ------------------------------------------------------------------------
+ * Opacity Utilities
+ * Usage: Set element opacity.
+ * Example: <div class="opacity-75"></div>
+ * ------------------------------------------------------------------------ */
 .opacity-50 {
   opacity: 0.5;
 }
@@ -90,7 +140,11 @@
   opacity: 0.9;
 }
 
-/* Letter spacing and text transform utilities */
+/* ------------------------------------------------------------------------
+ * Letter Spacing & Text Transform Utilities
+ * Usage: Adjust letter spacing or text case.
+ * Example: <span class="uppercase tracking-wide"></span>
+ * ------------------------------------------------------------------------ */
 .tracking-wide {
   letter-spacing: 0.05em;
 }
@@ -103,7 +157,11 @@
   text-transform: capitalize;
 }
 
-/* List style utilities */
+/* ------------------------------------------------------------------------
+ * List Style Utilities
+ * Usage: Control list marker style and position.
+ * Example: <ul class="list-disc list-inside"></ul>
+ * ------------------------------------------------------------------------ */
 .list-none {
   list-style: none;
 }
@@ -116,7 +174,11 @@
   list-style-position: inside;
 }
 
-/* Cursor and pointer events utilities */
+/* ------------------------------------------------------------------------
+ * Cursor & Pointer Events Utilities
+ * Usage: Control cursor and pointer events.
+ * Example: <button class="cursor-pointer"></button>
+ * ------------------------------------------------------------------------ */
 .cursor-pointer {
   cursor: pointer;
 }
@@ -125,7 +187,11 @@
   pointer-events: none;
 }
 
-/* Logical properties for RTL/LTR support */
+/* ------------------------------------------------------------------------
+ * Logical Properties (RTL/LTR Support)
+ * Usage: Use logical margin/padding for better i18n support.
+ * Example: <div class="p-inline-md m-block-lg"></div>
+ * ------------------------------------------------------------------------ */
 .p-inline-md {
   padding-inline: var(--spacing-md);
 }
@@ -134,7 +200,11 @@
   margin-block: var(--spacing-lg);
 }
 
-/* Min/max width and height utilities */
+/* ------------------------------------------------------------------------
+ * Min/Max Width & Height Utilities
+ * Usage: Set min/max/viewport width and height.
+ * Example: <div class="min-h-100 w-screen"></div>
+ * ------------------------------------------------------------------------ */
 .min-h-100 {
   min-height: 100vh;
 }
@@ -145,4 +215,100 @@
 
 .w-screen {
   width: 100vw;
+}
+
+/* ------------------------------------------------------------------------
+ * Responsive Images & Embeds
+ * Usage: Make images and embeds fluid and responsive.
+ * Example: <img class="img-fluid" />
+ * ------------------------------------------------------------------------ */
+.img-fluid,
+.wp-block-image img,
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------------------------------------------------
+ * Border Utilities
+ * Usage: Add or remove borders, or set border color.
+ * Example: <div class="border-accent"></div>
+ * ------------------------------------------------------------------------ */
+.border {
+  border: 1px solid var(--color-accent-4);
+}
+
+.border-0 {
+  border: none;
+}
+
+.border-accent {
+  border: 1px solid var(--color-accent-3);
+}
+
+/* ------------------------------------------------------------------------
+ * Font Style & Decoration Utilities
+ * Usage: Set underline, line-through, italic, or normal case.
+ * Example: <span class="underline italic"></span>
+ * ------------------------------------------------------------------------ */
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+/* ------------------------------------------------------------------------
+ * Responsive Visibility Utilities
+ * Usage: Show/hide elements for print or screen.
+ * Example: <div class="hide-print show-screen"></div>
+ * ------------------------------------------------------------------------ */
+.hide-print {
+  display: block;
+}
+
+.show-print {
+  display: none;
+}
+
+@media print {
+  .hide-print {
+    display: none !important;
+  }
+
+  .show-print {
+    display: block !important;
+  }
+}
+
+.hide-screen {
+  display: none;
+}
+
+.show-screen {
+  display: block;
+}
+
+@media screen {
+  .hide-screen {
+    display: none !important;
+  }
+
+  .show-screen {
+    display: block !important;
+  }
 }

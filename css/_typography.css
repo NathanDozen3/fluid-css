@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Typography Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for font size, weight, alignment, and spacing.
+ * Usage: Use .text-*, .font-*, .text-center, etc. for typography control.
+ * Example: <h1 class="text-xl font-bold text-center">Heading</h1>
+ * ======================================================================== */
+
 /* Typography utilities. */
 
 .text-sm {

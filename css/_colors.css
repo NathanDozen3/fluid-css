@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Color Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for background, text, and border colors using design tokens.
+ * Usage: Add .bg-*, .text-*, .border-* to set color.
+ * Example: <div class="bg-accent-1 text-contrast border-accent-1"></div>
+ * ======================================================================== */
+
 /* Color utility classes. */
 
 .bg-base {

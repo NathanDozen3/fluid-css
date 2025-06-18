@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Spacing Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for margin, padding, and gap spacing using design tokens.
+ * Usage: Add .m-*, .p-*, .gap-* to control spacing.
+ * Example: <div class="p-md m-lg gap-sm"></div>
+ * ======================================================================== */
+
 /* Gap, padding, and margin utilities. */
 
 .gap-0 {

@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Grid System & Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for CSS Grid layouts, responsive columns, and grid gaps.
+ * Usage: Use .grid and .grid-cols-* for flexible layouts.
+ * Example: <div class="grid grid-cols-1-to-3"> ... </div>
+ * ======================================================================== */
+
 /* Grid system and utilities. */
 
 .grid {

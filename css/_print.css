@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Print Styles
+ * ------------------------------------------------------------------------
+ * Print-specific overrides for background, color, and layout.
+ * Usage: Automatically applied when printing. Use .no-print to hide elements.
+ * Example: <div class="no-print">Screen only</div>
+ * ======================================================================== */
+
 /* Print styles for Fluid CSS framework */
 @media print {
   body {

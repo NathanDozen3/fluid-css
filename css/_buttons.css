@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Button Styles
+ * ------------------------------------------------------------------------
+ * Utility and component classes for primary and outline buttons.
+ * Usage: Use .btn and .btn-outline for styled buttons.
+ * Example: <button class="btn">Button</button>
+ * ======================================================================== */
+
 /* Button styles */
 .btn {
   display: inline-block;

@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Form Styles
+ * ------------------------------------------------------------------------
+ * Styles for form elements (input, select, textarea, button) and labels.
+ * Usage: Add to forms for consistent appearance and focus states.
+ * Example: <input type="text" /> <label for="field">Label</label>
+ * ======================================================================== */
+
 /* Form element styling */
 input, select, textarea, button {
   font-family: inherit;

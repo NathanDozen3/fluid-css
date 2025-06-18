@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Container System
+ * ------------------------------------------------------------------------
+ * Utility classes for responsive, centered containers with max-widths.
+ * Usage: Wrap page content in a .container, .container-narrow, or .container-fluid.
+ * Example: <div class="container"> ... </div>
+ * ======================================================================== */
+
 /* Container system */
 .container {
   width: clamp(var(--container-min-width), calc(var(--container-width) - var(--gutter-base) * 2), var(--container-max-width));

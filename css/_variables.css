@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Design Tokens & Variables
+ * ------------------------------------------------------------------------
+ * Centralized CSS custom properties for color, spacing, typography, breakpoints, etc.
+ * Usage: Reference these variables throughout all CSS for consistency.
+ * Example: color: var(--color-accent-1); padding: var(--spacing-md);
+ * ======================================================================== */
+
 /* CSS Variables and root custom properties
  *
  * This file centralizes all design tokens for the Fluid CSS framework.

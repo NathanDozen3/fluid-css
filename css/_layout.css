@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Layout & Display Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for width, height, and display properties.
+ * Usage: Use .w-*, .h-*, .d-flex, .d-grid, etc. for layout control.
+ * Example: <div class="w-full d-flex"></div>
+ * ======================================================================== */
+
 /* Layout and display utilities. */
 
 .w-full {

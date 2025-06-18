@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Animation & Transition Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for transitions and keyframe-based animations (fade, slide, scale).
+ * Usage: Add .transition, .fade-in, .slide-in, etc. to animate elements.
+ * Example: <div class="fade-in transition"></div>
+ * ======================================================================== */
+
 /* Animation and transition utilities */
 
 /* Transition utilities */

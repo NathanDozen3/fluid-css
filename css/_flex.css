@@ -1,3 +1,11 @@
+/* ========================================================================
+ * Fluid CSS Flexbox Utilities
+ * ------------------------------------------------------------------------
+ * Utility classes for flexbox layouts, alignment, and order.
+ * Usage: Use .flex, .flex-row, .items-center, etc. for flex layouts.
+ * Example: <div class="flex items-center justify-between"></div>
+ * ======================================================================== */
+
 /* Flexbox system. */
 
 .flex {
