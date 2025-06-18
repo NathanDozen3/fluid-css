@@ -1,0 +1,19 @@
+/* Fluid CSS Framework
+ * Version: 1.0.0
+ */
+
+/* Import partials for organization */
+@import url('css/_variables.css');
+@import url('css/_reset.css');
+@import url('css/_container.css');
+@import url('css/_grid.css');
+@import url('css/_spacing.css');
+@import url('css/_flex.css');
+@import url('css/_typography.css');
+@import url('css/_layout.css');
+@import url('css/_a11y.css');
+@import url('css/_colors.css');
+@import url('css/_buttons.css');
+@import url('css/_forms.css');
+@import url('css/_animations.css');
+@import url('css/_print.css')
