@@ -1,0 +1,45 @@
+/* Layout and display utilities. */
+
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.max-w-sm {
+  max-width: clamp(320px, 50vw, 540px);
+}
+
+.max-w-md {
+  max-width: clamp(540px, 70vw, 720px);
+}
+
+.max-w-lg {
+  max-width: clamp(720px, 80vw, 960px);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}

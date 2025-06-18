@@ -1,0 +1,85 @@
+/* Color utility classes. */
+
+.bg-base {
+  background: var(--color-base);
+}
+
+.bg-contrast {
+  background: var(--color-contrast);
+}
+
+.bg-accent-1 {
+  background: var(--color-accent-1);
+}
+
+.bg-accent-2 {
+  background: var(--color-accent-2);
+}
+
+.bg-accent-3 {
+  background: var(--color-accent-3);
+}
+
+.bg-accent-4 {
+  background: var(--color-accent-4);
+}
+
+.bg-accent-5 {
+  background: var(--color-accent-5);
+}
+
+.text-base {
+  color: var(--color-base);
+}
+
+.text-contrast {
+  color: var(--color-contrast);
+}
+
+.text-accent-1 {
+  color: var(--color-accent-1);
+}
+
+.text-accent-2 {
+  color: var(--color-accent-2);
+}
+
+.text-accent-3 {
+  color: var(--color-accent-3);
+}
+
+.text-accent-4 {
+  color: var(--color-accent-4);
+}
+
+.text-accent-5 {
+  color: var(--color-accent-5);
+}
+
+.border-base {
+  border-color: var(--color-base);
+}
+
+.border-contrast {
+  border-color: var(--color-contrast);
+}
+
+.border-accent-1 {
+  border-color: var(--color-accent-1);
+}
+
+.border-accent-2 {
+  border-color: var(--color-accent-2);
+}
+
+.border-accent-3 {
+  border-color: var(--color-accent-3);
+}
+
+.border-accent-4 {
+  border-color: var(--color-accent-4);
+}
+
+.border-accent-5 {
+  border-color: var(--color-accent-5);
+}

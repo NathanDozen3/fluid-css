@@ -1,0 +1,101 @@
+/* Accessibility (a11y) enhancements: focus, contrast, and helpers. */
+
+/* Visually hidden utility for screen-reader-only text. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip-link styles for keyboard navigation. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+  background: var(--color-accent-1);
+  color: var(--color-contrast);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 2px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  width: auto;
+  height: auto;
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+  background: var(--color-accent-1);
+  color: var(--color-contrast);
+}
+
+/* High-contrast focus styles for all interactive elements. */
+a,
+button,
+input,
+textarea,
+select,
+summary,
+[tabindex]:not([tabindex="-1"]) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Optional: fallback for browsers without :focus-visible */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+summary:focus,
+[tabindex]:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Focus ring utility for custom focusable elements. */
+.focus-ring:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Accessible link colors. */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-color-hover);
+}
+
+/* Reduced motion for users who prefer it. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

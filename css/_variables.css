@@ -1,0 +1,120 @@
+/* CSS Variables and root custom properties
+ *
+ * This file centralizes all design tokens for the Fluid CSS framework.
+ * Each section is commented for clarity and maintainability.
+ */
+:root {
+  /* Breakpoints (for documentation and future use) */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Container and layout */
+  --container-min-width: 320px; /* Minimum container width */
+  --container-max-width: 1328px; /* Maximum container width */
+  --container-narrow-max-width: 960px; /* Max width for narrow containers */
+  --container-width: 80vw; /* Default container width */
+  --container-narrow-width: 60vw; /* Default narrow container width */
+  --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
+  --container-padding: var(--spacing-md); /* Default container padding */
+
+  /* Typography (responsive with clamp) */
+  --font-size-xs: clamp(10px, 1vw, 12px); /* Extra small text */
+  --font-size-sm: clamp(12px, 1.2vw, 14px); /* Small text */
+  --font-size-base: clamp(16px, 1.4vw, 18px); /* Base text */
+  --font-size-lg: clamp(20px, 1.8vw, 24px); /* Large text */
+  --font-size-xl: clamp(24px, 2.8vw, 36px); /* Extra large text */
+  --font-size-xxl: clamp(32px, 4vw, 48px); /* 2x large text */
+  --line-height-base: 1.6; /* Base line height */
+  --line-height-heading: 1.2; /* Heading line height */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --letter-spacing-wide: 0.05em;
+
+  /* Spacing (responsive with clamp) */
+  --spacing-0: 0;
+  --spacing-xs: clamp(4px, 0.4vw, 8px); /* Extra small spacing */
+  --spacing-sm: clamp(8px, 0.8vw, 16px); /* Small spacing */
+  --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
+  --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
+  --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
+  --spacing-xxl: clamp(48px, 4vw, 64px); /* 2x large spacing */
+
+  /* Grid */
+  --min-cols: 1;
+  --max-cols: 2;
+  --col-min-width: 320px;
+
+  /* Colors (light mode) */
+  --color-base: #fff;
+  --color-contrast: #111;
+  --color-accent-1: #FFEE58;
+  --color-accent-2: #F6CFF4;
+  --color-accent-3: #503AA8;
+  --color-accent-4: #686868;
+  --color-accent-5: #FBFAF3;
+  --gradient-primary: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-3));
+  --gradient-accent: linear-gradient(90deg, var(--color-accent-2), var(--color-accent-4));
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.10);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.16);
+
+  /* Border radius */
+  --radius-sm: 2px;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Z-index scale */
+  --z-0: 0;
+  --z-10: 10;
+  --z-50: 50;
+  --z-100: 100;
+  --z-auto: auto;
+
+  /* Button and form states */
+  --btn-bg: var(--color-accent-1);
+  --btn-bg-hover: var(--color-accent-2);
+  --btn-bg-active: var(--color-accent-3);
+  --btn-bg-disabled: var(--color-accent-4);
+  --btn-text: var(--color-contrast);
+  --input-bg: var(--color-base);
+  --input-border: var(--color-accent-4);
+  --input-focus: var(--color-accent-3);
+
+  /* Accessibility */
+  --focus-outline: 2px solid var(--color-accent-3);
+  --focus-outline-offset: 2px;
+  --link-color: var(--color-accent-3);
+  --link-color-hover: var(--color-accent-4);
+
+  /* Animation and transitions */
+  --transition-duration: 0.2s;
+  --transition-duration-fast: 0.1s;
+  --transition-duration-slow: 0.4s;
+  --transition-ease: ease;
+  --animation-duration: 0.8s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors (dark mode) */
+    --color-base: #181818;
+    --color-contrast: #fff;
+    --color-accent-1: #FFD600;
+    --color-accent-2: #B388FF;
+    --color-accent-3: #7C4DFF;
+    --color-accent-4: #333;
+    --color-accent-5: #222;
+  }
+}
+
+/*
+  For a full list of variables and usage, see the documentation in README.md or demo.html.
+*/

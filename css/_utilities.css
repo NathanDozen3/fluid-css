@@ -1,0 +1,148 @@
+/* Shadow utilities */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Border radius utilities */
+.rounded {
+  border-radius: var(--radius);
+}
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* Z-index utilities */
+.z-0 {
+  z-index: var(--z-0);
+}
+
+.z-10 {
+  z-index: var(--z-10);
+}
+
+.z-50 {
+  z-index: var(--z-50);
+}
+
+.z-100 {
+  z-index: var(--z-100);
+}
+
+.z-auto {
+  z-index: var(--z-auto);
+}
+
+/* Aspect ratio utilities */
+.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+/* Text truncation and overflow utilities */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Opacity utilities */
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+/* Letter spacing and text transform utilities */
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* List style utilities */
+.list-none {
+  list-style: none;
+}
+
+.list-disc {
+  list-style: disc;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+/* Cursor and pointer events utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+/* Logical properties for RTL/LTR support */
+.p-inline-md {
+  padding-inline: var(--spacing-md);
+}
+
+.m-block-lg {
+  margin-block: var(--spacing-lg);
+}
+
+/* Min/max width and height utilities */
+.min-h-100 {
+  min-height: 100vh;
+}
+
+.max-w-screen {
+  max-width: 100vw;
+}
+
+.w-screen {
+  width: 100vw;
+}

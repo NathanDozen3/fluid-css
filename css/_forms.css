@@ -1,0 +1,22 @@
+/* Form element styling */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent-4);
+  padding: 0.5em 1em;
+  margin-bottom: 1rem;
+  background: var(--color-base);
+  color: var(--color-contrast);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 2px solid var(--color-accent-3);
+  border-color: var(--color-accent-3);
+}
+label {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  display: block;
+}

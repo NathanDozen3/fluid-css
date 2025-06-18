@@ -1,0 +1,71 @@
+/* Typography utilities. */
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+/* Headings spacing. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--spacing-lg, 2rem);
+  margin-bottom: var(--spacing-md, 1rem);
+  line-height: 1.2;
+}
+
+/* Paragraph spacing. */
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 1rem);
+}
+
+/* List spacing. */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 1rem);
+  padding-left: 2rem;
+}
+
+/* Blockquote spacing. */
+blockquote {
+  margin: var(--spacing-md, 1rem) 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-accent-4);
+  color: var(--color-contrast);
+}

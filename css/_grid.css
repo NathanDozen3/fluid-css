@@ -1,0 +1,155 @@
+/* Grid system and utilities. */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-cols {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+  min-width: calc(var(--col-min-width) * var(--min-cols));
+}
+
+/* Predefined grid transition classes. */
+.grid-cols-1-to-2 {
+  --min-cols: 1;
+  --max-cols: 2;
+  --col-min-width: 320px;
+}
+
+.grid-cols-1-to-3 {
+  --min-cols: 1;
+  --max-cols: 3;
+  --col-min-width: 256px;
+}
+
+.grid-cols-1-to-4 {
+  --min-cols: 1;
+  --max-cols: 4;
+  --col-min-width: 208px;
+}
+
+.grid-cols-1-to-5 {
+  --min-cols: 1;
+  --max-cols: 5;
+  --col-min-width: 192px;
+}
+
+.grid-cols-1-to-6 {
+  --min-cols: 1;
+  --max-cols: 6;
+  --col-min-width: 160px;
+}
+
+.grid-cols-2-to-3 {
+  --min-cols: 2;
+  --max-cols: 3;
+  --col-min-width: 288px;
+}
+
+.grid-cols-2-to-4 {
+  --min-cols: 2;
+  --max-cols: 4;
+  --col-min-width: 224px;
+}
+
+.grid-cols-2-to-5 {
+  --min-cols: 2;
+  --max-cols: 5;
+  --col-min-width: 208px;
+}
+
+.grid-cols-2-to-6 {
+  --min-cols: 2;
+  --max-cols: 6;
+  --col-min-width: 208px;
+}
+
+/* Helper classes for min/max cols and col width. */
+.min-cols-1 {
+  --min-cols: 1;
+}
+
+.min-cols-2 {
+  --min-cols: 2;
+}
+
+.min-cols-3 {
+  --min-cols: 3;
+}
+
+.min-cols-4 {
+  --min-cols: 4;
+}
+
+.max-cols-2 {
+  --max-cols: 2;
+}
+
+.max-cols-3 {
+  --max-cols: 3;
+}
+
+.max-cols-4 {
+  --max-cols: 4;
+}
+
+.max-cols-5 {
+  --max-cols: 5;
+}
+
+.max-cols-6 {
+  --max-cols: 6;
+}
+
+.col-min-w-150 {
+  --col-min-width: 150px;
+}
+
+.col-min-w-180 {
+  --col-min-width: 180px;
+}
+
+.col-min-w-200 {
+  --col-min-width: 200px;
+}
+
+.col-min-w-220 {
+  --col-min-width: 220px;
+}
+
+.col-min-w-250 {
+  --col-min-width: 250px;
+}
+
+.col-min-w-280 {
+  --col-min-width: 280px;
+}
+
+.col-min-w-300 {
+  --col-min-width: 300px;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-auto {
+  grid-template-columns: auto;
+}
+
+.grid-cols-minmax {
+  grid-template-columns: minmax(0, 1fr);
+}

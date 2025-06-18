@@ -1,0 +1,61 @@
+/* Animation and transition utilities */
+
+/* Transition utilities */
+.transition {
+  transition: all var(--transition-duration) var(--transition-ease);
+}
+.transition-fast {
+  transition: all var(--transition-duration-fast) var(--transition-ease);
+}
+.transition-slow {
+  transition: all var(--transition-duration-slow) var(--transition-ease);
+}
+
+/* Fade animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--animation-duration) forwards;
+}
+.fade-out {
+  opacity: 1;
+  animation: fadeOut var(--animation-duration) forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* Slide and scale animations */
+.slide-in {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn var(--animation-duration) forwards;
+}
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.scale-up {
+  transform: scale(0.95);
+  opacity: 0;
+  animation: scaleUp var(--animation-duration) forwards;
+}
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
