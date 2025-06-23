@@ -10,7 +10,14 @@
  * Shadow Utilities
  * Usage: Add shadow to elements for elevation effects.
  * Example: <div class="shadow-md"></div>
+ *
+ * All shadow utilities use design tokens from _variables.css for consistency and theming.
+ * Do not hard-code shadow values in utility classes.
  * ------------------------------------------------------------------------ */
+.shadow-xs {
+  box-shadow: var(--shadow-xs);
+}
+
 .shadow-sm {
   box-shadow: var(--shadow-sm);
 }
@@ -23,21 +30,39 @@
   box-shadow: var(--shadow-lg);
 }
 
-.shadow-xs {
-  box-shadow: 0 1px 1px rgb(0 0 0 / 3%);
-}
-
 .shadow-xl {
-  box-shadow: 0 8px 32px rgb(0 0 0 / 18%);
+  box-shadow: var(--shadow-xl);
 }
 
 /* ------------------------------------------------------------------------
  * Border Radius Utilities
- * Usage: Control border radius for rounded corners.
+ * Usage: Control border radius for rounded corners. All values use tokens from _variables.css.
  * Example: <img class="rounded-lg" />
+ *
+ * Atomic utilities:
+ *   .rounded[-sm|-lg|-full]         - all corners
+ *   .rounded-none                   - no border radius
+ *   .rounded-t[-sm|-lg|-full]       - top corners
+ *   .rounded-b[-sm|-lg|-full]       - bottom corners
+ *   .rounded-l[-sm|-lg|-full]       - left corners
+ *   .rounded-r[-sm|-lg|-full]       - right corners
+ *   .rounded-tl[-sm|-lg|-full]      - top-left corner
+ *   .rounded-tr[-sm|-lg|-full]      - top-right corner
+ *   .rounded-bl[-sm|-lg|-full]      - bottom-left corner
+ *   .rounded-br[-sm|-lg|-full]      - bottom-right corner
+ *
+ * Compose for any combination, e.g. class="rounded-none rounded-tl-lg rounded-br-sm"
  * ------------------------------------------------------------------------ */
 .rounded {
   border-radius: var(--radius);
+}
+
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-xs {
+  border-radius: var(--radius-xs);
 }
 
 .rounded-sm {
@@ -52,14 +77,278 @@
   border-radius: var(--radius-full);
 }
 
+/* Top corners */
 .rounded-t {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
 }
 
+.rounded-t-xs {
+  border-top-left-radius: var(--radius-xs);
+  border-top-right-radius: var(--radius-xs);
+}
+
+.rounded-t-sm {
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
+}
+
+.rounded-t-lg {
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+.rounded-t-full {
+  border-top-left-radius: var(--radius-full);
+  border-top-right-radius: var(--radius-full);
+}
+
+/* Bottom corners */
 .rounded-b {
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+}
+
+.rounded-b-xs {
+  border-bottom-left-radius: var(--radius-xs);
+  border-bottom-right-radius: var(--radius-xs);
+}
+
+.rounded-b-sm {
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.rounded-b-lg {
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+.rounded-b-full {
+  border-bottom-left-radius: var(--radius-full);
+  border-bottom-right-radius: var(--radius-full);
+}
+
+/* Left corners */
+.rounded-l {
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+.rounded-l-xs {
+  border-top-left-radius: var(--radius-xs);
+  border-bottom-left-radius: var(--radius-xs);
+}
+
+.rounded-l-sm {
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.rounded-l-lg {
+  border-top-left-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-lg);
+}
+
+.rounded-l-full {
+  border-top-left-radius: var(--radius-full);
+  border-bottom-left-radius: var(--radius-full);
+}
+
+/* Right corners */
+.rounded-r {
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.rounded-r-xs {
+  border-top-right-radius: var(--radius-xs);
+  border-bottom-right-radius: var(--radius-xs);
+}
+
+.rounded-r-sm {
+  border-top-right-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.rounded-r-lg {
+  border-top-right-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+.rounded-r-full {
+  border-top-right-radius: var(--radius-full);
+  border-bottom-right-radius: var(--radius-full);
+}
+
+/* Individual corners */
+.rounded-tl {
+  border-top-left-radius: var(--radius);
+}
+
+.rounded-tl-xs {
+  border-top-left-radius: var(--radius-xs);
+}
+
+.rounded-tl-sm {
+  border-top-left-radius: var(--radius-sm);
+}
+
+.rounded-tl-lg {
+  border-top-left-radius: var(--radius-lg);
+}
+
+.rounded-tl-full {
+  border-top-left-radius: var(--radius-full);
+}
+
+.rounded-tr {
+  border-top-right-radius: var(--radius);
+}
+
+.rounded-tr-xs {
+  border-top-right-radius: var(--radius-xs);
+}
+
+.rounded-tr-sm {
+  border-top-right-radius: var(--radius-sm);
+}
+
+.rounded-tr-lg {
+  border-top-right-radius: var(--radius-lg);
+}
+
+.rounded-tr-full {
+  border-top-right-radius: var(--radius-full);
+}
+
+.rounded-bl {
+  border-bottom-left-radius: var(--radius);
+}
+
+.rounded-bl-xs {
+  border-bottom-left-radius: var(--radius-xs);
+}
+
+.rounded-bl-sm {
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.rounded-bl-lg {
+  border-bottom-left-radius: var(--radius-lg);
+}
+
+.rounded-bl-full {
+  border-bottom-left-radius: var(--radius-full);
+}
+
+.rounded-br {
+  border-bottom-right-radius: var(--radius);
+}
+
+.rounded-br-xs {
+  border-bottom-right-radius: var(--radius-xs);
+}
+
+.rounded-br-sm {
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.rounded-br-lg {
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+.rounded-br-full {
+  border-bottom-right-radius: var(--radius-full);
+}
+
+/* ------------------------------------------------------------------------
+ * Logical (RTL-aware) Border Radius Utilities
+ *
+ * Purpose:
+ *   These utilities provide atomic, utility-first classes for setting border radius
+ *   on the logical start and end sides of an element, supporting both LTR and RTL layouts.
+ *   This ensures correct border radius application regardless of text direction, making
+ *   your UI fully internationalization (i18n) and RTL-ready.
+ *
+ * Classes:
+ *   .rounded-start[-xs|-sm|-lg|-full]   - Sets border radius on the logical start side (top & bottom)
+ *   .rounded-end[-xs|-sm|-lg|-full]     - Sets border radius on the logical end side (top & bottom)
+ *
+ *   - "Start" refers to the left side in LTR and right side in RTL.
+ *   - "End" refers to the right side in LTR and left side in RTL.
+ *   - Each class sets both the top and bottom logical corners for that side.
+ *
+ * Usage:
+ *   <div class="rounded-start-lg rounded-end-sm"></div>
+ *   <img class="rounded-end-full" />
+ *
+ *   These classes are composable with other border radius utilities for precise control.
+ *
+ * Why use logical properties?
+ *   - Ensures correct border radius in both LTR and RTL contexts without extra CSS.
+ *   - Great for components that need to be mirrored for RTL languages.
+ *   - Follows modern CSS best practices for internationalization.
+ *
+ * For more details, see: https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-start-radius
+ * ------------------------------------------------------------------------ */
+.rounded-start {
+  border-start-start-radius: var(--radius);
+  border-end-start-radius: var(--radius);
+}
+
+.rounded-start-xs {
+  border-start-start-radius: var(--radius-xs);
+  border-end-start-radius: var(--radius-xs);
+}
+
+.rounded-start-sm {
+  border-start-start-radius: var(--radius-sm);
+  border-end-start-radius: var(--radius-sm);
+}
+
+.rounded-start-lg {
+  border-start-start-radius: var(--radius-lg);
+  border-end-start-radius: var(--radius-lg);
+}
+
+.rounded-start-full {
+  border-start-start-radius: var(--radius-full);
+  border-end-start-radius: var(--radius-full);
+}
+
+.rounded-end {
+  border-start-end-radius: var(--radius);
+  border-end-end-radius: var(--radius);
+}
+
+.rounded-end-xs {
+  border-start-end-radius: var(--radius-xs);
+  border-end-end-radius: var(--radius-xs);
+}
+
+.rounded-end-sm {
+  border-start-end-radius: var(--radius-sm);
+  border-end-end-radius: var(--radius-sm);
+}
+
+.rounded-end-lg {
+  border-start-end-radius: var(--radius-lg);
+  border-end-end-radius: var(--radius-lg);
+}
+
+.rounded-end-full {
+  border-start-end-radius: var(--radius-full);
+  border-end-end-radius: var(--radius-full);
+}
+
+/* Inherit/initial border radius utilities */
+.rounded-inherit {
+  border-radius: inherit;
+}
+
+.rounded-initial {
+  border-radius: initial;
 }
 
 /* ------------------------------------------------------------------------
@@ -570,3 +859,464 @@ object {
   These utilities are atomic and can be used with both flex and grid layouts.
   For gap utilities, see _spacing.css.
 */
+
+/* ------------------------------------------------------------------------
+ * Color Opacity Utilities
+ * Usage: Add semi-transparent backgrounds or text using semantic tokens.
+ * Example: <div class="bg-primary-50 text-contrast-75"></div>
+ *
+ * These use CSS color-mix for best browser support, or fallback to rgba if needed.
+ * ------------------------------------------------------------------------ */
+.bg-primary-50 {
+  background-color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+}
+
+.bg-primary-75 {
+  background-color: color-mix(in srgb, var(--color-primary) 75%, transparent);
+}
+
+.bg-contrast-50 {
+  background-color: color-mix(in srgb, var(--color-contrast) 50%, transparent);
+}
+
+.bg-contrast-75 {
+  background-color: color-mix(in srgb, var(--color-contrast) 75%, transparent);
+}
+
+.text-primary-50 {
+  color: color-mix(in srgb, var(--color-primary) 50%, transparent);
+}
+
+.text-primary-75 {
+  color: color-mix(in srgb, var(--color-primary) 75%, transparent);
+}
+
+.text-contrast-50 {
+  color: color-mix(in srgb, var(--color-contrast) 50%, transparent);
+}
+
+.text-contrast-75 {
+  color: color-mix(in srgb, var(--color-contrast) 75%, transparent);
+}
+
+/* ------------------------------------------------------------------------
+ * Transform Utilities
+ * Usage: Apply transforms for rotation, scaling, translation.
+ * Example: <div class="rotate-90 scale-110 translate-x-2"></div>
+ * ------------------------------------------------------------------------ */
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.scale-90 {
+  transform: scale(0.9);
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.translate-x-2 {
+  transform: translateX(0.5rem);
+}
+
+.translate-x-neg-2 {
+  transform: translateX(-0.5rem);
+}
+
+.translate-y-2 {
+  transform: translateY(0.5rem);
+}
+
+.translate-y-neg-2 {
+  transform: translateY(-0.5rem);
+}
+
+/* ------------------------------------------------------------------------
+ * Positioning Utilities
+ * Usage: Set element positioning and insets.
+ * Example: <div class="absolute top-0 left-0"></div>
+ * ------------------------------------------------------------------------ */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+/* ------------------------------------------------------------------------
+ * Display Utilities
+ * Usage: Control element display.
+ * Example: <div class="d-none d-inline-block"></div>
+ * ------------------------------------------------------------------------ */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+/* ------------------------------------------------------------------------
+ * Border Width, Style, and Side Utilities
+ * Usage: Set border width, style, and per-side borders.
+ * Example: <div class="border-2 border-dashed border-t"></div>
+ * ------------------------------------------------------------------------ */
+.border-2 {
+  border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-t {
+  border-top: 1px solid var(--color-border);
+}
+
+.border-b {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.border-l {
+  border-left: 1px solid var(--color-border);
+}
+
+.border-r {
+  border-right: 1px solid var(--color-border);
+}
+
+/* ------------------------------------------------------------------------
+ * Advanced Flex/Grid Utilities
+ * Usage: Fine-tune flex and grid layouts.
+ * Example: <div class="flex-basis-1-2 flex-grow-2 grid-auto-flow-row"></div>
+ * ------------------------------------------------------------------------ */
+.flex-basis-0 {
+  flex-basis: 0;
+}
+
+.flex-basis-1-2 {
+  flex-basis: 50%;
+}
+
+.flex-basis-auto {
+  flex-basis: auto;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-2 {
+  flex-shrink: 2;
+}
+
+.grid-auto-flow-row {
+  grid-auto-flow: row;
+}
+
+.grid-auto-flow-col {
+  grid-auto-flow: column;
+}
+
+/* ------------------------------------------------------------------------
+ * Overflow & Visibility Utilities
+ * Usage: Control overflow and visibility.
+ * Example: <div class="overflow-x-auto visible"></div>
+ * ------------------------------------------------------------------------ */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* ------------------------------------------------------------------------
+ * Sizing Utilities
+ * Usage: Set width/height as fractions or min/max.
+ * Example: <div class="w-1-2 h-1-3 min-w-0 max-h-full"></div>
+ * ------------------------------------------------------------------------ */
+.w-1-2 {
+  width: 50%;
+}
+
+.w-1-3 {
+  width: 33.3333%;
+}
+
+.w-2-3 {
+  width: 66.6667%;
+}
+
+.h-1-2 {
+  height: 50%;
+}
+
+.h-1-3 {
+  height: 33.3333%;
+}
+
+.h-2-3 {
+  height: 66.6667%;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+/* ------------------------------------------------------------------------
+ * Fractional Spacing Utilities
+ * Usage: Set margin/padding as fractions.
+ * Example: <div class="m-1-2 p-1-4"></div>
+ * ------------------------------------------------------------------------ */
+.m-1-2 {
+  margin: 50%;
+}
+
+.p-1-4 {
+  padding: 25%;
+}
+
+/* ------------------------------------------------------------------------
+ * Typography Utilities
+ * Usage: Set font family, smoothing, and more text decoration.
+ * Example: <span class="font-sans antialiased overline"></span>
+ * ------------------------------------------------------------------------ */
+.font-sans {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.font-serif {
+  font-family: serif;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.subpixel-antialiased {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+.overline {
+  text-decoration: overline;
+}
+
+/* ------------------------------------------------------------------------
+ * SVG/Media Utilities
+ * Usage: Control SVG fill/stroke and object-fit/position.
+ * Example: <svg class="fill-current"></svg> <img class="object-cover" />
+ * ------------------------------------------------------------------------ */
+.fill-current {
+  fill: currentcolor;
+}
+
+.stroke-current {
+  stroke: currentcolor;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-center {
+  object-position: center;
+}
+
+/* ------------------------------------------------------------------------
+ * State/Interaction Utilities (static)
+ * Usage: Use for static state styling. For dynamic states, use custom CSS or JS.
+ * Example: <div class="hover-bg-primary focus-underline"></div>
+ * ------------------------------------------------------------------------ */
+.hover-bg-primary:hover {
+  background: var(--color-primary);
+}
+
+.focus-underline:focus {
+  text-decoration: underline;
+}
+
+/* ========================================================================
+ * Advanced State/Interaction Utilities
+ * ------------------------------------------------------------------------
+ * Usage: Add .group, .group-hover-*, .peer, .peer-focus-*, etc. for advanced state styling.
+ * Example: <div class="group"><button class="group-hover:bg-primary"></button></div>
+ * ======================================================================== */
+
+.group {
+  position: relative;
+}
+
+.group:hover .group-hover-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.group:focus .group-focus-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.peer:focus ~ .peer-focus-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.active-opacity-80:active {
+  opacity: 0.8;
+}
+
+.disabled-opacity-50:disabled {
+  opacity: 0.5;
+}
+
+/* ========================================================================
+ * Outline, Filter, and Backdrop Utilities
+ * ------------------------------------------------------------------------
+ * Usage: Add outline, filter, and backdrop effects.
+ * Example: <div class="outline-primary filter-blur backdrop-blur"></div>
+ * ======================================================================== */
+
+.outline-none {
+  outline: none;
+}
+
+.outline {
+  outline: 2px solid var(--color-outline, currentColor);
+}
+
+.outline-primary {
+  outline: 2px solid var(--color-primary);
+}
+
+.outline-accent {
+  outline: 2px solid var(--color-accent);
+}
+
+.filter-blur {
+  filter: blur(4px);
+}
+
+.filter-grayscale {
+  filter: grayscale(1);
+}
+
+.filter-invert {
+  filter: invert(1);
+}
+
+.filter-sepia {
+  filter: sepia(1);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-grayscale {
+  backdrop-filter: grayscale(1);
+}
+
+.backdrop-invert {
+  backdrop-filter: invert(1);
+}
+
+.backdrop-sepia {
+  backdrop-filter: sepia(1);
+}

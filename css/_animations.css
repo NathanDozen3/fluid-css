@@ -10,8 +10,7 @@
  * Transition utilities
  * ------------------------------------------------------------------------ */
 .transition {
-  transition: var(--transition-property) var(--transition-duration)
-    var(--transition-timing-function);
+  transition: var(--transition-property) var(--transition-duration);
 }
 
 .transition-all {
@@ -54,7 +53,6 @@
 
 /* ------------------------------------------------------------------------
  * Animation delay utilities
- * Example: <div class="animation-delay-fast animation-fade-in"></div>
  * ------------------------------------------------------------------------ */
 .animation-delay-fast {
   --animation-delay: 0.1s;
@@ -66,7 +64,6 @@
 
 /* ------------------------------------------------------------------------
  * Animation direction utilities
- * Example: <div class="animation-direction-reverse animation-fade-in"></div>
  * ------------------------------------------------------------------------ */
 .animation-direction-reverse {
   --animation-direction: reverse;
@@ -78,7 +75,6 @@
 
 /* ------------------------------------------------------------------------
  * Animation fill mode utilities
- * Example: <div class="animation-fill-both animation-fade-in"></div>
  * ------------------------------------------------------------------------ */
 .animation-fill-both {
   --animation-fill-mode: both;
@@ -90,7 +86,6 @@
 
 /* ------------------------------------------------------------------------
  * Animation iteration count utilities
- * Example: <div class="animation-iteration-infinite animation-fade-in"></div>
  * ------------------------------------------------------------------------ */
 .animation-iteration-infinite {
   --animation-iteration-count: infinite;
@@ -113,7 +108,6 @@
 
 /* ------------------------------------------------------------------------
  * Opacity utilities
- * Example: <div class="opacity-0 animation-fade-in"></div>
  * ------------------------------------------------------------------------ */
 .opacity-0 {
   opacity: 0;
