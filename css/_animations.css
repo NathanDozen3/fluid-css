@@ -6,30 +6,141 @@
  * Example: <div class="fade-in transition"></div>
  * ======================================================================== */
 
-/* Animation and transition utilities */
-
-/* Transition utilities */
+/* ------------------------------------------------------------------------
+ * Transition utilities
+ * ------------------------------------------------------------------------ */
 .transition {
-  transition: all var(--transition-duration) var(--transition-ease);
+  transition: var(--transition-property) var(--transition-duration) var(--transition-timing-function);
 }
 
+.transition-all {
+  --transition-property: all;
+}
+
+/* ------------------------------------------------------------------------
+ * Transition duration utilities
+ * ------------------------------------------------------------------------ */
 .transition-fast {
-  transition: all var(--transition-duration-fast) var(--transition-ease);
+  --transition-duration: var(--transition-duration-fast);
 }
 
 .transition-slow {
-  transition: all var(--transition-duration-slow) var(--transition-ease);
+  --transition-duration: var(--transition-duration-slow);
 }
 
-/* Fade animations */
-.fade-in {
+/* ------------------------------------------------------------------------
+ * Transition timing function utilities
+ * ------------------------------------------------------------------------ */
+.transition-ease {
+  --transition-timing-function: ease;
+}
+
+.transition-ease-in {
+  --transition-timing-function: ease-in;
+}
+
+.transition-ease-out {
+  --transition-timing-function: ease-out;
+}
+
+.transition-ease-in-out {
+  --transition-timing-function: ease-in-out;
+}
+
+.transition-linear {
+  --transition-timing-function: linear;
+}
+
+/* ------------------------------------------------------------------------
+ * Animation delay utilities
+ * Example: <div class="animation-delay-fast animation-fade-in"></div>
+ * ------------------------------------------------------------------------ */
+.animation-delay-fast {
+  --animation-delay: 0.1s;
+}
+.animation-delay-slow {
+  --animation-delay: 0.5s;
+}
+
+/* ------------------------------------------------------------------------
+ * Animation direction utilities
+ * Example: <div class="animation-direction-reverse animation-fade-in"></div>
+ * ------------------------------------------------------------------------ */
+.animation-direction-reverse {
+  --animation-direction: reverse;
+}
+.animation-direction-normal {
+  --animation-direction: normal;
+}
+
+/* ------------------------------------------------------------------------
+ * Animation fill mode utilities
+ * Example: <div class="animation-fill-both animation-fade-in"></div>
+ * ------------------------------------------------------------------------ */
+.animation-fill-both {
+  --animation-fill-mode: both;
+}
+.animation-fill-forwards {
+  --animation-fill-mode: forwards;
+}
+
+/* ------------------------------------------------------------------------
+ * Animation iteration count utilities
+ * Example: <div class="animation-iteration-infinite animation-fade-in"></div>
+ * ------------------------------------------------------------------------ */
+.animation-iteration-infinite {
+  --animation-iteration-count: infinite;
+}
+.animation-iteration-once {
+  --animation-iteration-count: 1;
+}
+
+/* ------------------------------------------------------------------------
+ * Animation timing function utilities
+ * ------------------------------------------------------------------------ */
+.animation-ease {
+  --animation-timing-function: ease;
+}
+
+.animation-linear {
+  --animation-timing-function: linear;
+}
+
+/* ------------------------------------------------------------------------
+ * Opacity utilities
+ * Example: <div class="opacity-0 animation-fade-in"></div>
+ * ------------------------------------------------------------------------ */
+.opacity-0 {
   opacity: 0;
-  animation: fade-in var(--animation-duration) forwards;
+}
+.opacity-100 {
+  opacity: 1;
 }
 
-.fade-out {
+/* ------------------------------------------------------------------------
+ * Fade animations (atomic, composable)
+ * Example: <div class="animation-fade-in animation-duration-fast animation-ease animation-delay-fast animation-iteration-infinite animation-fill-both"></div>
+ * ------------------------------------------------------------------------ */
+.animation-fade-in {
+  opacity: 0;
+  animation:
+    fade-in var(--animation-duration)
+    var(--animation-timing-function)
+    var(--animation-delay, 0s)
+    var(--animation-iteration-count, 1)
+    var(--animation-direction)
+    var(--animation-fill-mode);
+}
+
+.animation-fade-out {
   opacity: 1;
-  animation: fade-out var(--animation-duration) forwards;
+  animation:
+    fade-out var(--animation-duration)
+    var(--animation-timing-function)
+    var(--animation-delay, 0s)
+    var(--animation-iteration-count, 1)
+    var(--animation-direction)
+    var(--animation-fill-mode);
 }
 
 @keyframes fade-in {
@@ -44,11 +155,20 @@
   }
 }
 
-/* Slide and scale animations */
-.slide-in {
+/* ------------------------------------------------------------------------
+ * Slide and scale animations (atomic, composable)
+ * Example: <div class="animation-slide-in animation-duration-fast animation-ease"></div>
+ * ------------------------------------------------------------------------ */
+.animation-slide-in {
   transform: translateY(20px);
   opacity: 0;
-  animation: slide-in var(--animation-duration) forwards;
+  animation:
+    slide-in var(--animation-duration)
+    var(--animation-timing-function)
+    var(--animation-delay, 0s)
+    var(--animation-iteration-count, 1)
+    var(--animation-direction)
+    var(--animation-fill-mode);
 }
 
 @keyframes slide-in {
@@ -58,10 +178,16 @@
   }
 }
 
-.scale-up {
+.animation-scale-up {
   transform: scale(0.95);
   opacity: 0;
-  animation: scale-up var(--animation-duration) forwards;
+  animation:
+    scale-up var(--animation-duration)
+    var(--animation-timing-function)
+    var(--animation-delay, 0s)
+    var(--animation-iteration-count, 1)
+    var(--animation-direction)
+    var(--animation-fill-mode);
 }
 
 @keyframes scale-up {
@@ -71,7 +197,10 @@
   }
 }
 
-/* Reduced motion for users who prefer it */
+/* ------------------------------------------------------------------------
+ * Accessibility: Reduced motion for users who prefer it
+ * This disables most animations and transitions for accessibility.
+ * ------------------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

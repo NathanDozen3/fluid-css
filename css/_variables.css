@@ -111,11 +111,14 @@
   --link-color-hover: var(--color-accent-4);
 
   /* Animation and transitions */
+  --transition-property: all;
   --transition-duration: 0.2s;
   --transition-duration-fast: 0.1s;
   --transition-duration-slow: 0.4s;
-  --transition-ease: ease;
+  --transition-timing-function: ease-in-out;
   --animation-duration: 0.8s;
+  --animation-direction: normal;
+  --animation-fill-mode: forwards;
 }
 
 @media (prefers-color-scheme: dark) {
