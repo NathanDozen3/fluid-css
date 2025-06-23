@@ -2,7 +2,9 @@
  * Fluid CSS Flexbox Utilities (Extended)
  * ------------------------------------------------------------------------
  * Utility classes for all flexbox features: direction, wrap, grow, shrink,
- * basis, order, alignment, justification, gap, self alignment, etc.
+ * basis, order, etc. Shared utilities for gap, alignment, and justification
+ * have been moved to _spacing.css and/or _utilities.css. Only flex-specific
+ * utilities remain here.
  * ======================================================================== */
 
 /* Flexbox system. */
@@ -39,42 +41,6 @@
 
 .flex-nowrap {
   flex-wrap: nowrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-start {
-  align-items: flex-start;
-}
-
-.items-end {
-  align-items: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .order-1 {
@@ -127,92 +93,4 @@
 
 .flex-basis-full {
   flex-basis: 100%;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.content-start {
-  align-content: flex-start;
-}
-
-.content-end {
-  align-content: flex-end;
-}
-
-.content-between {
-  align-content: space-between;
-}
-
-.content-around {
-  align-content: space-around;
-}
-
-.content-evenly {
-  align-content: space-evenly;
-}
-
-.self-auto {
-  align-self: auto;
-}
-
-.self-start {
-  align-self: flex-start;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
-.self-center {
-  align-self: center;
-}
-
-.self-stretch {
-  align-self: stretch;
-}
-
-.justify-self-auto {
-  justify-self: auto;
-}
-
-.justify-self-start {
-  justify-self: flex-start;
-}
-
-.justify-self-end {
-  justify-self: flex-end;
-}
-
-.justify-self-center {
-  justify-self: center;
-}
-
-.justify-self-stretch {
-  justify-self: stretch;
-}
-
-.gap-0 {
-  gap: 0;
-}
-
-.gap-xs {
-  gap: var(--spacing-xs);
-}
-
-.gap-sm {
-  gap: var(--spacing-sm);
-}
-
-.gap-md {
-  gap: var(--spacing-md);
-}
-
-.gap-lg {
-  gap: var(--spacing-lg);
-}
-
-.gap-xl {
-  gap: var(--spacing-xl);
 }

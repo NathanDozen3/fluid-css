@@ -2,9 +2,9 @@
  * Fluid CSS Grid Utilities
  * -------------------------------------------------------------------------
  * Utility classes for all CSS Grid features: template columns/rows, auto-flow,
- * auto-fit, auto-fill, gap, justify/align items, justify/align content, grid area,
- * start/end, etc.
+ * auto-fit, auto-fill, grid area, start/end, etc.
  * -------------------------------------------------------------------------
+ * Shared utilities for gap, alignment, and justification are now in _spacing.css and _utilities.css.
  * Design tokens: see _variables.css
  * ========================================================================= */
 
@@ -299,87 +299,19 @@
 /* -------------------------------------------------------------------------
  * 7. Justify/Align Items
  * ------------------------------------------------------------------------- */
-.justify-items-start {
-  justify-items: start;
-}
 
-.justify-items-end {
-  justify-items: end;
-}
-
-.justify-items-center {
-  justify-items: center;
-}
-
-.justify-items-stretch {
-  justify-items: stretch;
-}
-
-.align-items-start {
-  align-items: start;
-}
-
-.align-items-end {
-  align-items: end;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-stretch {
-  align-items: stretch;
-}
+/*
+  Shared utilities for alignment (align-items-*, justify-items-*) are now in _utilities.css.
+  Please use those atomic classes for alignment in grid layouts.
+*/
 
 /* -------------------------------------------------------------------------
  * 8. Justify/Align Content
  * ------------------------------------------------------------------------- */
-.justify-content-start {
-  justify-content: start;
-}
 
-.justify-content-end {
-  justify-content: end;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.justify-content-around {
-  justify-content: space-around;
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
-
-.align-content-start {
-  align-content: start;
-}
-
-.align-content-end {
-  align-content: end;
-}
-
-.align-content-center {
-  align-content: center;
-}
-
-.align-content-between {
-  align-content: space-between;
-}
-
-.align-content-around {
-  align-content: space-around;
-}
-
-.align-content-evenly {
-  align-content: space-evenly;
+/*
+  Shared utilities for justification and alignment (justify-content-*, align-content-*)
+  are now in _utilities.css. Please use those atomic classes for grid layouts.
 }
 
 /* -------------------------------------------------------------------------
@@ -451,45 +383,11 @@
 /* -------------------------------------------------------------------------
  * 11. Justify/Align Self
  * ------------------------------------------------------------------------- */
-.justify-self-auto {
-  justify-self: auto;
-}
 
-.justify-self-start {
-  justify-self: start;
-}
-
-.justify-self-end {
-  justify-self: end;
-}
-
-.justify-self-center {
-  justify-self: center;
-}
-
-.justify-self-stretch {
-  justify-self: stretch;
-}
-
-.align-self-auto {
-  align-self: auto;
-}
-
-.align-self-start {
-  align-self: start;
-}
-
-.align-self-end {
-  align-self: end;
-}
-
-.align-self-center {
-  align-self: center;
-}
-
-.align-self-stretch {
-  align-self: stretch;
-}
+/*
+  Shared utilities for self-alignment (align-self-*, justify-self-*) are now in _utilities.css.
+  Please use those atomic classes for grid layouts.
+*/
 
 /* -------------------------------------------------------------------------
  * 12. Grid Column/Row Span Utilities
@@ -568,75 +466,27 @@
 
 /* -------------------------------------------------------------------------
  * 15. Grid Justify/Align Content (All Values)
- * Example: <div class="justify-content-stretch align-content-stretch"></div>
  * ------------------------------------------------------------------------- */
-.justify-content-stretch {
-  justify-content: stretch;
-}
 
-.align-content-stretch {
-  align-content: stretch;
-}
+/*
+  Shared utilities for justify-content-stretch and align-content-stretch are now in _utilities.css.
+*/
 
 /* -------------------------------------------------------------------------
  * 16. Grid Justify/Align Self (All Values)
- * Example: <div class="justify-self-left align-self-baseline"></div>
  * ------------------------------------------------------------------------- */
-.justify-self-left {
-  justify-self: left;
-}
 
-.justify-self-right {
-  justify-self: right;
-}
-
-.align-self-baseline {
-  align-self: baseline;
-}
+/*
+  Shared utilities for justify-self-left, justify-self-right, and align-self-baseline are now in _utilities.css.
+*/
 
 /* -------------------------------------------------------------------------
  * 17. Grid Dense Placement for Items
- * Example: <div class="place-self-center place-content-end"></div>
  * ------------------------------------------------------------------------- */
-.place-content-auto {
-  place-content: normal;
-}
 
-.place-content-center {
-  place-content: center;
-}
-
-.place-content-end {
-  place-content: end;
-}
-
-.place-content-start {
-  place-content: start;
-}
-
-.place-content-stretch {
-  place-content: stretch;
-}
-
-.place-self-auto {
-  place-self: auto;
-}
-
-.place-self-center {
-  place-self: center;
-}
-
-.place-self-end {
-  place-self: end;
-}
-
-.place-self-start {
-  place-self: start;
-}
-
-.place-self-stretch {
-  place-self: stretch;
-}
+/*
+  Shared utilities for place-content-*, place-items-*, and place-self-* are now in _utilities.css.
+*/
 
 /* -------------------------------------------------------------------------
  * 18. Grid Line Naming (Example)
