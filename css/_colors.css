@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Color Utilities
  * ------------------------------------------------------------------------
  * Utility classes for background, text, and border colors using semantic tokens.
@@ -11,8 +12,16 @@
   background: var(--color-base);
 }
 
+.bg-base-hover {
+  background: var(--color-base-hover);
+}
+
 .bg-contrast {
   background: var(--color-contrast);
+}
+
+.bg-contrast-light {
+  background: var(--color-contrast-light);
 }
 
 .bg-primary {
@@ -39,16 +48,44 @@
   background: var(--color-surface);
 }
 
+.bg-surface-hover {
+  background: var(--color-surface-hover);
+}
+
 .bg-background {
   background: var(--color-background);
+}
+
+.bg-background-alt {
+  background: var(--color-background-alt);
+}
+
+.bg-overlay {
+  background: var(--color-overlay);
+}
+
+.bg-muted {
+  background: var(--color-muted);
+}
+
+.bg-high-contrast {
+  background: var(--color-high-contrast);
 }
 
 .text-base {
   color: var(--color-base);
 }
 
+.text-base-hover {
+  color: var(--color-base-hover);
+}
+
 .text-contrast {
   color: var(--color-contrast);
+}
+
+.text-contrast-light {
+  color: var(--color-contrast-light);
 }
 
 .text-primary {
@@ -75,16 +112,40 @@
   color: var(--color-surface);
 }
 
+.text-surface-hover {
+  color: var(--color-surface-hover);
+}
+
 .text-background {
   color: var(--color-background);
+}
+
+.text-background-alt {
+  color: var(--color-background-alt);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-high-contrast {
+  color: var(--color-high-contrast);
 }
 
 .border-base {
   border-color: var(--color-base);
 }
 
+.border-base-hover {
+  border-color: var(--color-base-hover);
+}
+
 .border-contrast {
   border-color: var(--color-contrast);
+}
+
+.border-contrast-light {
+  border-color: var(--color-contrast-light);
 }
 
 .border-primary {
@@ -111,8 +172,24 @@
   border-color: var(--color-surface);
 }
 
+.border-surface-hover {
+  border-color: var(--color-surface-hover);
+}
+
 .border-background {
   border-color: var(--color-background);
+}
+
+.border-background-alt {
+  border-color: var(--color-background-alt);
+}
+
+.border-muted {
+  border-color: var(--color-muted);
+}
+
+.border-high-contrast {
+  border-color: var(--color-high-contrast);
 }
 
 /* ========================================================================
@@ -122,7 +199,7 @@
  * Example: <div class="border-opacity-50"></div>
  * ======================================================================== */
 .border-opacity-0 {
-  border-color: rgb(var(--color-border-rgb), 0);
+  border-color: rgb(var(--color-border-rgb), var(--opacity-50));
 }
 
 .border-opacity-25 {
@@ -130,7 +207,7 @@
 }
 
 .border-opacity-50 {
-  border-color: rgb(var(--color-border-rgb), 0.5);
+  border-color: rgb(var(--color-border-rgb), var(--opacity-50));
 }
 
 .border-opacity-75 {
@@ -151,10 +228,41 @@
   background-image: var(--gradient-primary);
 }
 
-.bg-gradient-secondary {
-  background-image: var(--gradient-secondary);
-}
-
 .bg-gradient-accent {
   background-image: var(--gradient-accent);
+}
+
+/* Dark mode overrides */
+[data-theme='dark'] {
+  .bg-base {
+    background: var(--color-base);
+  }
+
+  .bg-contrast {
+    background: var(--color-contrast);
+  }
+
+  .bg-surface {
+    background: var(--color-surface);
+  }
+
+  .bg-background {
+    background: var(--color-background);
+  }
+
+  .border-base {
+    border-color: var(--color-base);
+  }
+
+  .border-contrast {
+    border-color: var(--color-contrast);
+  }
+
+  .border-surface {
+    border-color: var(--color-surface);
+  }
+
+  .border-background {
+    border-color: var(--color-background);
+  }
 }

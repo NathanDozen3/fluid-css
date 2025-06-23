@@ -1,21 +1,224 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Utility Classes
  * ------------------------------------------------------------------------
- * This file contains single-purpose utility classes for rapid styling.
- * Each section is documented with usage examples and follows a consistent
- * naming convention: .utility[-modifier] (e.g., .shadow-sm, .rounded-lg)
+ * Atomic utility classes for display, positioning, z-index, cursor, alignment,
+ * justification, shadows, opacity, and overflow. These are composable and
+ * intended for fine-grained control across layouts and components.
+ * Usage: Add .d-*, .pos-*, .z-*, .shadow-*, etc. to elements.
+ * Example: <div class="d-flex pos-relative z-10 shadow-md"></div>
  * ======================================================================== */
 
-/* ------------------------------------------------------------------------
- * Shadow Utilities
- * Usage: Add shadow to elements for elevation effects.
- * Example: <div class="shadow-md"></div>
- *
- * All shadow utilities use design tokens from _variables.css for consistency and theming.
- * Do not hard-code shadow values in utility classes.
- * ------------------------------------------------------------------------ */
-.shadow-xs {
-  box-shadow: var(--shadow-xs);
+/* Display utilities */
+.d-none {
+  display: var(--display-none);
+}
+
+.d-block {
+  display: var(--display-block);
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: var(--display-flex);
+}
+
+.d-grid {
+  display: var(--display-grid);
+}
+
+.d-inline-flex {
+  display: var(--display-inline-flex);
+}
+
+.d-table {
+  display: var(--display-table);
+}
+
+/* Positioning utilities */
+.pos-static {
+  position: static;
+}
+
+.pos-relative {
+  position: var(--position-relative);
+}
+
+.pos-absolute {
+  position: var(--position-absolute);
+}
+
+.pos-fixed {
+  position: var(--position-fixed);
+}
+
+.pos-sticky {
+  position: var(--position-sticky);
+}
+
+.top-0 {
+  top: var(--spacing-0);
+}
+
+.right-0 {
+  right: var(--spacing-0);
+}
+
+.bottom-0 {
+  bottom: var(--spacing-0);
+}
+
+.left-0 {
+  left: var(--spacing-0);
+}
+
+/* Z-index utilities */
+.z-0 {
+  z-index: var(--z-0);
+}
+
+.z-10 {
+  z-index: var(--z-10);
+}
+
+.z-50 {
+  z-index: var(--z-50);
+}
+
+.z-100 {
+  z-index: var(--z-100);
+}
+
+.z-200 {
+  z-index: var(--z-200);
+}
+
+.z-300 {
+  z-index: var(--z-300);
+}
+
+/* Cursor utilities */
+.cursor-pointer {
+  cursor: var(--cursor-pointer);
+}
+
+.cursor-disabled {
+  cursor: var(--cursor-disabled);
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+/* Alignment utilities */
+.align-items-start {
+  align-items: start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.justify-items-start {
+  justify-items: start;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-end {
+  justify-items: end;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
+/* Justification utilities */
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+/* Self-alignment utilities */
+.align-self-start {
+  align-self: start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
+/* Shadow utilities */
+.shadow-none {
+  box-shadow: var(--shadow-none);
 }
 
 .shadow-sm {
@@ -34,1289 +237,87 @@
   box-shadow: var(--shadow-xl);
 }
 
-/* ------------------------------------------------------------------------
- * Border Radius Utilities
- * Usage: Control border radius for rounded corners. All values use tokens from _variables.css.
- * Example: <img class="rounded-lg" />
- *
- * Atomic utilities:
- *   .rounded[-sm|-lg|-full]         - all corners
- *   .rounded-none                   - no border radius
- *   .rounded-t[-sm|-lg|-full]       - top corners
- *   .rounded-b[-sm|-lg|-full]       - bottom corners
- *   .rounded-l[-sm|-lg|-full]       - left corners
- *   .rounded-r[-sm|-lg|-full]       - right corners
- *   .rounded-tl[-sm|-lg|-full]      - top-left corner
- *   .rounded-tr[-sm|-lg|-full]      - top-right corner
- *   .rounded-bl[-sm|-lg|-full]      - bottom-left corner
- *   .rounded-br[-sm|-lg|-full]      - bottom-right corner
- *
- * Compose for any combination, e.g. class="rounded-none rounded-tl-lg rounded-br-sm"
- * ------------------------------------------------------------------------ */
-.rounded {
-  border-radius: var(--radius);
+/* Opacity utilities */
+.opacity-0 {
+  opacity: var(--opacity-50);
 }
 
-.rounded-none {
-  border-radius: 0;
+.opacity-25 {
+  opacity: 0.25;
 }
 
-.rounded-xs {
-  border-radius: var(--radius-xs);
-}
-
-.rounded-sm {
-  border-radius: var(--radius-sm);
-}
-
-.rounded-lg {
-  border-radius: var(--radius-lg);
-}
-
-.rounded-full {
-  border-radius: var(--radius-full);
-}
-
-/* Top corners */
-.rounded-t {
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-}
-
-.rounded-t-xs {
-  border-top-left-radius: var(--radius-xs);
-  border-top-right-radius: var(--radius-xs);
-}
-
-.rounded-t-sm {
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-sm);
-}
-
-.rounded-t-lg {
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
-}
-
-.rounded-t-full {
-  border-top-left-radius: var(--radius-full);
-  border-top-right-radius: var(--radius-full);
-}
-
-/* Bottom corners */
-.rounded-b {
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-}
-
-.rounded-b-xs {
-  border-bottom-left-radius: var(--radius-xs);
-  border-bottom-right-radius: var(--radius-xs);
-}
-
-.rounded-b-sm {
-  border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
-}
-
-.rounded-b-lg {
-  border-bottom-left-radius: var(--radius-lg);
-  border-bottom-right-radius: var(--radius-lg);
-}
-
-.rounded-b-full {
-  border-bottom-left-radius: var(--radius-full);
-  border-bottom-right-radius: var(--radius-full);
-}
-
-/* Left corners */
-.rounded-l {
-  border-top-left-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
-}
-
-.rounded-l-xs {
-  border-top-left-radius: var(--radius-xs);
-  border-bottom-left-radius: var(--radius-xs);
-}
-
-.rounded-l-sm {
-  border-top-left-radius: var(--radius-sm);
-  border-bottom-left-radius: var(--radius-sm);
-}
-
-.rounded-l-lg {
-  border-top-left-radius: var(--radius-lg);
-  border-bottom-left-radius: var(--radius-lg);
-}
-
-.rounded-l-full {
-  border-top-left-radius: var(--radius-full);
-  border-bottom-left-radius: var(--radius-full);
-}
-
-/* Right corners */
-.rounded-r {
-  border-top-right-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-}
-
-.rounded-r-xs {
-  border-top-right-radius: var(--radius-xs);
-  border-bottom-right-radius: var(--radius-xs);
-}
-
-.rounded-r-sm {
-  border-top-right-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
-}
-
-.rounded-r-lg {
-  border-top-right-radius: var(--radius-lg);
-  border-bottom-right-radius: var(--radius-lg);
-}
-
-.rounded-r-full {
-  border-top-right-radius: var(--radius-full);
-  border-bottom-right-radius: var(--radius-full);
-}
-
-/* Individual corners */
-.rounded-tl {
-  border-top-left-radius: var(--radius);
-}
-
-.rounded-tl-xs {
-  border-top-left-radius: var(--radius-xs);
-}
-
-.rounded-tl-sm {
-  border-top-left-radius: var(--radius-sm);
-}
-
-.rounded-tl-lg {
-  border-top-left-radius: var(--radius-lg);
-}
-
-.rounded-tl-full {
-  border-top-left-radius: var(--radius-full);
-}
-
-.rounded-tr {
-  border-top-right-radius: var(--radius);
-}
-
-.rounded-tr-xs {
-  border-top-right-radius: var(--radius-xs);
-}
-
-.rounded-tr-sm {
-  border-top-right-radius: var(--radius-sm);
-}
-
-.rounded-tr-lg {
-  border-top-right-radius: var(--radius-lg);
-}
-
-.rounded-tr-full {
-  border-top-right-radius: var(--radius-full);
-}
-
-.rounded-bl {
-  border-bottom-left-radius: var(--radius);
-}
-
-.rounded-bl-xs {
-  border-bottom-left-radius: var(--radius-xs);
-}
-
-.rounded-bl-sm {
-  border-bottom-left-radius: var(--radius-sm);
-}
-
-.rounded-bl-lg {
-  border-bottom-left-radius: var(--radius-lg);
-}
-
-.rounded-bl-full {
-  border-bottom-left-radius: var(--radius-full);
-}
-
-.rounded-br {
-  border-bottom-right-radius: var(--radius);
-}
-
-.rounded-br-xs {
-  border-bottom-right-radius: var(--radius-xs);
-}
-
-.rounded-br-sm {
-  border-bottom-right-radius: var(--radius-sm);
-}
-
-.rounded-br-lg {
-  border-bottom-right-radius: var(--radius-lg);
-}
-
-.rounded-br-full {
-  border-bottom-right-radius: var(--radius-full);
-}
-
-/* ------------------------------------------------------------------------
- * Logical (RTL-aware) Border Radius Utilities
- *
- * Purpose:
- *   These utilities provide atomic, utility-first classes for setting border radius
- *   on the logical start and end sides of an element, supporting both LTR and RTL layouts.
- *   This ensures correct border radius application regardless of text direction, making
- *   your UI fully internationalization (i18n) and RTL-ready.
- *
- * Classes:
- *   .rounded-start[-xs|-sm|-lg|-full]   - Sets border radius on the logical start side (top & bottom)
- *   .rounded-end[-xs|-sm|-lg|-full]     - Sets border radius on the logical end side (top & bottom)
- *
- *   - "Start" refers to the left side in LTR and right side in RTL.
- *   - "End" refers to the right side in LTR and left side in RTL.
- *   - Each class sets both the top and bottom logical corners for that side.
- *
- * Usage:
- *   <div class="rounded-start-lg rounded-end-sm"></div>
- *   <img class="rounded-end-full" />
- *
- *   These classes are composable with other border radius utilities for precise control.
- *
- * Why use logical properties?
- *   - Ensures correct border radius in both LTR and RTL contexts without extra CSS.
- *   - Great for components that need to be mirrored for RTL languages.
- *   - Follows modern CSS best practices for internationalization.
- *
- * For more details, see: https://developer.mozilla.org/en-US/docs/Web/CSS/border-start-start-radius
- * ------------------------------------------------------------------------ */
-.rounded-start {
-  border-start-start-radius: var(--radius);
-  border-end-start-radius: var(--radius);
-}
-
-.rounded-start-xs {
-  border-start-start-radius: var(--radius-xs);
-  border-end-start-radius: var(--radius-xs);
-}
-
-.rounded-start-sm {
-  border-start-start-radius: var(--radius-sm);
-  border-end-start-radius: var(--radius-sm);
-}
-
-.rounded-start-lg {
-  border-start-start-radius: var(--radius-lg);
-  border-end-start-radius: var(--radius-lg);
-}
-
-.rounded-start-full {
-  border-start-start-radius: var(--radius-full);
-  border-end-start-radius: var(--radius-full);
-}
-
-.rounded-end {
-  border-start-end-radius: var(--radius);
-  border-end-end-radius: var(--radius);
-}
-
-.rounded-end-xs {
-  border-start-end-radius: var(--radius-xs);
-  border-end-end-radius: var(--radius-xs);
-}
-
-.rounded-end-sm {
-  border-start-end-radius: var(--radius-sm);
-  border-end-end-radius: var(--radius-sm);
-}
-
-.rounded-end-lg {
-  border-start-end-radius: var(--radius-lg);
-  border-end-end-radius: var(--radius-lg);
-}
-
-.rounded-end-full {
-  border-start-end-radius: var(--radius-full);
-  border-end-end-radius: var(--radius-full);
-}
-
-/* Inherit/initial border radius utilities */
-.rounded-inherit {
-  border-radius: inherit;
-}
-
-.rounded-initial {
-  border-radius: initial;
-}
-
-/* ------------------------------------------------------------------------
- * Z-Index Utilities
- * Usage: Set stacking order for positioned elements.
- * Example: <div class="z-10"></div>
- * ------------------------------------------------------------------------ */
-.z-0 {
-  z-index: var(--z-0);
-}
-
-.z-10 {
-  z-index: var(--z-10);
-}
-
-.z-50 {
-  z-index: var(--z-50);
-}
-
-.z-100 {
-  z-index: var(--z-100);
-}
-
-.z-auto {
-  z-index: var(--z-auto);
-}
-
-/* ------------------------------------------------------------------------
- * Aspect Ratio Utilities
- * Usage: Maintain aspect ratio for media elements.
- * Example: <div class="aspect-16-9"></div>
- * ------------------------------------------------------------------------ */
-.aspect-16-9 {
-  aspect-ratio: 16 / 9;
-}
-
-.aspect-1-1 {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-4-3 {
-  aspect-ratio: 4 / 3;
-}
-
-/* ------------------------------------------------------------------------
- * Text Truncation & Overflow Utilities
- * Usage: Truncate text or control overflow.
- * Example: <span class="truncate"></span>
- * ------------------------------------------------------------------------ */
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-/* ------------------------------------------------------------------------
- * Opacity Utilities
- * Usage: Set element opacity.
- * Example: <div class="opacity-75"></div>
- * ------------------------------------------------------------------------ */
 .opacity-50 {
-  opacity: 0.5;
+  opacity: var(--opacity-50);
 }
 
 .opacity-75 {
   opacity: 0.75;
 }
 
-.opacity-90 {
-  opacity: 0.9;
+.opacity-100 {
+  opacity: 1;
 }
 
-/* ------------------------------------------------------------------------
- * Letter Spacing & Text Transform Utilities
- * Usage: Adjust letter spacing or text case.
- * Example: <span class="uppercase tracking-wide"></span>
- * ------------------------------------------------------------------------ */
-.tracking-wide {
-  letter-spacing: 0.05em;
+/* Overflow utilities */
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.overflow-auto {
+  overflow: auto;
 }
 
-.capitalize {
-  text-transform: capitalize;
+.overflow-scroll {
+  overflow: scroll;
 }
 
-/* ------------------------------------------------------------------------
- * List Style Utilities
- * Usage: Control list marker style and position.
- * Example: <ul class="list-disc list-inside"></ul>
- * ------------------------------------------------------------------------ */
-.list-none {
-  list-style: none;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
-.list-disc {
-  list-style: disc;
-}
-
-.list-inside {
-  list-style-position: inside;
-}
-
-/* ------------------------------------------------------------------------
- * Cursor & Pointer Events Utilities
- * Usage: Control cursor and pointer events.
- * Example: <button class="cursor-pointer"></button>
- * ------------------------------------------------------------------------ */
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.pointer-events-none {
-  pointer-events: none;
-}
-
-/* ------------------------------------------------------------------------
- * Logical Properties (RTL/LTR Support)
- * Usage: Use logical margin/padding for better i18n support.
- * Example: <div class="p-inline-md m-block-lg"></div>
- * ------------------------------------------------------------------------ */
-.p-inline-md {
-  padding-inline: var(--spacing-md);
-}
-
-.m-block-lg {
-  margin-block: var(--spacing-lg);
-}
-
-/* ------------------------------------------------------------------------
- * Min/Max Width & Height Utilities
- * Usage: Set min/max/viewport width and height.
- * Example: <div class="min-h-100 w-screen"></div>
- * ------------------------------------------------------------------------ */
-.min-h-100 {
-  min-height: 100vh;
-}
-
-.max-w-screen {
-  max-width: 100vw;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-/* ------------------------------------------------------------------------
- * Responsive Images & Embeds
- * Usage: Make images and embeds fluid and responsive.
- * Example: <img class="img-fluid" />
- * ------------------------------------------------------------------------ */
-img,
-.wp-block-image img,
-video,
-iframe,
-embed,
-object {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ------------------------------------------------------------------------
- * Border Utilities
- * Usage: Add or remove borders, or set border color.
- * Example: <div class="border-accent"></div>
- * ------------------------------------------------------------------------ */
-.border {
-  border: 1px solid var(--color-border);
-}
-
-.border-0 {
-  border: none;
-}
-
-.border-accent {
-  border: 1px solid var(--color-primary);
-}
-
-/* ------------------------------------------------------------------------
- * Font Style & Decoration Utilities
- * Usage: Set underline, line-through, italic, or normal case.
- * Example: <span class="underline italic"></span>
- * ------------------------------------------------------------------------ */
-.underline {
-  text-decoration: underline;
-}
-
-.line-through {
-  text-decoration: line-through;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.normal-case {
-  text-transform: none;
-}
-
-/* ------------------------------------------------------------------------
- * Responsive Visibility Utilities
- * Usage: Show/hide elements for print or screen.
- * Example: <div class="hide-print show-screen"></div>
- * ------------------------------------------------------------------------ */
-.hide-print {
-  display: block;
-}
-
-.show-print {
-  display: none;
-}
-
-@media print {
-  .hide-print {
-    display: none !important;
-  }
-
-  .show-print {
-    display: block !important;
-  }
-}
-
-.hide-screen {
-  display: none;
-}
-
-.show-screen {
-  display: block;
-}
-
-@media screen {
-  .hide-screen {
-    display: none !important;
-  }
-
-  .show-screen {
-    display: block !important;
-  }
-}
-
-/* ------------------------------------------------------------------------
- * Alignment & Justification Utilities (Flex & Grid)
- * ------------------------------------------------------------------------
- * Atomic utility classes for all alignment and justification properties.
- * Use these for flexbox and grid layouts to control alignment, justification,
- * and placement of items, content, and self. These classes are single-purpose
- * and can be freely combined for any layout system.
- *
- * Usage Example:
- *   <div class="flex align-items-center justify-content-between"></div>
- *   <div class="grid place-items-center gap-md"></div>
- *
- * For gap utilities, see _spacing.css.
- * ------------------------------------------------------------------------ */
-
-/* Align Items (Flex & Grid)
- * Aligns children vertically in flex containers, or along the block axis in grid containers.
- */
-.align-items-start {
-  align-items: flex-start;
-}
-
-.align-items-end {
-  align-items: flex-end;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-baseline {
-  align-items: baseline;
-}
-
-.align-items-stretch {
-  align-items: stretch;
-}
-
-/* Justify Items (Grid Only)
- * Aligns grid children horizontally within their grid area. Not supported in flex layouts.
- */
-.justify-items-start {
-  justify-items: start;
-}
-
-.justify-items-end {
-  justify-items: end;
-}
-
-.justify-items-center {
-  justify-items: center;
-}
-
-.justify-items-stretch {
-  justify-items: stretch;
-}
-
-/* Align Content (Flex & Grid)
- * Aligns rows (grid) or lines (flex) within the container.
- */
-.align-content-start {
-  align-content: flex-start;
-}
-
-.align-content-end {
-  align-content: flex-end;
-}
-
-.align-content-center {
-  align-content: center;
-}
-
-.align-content-between {
-  align-content: space-between;
-}
-
-.align-content-around {
-  align-content: space-around;
-}
-
-.align-content-evenly {
-  align-content: space-evenly;
-}
-
-.align-content-stretch {
-  align-content: stretch;
-}
-
-/* Justify Content (Flex & Grid)
- * Aligns children horizontally in flex containers, or distributes space between grid tracks.
- */
-.justify-content-start {
-  justify-content: flex-start;
-}
-
-.justify-content-end {
-  justify-content: flex-end;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.justify-content-around {
-  justify-content: space-around;
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-content-stretch {
-  justify-content: stretch;
-}
-
-/* Align Self (Flex & Grid)
- * Overrides align-items for a single flex/grid child.
- */
-.align-self-auto {
-  align-self: auto;
-}
-
-.align-self-start {
-  align-self: flex-start;
-}
-
-.align-self-end {
-  align-self: flex-end;
-}
-
-.align-self-center {
-  align-self: center;
-}
-
-.align-self-stretch {
-  align-self: stretch;
-}
-
-.align-self-baseline {
-  align-self: baseline;
-}
-
-/* Justify Self (Grid Only)
- * Overrides justify-items for a single grid child. Not supported in flex layouts.
- */
-.justify-self-auto {
-  justify-self: auto;
-}
-
-.justify-self-start {
-  justify-self: flex-start;
-}
-
-.justify-self-end {
-  justify-self: flex-end;
-}
-
-.justify-self-center {
-  justify-self: center;
-}
-
-.justify-self-stretch {
-  justify-self: stretch;
-}
-
-.justify-self-left {
-  justify-self: left;
-}
-
-.justify-self-right {
-  justify-self: right;
-}
-
-/* Place Content (Grid Only)
- * Shorthand for align-content and justify-content in grid containers.
- */
-.place-content-center {
-  place-content: center;
-}
-
-.place-content-start {
-  place-content: start;
-}
-
-.place-content-end {
-  place-content: end;
-}
-
-.place-content-stretch {
-  place-content: stretch;
-}
-
-.place-content-between {
-  place-content: space-between;
-}
-
-.place-content-around {
-  place-content: space-around;
-}
-
-.place-content-evenly {
-  place-content: space-evenly;
-}
-
-.place-content-auto {
-  place-content: normal;
-}
-
-/* Place Items (Grid Only)
- * Shorthand for align-items and justify-items in grid containers.
- */
-.place-items-center {
-  place-items: center;
-}
-
-.place-items-start {
-  place-items: start;
-}
-
-.place-items-end {
-  place-items: end;
-}
-
-.place-items-stretch {
-  place-items: stretch;
-}
-
-/* Place Self (Grid Only)
- * Shorthand for align-self and justify-self for a single grid child.
- */
-.place-self-auto {
-  place-self: auto;
-}
-
-.place-self-center {
-  place-self: center;
-}
-
-.place-self-start {
-  place-self: start;
-}
-
-.place-self-end {
-  place-self: end;
-}
-
-.place-self-stretch {
-  place-self: stretch;
-}
-
-/*
-  These utilities are atomic and can be used with both flex and grid layouts.
-  For gap utilities, see _spacing.css.
-*/
-
-/* ------------------------------------------------------------------------
- * Color Opacity Utilities
- * Usage: Add semi-transparent backgrounds or text using semantic tokens.
- * Example: <div class="bg-primary-50 text-contrast-75"></div>
- *
- * These use CSS color-mix for best browser support, or fallback to rgba if needed.
- * ------------------------------------------------------------------------ */
-.bg-primary-50 {
-  background-color: color-mix(in srgb, var(--color-primary) 50%, transparent);
-}
-
-.bg-primary-75 {
-  background-color: color-mix(in srgb, var(--color-primary) 75%, transparent);
-}
-
-.bg-contrast-50 {
-  background-color: color-mix(in srgb, var(--color-contrast) 50%, transparent);
-}
-
-.bg-contrast-75 {
-  background-color: color-mix(in srgb, var(--color-contrast) 75%, transparent);
-}
-
-.text-primary-50 {
-  color: color-mix(in srgb, var(--color-primary) 50%, transparent);
-}
-
-.text-primary-75 {
-  color: color-mix(in srgb, var(--color-primary) 75%, transparent);
-}
-
-.text-contrast-50 {
-  color: color-mix(in srgb, var(--color-contrast) 50%, transparent);
-}
-
-.text-contrast-75 {
-  color: color-mix(in srgb, var(--color-contrast) 75%, transparent);
-}
-
-/* ------------------------------------------------------------------------
- * Transform Utilities
- * Usage: Apply transforms for rotation, scaling, translation.
- * Example: <div class="rotate-90 scale-110 translate-x-2"></div>
- * ------------------------------------------------------------------------ */
-.rotate-45 {
-  transform: rotate(45deg);
-}
-
-.rotate-90 {
-  transform: rotate(90deg);
-}
-
-.rotate-180 {
-  transform: rotate(180deg);
-}
-
-.scale-90 {
-  transform: scale(0.9);
-}
-
-.scale-100 {
-  transform: scale(1);
-}
-
-.scale-110 {
-  transform: scale(1.1);
-}
-
-.translate-x-2 {
-  transform: translateX(0.5rem);
-}
-
-.translate-x-neg-2 {
-  transform: translateX(-0.5rem);
-}
-
-.translate-y-2 {
-  transform: translateY(0.5rem);
-}
-
-.translate-y-neg-2 {
-  transform: translateY(-0.5rem);
-}
-
-/* ------------------------------------------------------------------------
- * Positioning Utilities
- * Usage: Set element positioning and insets.
- * Example: <div class="absolute top-0 left-0"></div>
- * ------------------------------------------------------------------------ */
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.sticky {
-  position: sticky;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.bottom-0 {
-  bottom: 0;
-}
-
-.left-0 {
-  left: 0;
-}
-
-.inset-0 {
-  inset: 0;
-}
-
-/* ------------------------------------------------------------------------
- * Display Utilities
- * Usage: Control element display.
- * Example: <div class="d-none d-inline-block"></div>
- * ------------------------------------------------------------------------ */
-.d-none {
-  display: none;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-inline {
-  display: inline;
-}
-
-.d-inline-block {
-  display: inline-block;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-grid {
-  display: grid;
-}
-
-/* ------------------------------------------------------------------------
- * Border Width, Style, and Side Utilities
- * Usage: Set border width, style, and per-side borders.
- * Example: <div class="border-2 border-dashed border-t"></div>
- * ------------------------------------------------------------------------ */
-.border-2 {
-  border-width: 2px;
-}
-
-.border-4 {
-  border-width: 4px;
-}
-
-.border-dashed {
-  border-style: dashed;
-}
-
-.border-dotted {
-  border-style: dotted;
-}
-
-.border-t {
-  border-top: 1px solid var(--color-border);
-}
-
-.border-b {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.border-l {
-  border-left: 1px solid var(--color-border);
-}
-
-.border-r {
-  border-right: 1px solid var(--color-border);
-}
-
-/* ------------------------------------------------------------------------
- * Advanced Flex/Grid Utilities
- * Usage: Fine-tune flex and grid layouts.
- * Example: <div class="flex-basis-1-2 flex-grow-2 grid-auto-flow-row"></div>
- * ------------------------------------------------------------------------ */
-.flex-basis-0 {
-  flex-basis: 0;
-}
-
-.flex-basis-1-2 {
-  flex-basis: 50%;
-}
-
-.flex-basis-auto {
-  flex-basis: auto;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
-}
-
-.flex-grow-2 {
-  flex-grow: 2;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
-.flex-shrink-2 {
-  flex-shrink: 2;
-}
-
-.grid-auto-flow-row {
-  grid-auto-flow: row;
-}
-
-.grid-auto-flow-col {
-  grid-auto-flow: column;
-}
-
-/* ------------------------------------------------------------------------
- * Overflow & Visibility Utilities
- * Usage: Control overflow and visibility.
- * Example: <div class="overflow-x-auto visible"></div>
- * ------------------------------------------------------------------------ */
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .overflow-y-auto {
   overflow-y: auto;
 }
 
-.visible {
-  visibility: visible;
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
-.invisible {
-  visibility: hidden;
-}
+/* Dark mode overrides */
+[data-theme='dark'] {
+  .shadow-sm {
+    box-shadow: var(--shadow-sm);
+  }
 
-/* ------------------------------------------------------------------------
- * Sizing Utilities
- * Usage: Set width/height as fractions or min/max.
- * Example: <div class="w-1-2 h-1-3 min-w-0 max-h-full"></div>
- * ------------------------------------------------------------------------ */
-.w-1-2 {
-  width: 50%;
-}
+  .shadow-md {
+    box-shadow: var(--shadow-md);
+  }
 
-.w-1-3 {
-  width: 33.3333%;
-}
+  .shadow-lg {
+    box-shadow: var(--shadow-lg);
+  }
 
-.w-2-3 {
-  width: 66.6667%;
-}
+  .shadow-xl {
+    box-shadow: var(--shadow-xl);
+  }
 
-.h-1-2 {
-  height: 50%;
-}
+  .opacity-0 {
+    opacity: var(--opacity-50);
+  }
 
-.h-1-3 {
-  height: 33.3333%;
-}
-
-.h-2-3 {
-  height: 66.6667%;
-}
-
-.min-w-0 {
-  min-width: 0;
-}
-
-.max-h-full {
-  max-height: 100%;
-}
-
-/* ------------------------------------------------------------------------
- * Fractional Spacing Utilities
- * Usage: Set margin/padding as fractions.
- * Example: <div class="m-1-2 p-1-4"></div>
- * ------------------------------------------------------------------------ */
-.m-1-2 {
-  margin: 50%;
-}
-
-.p-1-4 {
-  padding: 25%;
-}
-
-/* ------------------------------------------------------------------------
- * Typography Utilities
- * Usage: Set font family, smoothing, and more text decoration.
- * Example: <span class="font-sans antialiased overline"></span>
- * ------------------------------------------------------------------------ */
-.font-sans {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-}
-
-.font-serif {
-  font-family: serif;
-}
-
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-}
-
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.subpixel-antialiased {
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
-}
-
-.overline {
-  text-decoration: overline;
-}
-
-/* ------------------------------------------------------------------------
- * SVG/Media Utilities
- * Usage: Control SVG fill/stroke and object-fit/position.
- * Example: <svg class="fill-current"></svg> <img class="object-cover" />
- * ------------------------------------------------------------------------ */
-.fill-current {
-  fill: currentcolor;
-}
-
-.stroke-current {
-  stroke: currentcolor;
-}
-
-.object-cover {
-  object-fit: cover;
-}
-
-.object-contain {
-  object-fit: contain;
-}
-
-.object-center {
-  object-position: center;
-}
-
-/* ------------------------------------------------------------------------
- * State/Interaction Utilities (static)
- * Usage: Use for static state styling. For dynamic states, use custom CSS or JS.
- * Example: <div class="hover-bg-primary focus-underline"></div>
- * ------------------------------------------------------------------------ */
-.hover-bg-primary:hover {
-  background: var(--color-primary);
-}
-
-.focus-underline:focus {
-  text-decoration: underline;
-}
-
-/* ========================================================================
- * Advanced State/Interaction Utilities
- * ------------------------------------------------------------------------
- * Usage: Add .group, .group-hover-*, .peer, .peer-focus-*, etc. for advanced state styling.
- * Example: <div class="group"><button class="group-hover:bg-primary"></button></div>
- * ======================================================================== */
-
-.group {
-  position: relative;
-}
-
-.group:hover .group-hover-bg-primary {
-  background-color: var(--color-primary);
-}
-
-.group:focus .group-focus-bg-primary {
-  background-color: var(--color-primary);
-}
-
-.peer:focus ~ .peer-focus-bg-primary {
-  background-color: var(--color-primary);
-}
-
-.active-opacity-80:active {
-  opacity: 0.8;
-}
-
-.disabled-opacity-50:disabled {
-  opacity: 0.5;
-}
-
-/* ========================================================================
- * Outline, Filter, and Backdrop Utilities
- * ------------------------------------------------------------------------
- * Usage: Add outline, filter, and backdrop effects.
- * Example: <div class="outline-primary filter-blur backdrop-blur"></div>
- * ======================================================================== */
-
-.outline-none {
-  outline: none;
-}
-
-.outline {
-  outline: 2px solid var(--color-outline, currentColor);
-}
-
-.outline-primary {
-  outline: 2px solid var(--color-primary);
-}
-
-.outline-accent {
-  outline: 2px solid var(--color-accent);
-}
-
-.filter-blur {
-  filter: blur(4px);
-}
-
-.filter-grayscale {
-  filter: grayscale(1);
-}
-
-.filter-invert {
-  filter: invert(1);
-}
-
-.filter-sepia {
-  filter: sepia(1);
-}
-
-.backdrop-blur {
-  backdrop-filter: blur(4px);
-}
-
-.backdrop-grayscale {
-  backdrop-filter: grayscale(1);
-}
-
-.backdrop-invert {
-  backdrop-filter: invert(1);
-}
-
-.backdrop-sepia {
-  backdrop-filter: sepia(1);
+  .opacity-50 {
+    opacity: var(--opacity-50);
+  }
 }

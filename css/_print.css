@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Print Styles
  * ------------------------------------------------------------------------
  * Print-specific overrides for background, color, and layout.
@@ -8,12 +9,12 @@
 
 @media print {
   body {
-    background: #fff !important;
-    color: #000 !important;
+    background: var(--color-base) !important;
+    color: var(--color-high-contrast) !important;
   }
 
   a {
-    color: #000 !important;
+    color: var(--color-high-contrast) !important;
     text-decoration: underline !important;
   }
 
@@ -22,7 +23,7 @@
   .sidebar,
   .header,
   .footer {
-    display: none !important;
+    display: var(--display-none) !important;
   }
 
   img,
@@ -30,7 +31,7 @@
   video,
   canvas {
     max-width: 100% !important;
-    height: auto !important;
+    height: var(--spacing-auto) !important;
   }
 
   * {
@@ -47,7 +48,7 @@
 
 @media print {
   .print-block {
-    display: block !important;
+    display: var(--display-block) !important;
   }
 
   .print-inline {
@@ -67,6 +68,6 @@
   }
 
   .print-none {
-    display: none !important;
+    display: var(--display-none) !important;
   }
 }

@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Accessibility (A11y) Utilities
  * ------------------------------------------------------------------------
  * Utility classes and helpers for improved accessibility, focus management,
@@ -69,7 +70,7 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
-  z-index: 100;
+  z-index: var(--z-100);
   background: var(--color-warning);
   color: var(--color-contrast);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -78,23 +79,23 @@
 }
 
 .skip-link:focus {
-  left: 8px;
-  top: 8px;
+  left: var(--spacing-sm);
+  top: var(--spacing-sm);
   width: auto;
   height: auto;
-  outline: var(--focus-outline);
+  outline: var(--focus-ring);
   outline-offset: var(--focus-outline-offset);
   background: var(--color-warning);
   color: var(--color-contrast);
 }
 
-/* Accessible link colors. */
+/* Accessible link colors */
 a {
   color: var(--link-color);
   text-decoration: underline;
 }
 
-/* High-contrast focus styles for all interactive elements. */
+/* High-contrast focus styles for all interactive elements */
 a,
 button,
 input,
@@ -119,23 +120,40 @@ textarea:focus,
 select:focus,
 summary:focus,
 [tabindex]:focus {
-  outline: var(--focus-outline);
+  outline: var(--focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
-/* Focus ring utility for custom focusable elements. */
+/* Focus ring utility for custom focusable elements */
 .focus-ring:focus {
-  outline: var(--focus-outline);
+  outline: var(--focus-ring);
   outline-offset: var(--focus-outline-offset);
+}
+
+/* Custom focus ring utility */
+.focus-ring-custom:focus {
+  box-shadow: var(--focus-shadow);
+  outline: none;
+}
+
+/* High-contrast outline utility */
+.high-contrast-outline:focus {
+  outline: var(--high-contrast-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Disabled cursor utility */
+.cursor-disabled:disabled {
+  cursor: var(--cursor-disabled);
 }
 
 /* Focus-visible utility for keyboard navigation */
 .focus-visible:focus-visible {
-  outline: var(--focus-outline);
+  outline: var(--focus-ring);
   outline-offset: var(--focus-outline-offset);
 }
 
-/* Reduced motion for users who prefer it. */
+/* Reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

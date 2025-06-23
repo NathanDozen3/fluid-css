@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Layout Utilities
  * ------------------------------------------------------------------------
  * Utility classes for width and height properties only.
@@ -8,13 +9,17 @@
  * Note: All display utilities (.d-*) are now located in _utilities.css.
  * ======================================================================== */
 
-/* Layout sizing utilities. */
+/* Layout sizing utilities */
 .w-full {
   width: 100%;
 }
 
 .w-auto {
-  width: auto;
+  width: var(--spacing-auto);
+}
+
+.w-screen {
+  width: var(--viewport-min);
 }
 
 .max-w-sm {
@@ -34,7 +39,19 @@
 }
 
 .h-auto {
-  height: auto;
+  height: var(--spacing-auto);
+}
+
+.h-screen {
+  height: var(--max-height-full);
+}
+
+.max-h-sm {
+  max-height: var(--max-height-sm);
+}
+
+.max-h-full {
+  max-height: var(--max-height-full);
 }
 
 /* ========================================================================

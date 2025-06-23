@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Button Styles
  * ------------------------------------------------------------------------
  * Utility and component classes for primary and outline buttons.
@@ -9,24 +10,30 @@
 /* Button styles */
 .btn {
   display: inline-block;
-  padding: 0.5em 1.5em;
-  border-radius: 4px;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius);
   border: none;
-  background: var(--color-primary);
-  color: var(--color-base);
-  font-weight: 600;
-  cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: var(--font-weight-semibold);
+  cursor: var(--cursor-pointer);
   transition:
-    background 0.2s,
-    color 0.2s;
-  text-align: center;
+    background var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function);
+  text-align: var(--text-align-center);
   text-decoration: none;
 }
 
 .btn:hover,
 .btn:focus {
-  background: var(--color-border);
-  color: var(--color-base);
+  background: var(--btn-bg-hover);
+  color: var(--btn-text);
+}
+
+.btn:disabled {
+  background: var(--btn-bg-disabled);
+  cursor: var(--cursor-disabled);
+  opacity: var(--opacity-50);
 }
 
 .btn-outline {
@@ -39,4 +46,28 @@
 .btn-outline:focus {
   background: var(--color-primary);
   color: var(--color-base);
+}
+
+/* Dark mode overrides */
+[data-theme='dark'] {
+  .btn {
+    background: var(--color-primary);
+    color: var(--color-contrast);
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background: var(--color-success);
+  }
+
+  .btn-outline {
+    color: var(--color-contrast);
+    border-color: var(--color-contrast);
+  }
+
+  .btn-outline:hover,
+  .btn-outline:focus {
+    background: var(--color-contrast);
+    color: var(--color-base);
+  }
 }

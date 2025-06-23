@@ -1,4 +1,5 @@
-/* =========================================================================
+/*
+ * =========================================================================
  * Fluid CSS Grid Utilities
  * -------------------------------------------------------------------------
  * Utility classes for all CSS Grid features: template columns/rows, auto-flow,
@@ -12,8 +13,8 @@
  * 1. Grid Container
  * ------------------------------------------------------------------------- */
 .grid {
-  display: grid;
-  gap: var(--spacing-md);
+  display: var(--display-grid);
+  gap: var(--gap-md);
 }
 
 .grid-cols {
@@ -79,7 +80,7 @@
 }
 
 /* -------------------------------------------------------------------------
- * 3. Helper Classes for Min/Max Columns and Column Width
+ * 3. Helper Classes for Min/Max Columns and Width
  * ------------------------------------------------------------------------- */
 .min-cols-1 {
   --min-cols: 1;
@@ -149,7 +150,7 @@
  * 4. Explicit Grid Column and Row Classes
  * ------------------------------------------------------------------------- */
 .grid-cols-1 {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .grid-cols-2 {
@@ -165,7 +166,7 @@
 }
 
 .grid-cols-auto {
-  grid-template-columns: auto;
+  grid-template-columns: var(--display-auto);
 }
 
 .grid-cols-minmax {
@@ -189,7 +190,7 @@
 }
 
 .grid-rows-auto {
-  grid-template-rows: auto;
+  grid-template-rows: var(--display-auto);
 }
 
 .grid-rows-minmax {
@@ -200,36 +201,36 @@
  * 5. Grid Auto-Flow
  * ------------------------------------------------------------------------- */
 .grid-flow-row {
-  grid-auto-flow: row;
+  grid-auto-flow: var(--row);
 }
 
 .grid-flow-column {
-  grid-auto-flow: column;
+  grid-auto-flow: var(--column);
 }
 
 .grid-flow-dense {
-  grid-auto-flow: dense;
+  grid-auto-flow: var(--dense);
 }
 
 .grid-flow-row-dense {
-  grid-auto-flow: row dense;
+  grid-auto-flow: var(--row) var(--dense);
 }
 
 .grid-flow-col-dense {
-  grid-auto-flow: column dense;
+  grid-auto-flow: var(--column) var(--dense);
 }
 
 /* -------------------------------------------------------------------------
  * 6. Grid Gap Utilities (gap, column-gap, row-gap)
  * Usage: Control spacing between grid tracks and cells.
- * Example: <div class="grid-gap-md col-gap-lg row-gap-sm"></div>
+ * Example: <div class="grid gap-xs col-gap-lg row-gap-sm"></div>
  * ------------------------------------------------------------------------- */
 .grid-gap-0 {
-  gap: 0;
+  gap: var(--spacing-0);
 }
 
 .grid-gap-xs {
-  gap: var(--spacing-xs);
+  gap: var(--gap-xs);
 }
 
 .grid-gap-sm {
@@ -237,7 +238,7 @@
 }
 
 .grid-gap-md {
-  gap: var(--spacing-md);
+  gap: var(--gap-md);
 }
 
 .grid-gap-lg {
@@ -249,11 +250,11 @@
 }
 
 .col-gap-0 {
-  column-gap: 0;
+  column-gap: var(--spacing-0);
 }
 
 .col-gap-xs {
-  column-gap: var(--spacing-xs);
+  column-gap: var(--gap-xs);
 }
 
 .col-gap-sm {
@@ -261,7 +262,7 @@
 }
 
 .col-gap-md {
-  column-gap: var(--spacing-md);
+  column-gap: var(--gap-md);
 }
 
 .col-gap-lg {
@@ -273,11 +274,11 @@
 }
 
 .row-gap-0 {
-  row-gap: 0;
+  row-gap: var(--spacing-0);
 }
 
 .row-gap-xs {
-  row-gap: var(--spacing-xs);
+  row-gap: var(--gap-xs);
 }
 
 .row-gap-sm {
@@ -285,7 +286,7 @@
 }
 
 .row-gap-md {
-  row-gap: var(--spacing-md);
+  row-gap: var(--gap-md);
 }
 
 .row-gap-lg {
@@ -312,7 +313,7 @@
 /*
   Shared utilities for justification and alignment (justify-content-*, align-content-*)
   are now in _utilities.css. Please use those atomic classes for grid layouts.
-}
+*/
 
 /* -------------------------------------------------------------------------
  * 9. Grid Item Placement
@@ -369,7 +370,7 @@
  * 10. Grid Area
  * ------------------------------------------------------------------------- */
 .grid-area-auto {
-  grid-area: auto;
+  grid-area: var(--auto);
 }
 
 .grid-area-1 {
@@ -593,4 +594,11 @@
 
 .grid-rows-subgrid {
   grid-template-rows: subgrid;
+}
+
+/* Dark mode overrides */
+[data-theme='dark'] {
+  .grid {
+    box-shadow: var(--shadow-md);
+  }
 }

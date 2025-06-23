@@ -1,9 +1,11 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Container System
  * ------------------------------------------------------------------------
  * Utility classes for responsive, centered containers with max-widths.
  * Usage: Wrap page content in a .container, .container-narrow, or .container-fluid.
  * Example: <div class="container"> ... </div>
+ * Note: Breakpoint utilities (e.g., .container-md) can be added using --breakpoint-* tokens.
  * ======================================================================== */
 
 /* Container system */

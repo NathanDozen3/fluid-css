@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Spacing Utilities
  * ------------------------------------------------------------------------
  * Utility classes for margin, padding, and gap spacing using design tokens.
@@ -6,9 +7,13 @@
  * Example: <div class="p-md m-lg gap-sm"></div>
  * ======================================================================== */
 
-/* Gap, padding, and margin utilities. */
+/* Gap, padding, and margin utilities */
 .gap-0 {
   gap: var(--spacing-0);
+}
+
+.gap-xs {
+  gap: var(--gap-xs);
 }
 
 .gap-sm {
@@ -16,7 +21,7 @@
 }
 
 .gap-md {
-  gap: var(--spacing-md);
+  gap: var(--gap-md);
 }
 
 .gap-lg {
@@ -29,6 +34,10 @@
 
 .p-0 {
   padding: var(--spacing-0);
+}
+
+.p-xs {
+  padding: var(--spacing-xs);
 }
 
 .p-sm {
@@ -50,6 +59,11 @@
 .px-0 {
   padding-left: var(--spacing-0);
   padding-right: var(--spacing-0);
+}
+
+.px-xs {
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
 }
 
 .px-sm {
@@ -77,6 +91,11 @@
   padding-bottom: var(--spacing-0);
 }
 
+.py-xs {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+}
+
 .py-sm {
   padding-top: var(--spacing-sm);
   padding-bottom: var(--spacing-sm);
@@ -101,6 +120,10 @@
   padding-top: var(--spacing-0);
 }
 
+.pt-xs {
+  padding-top: var(--spacing-xs);
+}
+
 .pt-sm {
   padding-top: var(--spacing-sm);
 }
@@ -119,6 +142,10 @@
 
 .pr-0 {
   padding-right: var(--spacing-0);
+}
+
+.pr-xs {
+  padding-right: var(--spacing-xs);
 }
 
 .pr-sm {
@@ -141,6 +168,10 @@
   padding-bottom: var(--spacing-0);
 }
 
+.pb-xs {
+  padding-bottom: var(--spacing-xs);
+}
+
 .pb-sm {
   padding-bottom: var(--spacing-sm);
 }
@@ -159,6 +190,10 @@
 
 .pl-0 {
   padding-left: var(--spacing-0);
+}
+
+.pl-xs {
+  padding-left: var(--spacing-xs);
 }
 
 .pl-sm {
@@ -181,6 +216,10 @@
   margin: var(--spacing-0);
 }
 
+.m-xs {
+  margin: var(--spacing-xs);
+}
+
 .m-sm {
   margin: var(--spacing-sm);
 }
@@ -200,6 +239,11 @@
 .mx-0 {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
+}
+
+.mx-xs {
+  margin-left: var(--spacing-xs);
+  margin-right: var(--spacing-xs);
 }
 
 .mx-sm {
@@ -227,6 +271,11 @@
   margin-bottom: var(--spacing-0);
 }
 
+.my-xs {
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
 .my-sm {
   margin-top: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
@@ -251,6 +300,10 @@
   margin-top: var(--spacing-0);
 }
 
+.mt-xs {
+  margin-top: var(--spacing-xs);
+}
+
 .mt-sm {
   margin-top: var(--spacing-sm);
 }
@@ -269,6 +322,10 @@
 
 .mr-0 {
   margin-right: var(--spacing-0);
+}
+
+.mr-xs {
+  margin-right: var(--spacing-xs);
 }
 
 .mr-sm {
@@ -291,6 +348,10 @@
   margin-bottom: var(--spacing-0);
 }
 
+.mb-xs {
+  margin-bottom: var(--spacing-xs);
+}
+
 .mb-sm {
   margin-bottom: var(--spacing-sm);
 }
@@ -311,6 +372,10 @@
   margin-left: var(--spacing-0);
 }
 
+.ml-xs {
+  margin-left: var(--spacing-xs);
+}
+
 .ml-sm {
   margin-left: var(--spacing-sm);
 }
@@ -328,22 +393,26 @@
 }
 
 .mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: var(--spacing-auto);
+  margin-right: var(--spacing-auto);
 }
 
 /* ========================================================================
  * Negative Margin Utilities
  * ------------------------------------------------------------------------
  * Usage: Add negative margin to elements.
- * Example: <div class="-m-sm -mx-md"></div>
+ * Example: <div class="m-neg-xs m-neg-md"></div>
  * ======================================================================== */
 .m-neg-0 {
-  margin: calc(var(--spacing-0) * -1);
+  margin: var(--spacing-0);
+}
+
+.m-neg-xs {
+  margin: var(--spacing-negative-xs);
 }
 
 .m-neg-sm {
-  margin: calc(var(--spacing-sm) * -1);
+  margin: var(--spacing-negative-sm);
 }
 
 .m-neg-md {
@@ -359,13 +428,18 @@
 }
 
 .mx-neg-0 {
-  margin-left: calc(var(--spacing-0) * -1);
-  margin-right: calc(var(--spacing-0) * -1);
+  margin-left: var(--spacing-0);
+  margin-right: var(--spacing-0);
+}
+
+.mx-neg-xs {
+  margin-left: var(--spacing-negative-xs);
+  margin-right: var(--spacing-negative-xs);
 }
 
 .mx-neg-sm {
-  margin-left: calc(var(--spacing-sm) * -1);
-  margin-right: calc(var(--spacing-sm) * -1);
+  margin-left: var(--spacing-negative-sm);
+  margin-right: var(--spacing-negative-sm);
 }
 
 .mx-neg-md {
@@ -384,13 +458,18 @@
 }
 
 .my-neg-0 {
-  margin-top: calc(var(--spacing-0) * -1);
-  margin-bottom: calc(var(--spacing-0) * -1);
+  margin-top: var(--spacing-0);
+  margin-bottom: var(--spacing-0);
+}
+
+.my-neg-xs {
+  margin-top: var(--spacing-negative-xs);
+  margin-bottom: var(--spacing-negative-xs);
 }
 
 .my-neg-sm {
-  margin-top: calc(var(--spacing-sm) * -1);
-  margin-bottom: calc(var(--spacing-sm) * -1);
+  margin-top: var(--spacing-negative-sm);
+  margin-bottom: var(--spacing-negative-sm);
 }
 
 .my-neg-md {
@@ -409,11 +488,15 @@
 }
 
 .mt-neg-0 {
-  margin-top: calc(var(--spacing-0) * -1);
+  margin-top: var(--spacing-0);
+}
+
+.mt-neg-xs {
+  margin-top: var(--spacing-negative-xs);
 }
 
 .mt-neg-sm {
-  margin-top: calc(var(--spacing-sm) * -1);
+  margin-top: var(--spacing-negative-sm);
 }
 
 .mt-neg-md {
@@ -429,11 +512,15 @@
 }
 
 .mr-neg-0 {
-  margin-right: calc(var(--spacing-0) * -1);
+  margin-right: var(--spacing-0);
+}
+
+.mr-neg-xs {
+  margin-right: var(--spacing-negative-xs);
 }
 
 .mr-neg-sm {
-  margin-right: calc(var(--spacing-sm) * -1);
+  margin-right: var(--spacing-negative-sm);
 }
 
 .mr-neg-md {
@@ -449,11 +536,15 @@
 }
 
 .mb-neg-0 {
-  margin-bottom: calc(var(--spacing-0) * -1);
+  margin-bottom: var(--spacing-0);
+}
+
+.mb-neg-xs {
+  margin-bottom: var(--spacing-negative-xs);
 }
 
 .mb-neg-sm {
-  margin-bottom: calc(var(--spacing-sm) * -1);
+  margin-bottom: var(--spacing-negative-sm);
 }
 
 .mb-neg-md {
@@ -469,11 +560,15 @@
 }
 
 .ml-neg-0 {
-  margin-left: calc(var(--spacing-0) * -1);
+  margin-left: var(--spacing-0);
+}
+
+.ml-neg-xs {
+  margin-left: var(--spacing-negative-xs);
 }
 
 .ml-neg-sm {
-  margin-left: calc(var(--spacing-sm) * -1);
+  margin-left: var(--spacing-negative-sm);
 }
 
 .ml-neg-md {

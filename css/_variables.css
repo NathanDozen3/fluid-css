@@ -49,28 +49,57 @@
    * Semantic color tokens (use these everywhere)
    * ---------------------------------------------------------------------- */
   --color-base: var(--palette-white); /* Text on dark, surface backgrounds */
+  --color-base-hover: var(--palette-grey); /* Hover state for base text */
   --color-contrast: var(--palette-black); /* Text on light backgrounds */
+  --color-contrast-light: #444; /* Lighter contrast for secondary text */
   --color-primary: var(--palette-purple); /* Main brand/action color */
   --color-success: #27ae60; /* Success/positive */
   --color-warning: #f39c12; /* Warning/attention */
   --color-error: #e74c3c; /* Error/negative */
   --color-info: #3498db; /* Informational */
   --color-surface: var(--palette-white); /* Card/panel background */
+  --color-surface-hover: #f5f5f5; /* Hover state for surface elements */
   --color-background: var(--palette-offwhite); /* Page/app background */
+  --color-background-alt: #e8e7e0; /* Alternate background for sections */
+  --color-overlay: rgb(0 0 0 / 50%); /* For modals or overlays */
+  --color-muted: var(--palette-grey); /* For subdued text or placeholders */
+  --color-high-contrast: #000; /* For high-contrast accessibility */
   --color-border: var(--palette-grey); /* Default border color */
 
   /* Optional: add shade variants for semantic colors */
   --color-primary-light: #7c4dff;
   --color-primary-dark: #301a60;
 
-  /* Breakpoints (for documentation and future use) */
+  /* ----------------------------------------------------------------------
+   * Dark mode overrides
+   * ---------------------------------------------------------------------- */
+  [data-theme='dark'] {
+    --color-base: var(--palette-black); /* Text on light backgrounds */
+    --color-contrast: var(--palette-white); /* Text on dark backgrounds */
+    --color-surface: #1a1a1a; /* Dark card/panel background */
+    --color-background: #111; /* Dark page background */
+    --color-border: #444; /* Dark border color */
+    --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
+    --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
+  }
+
+  /* ----------------------------------------------------------------------
+   * Breakpoints (for documentation and future use)
+   * ---------------------------------------------------------------------- */
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px; /* For ultra-wide screens */
+  --breakpoint-mobile: var(--breakpoint-xs); /* Alias for mobile-first */
+  --breakpoint-desktop: var(--breakpoint-lg); /* Alias for desktop */
+  --viewport-min: 100vw; /* Minimum viewport width */
+  --viewport-max: 1920px; /* Maximum viewport width for scaling */
 
-  /* Container and layout */
+  /* ----------------------------------------------------------------------
+   * Container and layout
+   * ---------------------------------------------------------------------- */
   --container-min-width: 320px; /* Minimum container width */
   --container-max-width: 1328px; /* Maximum container width */
   --container-narrow-max-width: 960px; /* Max width for narrow containers */
@@ -79,13 +108,24 @@
   --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
 
-  /* Typography (responsive with clamp) */
+  /* ----------------------------------------------------------------------
+   * Typography (responsive with clamp)
+   * ---------------------------------------------------------------------- */
+  --font-family-base:
+    'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
+
+  --font-family-heading: 'Merriweather', serif; /* Font for headings */
+  --font-family-monospace:
+    'Fira Code', 'Courier New', monospace; /* For code blocks */
+
+  --font-size-caption: clamp(10px, 0.9vw, 11px); /* For captions or footnotes */
   --font-size-xs: clamp(10px, 1vw, 12px); /* Extra small text */
   --font-size-sm: clamp(12px, 1.2vw, 14px); /* Small text */
   --font-size-base: clamp(16px, 1.4vw, 18px); /* Base text */
   --font-size-lg: clamp(20px, 1.8vw, 24px); /* Large text */
   --font-size-xl: clamp(24px, 2.8vw, 36px); /* Extra large text */
   --font-size-xxl: clamp(32px, 4vw, 48px); /* 2x large text */
+  --font-size-display: clamp(48px, 6vw, 72px); /* For hero/display text */
   --line-height-base: 1.6; /* Base line height */
   --line-height-heading: 1.2; /* Heading line height */
   --font-weight-light: 300;
@@ -93,22 +133,35 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --letter-spacing-wide: 0.05em;
+  --text-align-center: center; /* Reusable alignment token */
+  --text-transform-uppercase: uppercase; /* For specific text styling */
 
-  /* Spacing (responsive with clamp) */
+  /* ----------------------------------------------------------------------
+   * Spacing (responsive with clamp)
+   * ---------------------------------------------------------------------- */
   --spacing-0: 0;
+  --spacing-auto: auto; /* For margin: auto or other auto layouts */
   --spacing-xs: clamp(4px, 0.4vw, 8px); /* Extra small spacing */
   --spacing-sm: clamp(8px, 0.8vw, 16px); /* Small spacing */
   --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
   --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
   --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
   --spacing-xxl: clamp(48px, 4vw, 64px); /* 2x large spacing */
+  --spacing-negative-sm: calc(var(--spacing-sm) * -1); /* Negative margins */
+  --gap-xs: clamp(4px, 0.4vw, 6px); /* For flex/grid gaps */
+  --gap-md: clamp(12px, 1.2vw, 16px); /* Medium gap for layouts */
+  --max-height-sm: 300px; /* For constrained elements like modals */
+  --max-height-full: 100vh; /* Full viewport height */
 
-  /* Grid */
+  /* ----------------------------------------------------------------------
+   * Grid
+   * ---------------------------------------------------------------------- */
   --min-cols: 1;
   --max-cols: 2;
   --col-min-width: 320px;
 
-  /* Shadows (use only these tokens in utilities; do not hard-code values)
+  /* ----------------------------------------------------------------------
+   * Shadows (use only these tokens in utilities; do not hard-code values)
    * ---------------------------------------------------------------------- */
   --shadow-xs: 0 1px 1px rgb(0 0 0 / 3%);
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
@@ -116,21 +169,27 @@
   --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
   --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%);
 
-  /* Border radius */
+  /* ----------------------------------------------------------------------
+   * Border radius
+   * ---------------------------------------------------------------------- */
   --radius-xs: 1px;
   --radius-sm: 2px;
   --radius: 4px;
   --radius-lg: 8px;
   --radius-full: 9999px;
 
-  /* Z-index scale */
+  /* ----------------------------------------------------------------------
+   * Z-index scale
+   * ---------------------------------------------------------------------- */
   --z-0: 0;
   --z-10: 10;
   --z-50: 50;
   --z-100: 100;
   --z-auto: auto;
 
-  /* Button and form states */
+  /* ----------------------------------------------------------------------
+   * Button and form states
+   * ---------------------------------------------------------------------- */
   --btn-bg: var(--color-primary);
   --btn-bg-hover: var(--color-success);
   --btn-bg-active: var(--color-primary);
@@ -140,23 +199,68 @@
   --input-border: var(--color-border);
   --input-focus: var(--color-primary);
 
-  /* Accessibility */
+  /* ----------------------------------------------------------------------
+   * Component-specific tokens
+   * ---------------------------------------------------------------------- */
+  --badge-bg: var(--color-primary); /* Background for badges */
+  --badge-text: var(--color-base); /* Text for badges */
+  --alert-bg-success: rgb(39 174 96 / 10%); /* Success alert background */
+  --alert-border-success: var(--color-success); /* Success alert border */
+  --tooltip-bg: var(--color-contrast); /* Tooltip background */
+  --tooltip-text: var(--color-base); /* Tooltip text */
+  --dropdown-shadow: var(--shadow-md); /* Dropdown menu shadow */
+
+  /* ----------------------------------------------------------------------
+   * Accessibility
+   * ---------------------------------------------------------------------- */
   --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
+  --focus-ring: 0 0 0 3px rgb(80 58 168 / 30%); /* Subtle focus ring */
+  --focus-shadow: 0 0 8px var(--color-primary); /* Enhanced focus effect */
+  --reduced-motion: reduce; /* For prefers-reduced-motion */
+  --high-contrast-outline: 3px solid #000; /* For high-contrast mode */
+  --cursor-disabled: not-allowed; /* For disabled elements */
+  --cursor-pointer: pointer; /* For interactive elements */
   --link-color: var(--color-primary);
   --link-color-hover: var(--color-border);
 
-  /* Animation and transitions */
+  /* ----------------------------------------------------------------------
+   * Animation and transitions
+   * ---------------------------------------------------------------------- */
   --transition-property: all;
   --transition-duration: 0.2s;
   --transition-duration-fast: 0.1s;
   --transition-duration-slow: 0.4s;
+  --transition-delay: 0.1s; /* Default delay for transitions */
   --transition-timing-function: ease-in-out;
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce effect */
+  --easing-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Elastic effect */
   --animation-duration: 0.8s;
   --animation-direction: normal;
   --animation-fill-mode: forwards;
+  --animation-fade: fade 0.5s ease-in-out; /* Reusable fade animation */
+  --animation-slide: slide 0.6s ease-out; /* Reusable slide animation */
 
-  /* Gradients (updated to use semantic tokens) */
+  /* ----------------------------------------------------------------------
+   * Aspect ratios and media
+   * ---------------------------------------------------------------------- */
+  --aspect-ratio-square: 1 / 1; /* For square media */
+  --aspect-ratio-16-9: 16 / 9; /* For widescreen media */
+  --aspect-ratio-4-3: 4 / 3; /* For standard media */
+  --image-object-fit: cover; /* Default object-fit for images */
+  --video-max-height: 80vh; /* Max height for videos */
+
+  /* ----------------------------------------------------------------------
+   * Custom utility tokens
+   * ---------------------------------------------------------------------- */
+  --opacity-50: 0.5; /* For semi-transparent elements */
+  --opacity-80: 0.8; /* For overlays or hover effects */
+  --display-none: none; /* For toggling visibility */
+  --display-block: block; /* For layout utilities */
+
+  /* ----------------------------------------------------------------------
+   * Gradients (updated to use semantic tokens)
+   * ---------------------------------------------------------------------- */
   --gradient-primary: linear-gradient(
     90deg,
     var(--color-primary),
