@@ -24,11 +24,11 @@
 }
 
 .shadow-xs {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 3%);
 }
 
 .shadow-xl {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 18%);
 }
 
 /* ------------------------------------------------------------------------
@@ -222,9 +222,8 @@
  * Usage: Make images and embeds fluid and responsive.
  * Example: <img class="img-fluid" />
  * ------------------------------------------------------------------------ */
-.img-fluid,
-.wp-block-image img,
 img,
+.wp-block-image img,
 video,
 iframe,
 embed,

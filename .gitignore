@@ -6,4 +6,14 @@
 !fluid.css
 !css/
 !css/*.css
+!package-lock.json
+!package.json
 !readme.md
+!.editorconfig
+!stylelint.config.js
+!.stylelintrc
+!.prettierrc
+!CONTRIBUTING.md
+!demo.html
+!.huskyrc.js
+!.lintstagedrc

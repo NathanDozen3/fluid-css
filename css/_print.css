@@ -12,17 +12,28 @@
     background: #fff !important;
     color: #000 !important;
   }
+
   a {
     color: #000 !important;
     text-decoration: underline !important;
   }
-  nav, .no-print, .sidebar, .header, .footer {
+
+  nav,
+  .no-print,
+  .sidebar,
+  .header,
+  .footer {
     display: none !important;
   }
-  img, svg, video, canvas {
+
+  img,
+  svg,
+  video,
+  canvas {
     max-width: 100% !important;
     height: auto !important;
   }
+
   * {
     box-shadow: none !important;
     background: transparent !important;

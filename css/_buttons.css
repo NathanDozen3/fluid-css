@@ -16,20 +16,27 @@
   color: var(--color-base);
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   text-align: center;
   text-decoration: none;
 }
-.btn:hover, .btn:focus {
+
+.btn:hover,
+.btn:focus {
   background: var(--color-accent-4);
   color: var(--color-base);
 }
+
 .btn-outline {
   background: transparent;
   color: var(--color-accent-3);
   border: 2px solid var(--color-accent-3);
 }
-.btn-outline:hover, .btn-outline:focus {
+
+.btn-outline:hover,
+.btn-outline:focus {
   background: var(--color-accent-3);
   color: var(--color-base);
 }

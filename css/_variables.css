@@ -60,18 +60,26 @@
   /* Colors (light mode) */
   --color-base: #fff;
   --color-contrast: #111;
-  --color-accent-1: #FFEE58;
-  --color-accent-2: #F6CFF4;
-  --color-accent-3: #503AA8;
+  --color-accent-1: #ffee58;
+  --color-accent-2: #f6cff4;
+  --color-accent-3: #503aa8;
   --color-accent-4: #686868;
-  --color-accent-5: #FBFAF3;
-  --gradient-primary: linear-gradient(90deg, var(--color-accent-1), var(--color-accent-3));
-  --gradient-accent: linear-gradient(90deg, var(--color-accent-2), var(--color-accent-4));
+  --color-accent-5: #fbfaf3;
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--color-accent-1),
+    var(--color-accent-3)
+  );
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--color-accent-2),
+    var(--color-accent-4)
+  );
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 2px 8px rgba(0,0,0,0.10);
-  --shadow-lg: 0 4px 16px rgba(0,0,0,0.16);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
+  --shadow-md: 0 2px 8px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
 
   /* Border radius */
   --radius-sm: 2px;
@@ -115,9 +123,9 @@
     /* Colors (dark mode) */
     --color-base: #181818;
     --color-contrast: #fff;
-    --color-accent-1: #FFD600;
-    --color-accent-2: #B388FF;
-    --color-accent-3: #7C4DFF;
+    --color-accent-1: #ffd600;
+    --color-accent-2: #b388ff;
+    --color-accent-3: #7c4dff;
     --color-accent-4: #333;
     --color-accent-5: #222;
   }

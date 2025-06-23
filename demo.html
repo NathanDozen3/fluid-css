@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluid CSS Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="text-xl">Fluid CSS Demo</h1>
+    <nav>
+      <a class="btn" href="#">Home</a>
+      <a class="btn btn-outline" href="#">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section>
+      <h2>Buttons</h2>
+      <button class="btn">Primary Button</button>
+      <button class="btn btn-outline">Outline Button</button>
+    </section>
+    <section>
+      <h2>Form Elements</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your message"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+    <section>
+      <h2>Colors</h2>
+      <div class="bg-accent-1 text-contrast p-md mb-md">Accent 1</div>
+      <div class="bg-accent-2 text-contrast p-md mb-md">Accent 2</div>
+      <div class="bg-accent-3 text-base p-md mb-md">Accent 3</div>
+    </section>
+    <section>
+      <h2>Accessibility Helpers</h2>
+      <button class="btn focus-ring">Focusable Button</button>
+      <span class="visually-hidden">Screen reader only text</span>
+    </section>
+    <section>
+      <h2>Animations</h2>
+      <div class="fade-in p-md bg-accent-4 text-base">Fade In Example</div>
+    </section>
+    <section>
+      <h2>Grid & Flex Utilities</h2>
+      <div class="flex flex-row gap-md">
+        <div class="bg-accent-1 p-md grow">Flex 1</div>
+        <div class="bg-accent-2 p-md grow">Flex 2</div>
+      </div>
+      <div class="grid grid-cols-3 gap-md mt-md">
+        <div class="bg-accent-3 p-md">Grid 1</div>
+        <div class="bg-accent-4 p-md">Grid 2</div>
+        <div class="bg-accent-5 p-md">Grid 3</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
