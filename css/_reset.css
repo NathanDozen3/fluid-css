@@ -67,6 +67,6 @@ button {
 }
 
 :focus {
-  outline: var(--focus-outline, 2px solid var(--color-accent-3));
+  outline: var(--focus-outline, 2px solid var(--color-primary));
   outline-offset: var(--focus-outline-offset, 2px);
 }

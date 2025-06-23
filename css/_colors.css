@@ -1,12 +1,12 @@
 /* ========================================================================
  * Fluid CSS Color Utilities
  * ------------------------------------------------------------------------
- * Utility classes for background, text, and border colors using design tokens.
+ * Utility classes for background, text, and border colors using semantic tokens.
  * Usage: Add .bg-*, .text-*, .border-* to set color.
- * Example: <div class="bg-accent-1 text-contrast border-accent-1"></div>
+ * Example: <div class="bg-primary text-contrast border-primary"></div>
  * ======================================================================== */
 
-/* Color utility classes. */
+/* Color utility classes (semantic tokens only) */
 
 .bg-base {
   background: var(--color-base);
@@ -16,24 +16,32 @@
   background: var(--color-contrast);
 }
 
-.bg-accent-1 {
-  background: var(--color-accent-1);
+.bg-primary {
+  background: var(--color-primary);
 }
 
-.bg-accent-2 {
-  background: var(--color-accent-2);
+.bg-success {
+  background: var(--color-success);
 }
 
-.bg-accent-3 {
-  background: var(--color-accent-3);
+.bg-warning {
+  background: var(--color-warning);
 }
 
-.bg-accent-4 {
-  background: var(--color-accent-4);
+.bg-error {
+  background: var(--color-error);
 }
 
-.bg-accent-5 {
-  background: var(--color-accent-5);
+.bg-info {
+  background: var(--color-info);
+}
+
+.bg-surface {
+  background: var(--color-surface);
+}
+
+.bg-background {
+  background: var(--color-background);
 }
 
 .text-base {
@@ -44,24 +52,32 @@
   color: var(--color-contrast);
 }
 
-.text-accent-1 {
-  color: var(--color-accent-1);
+.text-primary {
+  color: var(--color-primary);
 }
 
-.text-accent-2 {
-  color: var(--color-accent-2);
+.text-success {
+  color: var(--color-success);
 }
 
-.text-accent-3 {
-  color: var(--color-accent-3);
+.text-warning {
+  color: var(--color-warning);
 }
 
-.text-accent-4 {
-  color: var(--color-accent-4);
+.text-error {
+  color: var(--color-error);
 }
 
-.text-accent-5 {
-  color: var(--color-accent-5);
+.text-info {
+  color: var(--color-info);
+}
+
+.text-surface {
+  color: var(--color-surface);
+}
+
+.text-background {
+  color: var(--color-background);
 }
 
 .border-base {
@@ -72,22 +88,30 @@
   border-color: var(--color-contrast);
 }
 
-.border-accent-1 {
-  border-color: var(--color-accent-1);
+.border-primary {
+  border-color: var(--color-primary);
 }
 
-.border-accent-2 {
-  border-color: var(--color-accent-2);
+.border-success {
+  border-color: var(--color-success);
 }
 
-.border-accent-3 {
-  border-color: var(--color-accent-3);
+.border-warning {
+  border-color: var(--color-warning);
 }
 
-.border-accent-4 {
-  border-color: var(--color-accent-4);
+.border-error {
+  border-color: var(--color-error);
 }
 
-.border-accent-5 {
-  border-color: var(--color-accent-5);
+.border-info {
+  border-color: var(--color-info);
+}
+
+.border-surface {
+  border-color: var(--color-surface);
+}
+
+.border-background {
+  border-color: var(--color-background);
 }

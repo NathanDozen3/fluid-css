@@ -3,7 +3,29 @@
  * ------------------------------------------------------------------------
  * Centralized CSS custom properties for color, spacing, typography, breakpoints, etc.
  * Usage: Reference these variables throughout all CSS for consistency.
- * Example: color: var(--color-accent-1); padding: var(--spacing-md);
+ *
+ * Color System for Designers:
+ * ------------------------------------------------------------------------
+ * 1. Palette tokens (e.g., --palette-purple, --palette-yellow) are the raw color values.
+ *    - Use these only for mapping to semantic tokens below.
+ *    - Do NOT use palette tokens directly in your CSS or design specs.
+ *
+ * 2. Semantic tokens (e.g., --color-primary, --color-surface, --color-error) are for all UI roles.
+ *    - Use semantic tokens for backgrounds, text, borders, buttons, etc.
+ *    - This enables easy theming, accessibility, and consistent usage across the system.
+ *    - Example: Use var(--color-primary) for main brand/action elements, var(--color-surface) for cards/panels, var(--color-background) for page backgrounds.
+ *
+ * 3. To update a color system-wide, change the palette value or remap a semantic token.
+ *    - For dark mode, override semantic tokens in the dark mode block.
+ *
+ * 4. Never use hard-coded color values in your CSS or design tokens. Always use semantic tokens.
+ *
+ * 5. For a full list of tokens and their intended roles, see the comments in this file and the README.
+ *
+ * Example usage in CSS:
+ *   color: var(--color-primary);
+ *   background: var(--color-surface);
+ *   border-color: var(--color-border);
  * ======================================================================== */
 
 /* CSS Variables and root custom properties
@@ -12,6 +34,35 @@
  * Each section is commented for clarity and maintainability.
  */
 :root {
+  /* ----------------------------------------------------------------------
+   * Palette (raw color values, do not use directly in utilities)
+   * ---------------------------------------------------------------------- */
+  --palette-yellow: #ffee58;
+  --palette-purple: #503aa8;
+  --palette-pink: #f6cff4;
+  --palette-grey: #686868;
+  --palette-offwhite: #fbfaf3;
+  --palette-black: #111;
+  --palette-white: #fff;
+
+  /* ----------------------------------------------------------------------
+   * Semantic color tokens (use these everywhere)
+   * ---------------------------------------------------------------------- */
+  --color-base: var(--palette-white); /* Text on dark, surface backgrounds */
+  --color-contrast: var(--palette-black); /* Text on light backgrounds */
+  --color-primary: var(--palette-purple); /* Main brand/action color */
+  --color-success: #27ae60; /* Success/positive */
+  --color-warning: #f39c12; /* Warning/attention */
+  --color-error: #e74c3c; /* Error/negative */
+  --color-info: #3498db; /* Informational */
+  --color-surface: var(--palette-white); /* Card/panel background */
+  --color-background: var(--palette-offwhite); /* Page/app background */
+  --color-border: var(--palette-grey); /* Default border color */
+
+  /* Optional: add shade variants for semantic colors */
+  --color-primary-light: #7c4dff;
+  --color-primary-dark: #301a60;
+
   /* Breakpoints (for documentation and future use) */
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
@@ -57,25 +108,6 @@
   --max-cols: 2;
   --col-min-width: 320px;
 
-  /* Colors (light mode) */
-  --color-base: #fff;
-  --color-contrast: #111;
-  --color-accent-1: #ffee58;
-  --color-accent-2: #f6cff4;
-  --color-accent-3: #503aa8;
-  --color-accent-4: #686868;
-  --color-accent-5: #fbfaf3;
-  --gradient-primary: linear-gradient(
-    90deg,
-    var(--color-accent-1),
-    var(--color-accent-3)
-  );
-  --gradient-accent: linear-gradient(
-    90deg,
-    var(--color-accent-2),
-    var(--color-accent-4)
-  );
-
   /* Shadows */
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
   --shadow-md: 0 2px 8px rgb(0 0 0 / 10%);
@@ -95,20 +127,20 @@
   --z-auto: auto;
 
   /* Button and form states */
-  --btn-bg: var(--color-accent-1);
-  --btn-bg-hover: var(--color-accent-2);
-  --btn-bg-active: var(--color-accent-3);
-  --btn-bg-disabled: var(--color-accent-4);
+  --btn-bg: var(--color-primary);
+  --btn-bg-hover: var(--color-success);
+  --btn-bg-active: var(--color-primary);
+  --btn-bg-disabled: var(--color-border);
   --btn-text: var(--color-contrast);
   --input-bg: var(--color-base);
-  --input-border: var(--color-accent-4);
-  --input-focus: var(--color-accent-3);
+  --input-border: var(--color-border);
+  --input-focus: var(--color-primary);
 
   /* Accessibility */
-  --focus-outline: 2px solid var(--color-accent-3);
+  --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
-  --link-color: var(--color-accent-3);
-  --link-color-hover: var(--color-accent-4);
+  --link-color: var(--color-primary);
+  --link-color-hover: var(--color-border);
 
   /* Animation and transitions */
   --transition-property: all;
@@ -119,19 +151,18 @@
   --animation-duration: 0.8s;
   --animation-direction: normal;
   --animation-fill-mode: forwards;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Colors (dark mode) */
-    --color-base: #181818;
-    --color-contrast: #fff;
-    --color-accent-1: #ffd600;
-    --color-accent-2: #b388ff;
-    --color-accent-3: #7c4dff;
-    --color-accent-4: #333;
-    --color-accent-5: #222;
-  }
+  /* Gradients (updated to use semantic tokens) */
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-success)
+  );
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--color-warning),
+    var(--color-error)
+  );
 }
 
 /*
