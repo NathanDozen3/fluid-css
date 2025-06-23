@@ -10,7 +10,8 @@
  * Transition utilities
  * ------------------------------------------------------------------------ */
 .transition {
-  transition: var(--transition-property) var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-property) var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .transition-all {
@@ -58,6 +59,7 @@
 .animation-delay-fast {
   --animation-delay: 0.1s;
 }
+
 .animation-delay-slow {
   --animation-delay: 0.5s;
 }
@@ -69,6 +71,7 @@
 .animation-direction-reverse {
   --animation-direction: reverse;
 }
+
 .animation-direction-normal {
   --animation-direction: normal;
 }
@@ -80,6 +83,7 @@
 .animation-fill-both {
   --animation-fill-mode: both;
 }
+
 .animation-fill-forwards {
   --animation-fill-mode: forwards;
 }
@@ -91,6 +95,7 @@
 .animation-iteration-infinite {
   --animation-iteration-count: infinite;
 }
+
 .animation-iteration-once {
   --animation-iteration-count: 1;
 }
@@ -113,6 +118,7 @@
 .opacity-0 {
   opacity: 0;
 }
+
 .opacity-100 {
   opacity: 1;
 }
@@ -123,24 +129,16 @@
  * ------------------------------------------------------------------------ */
 .animation-fade-in {
   opacity: 0;
-  animation:
-    fade-in var(--animation-duration)
-    var(--animation-timing-function)
-    var(--animation-delay, 0s)
-    var(--animation-iteration-count, 1)
-    var(--animation-direction)
-    var(--animation-fill-mode);
+  animation: fade-in var(--animation-duration) var(--animation-timing-function)
+    var(--animation-delay, 0s) var(--animation-iteration-count, 1)
+    var(--animation-direction) var(--animation-fill-mode);
 }
 
 .animation-fade-out {
   opacity: 1;
-  animation:
-    fade-out var(--animation-duration)
-    var(--animation-timing-function)
-    var(--animation-delay, 0s)
-    var(--animation-iteration-count, 1)
-    var(--animation-direction)
-    var(--animation-fill-mode);
+  animation: fade-out var(--animation-duration) var(--animation-timing-function)
+    var(--animation-delay, 0s) var(--animation-iteration-count, 1)
+    var(--animation-direction) var(--animation-fill-mode);
 }
 
 @keyframes fade-in {
@@ -162,13 +160,9 @@
 .animation-slide-in {
   transform: translateY(20px);
   opacity: 0;
-  animation:
-    slide-in var(--animation-duration)
-    var(--animation-timing-function)
-    var(--animation-delay, 0s)
-    var(--animation-iteration-count, 1)
-    var(--animation-direction)
-    var(--animation-fill-mode);
+  animation: slide-in var(--animation-duration) var(--animation-timing-function)
+    var(--animation-delay, 0s) var(--animation-iteration-count, 1)
+    var(--animation-direction) var(--animation-fill-mode);
 }
 
 @keyframes slide-in {
@@ -181,13 +175,9 @@
 .animation-scale-up {
   transform: scale(0.95);
   opacity: 0;
-  animation:
-    scale-up var(--animation-duration)
-    var(--animation-timing-function)
-    var(--animation-delay, 0s)
-    var(--animation-iteration-count, 1)
-    var(--animation-direction)
-    var(--animation-fill-mode);
+  animation: scale-up var(--animation-duration) var(--animation-timing-function)
+    var(--animation-delay, 0s) var(--animation-iteration-count, 1)
+    var(--animation-direction) var(--animation-fill-mode);
 }
 
 @keyframes scale-up {
