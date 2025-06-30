@@ -334,28 +334,30 @@
 /* ----------------------------------------------------------------------
  * Dark mode overrides
  * ---------------------------------------------------------------------- */
-[data-theme='dark'] {
-  --color-base: var(--palette-black); /* Text on light backgrounds */
-  --color-base-hover: #2a2a2a; /* Hover state for base text */
-  --color-contrast: var(--palette-white); /* Text on dark backgrounds */
-  --color-contrast-light: #d1d5db; /* Lighter contrast for secondary text */
-  --color-surface: #1a1a1a; /* Dark card/panel background */
-  --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
-  --color-background: #111; /* Dark page background */
-  --color-background-alt: #1f1f1f; /* Alternate dark background */
-  --color-border: #444; /* Dark border color */
-  --color-border-rgb: 68, 68, 68; /* RGB for dark mode opacity utilities */
-  --color-high-contrast: #fff; /* High-contrast for dark mode */
-  --btn-bg: var(--color-primary); /* Button background */
-  --btn-bg-hover: var(--color-success); /* Button hover background */
-  --btn-bg-disabled: #4a4a4a; /* Disabled button background */
-  --btn-text: var(--palette-white); /* Button text */
-  --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
-  --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
-  --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
-  --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
-  --text-shadow-md: 0 2px 4px rgb(0 0 0 / 80%);
-  --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 90%);
-  --color-overlay: rgb(0 0 0 / 70%);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: var(--palette-black); /* Text on light backgrounds */
+    --color-base-hover: #2a2a2a; /* Hover state for base text */
+    --color-contrast: var(--palette-white); /* Text on dark backgrounds */
+    --color-contrast-light: #d1d5db; /* Lighter contrast for secondary text */
+    --color-surface: #1a1a1a; /* Dark card/panel background */
+    --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
+    --color-background: #111; /* Dark page background */
+    --color-background-alt: #1f1f1f; /* Alternate dark background */
+    --color-border: #444; /* Dark border color */
+    --color-border-rgb: 68, 68, 68; /* RGB for dark mode opacity utilities */
+    --color-high-contrast: #fff; /* High-contrast for dark mode */
+    --btn-bg: var(--color-primary); /* Button background */
+    --btn-bg-hover: var(--color-success); /* Button hover background */
+    --btn-bg-disabled: #4a4a4a; /* Disabled button background */
+    --btn-text: var(--palette-white); /* Button text */
+    --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
+    --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
+    --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
+    --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
+    --text-shadow-md: 0 2px 4px rgb(0 0 0 / 80%);
+    --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 90%);
+    --color-overlay: rgb(0 0 0 / 70%);
+  }
 }

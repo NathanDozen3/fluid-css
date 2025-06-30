@@ -597,7 +597,7 @@
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   .grid {
     box-shadow: var(--shadow-md);
   }

@@ -49,7 +49,7 @@
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   .btn {
     background: var(--color-primary);
     color: var(--color-contrast);

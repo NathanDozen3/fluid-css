@@ -49,7 +49,7 @@ label {
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   input,
   select,
   textarea,

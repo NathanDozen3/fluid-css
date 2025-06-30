@@ -233,7 +233,7 @@
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   .bg-base {
     background: var(--color-base);
   }

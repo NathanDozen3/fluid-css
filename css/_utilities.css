@@ -556,7 +556,7 @@
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   .shadow-sm {
     box-shadow: var(--shadow-sm);
   }

@@ -159,7 +159,7 @@
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   .text-caption {
     color: var(--color-contrast);
   }

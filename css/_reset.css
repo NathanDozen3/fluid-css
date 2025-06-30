@@ -265,7 +265,7 @@ a:hover {
 }
 
 /* Dark mode overrides */
-[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
   body {
     background-color: var(--color-background);
     color: var(--color-contrast);
