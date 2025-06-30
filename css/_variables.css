@@ -61,7 +61,6 @@
   --color-surface-hover: #f5f5f5; /* Hover state for surface elements */
   --color-background: var(--palette-offwhite); /* Page/app background */
   --color-background-alt: #e8e7e0; /* Alternate background for sections */
-  --color-overlay: rgb(0 0 0 / 50%); /* For modals or overlays */
   --color-muted: var(--palette-grey); /* For subdued text or placeholders */
   --color-high-contrast: #000; /* For high-contrast accessibility */
   --color-border: var(--palette-grey); /* Default border color */
@@ -170,26 +169,39 @@
   /* ----------------------------------------------------------------------
    * Display
    * ---------------------------------------------------------------------- */
-
-  /* Display properties for controlling element rendering */
   --display-none: none; /* For toggling visibility */
   --display-block: block; /* For block-level layouts */
+  --display-inline: inline; /* For inline layouts */
+  --display-inline-block: inline-block; /* For inline-block layouts */
   --display-flex: flex; /* For flexbox layouts */
   --display-grid: grid; /* For grid layouts */
   --display-inline-flex: inline-flex; /* For inline flexbox layouts */
+  --display-inline-grid: inline-grid; /* For inline grid layouts */
   --display-table: table; /* For table layouts */
+  --display-table-row: table-row; /* For table row layouts */
+  --display-table-cell: table-cell; /* For table cell layouts */
+  --display-table-row-group: table-row-group; /* For table row group */
+  --display-table-header-group: table-header-group; /* For table header group */
+  --display-table-footer-group: table-footer-group; /* For table footer group */
+  --display-table-column: table-column; /* For table column */
+  --display-table-column-group: table-column-group; /* For table column group */
+  --display-table-caption: table-caption; /* For table caption */
+  --display-list-item: list-item; /* For list item layouts */
+  --display-contents: contents; /* For contents layouts */
+  --display-flow-root: flow-root; /* For flow-root layouts */
   --display-auto: auto; /* For auto display behavior */
 
   /* ----------------------------------------------------------------------
    * Positioning
    * ---------------------------------------------------------------------- */
+  --position-static: static;
   --position-relative: relative;
   --position-absolute: absolute;
   --position-fixed: fixed;
   --position-sticky: sticky;
 
   /* ----------------------------------------------------------------------
-   * Shadows (use only these tokens in utilities; do not hard-code values)
+   * Shadows
    * ---------------------------------------------------------------------- */
   --shadow-xs: 0 1px 1px rgb(0 0 0 / 3%);
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
@@ -197,6 +209,29 @@
   --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
   --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%);
   --shadow-none: none;
+
+  /* ----------------------------------------------------------------------
+   * Text Shadows
+   * ---------------------------------------------------------------------- */
+  --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 50%);
+  --text-shadow-md: 0 2px 4px rgb(0 0 0 / 60%);
+  --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 70%);
+
+  /* ----------------------------------------------------------------------
+   * Opacity
+   * ---------------------------------------------------------------------- */
+  --opacity-0: 0;
+  --opacity-25: 0.25;
+  --opacity-50: 0.5;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-100: 1;
+
+  /* ----------------------------------------------------------------------
+   * Overlay
+   * ---------------------------------------------------------------------- */
+  --color-overlay: rgb(0 0 0 / 50%);
+  --color-overlay-light: rgb(255 255 255 / 30%);
 
   /* ----------------------------------------------------------------------
    * Border radius
@@ -282,12 +317,6 @@
   --video-max-height: 80vh; /* Max height for videos */
 
   /* ----------------------------------------------------------------------
-   * Custom utility tokens
-   * ---------------------------------------------------------------------- */
-  --opacity-50: 0.5; /* For semi-transparent elements */
-  --opacity-80: 0.8; /* For overlays or hover effects */
-
-  /* ----------------------------------------------------------------------
    * Gradients (updated to use semantic tokens)
    * ---------------------------------------------------------------------- */
   --gradient-primary: linear-gradient(
@@ -325,8 +354,8 @@
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
   --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
   --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
+  --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
+  --text-shadow-md: 0 2px 4px rgb(0 0 0 / 80%);
+  --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 90%);
+  --color-overlay: rgb(0 0 0 / 70%);
 }
-
-/*
-  For a full list of variables and usage, see the documentation in README.md or demo.html.
-*/

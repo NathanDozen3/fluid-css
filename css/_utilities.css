@@ -3,63 +3,115 @@
  * Fluid CSS Utility Classes
  * ------------------------------------------------------------------------
  * Atomic utility classes for display, positioning, z-index, cursor, alignment,
- * justification, shadows, opacity, and overflow. These are composable and
- * intended for fine-grained control across layouts and components.
- * Usage: Add .d-*, .pos-*, .z-*, .shadow-*, etc. to elements.
- * Example: <div class="d-flex pos-relative z-10 shadow-md"></div>
- * ======================================================================== */
+ * justification, shadows, opacity, overflow, background, aspect ratio, and text shadow.
+ * Usage: Add .display-*, .position-*, .z-*, .shadow-*, .background-*, .aspect-*, etc. to elements.
+ * Example: <div class="display-flex position-relative z-10 shadow-md background-size-cover"></div>
+ * ========================================================================
+ */
 
 /* Display utilities */
-.d-none {
+.display-none {
   display: var(--display-none);
 }
 
-.d-block {
+.display-block {
   display: var(--display-block);
 }
 
-.d-inline {
-  display: inline;
+.display-inline {
+  display: var(--display-inline);
 }
 
-.d-inline-block {
-  display: inline-block;
+.display-inline-block {
+  display: var(--display-inline-block);
 }
 
-.d-flex {
+.display-flex {
   display: var(--display-flex);
 }
 
-.d-grid {
+.display-grid {
   display: var(--display-grid);
 }
 
-.d-inline-flex {
+.display-inline-flex {
   display: var(--display-inline-flex);
 }
 
-.d-table {
+.display-inline-grid {
+  display: var(--display-inline-grid);
+}
+
+.display-table {
   display: var(--display-table);
 }
 
-/* Positioning utilities */
-.pos-static {
-  position: static;
+.display-table-row {
+  display: var(--display-table-row);
 }
 
-.pos-relative {
+.display-table-cell {
+  display: var(--display-table-cell);
+}
+
+.display-table-row-group {
+  display: var(--display-table-row-group);
+}
+
+.display-table-header-group {
+  display: var(--display-table-header-group);
+}
+
+.display-table-footer-group {
+  display: var(--display-table-footer-group);
+}
+
+.display-table-column {
+  display: var(--display-table-column);
+}
+
+.display-table-column-group {
+  display: var(--display-table-column-group);
+}
+
+.display-table-caption {
+  display: var(--display-table-caption);
+}
+
+.display-list-item {
+  display: var(--display-list-item);
+}
+
+.display-contents {
+  display: var(--display-contents);
+}
+
+.display-flow-root {
+  display: var(--display-flow-root);
+}
+
+.display-auto {
+  display: var(--display-auto);
+}
+
+/* Positioning utilities */
+.position-static {
+  position: var(--position-static);
+}
+
+.position-relative {
   position: var(--position-relative);
 }
 
-.pos-absolute {
+.position-absolute {
   position: var(--position-absolute);
 }
 
-.pos-fixed {
+.position-fixed {
   position: var(--position-fixed);
 }
 
-.pos-sticky {
+.position-sticky {
   position: var(--position-sticky);
 }
 
@@ -77,6 +129,134 @@
 
 .left-0 {
   left: var(--spacing-0);
+}
+
+.top-xs {
+  top: var(--spacing-xs);
+}
+
+.right-xs {
+  right: var(--spacing-xs);
+}
+
+.bottom-xs {
+  bottom: var(--spacing-xs);
+}
+
+.left-xs {
+  left: var(--spacing-xs);
+}
+
+.top-sm {
+  top: var(--spacing-sm);
+}
+
+.right-sm {
+  right: var(--spacing-sm);
+}
+
+.bottom-sm {
+  bottom: var(--spacing-sm);
+}
+
+.left-sm {
+  left: var(--spacing-sm);
+}
+
+.top-md {
+  top: var(--spacing-md);
+}
+
+.right-md {
+  right: var(--spacing-md);
+}
+
+.bottom-md {
+  bottom: var(--spacing-md);
+}
+
+.left-md {
+  left: var(--spacing-md);
+}
+
+.top-lg {
+  top: var(--spacing-lg);
+}
+
+.right-lg {
+  right: var(--spacing-lg);
+}
+
+.bottom-lg {
+  bottom: var(--spacing-lg);
+}
+
+.left-lg {
+  left: var(--spacing-lg);
+}
+
+.top-xl {
+  top: var(--spacing-xl);
+}
+
+.right-xl {
+  right: var(--spacing-xl);
+}
+
+.bottom-xl {
+  bottom: var(--spacing-xl);
+}
+
+.left-xl {
+  left: var(--spacing-xl);
+}
+
+.top-negative-xs {
+  top: var(--spacing-negative-xs);
+}
+
+.right-negative-xs {
+  right: var(--spacing-negative-xs);
+}
+
+.bottom-negative-xs {
+  bottom: var(--spacing-negative-xs);
+}
+
+.left-negative-xs {
+  left: var(--spacing-negative-xs);
+}
+
+.top-negative-sm {
+  top: var(--spacing-negative-sm);
+}
+
+.right-negative-sm {
+  right: var(--spacing-negative-sm);
+}
+
+.bottom-negative-sm {
+  bottom: var(--spacing-negative-sm);
+}
+
+.left-negative-sm {
+  left: var(--spacing-negative-sm);
+}
+
+.top-auto {
+  top: var(--spacing-auto);
+}
+
+.right-auto {
+  right: var(--spacing-auto);
+}
+
+.bottom-auto {
+  bottom: var(--spacing-auto);
+}
+
+.left-auto {
+  left: var(--spacing-auto);
 }
 
 /* Z-index utilities */
@@ -102,6 +282,10 @@
 
 .z-300 {
   z-index: var(--z-300);
+}
+
+.z-auto {
+  z-index: var(--z-auto);
 }
 
 /* Cursor utilities */
@@ -239,11 +423,11 @@
 
 /* Opacity utilities */
 .opacity-0 {
-  opacity: var(--opacity-50);
+  opacity: var(--opacity-0);
 }
 
 .opacity-25 {
-  opacity: 0.25;
+  opacity: var(--opacity-25);
 }
 
 .opacity-50 {
@@ -251,11 +435,15 @@
 }
 
 .opacity-75 {
-  opacity: 0.75;
+  opacity: var(--opacity-75);
+}
+
+.opacity-80 {
+  opacity: var(--opacity-80);
 }
 
 .opacity-100 {
-  opacity: 1;
+  opacity: var(--opacity-100);
 }
 
 /* Overflow utilities */
@@ -295,6 +483,78 @@
   overflow-y: scroll;
 }
 
+/* Background utilities */
+.background-size-cover {
+  background-size: cover;
+}
+
+.background-size-contain {
+  background-size: contain;
+}
+
+.background-position-center {
+  background-position: center;
+}
+
+.background-position-top {
+  background-position: top;
+}
+
+.background-position-bottom {
+  background-position: bottom;
+}
+
+.background-repeat-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.background-repeat-repeat {
+  background-repeat: repeat;
+}
+
+.background-attachment-fixed {
+  background-attachment: fixed;
+}
+
+.background-attachment-scroll {
+  background-attachment: scroll;
+}
+
+/* Aspect ratio utilities */
+.aspect-square {
+  aspect-ratio: var(--aspect-ratio-square);
+}
+
+.aspect-16-9 {
+  aspect-ratio: var(--aspect-ratio-16-9);
+}
+
+.aspect-4-3 {
+  aspect-ratio: var(--aspect-ratio-4-3);
+}
+
+/* Overlay utilities */
+.overlay-dark {
+  background: var(--color-overlay);
+}
+
+.overlay-light {
+  background: var(--color-overlay-light);
+}
+
+/* Text shadow utilities */
+.text-shadow-sm {
+  text-shadow: var(--text-shadow-sm);
+}
+
+.text-shadow-md {
+  text-shadow: var(--text-shadow-md);
+}
+
+.text-shadow-lg {
+  text-shadow: var(--text-shadow-lg);
+}
+
 /* Dark mode overrides */
 [data-theme='dark'] {
   .shadow-sm {
@@ -314,10 +574,26 @@
   }
 
   .opacity-0 {
-    opacity: var(--opacity-50);
+    opacity: var(--opacity-0);
   }
 
   .opacity-50 {
     opacity: var(--opacity-50);
+  }
+
+  .overlay-dark {
+    background: var(--color-overlay);
+  }
+
+  .text-shadow-sm {
+    text-shadow: var(--text-shadow-sm);
+  }
+
+  .text-shadow-md {
+    text-shadow: var(--text-shadow-md);
+  }
+
+  .text-shadow-lg {
+    text-shadow: var(--text-shadow-lg);
   }
 }
