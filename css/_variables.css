@@ -65,23 +65,9 @@
   --color-muted: var(--palette-grey); /* For subdued text or placeholders */
   --color-high-contrast: #000; /* For high-contrast accessibility */
   --color-border: var(--palette-grey); /* Default border color */
-
-  /* Optional: add shade variants for semantic colors */
+  --color-border-rgb: 104, 104, 104; /* RGB for opacity utilities */
   --color-primary-light: #7c4dff;
   --color-primary-dark: #301a60;
-
-  /* ----------------------------------------------------------------------
-   * Dark mode overrides
-   * ---------------------------------------------------------------------- */
-  [data-theme='dark'] {
-    --color-base: var(--palette-black); /* Text on light backgrounds */
-    --color-contrast: var(--palette-white); /* Text on dark backgrounds */
-    --color-surface: #1a1a1a; /* Dark card/panel background */
-    --color-background: #111; /* Dark page background */
-    --color-border: #444; /* Dark border color */
-    --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
-    --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
-  }
 
   /* ----------------------------------------------------------------------
    * Breakpoints (for documentation and future use)
@@ -107,34 +93,41 @@
   --container-narrow-width: 60vw; /* Default narrow container width */
   --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
+  --max-height-sm: 300px; /* For constrained elements like modals */
+  --max-height-full: 100vh; /* Full viewport height */
 
   /* ----------------------------------------------------------------------
    * Typography (responsive with clamp)
    * ---------------------------------------------------------------------- */
   --font-family-base:
     'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
-
   --font-family-heading: 'Merriweather', serif; /* Font for headings */
   --font-family-monospace:
     'Fira Code', 'Courier New', monospace; /* For code blocks */
-
   --font-size-caption: clamp(10px, 0.9vw, 11px); /* For captions or footnotes */
   --font-size-xs: clamp(10px, 1vw, 12px); /* Extra small text */
   --font-size-sm: clamp(12px, 1.2vw, 14px); /* Small text */
   --font-size-base: clamp(16px, 1.4vw, 18px); /* Base text */
   --font-size-lg: clamp(20px, 1.8vw, 24px); /* Large text */
   --font-size-xl: clamp(24px, 2.8vw, 36px); /* Extra large text */
-  --font-size-xxl: clamp(32px, 4vw, 48px); /* 2x large text */
-  --font-size-display: clamp(48px, 6vw, 72px); /* For hero/display text */
+  --font-size-heading: clamp(32px, 4vw, 48px); /* Heading text */
   --line-height-base: 1.6; /* Base line height */
   --line-height-heading: 1.2; /* Heading line height */
+  --line-height-tight: 1.2; /* Tight line height */
+  --line-height-loose: 1.75; /* Loose line height */
   --font-weight-light: 300;
   --font-weight-normal: 400;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-heading: 700;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.05em;
-  --text-align-center: center; /* Reusable alignment token */
-  --text-transform-uppercase: uppercase; /* For specific text styling */
+  --text-align-left: left;
+  --text-align-center: center;
+  --text-align-right: right;
+  --text-align-justify: justify;
 
   /* ----------------------------------------------------------------------
    * Spacing (responsive with clamp)
@@ -146,12 +139,18 @@
   --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
   --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
   --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
-  --spacing-xxl: clamp(48px, 4vw, 64px); /* 2x large spacing */
-  --spacing-negative-sm: calc(var(--spacing-sm) * -1); /* Negative margins */
+  --spacing-negative-xs: clamp(
+    -8px,
+    -0.4vw,
+    -4px
+  ); /* Negative extra small spacing */
+  --spacing-negative-sm: clamp(
+    -16px,
+    -0.8vw,
+    -8px
+  ); /* Negative small spacing */
   --gap-xs: clamp(4px, 0.4vw, 6px); /* For flex/grid gaps */
   --gap-md: clamp(12px, 1.2vw, 16px); /* Medium gap for layouts */
-  --max-height-sm: 300px; /* For constrained elements like modals */
-  --max-height-full: 100vh; /* Full viewport height */
 
   /* ----------------------------------------------------------------------
    * Grid
@@ -159,6 +158,31 @@
   --min-cols: 1;
   --max-cols: 2;
   --col-min-width: 320px;
+  --row: row;
+  --column: column;
+  --dense: dense;
+  --auto: auto;
+
+  /* ----------------------------------------------------------------------
+   * Display
+   * ---------------------------------------------------------------------- */
+
+  /* Display properties for controlling element rendering */
+  --display-none: none; /* For toggling visibility */
+  --display-block: block; /* For block-level layouts */
+  --display-flex: flex; /* For flexbox layouts */
+  --display-grid: grid; /* For grid layouts */
+  --display-inline-flex: inline-flex; /* For inline flexbox layouts */
+  --display-table: table; /* For table layouts */
+  --display-auto: auto; /* For auto display behavior */
+
+  /* ----------------------------------------------------------------------
+   * Positioning
+   * ---------------------------------------------------------------------- */
+  --position-relative: relative;
+  --position-absolute: absolute;
+  --position-fixed: fixed;
+  --position-sticky: sticky;
 
   /* ----------------------------------------------------------------------
    * Shadows (use only these tokens in utilities; do not hard-code values)
@@ -168,6 +192,7 @@
   --shadow-md: 0 2px 8px rgb(0 0 0 / 10%);
   --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
   --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%);
+  --shadow-none: none;
 
   /* ----------------------------------------------------------------------
    * Border radius
@@ -185,6 +210,8 @@
   --z-10: 10;
   --z-50: 50;
   --z-100: 100;
+  --z-200: 200;
+  --z-300: 300;
   --z-auto: auto;
 
   /* ----------------------------------------------------------------------
@@ -192,7 +219,6 @@
    * ---------------------------------------------------------------------- */
   --btn-bg: var(--color-primary);
   --btn-bg-hover: var(--color-success);
-  --btn-bg-active: var(--color-primary);
   --btn-bg-disabled: var(--color-border);
   --btn-text: var(--color-contrast);
   --input-bg: var(--color-base);
@@ -238,6 +264,7 @@
   --animation-duration: 0.8s;
   --animation-direction: normal;
   --animation-fill-mode: forwards;
+  --animation-iteration-count: 1;
   --animation-fade: fade 0.5s ease-in-out; /* Reusable fade animation */
   --animation-slide: slide 0.6s ease-out; /* Reusable slide animation */
 
@@ -255,8 +282,6 @@
    * ---------------------------------------------------------------------- */
   --opacity-50: 0.5; /* For semi-transparent elements */
   --opacity-80: 0.8; /* For overlays or hover effects */
-  --display-none: none; /* For toggling visibility */
-  --display-block: block; /* For layout utilities */
 
   /* ----------------------------------------------------------------------
    * Gradients (updated to use semantic tokens)
@@ -271,6 +296,31 @@
     var(--color-warning),
     var(--color-error)
   );
+}
+
+/* ----------------------------------------------------------------------
+ * Dark mode overrides
+ * ---------------------------------------------------------------------- */
+[data-theme='dark'] {
+  --color-base: var(--palette-black); /* Text on light backgrounds */
+  --color-base-hover: #2a2a2a; /* Hover state for base text */
+  --color-contrast: var(--palette-white); /* Text on dark backgrounds */
+  --color-contrast-light: #d1d5db; /* Lighter contrast for secondary text */
+  --color-surface: #1a1a1a; /* Dark card/panel background */
+  --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
+  --color-background: #111; /* Dark page background */
+  --color-background-alt: #1f1f1f; /* Alternate dark background */
+  --color-border: #444; /* Dark border color */
+  --color-border-rgb: 68, 68, 68; /* RGB for dark mode opacity utilities */
+  --color-high-contrast: #fff; /* High-contrast for dark mode */
+  --btn-bg: var(--color-primary); /* Button background */
+  --btn-bg-hover: var(--color-success); /* Button hover background */
+  --btn-bg-disabled: #4a4a4a; /* Disabled button background */
+  --btn-text: var(--palette-white); /* Button text */
+  --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
+  --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
+  --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
 }
 
 /*
