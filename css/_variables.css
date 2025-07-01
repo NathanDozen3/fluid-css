@@ -1,4 +1,5 @@
-/* ========================================================================
+/*
+ * ========================================================================
  * Fluid CSS Design Tokens & Variables
  * ------------------------------------------------------------------------
  * Centralized CSS custom properties for color, spacing, typography, breakpoints, etc.
@@ -26,7 +27,8 @@
  *   color: var(--color-primary);
  *   background: var(--color-surface);
  *   border-color: var(--color-border);
- * ======================================================================== */
+ * ========================================================================
+ */
 
 /* CSS Variables and root custom properties
  *
@@ -217,6 +219,26 @@
   --justify-content-between: space-between;
   --justify-content-around: space-around;
   --justify-content-evenly: space-evenly;
+
+  /* ----------------------------------------------------------------------
+   * Flexbox
+   * ---------------------------------------------------------------------- */
+  --flex-direction-row: row;
+  --flex-direction-column: column;
+  --flex-wrap-wrap: wrap;
+  --flex-wrap-nowrap: nowrap;
+  --align-content-start: flex-start;
+  --align-content-end: flex-end;
+  --align-content-center: center;
+  --align-content-between: space-between;
+  --align-content-around: space-around;
+  --align-content-stretch: stretch;
+  --flex-grow-0: 0;
+  --flex-grow-1: 1;
+  --flex-shrink-0: 0;
+  --flex-shrink-1: 1;
+  --flex-basis-auto: auto;
+  --flex-basis-0: 0;
 
   /* ----------------------------------------------------------------------
    * Shadows

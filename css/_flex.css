@@ -1,105 +1,161 @@
 /*
  * ========================================================================
- * Fluid CSS Flexbox Utilities (Extended)
+ * Fluid CSS Flexbox Utilities
  * ------------------------------------------------------------------------
- * Utility classes for all flexbox features: direction, wrap, grow, shrink,
- * basis, order, etc. Shared utilities for gap, alignment, and justification
- * have been moved to _spacing.css and/or _utilities.css. Only flex-specific
- * utilities remain here.
- * ======================================================================== */
+ * Atomic utility classes for flexbox styling.
+ * Usage: Add .flex or .inline-flex and combine with other flex utilities.
+ * Example: <div class="flex flex-row align-items-center justify-content-center gap-md">Content</div>
+ * All properties use variables from _variables.css for consistency.
+ * Each utility sets a single CSS property for atomic design.
+ * ========================================================================
+ */
 
-/* Flexbox system */
+/* Display utilities */
 .flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap-md);
+  display: var(--display-flex);
 }
 
+.inline-flex {
+  display: var(--display-inline-flex);
+}
+
+/* Flex direction utilities */
 .flex-row {
-  flex-direction: row;
+  flex-direction: var(--flex-direction-row);
 }
 
-.flex-col {
-  flex-direction: column;
+.flex-column {
+  flex-direction: var(--flex-direction-column);
 }
 
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
-}
-
+/* Flex wrap utilities */
 .flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
+  flex-wrap: var(--flex-wrap-wrap);
 }
 
 .flex-nowrap {
-  flex-wrap: nowrap;
+  flex-wrap: var(--flex-wrap-nowrap);
 }
 
-.order-1 {
-  order: 1;
+/* Align items utilities */
+.align-items-start {
+  align-items: var(--align-items-start);
 }
 
-.order-2 {
-  order: 2;
+.align-items-end {
+  align-items: var(--align-items-end);
 }
 
-.order-3 {
-  order: 3;
+.align-items-center {
+  align-items: var(--align-items-center);
 }
 
-.grow {
-  flex-grow: 1;
+.align-items-baseline {
+  align-items: var(--align-items-baseline);
 }
 
-.flex-grow-0 {
-  flex-grow: 0;
+.align-items-stretch {
+  align-items: var(--align-items-stretch);
 }
 
-.flex-grow-1 {
-  flex-grow: 1;
+/* Justify content utilities */
+.justify-content-start {
+  justify-content: var(--justify-content-start);
 }
 
-.shrink {
-  flex-shrink: 1;
+.justify-content-end {
+  justify-content: var(--justify-content-end);
 }
 
-.flex-shrink-0 {
-  flex-shrink: 0;
+.justify-content-center {
+  justify-content: var(--justify-content-center);
 }
 
-.flex-shrink-1 {
-  flex-shrink: 1;
+.justify-content-between {
+  justify-content: var(--justify-content-between);
 }
 
-.flex > * {
-  flex: 1 1 250px;
+.justify-content-around {
+  justify-content: var(--justify-content-around);
 }
 
-.flex-basis-0 {
-  flex-basis: var(--spacing-0);
+.justify-content-evenly {
+  justify-content: var(--justify-content-evenly);
 }
 
-.flex-basis-auto {
-  flex-basis: var(--display-auto);
+/* Align content utilities */
+.align-content-start {
+  align-content: var(--align-content-start);
 }
 
-.flex-basis-full {
-  flex-basis: var(--display-block);
+.align-content-end {
+  align-content: var(--align-content-end);
+}
+
+.align-content-center {
+  align-content: var(--align-content-center);
+}
+
+.align-content-between {
+  align-content: var(--align-content-between);
+}
+
+.align-content-around {
+  align-content: var(--align-content-around);
+}
+
+.align-content-stretch {
+  align-content: var(--align-content-stretch);
 }
 
 /* Gap utilities */
+.gap-0 {
+  gap: var(--spacing-0);
+}
+
 .gap-xs {
-  gap: var(--gap-xs);
+  gap: var(--spacing-xs);
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
 }
 
 .gap-md {
-  gap: var(--gap-md);
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.gap-xl {
+  gap: var(--spacing-xl);
+}
+
+/* Flex grow utilities */
+.flex-grow-0 {
+  flex-grow: var(--flex-grow-0);
+}
+
+.flex-grow-1 {
+  flex-grow: var(--flex-grow-1);
+}
+
+/* Flex shrink utilities */
+.flex-shrink-0 {
+  flex-shrink: var(--flex-shrink-0);
+}
+
+.flex-shrink-1 {
+  flex-shrink: var(--flex-shrink-1);
+}
+
+/* Flex basis utilities */
+.flex-basis-auto {
+  flex-basis: var(--flex-basis-auto);
+}
+
+.flex-basis-0 {
+  flex-basis: var(--flex-basis-0);
 }
