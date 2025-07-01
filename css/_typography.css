@@ -2,197 +2,176 @@
  * ========================================================================
  * Fluid CSS Typography Utilities
  * ------------------------------------------------------------------------
- * Utility classes for typography: font family, size, weight, line height,
- * alignment, letter spacing, and text transformation.
- * Usage: Add .text-*, .font-*, .tracking-*, etc. to style text.
- * Example: <p class="text-lg font-bold text-center">Content</p>
- * ======================================================================== */
+ * Atomic utility classes for typography styling.
+ * Usage: Combine utilities to style text (e.g., .font-size-base.font-weight-bold.line-height-tight).
+ * Example: <h1 class="font-size-display font-family-heading font-weight-bold letter-spacing-heading">Title</h1>
+ * All properties use variables from _variables.css for consistency.
+ * Color utilities (e.g., .text-contrast) are in _colors.css.
+ * Each utility sets a single CSS property for atomic design.
+ * ========================================================================
+ */
 
-/* Typography utilities */
-.font-base {
+/* Font family utilities */
+.font-family-base {
   font-family: var(--font-family-base);
 }
 
-.font-heading {
+.font-family-heading {
   font-family: var(--font-family-heading);
 }
 
-.font-monospace {
+.font-family-monospace {
   font-family: var(--font-family-monospace);
 }
 
-.text-caption {
+/* Font size utilities */
+.font-size-caption {
   font-size: var(--font-size-caption);
-  line-height: var(--line-height-tight);
 }
 
-.text-xs {
+.font-size-xs {
   font-size: var(--font-size-xs);
-  line-height: var(--line-height-tight);
 }
 
-.text-sm {
+.font-size-sm {
   font-size: var(--font-size-sm);
-  line-height: var(--line-height-tight);
 }
 
-.text-base {
+.font-size-base {
   font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
 }
 
-.text-lg {
+.font-size-lg {
   font-size: var(--font-size-lg);
-  line-height: var(--line-height-base);
 }
 
-.text-xl {
+.font-size-xl {
   font-size: var(--font-size-xl);
-  line-height: var(--line-height-base);
 }
 
-.text-xxl {
-  font-size: var(--font-size-xxl);
-  line-height: var(--line-height-heading);
-}
-
-.text-display {
-  font-size: var(--font-size-display);
-  line-height: var(--line-height-heading);
-}
-
-.text-heading {
+.font-size-display {
   font-size: var(--font-size-heading);
-  line-height: var(--line-height-heading);
 }
 
-.text-high-contrast {
-  color: var(--color-high-contrast);
-}
-
-.font-light {
+/* Font weight utilities */
+.font-weight-light {
   font-weight: var(--font-weight-light);
 }
 
-.font-normal {
+.font-weight-normal {
   font-weight: var(--font-weight-normal);
 }
 
-.font-medium {
+.font-weight-medium {
   font-weight: var(--font-weight-medium);
 }
 
-.font-semibold {
+.font-weight-semibold {
   font-weight: var(--font-weight-semibold);
 }
 
-.font-bold {
+.font-weight-bold {
   font-weight: var(--font-weight-bold);
 }
 
-.font-heading-weight {
+.font-weight-heading {
   font-weight: var(--font-weight-heading);
 }
 
-.leading-tight {
+/* Line height utilities */
+.line-height-tight {
   line-height: var(--line-height-tight);
 }
 
-.leading-base {
+.line-height-base {
   line-height: var(--line-height-base);
 }
 
-.leading-loose {
+.line-height-loose {
   line-height: var(--line-height-loose);
 }
 
-.leading-heading {
+.line-height-heading {
   line-height: var(--line-height-heading);
 }
 
-.text-left {
-  text-align: var(--text-align-left);
-}
-
-.text-center {
-  text-align: var(--text-align-center);
-}
-
-.text-right {
-  text-align: var(--text-align-right);
-}
-
-.text-justify {
-  text-align: var(--text-align-justify);
-}
-
-.tracking-tight {
+/* Letter spacing utilities */
+.letter-spacing-tight {
   letter-spacing: var(--letter-spacing-tight);
 }
 
-.tracking-normal {
+.letter-spacing-normal {
   letter-spacing: var(--letter-spacing-normal);
 }
 
-.tracking-wide {
+.letter-spacing-wide {
   letter-spacing: var(--letter-spacing-wide);
 }
 
-.tracking-heading {
+.letter-spacing-heading {
   letter-spacing: var(--letter-spacing-wide);
 }
 
-.uppercase {
-  text-transform: var(--text-transform-uppercase);
+/* Text align utilities */
+.text-align-left {
+  text-align: var(--text-align-left);
 }
 
-.lowercase {
+.text-align-center {
+  text-align: var(--text-align-center);
+}
+
+.text-align-right {
+  text-align: var(--text-align-right);
+}
+
+.text-align-justify {
+  text-align: var(--text-align-justify);
+}
+
+/* Text transform utilities */
+.text-transform-uppercase {
+  text-transform: uppercase;
+}
+
+.text-transform-lowercase {
   text-transform: lowercase;
 }
 
-.capitalize {
+.text-transform-capitalize {
   text-transform: capitalize;
 }
 
-.normal-case {
+.text-transform-none {
   text-transform: none;
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  .text-caption {
-    color: var(--color-contrast);
-  }
+/* Text decoration utilities */
+.text-decoration-underline {
+  text-decoration: underline;
+}
 
-  .text-xs {
-    color: var(--color-contrast);
-  }
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
 
-  .text-sm {
-    color: var(--color-contrast);
-  }
+.text-decoration-none {
+  text-decoration: none;
+}
 
-  .text-base {
-    color: var(--color-contrast);
-  }
+/* Text shadow utilities */
+.text-shadow-sm {
+  text-shadow: var(--text-shadow-sm);
+}
 
-  .text-lg {
-    color: var(--color-contrast);
-  }
+.text-shadow-md {
+  text-shadow: var(--text-shadow-md);
+}
 
-  .text-xl {
-    color: var(--color-contrast);
-  }
+.text-shadow-lg {
+  text-shadow: var(--text-shadow-lg);
+}
 
-  .text-xxl {
-    color: var(--color-contrast);
-  }
-
-  .text-display {
-    color: var(--color-contrast);
-  }
-
-  .text-heading {
-    color: var(--color-contrast);
-  }
+.text-shadow-none {
+  text-shadow: none;
 }

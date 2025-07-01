@@ -92,6 +92,7 @@
   --container-narrow-max-width: 960px; /* Max width for narrow containers */
   --container-width: 80vw; /* Default container width */
   --container-narrow-width: 60vw; /* Default narrow container width */
+  --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
   --max-height-sm: 300px; /* For constrained elements like modals */
   --max-height-full: 100vh; /* Full viewport height */
