@@ -90,7 +90,6 @@
   --container-narrow-max-width: 960px; /* Max width for narrow containers */
   --container-width: 80vw; /* Default container width */
   --container-narrow-width: 60vw; /* Default narrow container width */
-  --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
   --max-height-sm: 300px; /* For constrained elements like modals */
   --max-height-full: 100vh; /* Full viewport height */
@@ -201,6 +200,25 @@
   --position-sticky: sticky;
 
   /* ----------------------------------------------------------------------
+   * Alignment
+   * ---------------------------------------------------------------------- */
+  --align-items-start: start;
+  --align-items-center: center;
+  --align-items-end: end;
+  --align-items-baseline: baseline;
+  --align-items-stretch: stretch;
+
+  /* ----------------------------------------------------------------------
+   * Justification
+   * ---------------------------------------------------------------------- */
+  --justify-content-start: start;
+  --justify-content-center: center;
+  --justify-content-end: end;
+  --justify-content-between: space-between;
+  --justify-content-around: space-around;
+  --justify-content-evenly: space-evenly;
+
+  /* ----------------------------------------------------------------------
    * Shadows
    * ---------------------------------------------------------------------- */
   --shadow-xs: 0 1px 1px rgb(0 0 0 / 3%);
@@ -226,6 +244,32 @@
   --opacity-75: 0.75;
   --opacity-80: 0.8;
   --opacity-100: 1;
+
+  /* ----------------------------------------------------------------------
+   * Overflow
+   * ---------------------------------------------------------------------- */
+  --overflow-hidden: hidden;
+  --overflow-auto: auto;
+  --overflow-scroll: scroll;
+  --overflow-x-hidden: hidden;
+  --overflow-x-auto: auto;
+  --overflow-x-scroll: scroll;
+  --overflow-y-hidden: hidden;
+  --overflow-y-auto: auto;
+  --overflow-y-scroll: scroll;
+
+  /* ----------------------------------------------------------------------
+   * Background
+   * ---------------------------------------------------------------------- */
+  --background-size-cover: cover;
+  --background-size-contain: contain;
+  --background-position-center: center;
+  --background-position-top: top;
+  --background-position-bottom: bottom;
+  --background-repeat-no-repeat: no-repeat;
+  --background-repeat-repeat: repeat;
+  --background-attachment-fixed: fixed;
+  --background-attachment-scroll: scroll;
 
   /* ----------------------------------------------------------------------
    * Overlay
