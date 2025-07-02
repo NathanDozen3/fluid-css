@@ -2,76 +2,15 @@
  * ========================================================================
  * Fluid CSS Color Utilities
  * ------------------------------------------------------------------------
- * Utility classes for background, text, and border colors using semantic tokens.
- * Usage: Add .bg-*, .text-*, .border-* to set color.
- * Example: <div class="bg-primary text-contrast border-primary"></div>
- * ======================================================================== */
+ * Atomic utility classes for color styling.
+ * Usage: Combine with other utilities (e.g., .text-primary.background-color-surface).
+ * Example: <p class="text-contrast background-color-primary">Text</p>
+ * All properties use semantic color variables from _variables.css.
+ * Each utility sets a single CSS property for atomic design.
+ * ========================================================================
+ */
 
-/* Color utility classes (semantic tokens only) */
-.bg-base {
-  background: var(--color-base);
-}
-
-.bg-base-hover {
-  background: var(--color-base-hover);
-}
-
-.bg-contrast {
-  background: var(--color-contrast);
-}
-
-.bg-contrast-light {
-  background: var(--color-contrast-light);
-}
-
-.bg-primary {
-  background: var(--color-primary);
-}
-
-.bg-success {
-  background: var(--color-success);
-}
-
-.bg-warning {
-  background: var(--color-warning);
-}
-
-.bg-error {
-  background: var(--color-error);
-}
-
-.bg-info {
-  background: var(--color-info);
-}
-
-.bg-surface {
-  background: var(--color-surface);
-}
-
-.bg-surface-hover {
-  background: var(--color-surface-hover);
-}
-
-.bg-background {
-  background: var(--color-background);
-}
-
-.bg-background-alt {
-  background: var(--color-background-alt);
-}
-
-.bg-overlay {
-  background: var(--color-overlay);
-}
-
-.bg-muted {
-  background: var(--color-muted);
-}
-
-.bg-high-contrast {
-  background: var(--color-high-contrast);
-}
-
+/* Text color utilities */
 .text-base {
   color: var(--color-base);
 }
@@ -108,22 +47,6 @@
   color: var(--color-info);
 }
 
-.text-surface {
-  color: var(--color-surface);
-}
-
-.text-surface-hover {
-  color: var(--color-surface-hover);
-}
-
-.text-background {
-  color: var(--color-background);
-}
-
-.text-background-alt {
-  color: var(--color-background-alt);
-}
-
 .text-muted {
   color: var(--color-muted);
 }
@@ -132,22 +55,68 @@
   color: var(--color-high-contrast);
 }
 
-.border-base {
-  border-color: var(--color-base);
+.text-primary-light {
+  color: var(--color-primary-light);
 }
 
-.border-base-hover {
-  border-color: var(--color-base-hover);
+.text-primary-dark {
+  color: var(--color-primary-dark);
 }
 
-.border-contrast {
-  border-color: var(--color-contrast);
+/* Background color utilities */
+.background-color-primary {
+  background-color: var(--color-primary);
 }
 
-.border-contrast-light {
-  border-color: var(--color-contrast-light);
+.background-color-success {
+  background-color: var(--color-success);
 }
 
+.background-color-warning {
+  background-color: var(--color-warning);
+}
+
+.background-color-error {
+  background-color: var(--color-error);
+}
+
+.background-color-info {
+  background-color: var(--color-info);
+}
+
+.background-color-surface {
+  background-color: var(--color-surface);
+}
+
+.background-color-surface-hover {
+  background-color: var(--color-surface-hover);
+}
+
+.background-color-background {
+  background-color: var(--color-background);
+}
+
+.background-color-background-alt {
+  background-color: var(--color-background-alt);
+}
+
+.background-color-muted {
+  background-color: var(--color-muted);
+}
+
+.background-color-high-contrast {
+  background-color: var(--color-high-contrast);
+}
+
+.background-color-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.background-color-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+/* Border color utilities */
 .border-primary {
   border-color: var(--color-primary);
 }
@@ -168,22 +137,6 @@
   border-color: var(--color-info);
 }
 
-.border-surface {
-  border-color: var(--color-surface);
-}
-
-.border-surface-hover {
-  border-color: var(--color-surface-hover);
-}
-
-.border-background {
-  border-color: var(--color-background);
-}
-
-.border-background-alt {
-  border-color: var(--color-background-alt);
-}
-
 .border-muted {
   border-color: var(--color-muted);
 }
@@ -192,77 +145,10 @@
   border-color: var(--color-high-contrast);
 }
 
-/* ========================================================================
- * Border Opacity Utilities
- * ------------------------------------------------------------------------
- * Usage: Set border opacity using tokens.
- * Example: <div class="border-opacity-50"></div>
- * ======================================================================== */
-.border-opacity-0 {
-  border-color: rgb(var(--color-border-rgb), var(--opacity-50));
+.border-primary-light {
+  border-color: var(--color-primary-light);
 }
 
-.border-opacity-25 {
-  border-color: rgb(var(--color-border-rgb), 0.25);
-}
-
-.border-opacity-50 {
-  border-color: rgb(var(--color-border-rgb), var(--opacity-50));
-}
-
-.border-opacity-75 {
-  border-color: rgb(var(--color-border-rgb), 0.75);
-}
-
-.border-opacity-100 {
-  border-color: rgb(var(--color-border-rgb), 1);
-}
-
-/* ========================================================================
- * Gradient Background Utilities
- * ------------------------------------------------------------------------
- * Usage: Add gradient backgrounds using tokens.
- * Example: <div class="bg-gradient-primary"></div>
- * ======================================================================== */
-.bg-gradient-primary {
-  background-image: var(--gradient-primary);
-}
-
-.bg-gradient-accent {
-  background-image: var(--gradient-accent);
-}
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  .bg-base {
-    background: var(--color-base);
-  }
-
-  .bg-contrast {
-    background: var(--color-contrast);
-  }
-
-  .bg-surface {
-    background: var(--color-surface);
-  }
-
-  .bg-background {
-    background: var(--color-background);
-  }
-
-  .border-base {
-    border-color: var(--color-base);
-  }
-
-  .border-contrast {
-    border-color: var(--color-contrast);
-  }
-
-  .border-surface {
-    border-color: var(--color-surface);
-  }
-
-  .border-background {
-    border-color: var(--color-background);
-  }
+.border-primary-dark {
+  border-color: var(--color-primary-dark);
 }

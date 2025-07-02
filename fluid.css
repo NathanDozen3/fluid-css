@@ -1,19 +1,41 @@
-/* Fluid CSS Framework
+/*
+ * ========================================================================
+ * Fluid CSS Framework
+ * ------------------------------------------------------------------------
  * Version: 1.0.0
+ * Description: A modular, atomic, variable-based CSS framework for consistent and accessible UI.
+ * Usage: Import this file in your HTML to apply all Fluid CSS utilities and styles.
+ * Notes:
+ * - All utilities are atomic (single-property) and use variables from _variables.css.
+ * - Partials are organized by function (reset, layout, styling, accessibility, print).
+ * - Ensure _variables.css is imported first for dependency resolution.
+ * - Hero module support: <section class="flex align-items-center justify-content-center ...">.
+ * ========================================================================
  */
 
-/* Import partials for organization */
-@import url('css/_variables.css');
-@import url('css/_reset.css');
-@import url('css/_container.css');
-@import url('css/_grid.css');
-@import url('css/_spacing.css');
-@import url('css/_flex.css');
-@import url('css/_typography.css');
-@import url('css/_layout.css');
-@import url('css/_a11y.css');
-@import url('css/_colors.css');
-@import url('css/_buttons.css');
-@import url('css/_forms.css');
-@import url('css/_animations.css');
-@import url('css/_print.css');
+/* Core variables (must be first for dependency resolution) */
+@import url('css/_variables.css?v=1.0.0');
+
+/* Browser reset for consistent styling */
+@import url('css/_reset.css?v=1.0.0');
+
+/* General utilities (display, visibility, etc.) */
+@import url('css/_utilities.css?v=1.0.0');
+
+/* Layout utilities (containers, grid, flexbox, sizing, spacing) */
+@import url('css/_container.css?v=1.0.0');
+@import url('css/_grid.css?v=1.0.0');
+@import url('css/_flex.css?v=1.0.0');
+@import url('css/_layout.css?v=1.0.0');
+@import url('css/_spacing.css?v=1.0.0');
+
+/* Styling utilities (typography, colors, buttons, forms, animations) */
+@import url('css/_typography.css?v=1.0.0');
+@import url('css/_colors.css?v=1.0.0');
+@import url('css/_buttons.css?v=1.0.0');
+@import url('css/_forms.css?v=1.0.0');
+@import url('css/_animations.css?v=1.0.0');
+
+/* Accessibility and print overrides (must be last for precedence) */
+@import url('css/_a11y.css?v=1.0.0');
+@import url('css/_print.css?v=1.0.0');

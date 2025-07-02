@@ -1,11 +1,16 @@
 /*
  * ========================================================================
- * Fluid CSS Utility Classes
+ * Fluid CSS General Utilities
  * ------------------------------------------------------------------------
- * Atomic utility classes for display, positioning, z-index, cursor, alignment,
- * justification, shadows, opacity, overflow, background, aspect ratio, and text shadow.
- * Usage: Add .display-*, .position-*, .z-*, .shadow-*, .background-*, .aspect-*, etc. to elements.
- * Example: <div class="display-flex position-relative z-10 shadow-md background-size-cover"></div>
+ * Atomic utility classes for display, positioning, z-index, cursor, visibility,
+ * float, isolation, overflow, background, aspect ratio, and pointer-events.
+ * Usage: Combine utilities (e.g., .display-flex.position-relative.z-10).
+ * Example: <div class="display-block vis-visible overflow-auto">Content</div>
+ * All properties use variables from _variables.css for consistency.
+ * Notes:
+ * - Alignment and justification utilities are in _flex.css.
+ * - Text shadow utilities are in _typography.css.
+ * - Hero module support: .display-flex, .position-relative, etc.
  * ========================================================================
  */
 
@@ -301,133 +306,44 @@
   cursor: default;
 }
 
-/* Alignment utilities */
-.align-items-start {
-  align-items: var(--align-items-start);
+/* Visibility utilities */
+.vis-hidden {
+  visibility: hidden;
 }
 
-.align-items-center {
-  align-items: var(--align-items-center);
+.vis-visible {
+  visibility: visible;
 }
 
-.align-items-end {
-  align-items: var(--align-items-end);
+/* Float utilities */
+.float-left {
+  float: left;
 }
 
-.align-items-baseline {
-  align-items: var(--align-items-baseline);
+.float-right {
+  float: right;
 }
 
-.align-items-stretch {
-  align-items: var(--align-items-stretch);
+.float-none {
+  float: none;
 }
 
-/* Justification utilities */
-.justify-content-start {
-  justify-content: var(--justify-content-start);
+/* Isolation utilities */
+.isolate {
+  isolation: isolate;
 }
 
-.justify-content-center {
-  justify-content: var(--justify-content-center);
+.isolation-auto {
+  isolation: auto;
 }
 
-.justify-content-end {
-  justify-content: var(--justify-content-end);
+/* Pointer-events utilities */
+.pointer-events-none {
+  pointer-events: none;
 }
 
-.justify-content-between {
-  justify-content: var(--justify-content-between);
-}
-
-.justify-content-around {
-  justify-content: var(--justify-content-around);
-}
-
-.justify-content-evenly {
-  justify-content: var(--justify-content-evenly);
-}
-
-/* Self-alignment utilities */
-.align-self-start {
-  align-self: var(--align-items-start);
-}
-
-.align-self-center {
-  align-self: var(--align-items-center);
-}
-
-.align-self-end {
-  align-self: var(--align-items-end);
-}
-
-.align-self-baseline {
-  align-self: var(--align-items-baseline);
-}
-
-.align-self-stretch {
-  align-self: var(--align-items-stretch);
-}
-
-.justify-self-start {
-  justify-self: var(--justify-content-start);
-}
-
-.justify-self-center {
-  justify-self: var(--justify-content-center);
-}
-
-.justify-self-end {
-  justify-self: var(--justify-content-end);
-}
-
-.justify-self-stretch {
-  justify-self: var(--justify-content-stretch);
-}
-
-/* Shadow utilities */
-.shadow-none {
-  box-shadow: var(--shadow-none);
-}
-
-.shadow-sm {
-  box-shadow: var(--shadow-sm);
-}
-
-.shadow-md {
-  box-shadow: var(--shadow-md);
-}
-
-.shadow-lg {
-  box-shadow: var(--shadow-lg);
-}
-
-.shadow-xl {
-  box-shadow: var(--shadow-xl);
-}
-
-/* Opacity utilities */
-.opacity-0 {
-  opacity: var(--opacity-0);
-}
-
-.opacity-25 {
-  opacity: var(--opacity-25);
-}
-
-.opacity-50 {
-  opacity: var(--opacity-50);
-}
-
-.opacity-75 {
-  opacity: var(--opacity-75);
-}
-
-.opacity-80 {
-  opacity: var(--opacity-80);
-}
-
-.opacity-100 {
-  opacity: var(--opacity-100);
+.pointer-events-auto {
+  pointer-events: auto;
 }
 
 /* Overflow utilities */
@@ -505,15 +421,15 @@
 }
 
 /* Aspect ratio utilities */
-.aspect-square {
+.aspect-ratio-square {
   aspect-ratio: var(--aspect-ratio-square);
 }
 
-.aspect-16-9 {
+.aspect-ratio-16-9 {
   aspect-ratio: var(--aspect-ratio-16-9);
 }
 
-.aspect-4-3 {
+.aspect-ratio-4-3 {
   aspect-ratio: var(--aspect-ratio-4-3);
 }
 
@@ -524,60 +440,4 @@
 
 .overlay-light {
   background: var(--color-overlay-light);
-}
-
-/* Text shadow utilities */
-.text-shadow-sm {
-  text-shadow: var(--text-shadow-sm);
-}
-
-.text-shadow-md {
-  text-shadow: var(--text-shadow-md);
-}
-
-.text-shadow-lg {
-  text-shadow: var(--text-shadow-lg);
-}
-
-/* Dark mode overrides using prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
-  .shadow-sm {
-    box-shadow: var(--shadow-sm);
-  }
-
-  .shadow-md {
-    box-shadow: var(--shadow-md);
-  }
-
-  .shadow-lg {
-    box-shadow: var(--shadow-lg);
-  }
-
-  .shadow-xl {
-    box-shadow: var(--shadow-xl);
-  }
-
-  .opacity-0 {
-    opacity: var(--opacity-0);
-  }
-
-  .opacity-50 {
-    opacity: var(--opacity-50);
-  }
-
-  .overlay-dark {
-    background: var(--color-overlay);
-  }
-
-  .text-shadow-sm {
-    text-shadow: var(--text-shadow-sm);
-  }
-
-  .text-shadow-md {
-    text-shadow: var(--text-shadow-md);
-  }
-
-  .text-shadow-lg {
-    text-shadow: var(--text-shadow-lg);
-  }
 }

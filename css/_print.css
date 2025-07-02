@@ -21,7 +21,9 @@
 
   /* Simplify layout for hero module */
   .flex,
-  .inline-flex {
+  .inline-flex,
+  .display-flex,
+  .display-inline-flex {
     display: block;
   }
 
@@ -90,13 +92,13 @@
     box-shadow: none;
   }
 
-  .bg-gradient-primary,
-  .bg-gradient-accent,
-  .bg-primary,
-  .bg-success,
-  .bg-warning,
-  .bg-error,
-  .bg-info {
+  .background-gradient-primary,
+  .background-gradient-accent,
+  .background-color-primary,
+  .background-color-success,
+  .background-color-warning,
+  .background-color-error,
+  .background-color-info {
     background: var(--color-base);
   }
 
@@ -111,12 +113,30 @@
     margin-bottom: var(--spacing-sm);
   }
 
-  /* Ensure containers fit on page */
+  /* Ensure containers and layout utilities fit on page */
   .container,
-  .container-narrow {
+  .container-narrow,
+  .width-full,
+  .width-screen,
+  .max-w-xs,
+  .max-w-sm,
+  .max-w-md,
+  .max-w-lg,
+  .max-w-xl,
+  .max-w-xxl,
+  .max-w-container,
+  .max-w-container-narrow {
     width: 100%;
     max-width: none;
     padding: var(--spacing-sm);
+  }
+
+  .height-screen,
+  .max-h-screen,
+  .min-h-screen {
+    height: auto;
+    max-height: none;
+    min-height: auto;
   }
 
   /* Handle links: display URLs */
@@ -136,8 +156,47 @@
   /* Handle overflow content */
   .overflow-hidden,
   .overflow-x-hidden,
-  .overflow-y-hidden {
+  .overflow-y-hidden,
+  .overflow-auto,
+  .overflow-x-auto,
+  .overflow-y-auto,
+  .overflow-scroll,
+  .overflow-x-scroll,
+  .overflow-y-scroll {
     overflow: visible;
+  }
+
+  /* Handle background utilities */
+  .background-size-cover,
+  .background-size-contain,
+  .background-position-center,
+  .background-position-top,
+  .background-position-bottom,
+  .background-repeat-no-repeat,
+  .background-repeat-repeat,
+  .background-attachment-fixed,
+  .background-attachment-scroll,
+  .overlay-dark,
+  .overlay-light {
+    background: none;
+  }
+
+  /* Handle float and isolation */
+  .float-left,
+  .float-right,
+  .float-none {
+    float: none;
+  }
+
+  .isolate,
+  .isolation-auto {
+    isolation: auto;
+  }
+
+  /* Handle pointer-events */
+  .pointer-events-none,
+  .pointer-events-auto {
+    pointer-events: auto;
   }
 
   /* Ensure tables fit on page */
@@ -157,29 +216,6 @@
   h6 {
     page-break-inside: avoid;
     page-break-after: auto;
-  }
-
-  /* Ensure layout utilities fit on page */
-  .width-full,
-  .width-screen,
-  .max-w-xs,
-  .max-w-sm,
-  .max-w-md,
-  .max-w-lg,
-  .max-w-xl,
-  .max-w-xxl,
-  .max-w-container,
-  .max-w-container-narrow {
-    width: 100%;
-    max-width: none;
-  }
-
-  .height-screen,
-  .max-h-screen,
-  .min-h-screen {
-    height: auto;
-    max-height: none;
-    min-height: auto;
   }
 
   /* Disable animations for reduced motion */

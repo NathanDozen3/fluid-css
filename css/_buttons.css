@@ -2,71 +2,87 @@
  * ========================================================================
  * Fluid CSS Button Utilities
  * ------------------------------------------------------------------------
- * Atomic utility classes for button-specific styling.
- * Usage: Add .btn and combine with .btn-* or general utilities (e.g., .bg-primary, .text-base, .padding-md).
- * Example: <button class="btn btn-bg-primary btn-color-contrast padding-md radius text-base font-semibold">Click me</button>
- * Button-specific properties use variables from _variables.css. General properties use utilities from _utilities.css, _colors.css, _spacing.css, or _typography.css.
+ * Atomic utility classes for button styling.
+ * Usage: Combine with other utilities (e.g., .btn.btn-background-primary.btn-color-contrast).
+ * Example: <button class="btn btn-background-primary btn-color-contrast">Click</button>
+ * All properties use variables from _variables.css for consistency.
  * Each utility sets a single CSS property for atomic design.
  * ========================================================================
  */
 
-/* Base button style */
+/* Base button styles */
 .btn {
   display: var(--display-inline-block);
-  cursor: var(--cursor-pointer);
-  text-decoration: none;
+  padding: var(--spacing-sm);
+  border: var(--border-width-sm) solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
   text-align: var(--text-align-center);
+  cursor: var(--cursor-pointer);
+  transition-property: var(--transition-property-all);
+  transition-duration: var(--transition-duration-fast);
+  transition-timing-function: var(--transition-timing-ease);
 }
 
-/* Button-specific background utilities */
-.btn-bg-primary {
+/* Button background utilities */
+.btn-background-primary {
   background: var(--btn-bg);
 }
 
-.btn-bg-hover {
-  background: var(--btn-bg-hover);
+.btn-background-success {
+  background: var(--color-success);
 }
 
-.btn-bg-disabled {
-  background: var(--btn-bg-disabled);
+.btn-background-warning {
+  background: var(--color-warning);
 }
 
-/* Button-specific text color utility */
+.btn-background-error {
+  background: var(--color-error);
+}
+
+.btn-background-info {
+  background: var(--color-info);
+}
+
+/* Button text color utilities */
 .btn-color-contrast {
   color: var(--btn-text);
 }
 
-/* Disabled state */
-.btn-disabled {
-  cursor: var(--cursor-disabled);
-  opacity: var(--opacity-50);
+.btn-color-base {
+  color: var(--color-base);
 }
 
-/* Focus state (combine with .focus-ring from _a11y.css if needed) */
-.btn-focus {
-  outline: var(--focus-outline);
+.btn-color-primary {
+  color: var(--color-primary);
 }
 
-/* Hover state (apply only when not disabled) */
-.btn:not(.btn-disabled):hover .btn-bg-hover {
-  background: var(--btn-bg-hover);
+/* Button border utilities */
+.btn-border-primary {
+  border-color: var(--color-primary);
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  .btn-bg-primary {
-    background: var(--btn-bg);
-  }
+.btn-border-success {
+  border-color: var(--color-success);
+}
 
-  .btn-bg-hover {
-    background: var(--btn-bg-hover);
-  }
+.btn-border-warning {
+  border-color: var(--color-warning);
+}
 
-  .btn-bg-disabled {
-    background: var(--btn-bg-disabled);
-  }
+.btn-border-error {
+  border-color: var(--color-error);
+}
 
-  .btn-color-contrast {
-    color: var(--btn-text);
-  }
+.btn-border-info {
+  border-color: var(--color-info);
+}
+
+/* Button focus utilities */
+.btn-focus-ring {
+  outline: var(--outline-width-sm) solid var(--color-primary);
 }
