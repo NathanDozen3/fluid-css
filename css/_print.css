@@ -159,6 +159,29 @@
     page-break-after: auto;
   }
 
+  /* Ensure layout utilities fit on page */
+  .width-full,
+  .width-screen,
+  .max-w-xs,
+  .max-w-sm,
+  .max-w-md,
+  .max-w-lg,
+  .max-w-xl,
+  .max-w-xxl,
+  .max-w-container,
+  .max-w-container-narrow {
+    width: 100%;
+    max-width: none;
+  }
+
+  .height-screen,
+  .max-h-screen,
+  .min-h-screen {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+  }
+
   /* Disable animations for reduced motion */
   @media (prefers-reduced-motion: reduce) {
     * {
