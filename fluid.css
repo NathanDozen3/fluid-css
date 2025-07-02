@@ -14,30 +14,30 @@
  */
 
 /* Core variables (must be first for dependency resolution) */
-@import url('css/_variables.css?v=1.0.0');
+@import url('css/_variables.css');
 
 /* Browser reset for consistent styling */
-@import url('css/_reset.css?v=1.0.0');
+@import url('css/_reset.css');
 
 /* General utilities (display, visibility, etc.) */
-@import url('css/_utilities.css?v=1.0.0');
+@import url('css/_utilities.css');
 
 /* Styling utilities (forms, animations) */
-@import url('css/_buttons.css?v=1.0.0');
-@import url('css/_forms.css?v=1.0.0');
+@import url('css/_buttons.css');
+@import url('css/_forms.css');
 
 /* Layout utilities (containers, grid, flexbox, sizing, spacing) */
-@import url('css/_container.css?v=1.0.0');
-@import url('css/_grid.css?v=1.0.0');
-@import url('css/_flex.css?v=1.0.0');
-@import url('css/_layout.css?v=1.0.0');
-@import url('css/_spacing.css?v=1.0.0');
+@import url('css/_container.css');
+@import url('css/_grid.css');
+@import url('css/_flex.css');
+@import url('css/_layout.css');
+@import url('css/_spacing.css');
 
 /* Styling utilities (typography, colors) */
-@import url('css/_typography.css?v=1.0.0');
-@import url('css/_colors.css?v=1.0.0');
-@import url('css/_animations.css?v=1.0.0');
+@import url('css/_typography.css');
+@import url('css/_colors.css');
+@import url('css/_animations.css');
 
 /* Accessibility and print overrides (must be last for precedence) */
-@import url('css/_a11y.css?v=1.0.0');
-@import url('css/_print.css?v=1.0.0');
+@import url('css/_a11y.css');
+@import url('css/_print.css');

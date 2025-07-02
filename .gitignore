@@ -18,3 +18,4 @@
 !.huskyrc.js
 !.lintstagedrc
 !.nojekyll
+!postcss.config.js
