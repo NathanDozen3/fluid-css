@@ -538,3 +538,15 @@
 .max-width-container-narrow {
   max-width: var(--container-narrow-max-width);
 }
+
+.max-width-200 {
+  max-width: var(--max-width-200);
+}
+
+.max-width-300 {
+  max-width: var(--max-width-300);
+}
+
+.max-width-600 {
+  max-width: var(--max-width-600);
+}
