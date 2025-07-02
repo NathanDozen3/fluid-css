@@ -124,8 +124,8 @@
   .max-w-lg,
   .max-w-xl,
   .max-w-xxl,
-  .max-w-container,
-  .max-w-container-narrow {
+  .max-width-container,
+  .max-width-container-narrow {
     width: 100%;
     max-width: none;
     padding: var(--spacing-sm);

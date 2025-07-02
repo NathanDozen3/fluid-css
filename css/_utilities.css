@@ -4,14 +4,15 @@
  * ------------------------------------------------------------------------
  * Atomic utility classes for display, positioning, z-index, cursor, visibility,
  * float, isolation, overflow, background, aspect ratio, pointer-events, border-radius,
- * text-overflow, user-select, white-space, vertical-align, and scroll-behavior.
- * Usage: Combine utilities (e.g., .display-flex.position-relative.border-radius-sm).
- * Example: <div class="display-block vis-visible overflow-auto border-radius-md">Content</div>
+ * text-overflow, user-select, white-space, vertical-align, scroll-behavior, max-width.
+ * Usage: Combine utilities (e.g., .display-flex.position-relative.border-radius-md).
+ * Example: <div class="display-block vis-visible border-radius-md max-width-container">Content</div>
  * All properties use variables from _variables.css for consistency.
  * Notes:
  * - Alignment and justification utilities are in _flex.css.
  * - Text shadow utilities are in _typography.css.
- * - Hero module support: .display-flex, .border-radius-sm, etc.
+ * - Padding and margin utilities are in _spacing.css.
+ * - Hero module support: .display-flex, .border-radius-md, .max-width-container, etc.
  * ========================================================================
  */
 
@@ -527,4 +528,13 @@
 
 .scroll-behavior-smooth {
   scroll-behavior: var(--scroll-behavior-smooth);
+}
+
+/* Max-width utilities */
+.max-width-container {
+  max-width: var(--container-max-width);
+}
+
+.max-width-container-narrow {
+  max-width: var(--container-narrow-max-width);
 }
