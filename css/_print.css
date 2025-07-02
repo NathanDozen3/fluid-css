@@ -2,72 +2,182 @@
  * ========================================================================
  * Fluid CSS Print Styles
  * ------------------------------------------------------------------------
- * Print-specific overrides for background, color, and layout.
- * Usage: Automatically applied when printing. Use .no-print to hide elements.
- * Example: <div class="no-print">Screen only</div>
- * ======================================================================== */
+ * Styles for optimizing print output.
+ * Usage: Applied automatically in print media to enhance readability and save ink.
+ * Example: Ensures hero module, typography, and links are print-friendly.
+ * All properties use variables from _variables.css where possible.
+ * Atomic utilities are preserved for consistency.
+ * ========================================================================
+ */
 
 @media print {
+  /* Reset page margins and background */
   body {
-    background: var(--color-base) !important;
-    color: var(--color-high-contrast) !important;
+    margin: var(--spacing-sm);
+    padding: var(--spacing-0);
+    background: var(--color-base);
+    color: var(--color-high-contrast);
   }
 
-  a {
-    color: var(--color-high-contrast) !important;
-    text-decoration: underline !important;
+  /* Simplify layout for hero module */
+  .flex,
+  .inline-flex {
+    display: block;
   }
 
-  nav,
-  .no-print,
-  .sidebar,
-  .header,
-  .footer {
-    display: var(--display-none) !important;
+  /* Center text for hero module */
+  .text-align-center {
+    text-align: var(--text-align-center);
   }
 
-  img,
-  svg,
-  video,
-  canvas {
-    max-width: 100% !important;
-    height: var(--spacing-auto) !important;
+  /* Optimize typography for print */
+  .font-size-caption {
+    font-size: calc(var(--font-size-caption) * 1.1);
   }
 
-  * {
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-}
-
-/* ------------------------------------------------------------------------
- * Granular Print Utility Classes
- * Usage: Control display in print media.
- * Example: <div class="print-block print-none"></div>
- * ------------------------------------------------------------------------ */
-
-@media print {
-  .print-block {
-    display: var(--display-block) !important;
+  .font-size-xs {
+    font-size: calc(var(--font-size-xs) * 1.1);
   }
 
-  .print-inline {
-    display: inline !important;
+  .font-size-sm {
+    font-size: calc(var(--font-size-sm) * 1.1);
   }
 
-  .print-inline-block {
-    display: inline-block !important;
+  .font-size-base {
+    font-size: calc(var(--font-size-base) * 1.1);
   }
 
-  .print-flex {
-    display: flex !important;
+  .font-size-lg {
+    font-size: calc(var(--font-size-lg) * 1.1);
   }
 
-  .print-grid {
-    display: grid !important;
+  .font-size-xl {
+    font-size: calc(var(--font-size-xl) * 1.1);
   }
 
-  .print-none {
-    display: var(--display-none) !important;
+  .font-size-display {
+    font-size: calc(var(--font-size-heading) * 1.1);
+  }
+
+  /* Ensure high-contrast text */
+  .text-contrast,
+  .text-primary,
+  .text-success,
+  .text-warning,
+  .text-error,
+  .text-info,
+  .text-muted {
+    color: var(--color-high-contrast);
+  }
+
+  /* Remove non-essential elements */
+  .btn,
+  .focus-ring,
+  [class*='animation-'],
+  [class*='transition-'] {
+    display: none;
+  }
+
+  /* Remove shadows and gradients */
+  .text-shadow-sm,
+  .text-shadow-md,
+  .text-shadow-lg,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .bg-gradient-primary,
+  .bg-gradient-accent,
+  .bg-primary,
+  .bg-success,
+  .bg-warning,
+  .bg-error,
+  .bg-info {
+    background: var(--color-base);
+  }
+
+  /* Adjust spacing for print */
+  .padding-md,
+  .margin-bottom-md {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .gap-md {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Ensure containers fit on page */
+  .container,
+  .container-narrow {
+    width: 100%;
+    max-width: none;
+    padding: var(--spacing-sm);
+  }
+
+  /* Handle links: display URLs */
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: var(--font-size-xs);
+    color: var(--color-high-contrast);
+    text-decoration: none;
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100%;
+    filter: grayscale(100%);
+  }
+
+  /* Handle overflow content */
+  .overflow-hidden,
+  .overflow-x-hidden,
+  .overflow-y-hidden {
+    overflow: visible;
+  }
+
+  /* Ensure tables fit on page */
+  table {
+    width: 100%;
+    page-break-inside: avoid;
+  }
+
+  /* Force page breaks for better layout */
+  section,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* Disable animations for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* Add page margins and headers */
+  @page {
+    margin: var(--spacing-md);
+  }
+
+  /* Optional: Add page number in footer */
+  @page :right {
+    @bottom-right {
+      content: 'Page ' counter(page);
+      font-size: var(--font-size-xs);
+      color: var(--color-high-contrast);
+    }
   }
 }
