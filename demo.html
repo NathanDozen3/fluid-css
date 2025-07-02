@@ -3,59 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fluid CSS Demo</title>
+  <title>Fluid CSS Framework - Build Faster, Smarter</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="text-xl">Fluid CSS Demo</h1>
+  <header class="site-header flex justify-content-between align-items-center padding-md background-color-surface scroll-behavior-smooth">
+    <h1 class="font-size-xl font-weight-bold text-primary white-space-nowrap user-select-none">Fluid CSS Framework</h1>
     <nav>
-      <a class="btn" href="#">Home</a>
-      <a class="btn btn-outline" href="#">About</a>
+      <a class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-right-sm" href="#hero">Home</a>
+      <a class="btn btn-outline border-radius-md" href="#features">Features</a>
     </nav>
   </header>
-  <main class="container">
-    <section>
-      <h2>Buttons</h2>
-      <button class="btn">Primary Button</button>
-      <button class="btn btn-outline">Outline Button</button>
+  <main class="container max-width-container padding-md">
+    <section id="hero" class="flex align-items-center justify-content-center text-align-center padding-lg height-screen background-color-gradient-primary scroll-behavior-smooth border-radius-md">
+      <div class="max-w-container-narrow text-contrast">
+        <h1 class="font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in white-space-nowrap user-select-none">Build Faster with Fluid CSS</h1>
+        <p class="font-size-xl line-height-loose margin-bottom-md text-overflow-ellipsis" style="max-width: 600px;">A lightweight, atomic CSS framework for rapid prototyping, responsive design, and accessible interfaces. Perfect for developers who value simplicity and flexibility.</p>
+        <a href="#features" class="btn btn-background-color-primary btn-color-contrast padding-md border-radius-md font-size-base font-weight-semibold focus-ring transition-property-all transition-duration-fast cursor-pointer">Explore Features</a>
+      </div>
+    </section>
+    <section id="features">
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Why Choose Fluid CSS?</h2>
+      <p class="font-size-base margin-bottom-md">Fluid CSS empowers developers with intuitive utilities, semantic color tokens, and responsive design tools. Build modern, accessible, and scalable interfaces effortlessly.</p>
     </section>
     <section>
-      <h2>Form Elements</h2>
-      <form>
-        <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Your name">
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Your message"></textarea>
-        <button class="btn" type="submit">Send</button>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Customizable Buttons</h2>
+      <p class="font-size-base margin-bottom-md text-overflow-ellipsis" style="max-width: 600px;">Create stunning buttons with ease using atomic classes for styling, radius, and focus states. Perfect for rapid UI development.</p>
+      <button class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-right-sm focus-ring">Primary Button</button>
+      <button class="btn btn-outline border-radius-md focus-ring">Outline Button</button>
+    </section>
+    <section>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Accessible Forms</h2>
+      <p class="font-size-base margin-bottom-md">Build forms with responsive inputs, accessible focus rings, and non-selectable labels for a polished user experience.</p>
+      <form class="flex flex-column gap-md">
+        <label for="name" class="font-size-base user-select-none">Name</label>
+        <input id="name" type="text" placeholder="Your name" class="padding-sm border-radius-sm border-color-primary">
+        <label for="message" class="font-size-base user-select-none">Message</label>
+        <textarea id="message" placeholder="Your message" class="padding-sm border-radius-sm border-color-primary"></textarea>
+        <button class="btn btn-background-color-primary btn-color-contrast border-radius-md focus-ring" type="submit">Send</button>
       </form>
     </section>
     <section>
-      <h2>Colors</h2>
-      <div class="bg-primary text-contrast p-md mb-md">Primary</div>
-      <div class="bg-success text-contrast p-md mb-md">Success</div>
-      <div class="bg-warning text-base p-md mb-md">Warning</div>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Semantic Colors</h2>
+      <p class="font-size-base margin-bottom-md">Leverage semantic color tokens for consistent theming across light and dark modes, with rounded edges for modern aesthetics.</p>
+      <div class="flex flex-wrap gap-md">
+        <div class="background-color-primary text-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Primary</div>
+        <div class="background-color-success text-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Success</div>
+        <div class="background-color-warning text-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Warning</div>
+      </div>
     </section>
     <section>
-      <h2>Accessibility Helpers</h2>
-      <button class="btn focus-ring">Focusable Button</button>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Accessibility First</h2>
+      <p class="font-size-base margin-bottom-md">Ensure inclusive design with focus rings, screen-reader-only text, and non-selectable elements for better UX.</p>
+      <button class="btn btn-background-color-info btn-color-contrast border-radius-md focus-ring user-select-none">Focusable Button</button>
       <span class="visually-hidden">Screen reader only text</span>
     </section>
     <section>
-      <h2>Animations</h2>
-      <div class="fade-in p-md bg-surface text-base">Fade In Example</div>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Smooth Animations</h2>
+      <p class="font-size-base margin-bottom-md">Add flair with built-in animations and control text overflow for clean, dynamic interfaces.</p>
+      <div class="fade-in padding-md background-color-surface text-base border-radius-md text-overflow-ellipsis" style="max-width: 200px;">Fade In with Long Text that Truncates Gracefully</div>
     </section>
     <section>
-      <h2>Grid & Flex Utilities</h2>
-      <div class="flex flex-row gap-md">
-        <div class="bg-primary p-md grow">Flex 1</div>
-        <div class="bg-success p-md grow">Flex 2</div>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Flexible Layouts</h2>
+      <p class="font-size-base margin-bottom-md">Craft responsive layouts with flexbox and grid utilities, including order control and vertical alignment.</p>
+      <div class="flex flex-row gap-md margin-bottom-md">
+        <div class="background-color-primary padding-md flex-grow-1 border-radius-md order-2 vertical-align-middle">Flex 1 (Reordered)</div>
+        <div class="background-color-success padding-md flex-grow-1 border-radius-md order-1 vertical-align-middle">Flex 2 (Reordered)</div>
       </div>
-      <div class="grid grid-cols-3 gap-md mt-md">
-        <div class="bg-warning p-md">Grid 1</div>
-        <div class="bg-error p-md">Grid 2</div>
-        <div class="bg-info p-md">Grid 3</div>
+      <div class="grid grid-cols-3 gap-md">
+        <div class="background-color-warning padding-md border-radius-md">Grid 1</div>
+        <div class="background-color-error padding-md border-radius-md">Grid 2</div>
+        <div class="background-color-info padding-md border-radius-md">Grid 3</div>
       </div>
+    </section>
+    <section>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Advanced Typography</h2>
+      <p class="font-size-base margin-bottom-md">Control text behavior with utilities for truncation, wrapping, and spacing, ensuring clean content presentation.</p>
+      <div class="flex flex-column gap-md">
+        <p class="font-size-base text-overflow-ellipsis" style="max-width: 300px;">This long paragraph truncates with an ellipsis for clean overflow handling in constrained spaces.</p>
+        <p class="font-size-base white-space-nowrap">This text stays on one line, perfect for titles or labels.</p>
+        <p class="font-size-base white-space-pre">This   text   preserves   spaces   and   newlines.</p>
+      </div>
+    </section>
+    <section>
+      <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Responsive Design</h2>
+      <p class="font-size-base margin-bottom-md">Create polished, responsive layouts with border radius and smooth scrolling for seamless navigation.</p>
+      <div class="flex flex-wrap gap-md">
+        <div class="border-radius-none background-color-surface padding-md">No Border Radius</div>
+        <div class="border-radius-sm background-color-surface padding-md">Small Border Radius</div>
+        <div class="border-radius-md background-color-surface padding-md">Medium Border Radius</div>
+        <div class="border-radius-lg background-color-surface padding-md">Large Border Radius</div>
+        <div class="border-radius-full background-color-surface padding-md">Full Border Radius</div>
+      </div>
+      <a href="#hero" class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-top-md scroll-behavior-smooth">Back to Top</a>
     </section>
   </main>
 </body>
