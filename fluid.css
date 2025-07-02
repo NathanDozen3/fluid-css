@@ -22,6 +22,10 @@
 /* General utilities (display, visibility, etc.) */
 @import url('css/_utilities.css?v=1.0.0');
 
+/* Styling utilities (forms, animations) */
+@import url('css/_buttons.css?v=1.0.0');
+@import url('css/_forms.css?v=1.0.0');
+
 /* Layout utilities (containers, grid, flexbox, sizing, spacing) */
 @import url('css/_container.css?v=1.0.0');
 @import url('css/_grid.css?v=1.0.0');
@@ -29,11 +33,9 @@
 @import url('css/_layout.css?v=1.0.0');
 @import url('css/_spacing.css?v=1.0.0');
 
-/* Styling utilities (typography, colors, buttons, forms, animations) */
+/* Styling utilities (typography, colors) */
 @import url('css/_typography.css?v=1.0.0');
 @import url('css/_colors.css?v=1.0.0');
-@import url('css/_buttons.css?v=1.0.0');
-@import url('css/_forms.css?v=1.0.0');
 @import url('css/_animations.css?v=1.0.0');
 
 /* Accessibility and print overrides (must be last for precedence) */
