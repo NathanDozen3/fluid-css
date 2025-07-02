@@ -57,7 +57,7 @@
     font-size: calc(var(--font-size-xl) * 1.1);
   }
 
-  .font-size-display {
+  .font-size-heading {
     font-size: calc(var(--font-size-heading) * 1.1);
   }
 
