@@ -10,27 +10,27 @@
   <header class="site-header display-flex justify-content-between align-items-center padding-md background-color-surface scroll-behavior-smooth">
     <h1 class="font-size-xl font-weight-bold text-primary white-space-nowrap user-select-none">Fluid CSS Framework</h1>
     <nav>
-      <a class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-right-sm" href="#hero">Home</a>
-      <a class="btn btn-outline border-radius-md" href="#features">Features</a>
+      <a class="button background-color-primary text-contrast border-radius-md margin-right-sm" href="#hero">Home</a>
+      <a class="button button-outline border-radius-md" href="#features">Features</a>
     </nav>
   </header>
   <main>
-    <section id="hero" class="flex align-items-center justify-content-center text-align-center padding-lg height-screen background-gradient-primary scroll-behavior-smooth border-radius-md">
+    <section id="hero" class="display-flex align-items-center justify-content-center text-align-center padding-lg height-screen background-gradient-primary scroll-behavior-smooth border-radius-md">
       <div class="max-width-container-narrow text-contrast">
-        <h1 class="font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in white-space-nowrap user-select-none">Build Faster with Fluid CSS</h1>
-        <p class="font-size-xl line-height-loose margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">A lightweight, atomic CSS framework for rapid prototyping, responsive design, and accessible interfaces. Perfect for developers who value simplicity and flexibility.</p>
-        <a href="#features" class="btn btn-background-color-primary btn-color-contrast padding-md border-radius-md font-size-base font-weight-semibold focus-ring transition-property-all transition-duration-fast cursor-pointer">Explore Features</a>
+        <h1 class="font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in">Build Faster with Fluid CSS</h1>
+        <p class="font-size-lg margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">A lightweight, atomic CSS framework for rapid prototyping, responsive design, and accessible interfaces. Perfect for developers who value simplicity and flexibility.</p>
+        <a href="#features" class="button background-color-primary-dark button-color-contrast padding-md border-radius-md font-size-base font-weight-semibold focus-ring transition-property-all transition-duration-fast cursor-pointer">Explore Features</a>
       </div>
     </section>
-    <section id="features">
+    <section id="features" class="container padding-top-lg padding-bottom-lg">
       <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Why Choose Fluid CSS?</h2>
       <p class="font-size-base margin-bottom-md">Fluid CSS empowers developers with intuitive utilities, semantic color tokens, and responsive design tools. Build modern, accessible, and scalable interfaces effortlessly.</p>
     </section>
     <section>
       <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Customizable Buttons</h2>
       <p class="font-size-base margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Create stunning buttons with ease using atomic classes for styling, radius, and focus states. Perfect for rapid UI development.</p>
-      <button class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-right-sm focus-ring">Primary Button</button>
-      <button class="btn btn-outline border-radius-md focus-ring">Outline Button</button>
+      <button class="button button-background-color-primary button-color-contrast border-radius-md margin-right-sm focus-ring">Primary Button</button>
+      <button class="button button-outline border-radius-md focus-ring">Outline Button</button>
     </section>
     <section>
       <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Accessible Forms</h2>
@@ -40,7 +40,7 @@
         <input id="name" type="text" placeholder="Your name" class="padding-sm border-radius-sm border-color-primary">
         <label for="message" class="font-size-base user-select-none">Message</label>
         <textarea id="message" placeholder="Your message" class="padding-sm border-radius-sm border-color-primary"></textarea>
-        <button class="btn btn-background-color-primary btn-color-contrast border-radius-md focus-ring" type="submit">Send</button>
+        <button class="button button-background-color-primary button-color-contrast border-radius-md focus-ring" type="submit">Send</button>
       </form>
     </section>
     <section>
@@ -55,7 +55,7 @@
     <section>
       <h2 class="font-size-lg font-weight-semibold margin-bottom-md">Accessibility First</h2>
       <p class="font-size-base margin-bottom-md">Ensure inclusive design with focus rings, screen-reader-only text, and non-selectable elements for better UX.</p>
-      <button class="btn btn-background-color-info btn-color-contrast border-radius-md focus-ring user-select-none">Focusable Button</button>
+      <button class="button button-background-color-info button-color-contrast border-radius-md focus-ring user-select-none">Focusable Button</button>
       <span class="visually-hidden">Screen reader only text</span>
     </section>
     <section>
@@ -95,7 +95,7 @@
         <div class="border-radius-lg background-color-surface padding-md">Large Border Radius</div>
         <div class="border-radius-full background-color-surface padding-md">Full Border Radius</div>
       </div>
-      <a href="#hero" class="btn btn-background-color-primary btn-color-contrast border-radius-md margin-top-md scroll-behavior-smooth">Back to Top</a>
+      <a href="#hero" class="button button-background-color-primary button-color-contrast border-radius-md margin-top-md scroll-behavior-smooth">Back to Top</a>
     </section>
   </main>
 </body>

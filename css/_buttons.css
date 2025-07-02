@@ -3,7 +3,7 @@
  * Fluid CSS Button Utilities
  * ------------------------------------------------------------------------
  * Atomic utility classes for button styling.
- * Usage: Combine with other utilities (e.g., .btn.btn-background-primary.btn-color-contrast).
+ * Usage: Combine with other utilities (e.g., .btn.button-background-primary.button-color-contrast).
  * Example: <button class="btn btn-background-primary btn-color-contrast">Click</button>
  * All properties use variables from _variables.css for consistency.
  * Each utility sets a single CSS property for atomic design.
@@ -11,7 +11,7 @@
  */
 
 /* Base button styles */
-.btn {
+.button {
   display: var(--display-inline-block);
   padding: var(--spacing-sm);
   border: var(--border-width-sm) solid transparent;
@@ -28,61 +28,61 @@
 }
 
 /* Button background utilities */
-.btn-background-primary {
+.button-background-primary {
   background: var(--btn-bg);
 }
 
-.btn-background-success {
+.button-background-success {
   background: var(--color-success);
 }
 
-.btn-background-warning {
+.button-background-warning {
   background: var(--color-warning);
 }
 
-.btn-background-error {
+.button-background-error {
   background: var(--color-error);
 }
 
-.btn-background-info {
+.button-background-info {
   background: var(--color-info);
 }
 
 /* Button text color utilities */
-.btn-color-contrast {
+.button-color-contrast {
   color: var(--btn-text);
 }
 
-.btn-color-base {
+.button-color-base {
   color: var(--color-base);
 }
 
-.btn-color-primary {
+.button-color-primary {
   color: var(--color-primary);
 }
 
 /* Button border utilities */
-.btn-border-primary {
+.button-border-primary {
   border-color: var(--color-primary);
 }
 
-.btn-border-success {
+.button-border-success {
   border-color: var(--color-success);
 }
 
-.btn-border-warning {
+.button-border-warning {
   border-color: var(--color-warning);
 }
 
-.btn-border-error {
+.button-border-error {
   border-color: var(--color-error);
 }
 
-.btn-border-info {
+.button-border-info {
   border-color: var(--color-info);
 }
 
 /* Button focus utilities */
-.btn-focus-ring {
+.button-focus-ring {
   outline: var(--outline-width-sm) solid var(--color-primary);
 }

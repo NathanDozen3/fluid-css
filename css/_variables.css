@@ -461,6 +461,15 @@
   /* ----------------------------------------------------------------------
    * Additional max-widths
    * ---------------------------------------------------------------------- */
+  --max-width-200: 200px; /* For small elements */
+  --max-width-300: 300px; /* For medium elements */
+  --max-width-400: 400px; /* For larger elements */
+  --max-width-500: 500px; /* For extra large elements */
+  --max-width-600: 600px; /* For wide elements */
+  --max-width-700: 700px; /* For very wide elements */
+  --max-width-800: 800px; /* For ultra wide elements */
+  --max-width-900: 900px; /* For extremely wide elements */
+  --max-width-1000: 1000px; /* For super wide elements */
   --max-width-xs: var(--breakpoint-xs); /* 480px */
   --max-width-sm: var(--breakpoint-sm); /* 640px */
   --max-width-md: var(--breakpoint-md); /* 768px */
