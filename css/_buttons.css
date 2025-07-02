@@ -15,7 +15,7 @@
   display: var(--display-inline-block);
   padding: var(--spacing-sm);
   border: var(--border-width-sm) solid transparent;
-  border-radius: var(--radius);
+  border-radius: var(--border-radius-md);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);

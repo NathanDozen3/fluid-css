@@ -199,6 +199,54 @@
     pointer-events: auto;
   }
 
+  /* Handle new utilities */
+  .border-radius-none,
+  .border-radius-sm,
+  .border-radius-md,
+  .border-radius-lg,
+  .border-radius-full {
+    border-radius: var(--border-radius-none);
+  }
+
+  .text-overflow-ellipsis,
+  .text-overflow-clip {
+    text-overflow: clip;
+  }
+
+  .user-select-none,
+  .user-select-auto,
+  .user-select-all {
+    user-select: auto;
+  }
+
+  .white-space-normal,
+  .white-space-nowrap,
+  .white-space-pre,
+  .white-space-pre-wrap {
+    white-space: normal;
+  }
+
+  .vertical-align-baseline,
+  .vertical-align-top,
+  .vertical-align-middle,
+  .vertical-align-bottom {
+    vertical-align: baseline;
+  }
+
+  .scroll-behavior-auto,
+  .scroll-behavior-smooth {
+    scroll-behavior: auto;
+  }
+
+  .order-0,
+  .order-1,
+  .order-2,
+  .order-3,
+  .order-first,
+  .order-last {
+    order: var(--order-0);
+  }
+
   /* Ensure tables fit on page */
   table {
     width: 100%;

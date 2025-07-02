@@ -197,3 +197,28 @@
 .flex-basis-0 {
   flex-basis: var(--flex-basis-0);
 }
+
+/* Order utilities */
+.order-0 {
+  order: var(--order-0);
+}
+
+.order-1 {
+  order: var(--order-1);
+}
+
+.order-2 {
+  order: var(--order-2);
+}
+
+.order-3 {
+  order: var(--order-3);
+}
+
+.order-first {
+  order: var(--order-first);
+}
+
+.order-last {
+  order: var(--order-last);
+}

@@ -240,6 +240,12 @@
   --flex-shrink-1: 1;
   --flex-basis-auto: auto;
   --flex-basis-0: 0;
+  --order-0: 0;
+  --order-1: 1;
+  --order-2: 2;
+  --order-3: 3;
+  --order-first: -9999;
+  --order-last: 9999;
 
   /* ----------------------------------------------------------------------
    * Shadows
@@ -303,11 +309,46 @@
   /* ----------------------------------------------------------------------
    * Border radius
    * ---------------------------------------------------------------------- */
-  --radius-xs: 1px;
-  --radius-sm: 2px;
-  --radius: 4px;
-  --radius-lg: 8px;
-  --radius-full: 9999px;
+  --border-radius-none: 0;
+  --border-radius-sm: clamp(2px, 0.2vw, 4px);
+  --border-radius-md: clamp(4px, 0.4vw, 8px);
+  --border-radius-lg: clamp(8px, 0.8vw, 16px);
+  --border-radius-full: 9999px;
+
+  /* ----------------------------------------------------------------------
+   * Text overflow
+   * ---------------------------------------------------------------------- */
+  --text-overflow-ellipsis: ellipsis;
+  --text-overflow-clip: clip;
+
+  /* ----------------------------------------------------------------------
+   * User select
+   * ---------------------------------------------------------------------- */
+  --user-select-none: none;
+  --user-select-auto: auto;
+  --user-select-all: all;
+
+  /* ----------------------------------------------------------------------
+   * White space
+   * ---------------------------------------------------------------------- */
+  --white-space-normal: normal;
+  --white-space-nowrap: nowrap;
+  --white-space-pre: pre;
+  --white-space-pre-wrap: pre-wrap;
+
+  /* ----------------------------------------------------------------------
+   * Vertical align
+   * ---------------------------------------------------------------------- */
+  --vertical-align-baseline: baseline;
+  --vertical-align-top: top;
+  --vertical-align-middle: middle;
+  --vertical-align-bottom: bottom;
+
+  /* ----------------------------------------------------------------------
+   * Scroll behavior
+   * ---------------------------------------------------------------------- */
+  --scroll-behavior-auto: auto;
+  --scroll-behavior-smooth: smooth;
 
   /* ----------------------------------------------------------------------
    * Z-index scale
