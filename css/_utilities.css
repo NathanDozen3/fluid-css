@@ -621,11 +621,38 @@
 
 /* Overlay utilities */
 .overlay-dark {
-  background: var(--color-overlay);
+  position: relative; /* Essential for positioning the pseudo-element */
 }
 
 .overlay-light {
-  background: var(--color-overlay-light);
+  position: relative; /* Essential for positioning the pseudo-element */
+}
+
+/* Base pseudo-element for overlays */
+.overlay-dark::before,
+.overlay-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* Sits above the element's background, but below its content */
+}
+
+.overlay-dark::before {
+  background-color: var(--color-overlay);
+}
+
+.overlay-light::before {
+  background-color: var(--color-overlay-light);
+}
+
+/* Ensure direct children content appears above the overlay */
+/* This ensures any text/content within the overlayed element is visible. */
+/* You might need to adjust this selector based on your common content wrappers. */
+/* For example, if you always use a div inside the section: */
+.overlay-dark > *,
+.overlay-light > * {
+  position: relative;
+  z-index: 2; /* Higher than the ::before overlay's z-index */
 }
 
 /* Border radius utilities */
