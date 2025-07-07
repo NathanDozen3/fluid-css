@@ -10,15 +10,6 @@
  * ========================================================================
  */
 
-/* Display utilities */
-.flex {
-  display: var(--display-flex);
-}
-
-.inline-flex {
-  display: var(--display-inline-flex);
-}
-
 /* Flex direction utilities */
 .flex-row {
   flex-direction: var(--flex-direction-row);
@@ -83,6 +74,10 @@
   justify-content: var(--justify-content-evenly);
 }
 
+.justify-content-stretch {
+  justify-content: var(--justify-content-stretch);
+}
+
 /* Align content utilities */
 .align-content-start {
   align-content: var(--align-content-start);
@@ -144,6 +139,14 @@
 
 .justify-self-stretch {
   justify-self: var(--justify-content-stretch);
+}
+
+.justify-self-left {
+  justify-self: var(--justify-self-left);
+}
+
+.justify-self-right {
+  justify-self: var(--justify-self-right);
 }
 
 /* Gap utilities */

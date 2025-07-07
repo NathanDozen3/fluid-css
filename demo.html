@@ -8,18 +8,18 @@
 </head>
 <body>
   <header class="display-flex flex-wrap justify-content-between align-items-center padding-md background-color-surface scroll-behavior-smooth">
-    <div class="font-size-xl font-weight-bold text-primary">Fluid CSS Framework</div>
+    <div class="font-size-xl font-weight-bold color-primary">Fluid CSS Framework</div>
     <nav class="display-flex gap-md">
-      <a class="button background-color-primary text-contrast border-radius-md" href="#hero">Home</a>
+      <a class="button background-color-primary color-contrast border-radius-md" href="#hero">Home</a>
       <a class="button button-outline border-radius-md" href="#features">Features</a>
     </nav>
   </header>
   <main>
     <section id="hero" class="display-flex align-items-center justify-content-center text-align-center padding-lg height-screen background-gradient-primary scroll-behavior-smooth border-radius-md">
-      <div class="max-width-container-narrow text-contrast">
+      <div class="max-width-container-narrow color-contrast">
         <h1 class="font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in">Build Faster with Fluid CSS</h1>
         <p class="font-size-lg margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">A lightweight, atomic CSS framework for rapid prototyping, responsive design, and accessible interfaces. Perfect for developers who value simplicity and flexibility.</p>
-        <a href="#features" class="button background-color-primary-dark text-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer">Explore Features</a>
+        <a href="#features" class="button background-color-primary-dark color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer text-decoration-none">Explore Features</a>
       </div>
     </section>
     <section id="features" class="container padding-top-lg padding-bottom-lg">
@@ -27,9 +27,9 @@
       <p>Fluid CSS empowers developers with intuitive utilities, semantic color tokens, and responsive design tools. Build modern, accessible, and scalable interfaces effortlessly.</p>
 
       <h3>Customizable Buttons</h3>
-      <p class="font-size-base margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Create stunning buttons with ease using atomic classes for styling, radius, and focus states. Perfect for rapid UI development.</p>
-      <button class="button button-background-color-primary button-color-contrast border-radius-md margin-right-sm focus-ring">Primary Button</button>
-      <button class="button button-outline border-radius-md focus-ring">Outline Button</button>
+      <p class="font-size-base margin-bottom-md">Create stunning buttons with ease using atomic classes for styling, radius, and focus states. Perfect for rapid UI development.</p>
+      <button class="button background-color-primary color-base border-radius-md margin-right-sm focus-ring">Primary Button</button>
+      <button class="button border-radius-md focus-ring">Outline Button</button>
 
       <h3>Accessible Forms</h3>
       <p class="font-size-base margin-bottom-md">Build forms with responsive inputs, accessible focus rings, and non-selectable labels for a polished user experience.</p>
@@ -44,9 +44,9 @@
       <h3>Semantic Colors</h3>
       <p class="font-size-base margin-bottom-md">Leverage semantic color tokens for consistent theming across light and dark modes, with rounded edges for modern aesthetics.</p>
       <div class="flex flex-wrap gap-md">
-        <div class="background-color-primary text-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Primary</div>
-        <div class="background-color-success text-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Success</div>
-        <div class="background-color-warning text-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Warning</div>
+        <div class="background-color-primary color-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Primary</div>
+        <div class="background-color-success color-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Success</div>
+        <div class="background-color-warning color-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Warning</div>
       </div>
 
       <h3>Accessibility First</h3>
@@ -56,7 +56,7 @@
 
       <h3>Smooth Animations</h3>
       <p class="font-size-base margin-bottom-md">Add flair with built-in animations and control text overflow for clean, dynamic interfaces.</p>
-      <div class="fade-in padding-md background-color-surface text-base border-radius-md text-overflow-ellipsis max-width-200">Fade In with Long Text that Truncates Gracefully</div>
+      <div class="fade-in padding-md background-color-surface color-primary border-radius-md text-overflow-ellipsis max-width-200">Fade In with Long Text that Truncates Gracefully</div>
 
       <h3>Flexible Layouts</h3>
       <p class="font-size-base margin-bottom-md">Craft responsive layouts with flexbox and grid utilities, including order control and vertical alignment.</p>
@@ -98,12 +98,14 @@
       </ul>
     </section>
   </main>
-  <footer class="container padding-md background-color-surface text-align-center">
-    <p class="font-size-base margin-bottom-md">© 2025 Fluid CSS Framework. All rights reserved.</p>
-    <nav>
-      <a class="button button-background-color-primary button-color-contrast border-radius-md margin-right-sm" href="#hero">Home</a>
-      <a class="button button-background-color-primary button-color-contrast border-radius-md" href="#features">Features</a>
-    </nav>
+  <footer class="background-color-surface text-align-center">
+    <div class="container padding-md">
+      <p class="font-size-base margin-bottom-md">© 2025 Fluid CSS Framework. All rights reserved.</p>
+      <nav class="display-flex justify-content-center gap-md">
+        <a class="color-contrast" href="#hero">Home</a>
+        <a class="color-contrast" href="#features">Features</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

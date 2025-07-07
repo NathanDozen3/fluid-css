@@ -135,8 +135,8 @@
   }
 
   .height-screen,
-  .max-h-screen,
-  .min-h-screen {
+  .max-height-screen,
+  .min-height-screen {
     height: auto;
     max-height: none;
     min-height: auto;
