@@ -10,7 +10,7 @@
   <header class="display-flex flex-wrap justify-content-between align-items-center padding-md background-color-surface scroll-behavior-smooth">
     <div class="font-size-xl font-weight-bold color-primary">Fluid CSS Framework</div>
     <nav class="display-flex gap-md">
-      <a class="button background-color-primary color-contrast border-radius-md" href="#hero">Home</a>
+      <a class="button background-color-primary color-base border-radius-md" href="#hero">Home</a>
       <a class="button button-outline border-color-primary-light border-radius-md" href="#features">Features</a>
       <a class="button button-outline border-color-primary-light border-radius-md" href="#documentation">Documentation</a>
       <a class="button button-outline border-color-primary-light border-radius-md" href="#community">Community</a>
@@ -18,9 +18,9 @@
   </header>
   <main>
     <section id="hero" class="display-flex align-items-center justify-content-center text-align-center padding-lg height-screen background-gradient-primary scroll-behavior-smooth border-radius-md overlay-dark">
-      <div class="max-width-container-narrow color-base">
-        <h1 class="font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in">Unleash Your Design Potential with Fluid CSS</h1>
-        <p class="font-size-lg margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Discover Fluid CSS: The lightweight, atomic framework meticulously crafted for rapid prototyping, responsive design, and inherently accessible interfaces. Simplify your workflow and build stunning UIs with unparalleled flexibility.</p>
+      <div class="max-width-container-narrow">
+        <h1 class="color-base font-size-heading font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in">Unleash Your Design Potential with Fluid CSS</h1>
+        <p class="color-base font-size-lg margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Discover Fluid CSS: The lightweight, atomic framework meticulously crafted for rapid prototyping, responsive design, and inherently accessible interfaces. Simplify your workflow and build stunning UIs with unparalleled flexibility.</p>
         <a href="#features" class="button background-color-primary-dark color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer text-decoration-none">Explore Core Features</a>
       </div>
     </section>
@@ -46,19 +46,19 @@
         <input id="email" type="email" placeholder="e.g., jane@example.com" class="padding-sm border-radius-sm border-color-primary">
         <label for="message" class="font-size-base user-select-none">Your Message</label>
         <textarea id="message" placeholder="Share your thoughts..." class="padding-sm border-radius-sm border-color-primary"></textarea>
-        <button class="button background-color-primary color-contrast border-radius-md focus-ring" type="submit">Send Inquiry</button>
+        <button class="button background-color-primary color-base border-radius-md focus-ring" type="submit">Send Inquiry</button>
       </form>
 
       <h3>Vibrant Semantic Colors</h3>
       <p class="font-size-base margin-bottom-md">Leverage a powerful semantic color system for consistent theming across light and dark modes. Easily define UI roles and ensure visual harmony throughout your application.</p>
       <div class="display-flex flex-wrap gap-md margin-bottom-lg">
-        <div class="background-color-primary color-contrast padding-md border-radius-lg white-space-nowrap">Primary Brand</div>
+        <div class="background-color-primary color-base padding-md border-radius-lg white-space-nowrap">Primary Brand</div>
         <div class="background-color-success color-contrast padding-md border-radius-lg white-space-nowrap">Success State</div>
         <div class="background-color-warning color-base padding-md border-radius-lg white-space-nowrap">Warning Alert</div>
         <div class="background-color-error color-base padding-md border-radius-lg white-space-nowrap">Error Message</div>
         <div class="background-color-info color-contrast padding-md border-radius-lg white-space-nowrap">Info Callout</div>
         <div class="background-color-surface color-contrast padding-md border-radius-lg white-space-nowrap">Surface Element</div>
-        <div class="background-color-background color-contrast padding-md border-radius-lg white-space-nowrap">Page Background</div>
+        <div class="background-color-background color-contrast border-style-solid border-width-sm border-color-primary padding-md border-radius-lg white-space-nowrap">Page Background</div>
         <div class="background-color-border color-contrast padding-md border-radius-lg white-space-nowrap">Border Line</div>
       </div>
 
@@ -111,18 +111,20 @@
         <div class="border-radius-full background-color-surface color-contrast padding-md">Full Radius</div>
       </div>
     </section>
-    <section id="documentation" class="container padding-top-lg padding-bottom-lg background-color-background-alt">
-      <h2>Comprehensive Documentation</h2>
-      <p>Dive deep into the Fluid CSS framework with our extensive and easy-to-understand documentation. From getting started guides to advanced customization, we've got you covered.</p>
-      <ul class="list-style-disc margin-bottom-md">
-        <li><strong>Installation Guides</strong>: Quick start with npm, CDN, or local setup.</li>
-        <li><strong>Utility Reference</strong>: A complete list of all atomic utility classes with examples.</li>
-        <li><strong>Design Tokens API</strong>: Understand and customize every variable for unique branding.</li>
-        <li><strong>Accessibility Best Practices</strong>: Learn how to build inclusive interfaces with Fluid CSS.</li>
-        <li><strong>Theming & Dark Mode</strong>: Instructions for effortless theming and dark mode implementation.</li>
-      </ul>
-      <div class="display-flex justify-content-center">
-        <a href="#" class="button background-color-primary color-contrast padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer">View Documentation</a>
+    <section id="documentation" class="padding-top-lg padding-bottom-lg background-color-background-alt">
+      <div class="container">
+        <h2>Comprehensive Documentation</h2>
+        <p>Dive deep into the Fluid CSS framework with our extensive and easy-to-understand documentation. From getting started guides to advanced customization, we've got you covered.</p>
+        <ul class="list-style-disc margin-bottom-md">
+          <li><strong>Installation Guides</strong>: Quick start with npm, CDN, or local setup.</li>
+          <li><strong>Utility Reference</strong>: A complete list of all atomic utility classes with examples.</li>
+          <li><strong>Design Tokens API</strong>: Understand and customize every variable for unique branding.</li>
+          <li><strong>Accessibility Best Practices</strong>: Learn how to build inclusive interfaces with Fluid CSS.</li>
+          <li><strong>Theming & Dark Mode</strong>: Instructions for effortless theming and dark mode implementation.</li>
+        </ul>
+        <div class="display-flex justify-content-center">
+          <a href="#" class="button background-color-primary color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer">View Documentation</a>
+        </div>
       </div>
     </section>
     <section id="community" class="container padding-top-lg padding-bottom-lg">
@@ -135,7 +137,7 @@
         <li><strong>Social Media</strong>: Follow us for updates and news.</li>
       </ul>
       <div class="display-flex justify-content-center">
-        <a href="https://github.com/NathanDozen3/fluid-css/" class="button background-color-primary color-contrast padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer">Join the Community</a>
+        <a href="https://github.com/NathanDozen3/fluid-css/" class="button background-color-primary color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer">Join the Community</a>
       </div>
     </section>
   </main>

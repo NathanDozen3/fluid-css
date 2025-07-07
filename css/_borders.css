@@ -1,0 +1,122 @@
+/*
+ * ========================================================================
+ * Fluid CSS Border Utilities
+ * ------------------------------------------------------------------------
+ * Atomic utility classes for border width, style, and color.
+ * Usage: Combine with other utilities (e.g., .border-width-sm.border-style-solid.border-color-primary).
+ * Example: <div class="border-width-md border-style-dashed border-color-success">Element</div>
+ * All properties use variables from _variables.css for consistency.
+ * Each utility sets a single CSS property for atomic design.
+ * ======================================================================== */
+
+/* Button border width utilities */
+.border-width-none {
+  border-width: var(--border-width-none);
+}
+
+.border-width-sm {
+  border-width: var(--border-width-sm);
+}
+
+.border-width-md {
+  border-width: var(--border-width-md);
+}
+
+.border-width-lg {
+  border-width: var(--border-width-lg);
+}
+
+.border-width-xl {
+  border-width: var(--border-width-xl);
+}
+
+/* Border color utilities */
+.border-color-primary {
+  border-color: var(--color-primary);
+}
+
+.border-color-success {
+  border-color: var(--color-success);
+}
+
+.border-color-warning {
+  border-color: var(--color-warning);
+}
+
+.border-color-error {
+  border-color: var(--color-error);
+}
+
+.border-color-info {
+  border-color: var(--color-info);
+}
+
+.border-color-muted {
+  border-color: var(--color-muted);
+}
+
+.border-color-high-contrast {
+  border-color: var(--color-high-contrast);
+}
+
+.border-color-primary-light {
+  border-color: var(--color-primary-light);
+}
+
+.border-color-primary-dark {
+  border-color: var(--color-primary-dark);
+}
+
+/* Border style utilities */
+.border-style-solid {
+  border-style: var(--border-style-solid);
+}
+
+.border-style-dashed {
+  border-style: var(--border-style-dashed);
+}
+
+.border-style-dotted {
+  border-style: var(--border-style-dotted);
+}
+
+.border-style-double {
+  border-style: var(--border-style-double);
+}
+
+.border-style-groove {
+  border-style: var(--border-style-groove);
+}
+
+.border-style-ridge {
+  border-style: var(--border-style-ridge);
+}
+
+.border-style-inset {
+  border-style: var(--border-style-inset);
+}
+
+.border-style-outset {
+  border-style: var(--border-style-outset);
+}
+
+/* Border radius utilities */
+.border-radius-none {
+  border-radius: var(--border-radius-none);
+}
+
+.border-radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.border-radius-md {
+  border-radius: var(--border-radius-md);
+}
+
+.border-radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+
+.border-radius-full {
+  border-radius: var(--border-radius-full);
+}

@@ -23,6 +23,7 @@
 @import url('css/_utilities.css');
 
 /* Styling utilities (forms, animations) */
+@import url('css/_borders.css');
 @import url('css/_buttons.css');
 @import url('css/_forms.css');
 

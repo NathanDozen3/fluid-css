@@ -386,35 +386,6 @@
   box-shadow: var(--dropdown-shadow);
 }
 
-/* Border style utilities */
-.border-style-dashed {
-  border-style: var(--border-style-dashed);
-}
-
-.border-style-dotted {
-  border-style: var(--border-style-dotted);
-}
-
-.border-style-double {
-  border-style: var(--border-style-double);
-}
-
-.border-style-groove {
-  border-style: var(--border-style-groove);
-}
-
-.border-style-ridge {
-  border-style: var(--border-style-ridge);
-}
-
-.border-style-inset {
-  border-style: var(--border-style-inset);
-}
-
-.border-style-outset {
-  border-style: var(--border-style-outset);
-}
-
 /* Cursor utilities */
 .cursor-pointer {
   cursor: var(--cursor-pointer);
@@ -646,34 +617,16 @@
 }
 
 /* Ensure direct children content appears above the overlay */
+
 /* This ensures any text/content within the overlayed element is visible. */
+
 /* You might need to adjust this selector based on your common content wrappers. */
+
 /* For example, if you always use a div inside the section: */
 .overlay-dark > *,
 .overlay-light > * {
   position: relative;
   z-index: 2; /* Higher than the ::before overlay's z-index */
-}
-
-/* Border radius utilities */
-.border-radius-none {
-  border-radius: var(--border-radius-none);
-}
-
-.border-radius-sm {
-  border-radius: var(--border-radius-sm);
-}
-
-.border-radius-md {
-  border-radius: var(--border-radius-md);
-}
-
-.border-radius-lg {
-  border-radius: var(--border-radius-lg);
-}
-
-.border-radius-full {
-  border-radius: var(--border-radius-full);
 }
 
 /* Text overflow utilities */
