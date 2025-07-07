@@ -11,7 +11,7 @@
     <div class="font-size-xl font-weight-bold color-primary">Fluid CSS Framework</div>
     <nav class="display-flex gap-md">
       <a class="button background-color-primary color-contrast border-radius-md" href="#hero">Home</a>
-      <a class="button button-outline border-radius-md" href="#features">Features</a>
+      <a class="button border-color-primary-light border-radius-md" href="#features">Features</a>
     </nav>
   </header>
   <main>
@@ -33,7 +33,7 @@
 
       <h3>Accessible Forms</h3>
       <p class="font-size-base margin-bottom-md">Build forms with responsive inputs, accessible focus rings, and non-selectable labels for a polished user experience.</p>
-      <form class="flex flex-column gap-md">
+      <form class="display-flex flex-column gap-md">
         <label for="name" class="font-size-base user-select-none">Name</label>
         <input id="name" type="text" placeholder="Your name" class="padding-sm border-radius-sm border-color-primary">
         <label for="message" class="font-size-base user-select-none">Message</label>
@@ -43,7 +43,7 @@
 
       <h3>Semantic Colors</h3>
       <p class="font-size-base margin-bottom-md">Leverage semantic color tokens for consistent theming across light and dark modes, with rounded edges for modern aesthetics.</p>
-      <div class="flex flex-wrap gap-md">
+      <div class="display-flex flex-wrap gap-md">
         <div class="background-color-primary color-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Primary</div>
         <div class="background-color-success color-contrast padding-md margin-bottom-md border-radius-lg white-space-nowrap">Success</div>
         <div class="background-color-warning color-base padding-md margin-bottom-md border-radius-lg white-space-nowrap">Warning</div>
@@ -56,11 +56,11 @@
 
       <h3>Smooth Animations</h3>
       <p class="font-size-base margin-bottom-md">Add flair with built-in animations and control text overflow for clean, dynamic interfaces.</p>
-      <div class="fade-in padding-md background-color-surface color-primary border-radius-md text-overflow-ellipsis max-width-200">Fade In with Long Text that Truncates Gracefully</div>
+      <div class="animation-fade-in padding-md background-color-surface color-primary border-radius-md text-overflow-ellipsis max-width-200">Fade In with Long Text that Truncates Gracefully</div>
 
       <h3>Flexible Layouts</h3>
       <p class="font-size-base margin-bottom-md">Craft responsive layouts with flexbox and grid utilities, including order control and vertical alignment.</p>
-      <div class="flex flex-row gap-md margin-bottom-md">
+      <div class="display-flex flex-row gap-md margin-bottom-md">
         <div class="background-color-primary padding-md flex-grow-1 border-radius-md order-2 vertical-align-middle">Flex 1 (Reordered)</div>
         <div class="background-color-success padding-md flex-grow-1 border-radius-md order-1 vertical-align-middle">Flex 2 (Reordered)</div>
       </div>
@@ -72,7 +72,7 @@
 
       <h3>Advanced Typography</h3>
       <p class="font-size-base margin-bottom-md">Control text behavior with utilities for truncation, wrapping, and spacing, ensuring clean content presentation.</p>
-      <div class="flex flex-column gap-md">
+      <div class="display-flex flex-column gap-md">
         <p class="font-size-base text-overflow-ellipsis max-width-300">This long paragraph truncates with an ellipsis for clean overflow handling in constrained spaces.</p>
         <p class="font-size-base white-space-nowrap overflow-scroll">This text stays on one line, perfect for titles or labels.</p>
         <p class="font-size-base white-space-pre overflow-scroll">This   text   preserves   spaces   and   newlines.</p>
@@ -80,7 +80,7 @@
 
       <h3>Responsive Design</h3>
       <p class="font-size-base margin-bottom-md">Create polished, responsive layouts with border radius and smooth scrolling for seamless navigation.</p>
-      <div class="flex flex-wrap gap-md">
+      <div class="display-flex flex-wrap gap-md">
         <div class="border-radius-none background-color-surface padding-md">No Border Radius</div>
         <div class="border-radius-sm background-color-surface padding-md">Small Border Radius</div>
         <div class="border-radius-md background-color-surface padding-md">Medium Border Radius</div>
