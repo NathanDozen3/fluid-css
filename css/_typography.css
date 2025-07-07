@@ -148,15 +148,15 @@
 
 /* Text decoration utilities */
 .text-decoration-underline {
-  text-decoration: underline;
+  text-decoration: var(--text-decoration-underline);
 }
 
 .text-decoration-line-through {
-  text-decoration: line-through;
+  text-decoration: var(--text-decoration-line-through);
 }
 
 .text-decoration-none {
-  text-decoration: none;
+  text-decoration: var(--text-decoration-none);
 }
 
 /* Text shadow utilities */
@@ -173,5 +173,5 @@
 }
 
 .text-shadow-none {
-  text-shadow: none;
+  text-shadow: var(--text-shadow-none);
 }

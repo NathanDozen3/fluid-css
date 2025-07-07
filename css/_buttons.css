@@ -14,7 +14,9 @@
 .button {
   display: var(--display-inline-block);
   padding: var(--spacing-sm);
-  border: var(--border-width-sm) solid transparent;
+  border-width: var(--border-width-sm);
+  border-style: var(--border-style-solid);
+  border-color: var(--color-border);
   border-radius: var(--border-radius-md);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);

@@ -305,47 +305,103 @@
 }
 
 .cursor-default {
-  cursor: default;
+  cursor: var(--cursor-default);
+}
+
+.cursor-grab {
+  cursor: var(--cursor-grab);
+}
+
+.cursor-grabbing {
+  cursor: var(--cursor-grabbing);
+}
+
+.cursor-not-allowed {
+  cursor: var(--cursor-not-allowed);
+}
+
+.cursor-help {
+  cursor: var(--cursor-help);
+}
+
+.cursor-move {
+  cursor: var(--cursor-move);
+}
+
+.cursor-text {
+  cursor: var(--cursor-text);
+}
+
+.cursor-crosshair {
+  cursor: var(--cursor-crosshair);
 }
 
 /* Visibility utilities */
-.vis-hidden {
-  visibility: hidden;
+.visibility-hidden {
+  visibility: var(--visibility-hidden);
 }
 
-.vis-visible {
-  visibility: visible;
+.visibility-visible {
+  visibility: var(--visibility-visible);
 }
 
 /* Float utilities */
 .float-left {
-  float: left;
+  float: var(--float-left);
 }
 
 .float-right {
-  float: right;
+  float: var(--float-right);
 }
 
 .float-none {
-  float: none;
+  float: var(--float-none);
 }
 
 /* Isolation utilities */
-.isolate {
-  isolation: isolate;
+.isolation-isolate {
+  isolation: var(--isolation-isolate);
 }
 
 .isolation-auto {
-  isolation: auto;
+  isolation: var(--isolation-auto);
+}
+
+.isolation-visible {
+  isolation: var(--isolation-visible);
+}
+
+.isolation-hidden {
+  isolation: var(--isolation-hidden);
+}
+
+.isolation-all {
+  isolation: var(--isolation-all);
+}
+
+.isolation-none {
+  isolation: var(--isolation-none);
 }
 
 /* Pointer-events utilities */
 .pointer-events-none {
-  pointer-events: none;
+  pointer-events: var(--pointer-events-none);
 }
 
 .pointer-events-auto {
-  pointer-events: auto;
+  pointer-events: var(--pointer-events-auto);
+}
+
+.pointer-events-visible {
+  pointer-events: var(--pointer-events-visible);
+}
+
+.pointer-events-hidden {
+  pointer-events: var(--pointer-events-hidden);
+}
+
+.pointer-events-all {
+  pointer-events: var(--pointer-events-all);
 }
 
 /* Overflow utilities */

@@ -3,8 +3,8 @@
  * Fluid CSS Layout Utilities
  * ------------------------------------------------------------------------
  * Atomic utility classes for width, height, min-width, min-height, max-width, and max-height.
- * Usage: Use .width-*, .height-*, .min-w-*, .min-h-*, .max-w-*, .max-h-* for layout sizing.
- * Example: <div class="width-full height-auto max-w-lg"></div>
+ * Usage: Use .width-*, .height-*, .min-width-*, .min-height-*, .max-width-*, .max-height-* for layout sizing.
+ * Example: <div class="width-full height-auto max-width-lg"></div>
  * All properties use variables from _variables.css for consistency.
  * Display utilities (.d-*) are in _utilities.css; container styles in _container.css.
  * ========================================================================
@@ -12,15 +12,27 @@
 
 /* Width utilities */
 .width-full {
-  width: 100%;
+  width: var(--width-full);
 }
 
 .width-auto {
-  width: var(--spacing-auto);
+  width: var(--width-auto);
 }
 
 .width-screen {
-  width: var(--viewport-min);
+  width: var(--width-screen);
+}
+
+.width-1-12 {
+  width: var(--width-1-12);
+}
+
+.width-1-6 {
+  width: var(--width-1-6);
+}
+
+.width-1-5 {
+  width: var(--width-1-5);
 }
 
 .width-1-4 {
@@ -44,56 +56,56 @@
 }
 
 /* Min-width utilities */
-.min-w-full {
+.min-width-full {
   min-width: 100%;
 }
 
-.min-w-container {
+.min-width-container {
   min-width: var(--container-min-width);
 }
 
-.min-w-xs {
+.min-width-xs {
   min-width: var(--breakpoint-xs);
 }
 
-.min-w-sm {
+.min-width-sm {
   min-width: var(--breakpoint-sm);
 }
 
-.min-w-md {
+.min-width-md {
   min-width: var(--breakpoint-md);
 }
 
 /* Max-width utilities */
-.max-w-xs {
+.max-width-xs {
   max-width: var(--max-width-xs);
 }
 
-.max-w-sm {
+.max-width-sm {
   max-width: var(--max-width-sm);
 }
 
-.max-w-md {
+.max-width-md {
   max-width: var(--max-width-md);
 }
 
-.max-w-lg {
+.max-width-lg {
   max-width: var(--max-width-lg);
 }
 
-.max-w-xl {
+.max-width-xl {
   max-width: var(--max-width-xl);
 }
 
-.max-w-xxl {
+.max-width-xxl {
   max-width: var(--max-width-xxl);
 }
 
-.max-w-container {
+.max-width-container {
   max-width: var(--max-width-container);
 }
 
-.max-w-container-narrow {
+.max-width-container-narrow {
   max-width: var(--max-width-container-narrow);
 }
 
@@ -131,27 +143,42 @@
 }
 
 /* Min-height utilities */
-.min-h-full {
-  min-height: 100%;
+.min-height-sm {
+  min-height: var(--min-height-sm);
 }
 
-.min-h-screen {
-  min-height: var(--max-height-full);
+.min-height-md {
+  min-height: var(--min-height-md);
+}
+.min-height-lg {
+  min-height: var(--min-height-lg);
 }
 
-.min-h-sm {
-  min-height: var(--max-height-sm);
+.min-height-full {
+  min-height: var(--min-height-full)
+}
+
+.min-height-screen {
+  min-height: var(--min-height-screen);
 }
 
 /* Max-height utilities */
-.max-h-sm {
+.max-height-sm {
   max-height: var(--max-height-sm);
 }
 
-.max-h-full {
+.max-height-md {
+  max-height: var(--max-height-md);
+}
+
+.max-height-lg {
+  max-height: var(--max-height-lg);
+}
+
+.max-height-full {
   max-height: var(--max-height-full);
 }
 
-.max-h-screen {
+.max-height-screen {
   max-height: var(--max-height-full);
 }

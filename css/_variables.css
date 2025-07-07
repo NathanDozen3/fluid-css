@@ -94,18 +94,25 @@
   --container-narrow-width: 60vw; /* Default narrow container width */
   --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
+
   --max-height-sm: 300px; /* For constrained elements like modals */
-  --max-height-full: 100vh; /* Full viewport height */
+  --max-height-md: 500px; /* For medium elements */
+  --max-height-lg: 800px; /* For large elements */
+  --max-height-full: 100%; /* Full viewport height */
+  --max-height-screen: 100vh; /* Full viewport height for screen elements */
+
+  --min-height-sm: 200px; /* Minimum height for small elements */
+  --min-height-md: 400px; /* Minimum height for medium elements */
+  --min-height-lg: 600px; /* Minimum height for large elements */
+  --min-height-full: 100%; /* Full height for elements */
+  --min-height-screen: 100vh; /* Full viewport height for screen elements */
 
   /* ----------------------------------------------------------------------
    * Typography (responsive with clamp)
    * ---------------------------------------------------------------------- */
-  --font-family-base:
-    'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
-
+  --font-family-base: 'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
   --font-family-heading: 'Merriweather', serif; /* Font for headings */
-  --font-family-monospace:
-    'Fira Code', 'Courier New', monospace; /* For code blocks */
+  --font-family-monospace: 'Fira Code', 'Courier New', monospace; /* For code blocks */
 
   --font-size-caption: clamp(10px, 0.9vw, 11px); /* For captions or footnotes */
   --font-size-xs: clamp(10px, 1vw, 12px); /* Extra small text */
@@ -142,17 +149,8 @@
   --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
   --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
   --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
-  --spacing-negative-xs: clamp(
-    -8px,
-    -0.4vw,
-    -4px
-  ); /* Negative extra small spacing */
-
-  --spacing-negative-sm: clamp(
-    -16px,
-    -0.8vw,
-    -8px
-  ); /* Negative small spacing */
+  --spacing-negative-xs: clamp(-8px, -0.4vw, -4px); /* Negative extra small spacing */
+  --spacing-negative-sm: clamp(-16px, -0.8vw, -8px); /* Negative small spacing */
 
   --gap-xs: clamp(4px, 0.4vw, 6px); /* For flex/grid gaps */
   --gap-md: clamp(12px, 1.2vw, 16px); /* Medium gap for layouts */
@@ -263,6 +261,7 @@
   --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 50%);
   --text-shadow-md: 0 2px 4px rgb(0 0 0 / 60%);
   --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 70%);
+  --text-shadow-none: none;
 
   /* ----------------------------------------------------------------------
    * Opacity
@@ -315,11 +314,47 @@
   --border-radius-lg: clamp(8px, 0.8vw, 16px);
   --border-radius-full: 9999px;
 
+  --border-width-none: 0; /* No border */
+  --border-width-sm: clamp(1px, 0.1vw, 2px); /* Small border */
+  --border-width-md: clamp(2px, 0.2vw, 4px); /* Medium border */
+  --border-width-lg: clamp(4px, 0.4vw, 8px); /* Large border */
+  --border-width-xl: clamp(8px, 0.8vw, 16px); /* Extra large border */
+
+  /* ----------------------------------------------------------------------
+   * Border style
+   * ---------------------------------------------------------------------- */
+  --border-style-none: none; /* No border */
+  --border-style-solid: solid; /* Solid border */
+  --border-style-dashed: dashed; /* Dashed border */
+  --border-style-dotted: dotted; /* Dotted border */
+  --border-style-double: double; /* Double border */
+  --border-style-groove: groove; /* Grooved border */
+  --border-style-ridge: ridge; /* Ridged border */
+  --border-style-inset: inset; /* Inset border */
+  --border-style-outset: outset; /* Outset border */
+  --border-style-hidden: hidden; /* Hidden border */
+  --border-style-inherit: inherit; /* Inherit border style from parent */
+  --border-style-initial: initial; /* Initial border style */
+  --border-style-unset: unset; /* Unset border style */
+  --border-style-revert: revert; /* Revert border style to default */
+  --border-style-revert-layer: revert-layer; /* Revert border style to layer default */
+  --border-style-all: all; /* Apply all border styles */
+  --border-style-auto: auto; /* Auto border style */
+  --border-style-invisible: invisible; /* Invisible border */
+  --border-style-visible: visible; /* Visible border */
+
   /* ----------------------------------------------------------------------
    * Text overflow
    * ---------------------------------------------------------------------- */
   --text-overflow-ellipsis: ellipsis;
   --text-overflow-clip: clip;
+
+  /* ----------------------------------------------------------------------
+   * Text decoration
+   * ---------------------------------------------------------------------- */
+  --text-decoration-underline: underline; /* For underlined text */
+  --text-decoration-none: none; /* For no text decoration */
+  --text-decoration-line-through: line-through; /* For strikethrough text */
 
   /* ----------------------------------------------------------------------
    * User select
@@ -392,10 +427,50 @@
   --focus-shadow: 0 0 8px var(--color-primary); /* Enhanced focus effect */
   --reduced-motion: reduce; /* For prefers-reduced-motion */
   --high-contrast-outline: 3px solid #000; /* For high-contrast mode */
-  --cursor-disabled: not-allowed; /* For disabled elements */
-  --cursor-pointer: pointer; /* For interactive elements */
   --link-color: var(--color-primary);
   --link-color-hover: var(--color-border);
+
+  /* ----------------------------------------------------------------------
+   * Pointer events
+   * ---------------------------------------------------------------------- */
+  --pointer-events-none: none; /* For elements that should not receive pointer events */
+  --pointer-events-auto: auto; /* For elements that should receive pointer events */
+  --pointer-events-visible: visible; /* For elements that should be visible to pointer events */
+  --pointer-events-hidden: hidden; /* For elements that should not be visible to pointer events */
+  --pointer-events-all: all; /* For elements that should receive all pointer events */
+
+  /* ----------------------------------------------------------------------
+   * Isolation
+   * ---------------------------------------------------------------------- */
+  --isolation-isolate: isolate; /* For creating a new stacking context */
+  --isolation-auto: auto; /* For default stacking context behavior */
+  --isolation-visible: visible; /* For elements that should be visible in the stacking context */
+  --isolation-hidden: hidden; /* For elements that should not be visible in the stacking context */
+  --isolation-all: all; /* For elements that should receive all isolation properties */
+  --isolation-none: none; /* For elements that should not create a new stacking context */
+
+  /* ----------------------------------------------------------------------
+   * Cursor styles
+   * ---------------------------------------------------------------------- */
+  --cursor-disabled: not-allowed; /* For disabled elements */
+  --cursor-pointer: pointer; /* For interactive elements */
+  --cursor-default: default; /* For default cursor */
+  --cursor-grab: grab; /* For draggable elements */
+  --cursor-grabbing: grabbing; /* For elements being dragged */
+  --cursor-not-allowed: not-allowed; /* For elements that are disabled or not interactive */
+  --cursor-help: help; /* For elements that provide help or information */
+  --cursor-move: move; /* For elements that can be moved */
+  --cursor-text: text; /* For text input areas */
+  --cursor-crosshair: crosshair; /* For precise selection areas */
+
+  /* ----------------------------------------------------------------------
+   * Visibility and float
+   * ---------------------------------------------------------------------- */
+  --visibility-hidden: hidden; /* For elements that should not be visible */
+  --visibility-visible: visible; /* For elements that should be visible */
+  --float-left: left; /* For floating elements to the left */
+  --float-right: right; /* For floating elements to the right */
+  --float-none: none; /* For elements that should not float */
 
   /* ----------------------------------------------------------------------
    * Animation and transitions
@@ -431,7 +506,7 @@
   --video-max-height: 80vh; /* Max height for videos */
 
   /* ----------------------------------------------------------------------
-   * Gradients (updated to use semantic tokens)
+   * Gradients
    * ---------------------------------------------------------------------- */
   --gradient-primary: linear-gradient(
     90deg,
@@ -447,6 +522,12 @@
   /* ----------------------------------------------------------------------
    * Fractional sizing
    * ---------------------------------------------------------------------- */
+  --width-screen: 100vw; /* Full viewport width */
+  --width-full: 100%; /* Full width */
+  --width-auto: auto; /* Auto width */
+  --width-1-12: 8.3333%; /* 1/12 width */
+  --width-1-6: 16.6667%; /* 1/6 width */
+  --width-1-5: 20%; /* 1/5 width */
   --width-1-4: 25%;
   --width-1-3: 33.3333%;
   --width-1-2: 50%;

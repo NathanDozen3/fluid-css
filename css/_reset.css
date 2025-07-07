@@ -256,7 +256,7 @@ a {
 
 a:hover {
   color: var(--link-color-hover);
-  text-decoration: underline;
+  text-decoration: var(--text-decoration-underline);
 }
 
 :focus {
