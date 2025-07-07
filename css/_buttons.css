@@ -50,6 +50,10 @@
   background: var(--color-info);
 }
 
+.button-bg-disabled {
+  background: var(--btn-bg-disabled);
+}
+
 /* Button text color utilities */
 .button-color-contrast {
   color: var(--btn-text);
@@ -84,7 +88,32 @@
   border-color: var(--color-info);
 }
 
+/* Button border width utilities */
+.border-width-none {
+  border-width: var(--border-width-none);
+}
+
+.border-width-md {
+  border-width: var(--border-width-md);
+}
+
+.border-width-lg {
+  border-width: var(--border-width-lg);
+}
+
+.border-width-xl {
+  border-width: var(--border-width-xl);
+}
+
 /* Button focus utilities */
 .button-focus-ring {
   outline: var(--outline-width-sm) solid var(--color-primary);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+  }
 }

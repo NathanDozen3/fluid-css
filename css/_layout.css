@@ -109,9 +109,41 @@
   max-width: var(--max-width-container-narrow);
 }
 
+.max-width-200 {
+  max-width: var(--max-width-200);
+}
+
+.max-width-300 {
+  max-width: var(--max-width-300);
+}
+
+.max-width-400 {
+  max-width: var(--max-width-400);
+}
+
+.max-width-500 {
+  max-width: var(--max-width-500);
+}
+
+.max-width-700 {
+  max-width: var(--max-width-700);
+}
+
+.max-width-800 {
+  max-width: var(--max-width-800);
+}
+
+.max-width-900 {
+  max-width: var(--max-width-900);
+}
+
+.max-width-1000 {
+  max-width: var(--max-width-1000);
+}
+
 /* Height utilities */
 .height-full {
-  height: 100%;
+  height: var(--height-full);
 }
 
 .height-auto {
@@ -150,12 +182,13 @@
 .min-height-md {
   min-height: var(--min-height-md);
 }
+
 .min-height-lg {
   min-height: var(--min-height-lg);
 }
 
 .min-height-full {
-  min-height: var(--min-height-full)
+  min-height: var(--min-height-full);
 }
 
 .min-height-screen {

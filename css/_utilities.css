@@ -295,6 +295,126 @@
   z-index: var(--z-auto);
 }
 
+/* Transition delay utilities */
+.transition-delay {
+  transition-delay: var(--transition-delay);
+}
+
+/* Animation utilities */
+.animation-duration {
+  animation-duration: var(--animation-duration);
+}
+
+.animation-duration-fast {
+  animation-duration: var(--animation-duration-fast);
+}
+
+.animation-duration-slow {
+  animation-duration: var(--animation-duration-slow);
+}
+
+.animation-direction-normal {
+  animation-direction: var(--animation-direction);
+}
+
+.animation-iteration-count {
+  animation-iteration-count: var(--animation-iteration-count);
+}
+
+.animation-iteration-count-infinite {
+  animation-iteration-count: var(--animation-iteration-count-infinite);
+}
+
+/* Palette color utility (for testing) */
+.background-color-pink {
+  background-color: var(--palette-pink);
+}
+
+/* Viewport utilities */
+.viewport-min {
+  width: var(--viewport-min);
+}
+
+.viewport-max {
+  width: var(--viewport-max);
+}
+
+/* Container padding utility */
+.container-padding {
+  padding: var(--container-padding);
+}
+
+/* Image object-fit utility */
+.object-fit-cover {
+  object-fit: var(--image-object-fit);
+}
+
+/* Video max-height utility */
+.video-max-height {
+  max-height: var(--video-max-height);
+}
+
+/* Badge utilities */
+.badge-bg {
+  background: var(--badge-bg);
+}
+
+.badge-text {
+  color: var(--badge-text);
+}
+
+/* Alert utilities */
+.alert-bg-success {
+  background: var(--alert-bg-success);
+}
+
+.alert-border-success {
+  border: 1px solid var(--alert-border-success);
+}
+
+/* Tooltip utilities */
+.tooltip-bg {
+  background: var(--tooltip-bg);
+}
+
+.tooltip-text {
+  color: var(--tooltip-text);
+}
+
+/* Dropdown shadow utility */
+.dropdown-shadow {
+  box-shadow: var(--dropdown-shadow);
+}
+
+/* Border style utilities */
+.border-style-dashed {
+  border-style: var(--border-style-dashed);
+}
+
+.border-style-dotted {
+  border-style: var(--border-style-dotted);
+}
+
+.border-style-double {
+  border-style: var(--border-style-double);
+}
+
+.border-style-groove {
+  border-style: var(--border-style-groove);
+}
+
+.border-style-ridge {
+  border-style: var(--border-style-ridge);
+}
+
+.border-style-inset {
+  border-style: var(--border-style-inset);
+}
+
+.border-style-outset {
+  border-style: var(--border-style-outset);
+}
+
 /* Cursor utilities */
 .cursor-pointer {
   cursor: var(--cursor-pointer);
@@ -613,4 +733,96 @@
 
 .max-width-600 {
   max-width: var(--max-width-600);
+}
+
+/* Justify content utilities */
+.justify-content-start {
+  justify-content: var(--justify-content-start);
+}
+
+.justify-content-end {
+  justify-content: var(--justify-content-end);
+}
+
+.justify-content-center {
+  justify-content: var(--justify-content-center);
+}
+
+.justify-content-between {
+  justify-content: var(--justify-content-between);
+}
+
+.justify-content-around {
+  justify-content: var(--justify-content-around);
+}
+
+.justify-content-evenly {
+  justify-content: var(--justify-content-evenly);
+}
+
+.justify-content-stretch {
+  justify-content: var(--justify-content-stretch);
+}
+
+/* Align content utilities */
+.align-content-start {
+  align-content: var(--align-content-start);
+}
+
+.align-content-end {
+  align-content: var(--align-content-end);
+}
+
+.align-content-center {
+  align-content: var(--align-content-center);
+}
+
+.align-content-between {
+  align-content: var(--align-content-between);
+}
+
+.align-content-around {
+  align-content: var(--align-content-around);
+}
+
+.align-content-stretch {
+  align-content: var(--align-content-stretch);
+}
+
+/* Justify self utilities */
+.justify-self-start {
+  justify-self: var(--justify-content-start);
+}
+
+.justify-self-center {
+  justify-self: var(--justify-content-center);
+}
+
+.justify-self-end {
+  justify-self: var(--justify-content-end);
+}
+
+.justify-self-stretch {
+  justify-self: var(--justify-content-stretch);
+}
+
+.justify-self-left {
+  justify-self: var(--justify-self-left);
+}
+
+.justify-self-right {
+  justify-self: var(--justify-self-right);
+}
+
+/* Place utilities */
+.place-content-center {
+  place-content: var(--place-content-center);
+}
+
+.place-items-center {
+  place-items: var(--place-items-center);
+}
+
+.place-self-center {
+  place-self: var(--place-self-center);
 }

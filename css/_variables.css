@@ -95,12 +95,18 @@
   --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
   --container-padding: var(--spacing-md); /* Default container padding */
 
+  /* ----------------------------------------------------------------------
+   * Maximum heights (responsive with clamp)
+   * ---------------------------------------------------------------------- */
   --max-height-sm: 300px; /* For constrained elements like modals */
   --max-height-md: 500px; /* For medium elements */
   --max-height-lg: 800px; /* For large elements */
   --max-height-full: 100%; /* Full viewport height */
   --max-height-screen: 100vh; /* Full viewport height for screen elements */
 
+  /* ----------------------------------------------------------------------
+   * Minimum heights (responsive with clamp)
+   * ---------------------------------------------------------------------- */
   --min-height-sm: 200px; /* Minimum height for small elements */
   --min-height-md: 400px; /* Minimum height for medium elements */
   --min-height-lg: 600px; /* Minimum height for large elements */
@@ -218,6 +224,12 @@
   --justify-content-between: space-between;
   --justify-content-around: space-around;
   --justify-content-evenly: space-evenly;
+  --justify-content-stretch: stretch;
+  --justify-self-left: left;
+  --justify-self-right: right;
+  --place-content-center: center;
+  --place-items-center: center;
+  --place-self-center: center;
 
   /* ----------------------------------------------------------------------
    * Flexbox
@@ -314,6 +326,9 @@
   --border-radius-lg: clamp(8px, 0.8vw, 16px);
   --border-radius-full: 9999px;
 
+  /* ----------------------------------------------------------------------
+   * Border width
+   * ---------------------------------------------------------------------- */
   --border-width-none: 0; /* No border */
   --border-width-sm: clamp(1px, 0.1vw, 2px); /* Small border */
   --border-width-md: clamp(2px, 0.2vw, 4px); /* Medium border */
