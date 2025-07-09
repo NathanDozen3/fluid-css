@@ -50,25 +50,97 @@
   /* ----------------------------------------------------------------------
    * Semantic color tokens (use these everywhere)
    * ---------------------------------------------------------------------- */
+
+  /* Base */
   --color-base: var(--palette-white); /* Text on dark, surface backgrounds */
   --color-base-hover: var(--palette-grey); /* Hover state for base text */
+  --color-base-active: var(--palette-black); /* Active state for base text */
+
+  /* Contrast */
   --color-contrast: var(--palette-black); /* Text on light backgrounds */
+  --color-contrast-hover: #333; /* Darker contrast for hover states */
+  --color-contrast-active: #222; /* Active state for contrast text */
+
+  /* Lighter contrast */
   --color-contrast-light: #444; /* Lighter contrast for secondary text */
+  --color-contrast-light-hover: #555; /* Hover state for lighter contrast */
+  --color-contrast-light-active: #666; /* Active state for lighter contrast */
+
+  /* Primary */
   --color-primary: var(--palette-purple); /* Main brand/action color */
+  --color-primary-hover: #402a8f; /* Hover state for primary */
+  --color-primary-active: #301a60; /* Active state for primary (reusing primary-dark) */
+
+  /* Secondary */
+  --color-secondary: var(--palette-yellow); /* Secondary action color */
+  --color-secondary-hover: #e6d300; /* Hover state for secondary */
+  --color-secondary-active: #bfa800; /* Active state for secondary */
+
+  /* Tertiary */
+  --color-tertiary: var(--palette-pink); /* Tertiary action color */
+  --color-tertiary-hover: #e6b3d1; /* Hover state for tertiary */
+  --color-tertiary-active: #d18ab3; /* Active state for tertiary */
+
+  /* Success */
   --color-success: #27ae60; /* Success/positive */
+  --color-success-hover: #219653; /* Hover state for success */
+  --color-success-active: #1e8449; /* Active state for success */
+
+  /* Warning */
   --color-warning: #915c00; /* Warning/attention */
+  --color-warning-hover: #b77a00; /* Hover state for warning */
+  --color-warning-active: #7a4c00; /* Active state for warning */
+
+  /* Error */
   --color-error: #b02b1d; /* Error/negative */
+  --color-error-hover: #a61b0c; /* Hover state for error */
+  --color-error-active: #912417; /* Active state for error */
+
+  /* Info */
   --color-info: #3498db; /* Informational */
+  --color-info-hover: #2980b9; /* Hover state for info */
+  --color-info-active: #256dab; /* Active state for info */
+
+  /* Surface */
   --color-surface: var(--palette-white); /* Card/panel background */
   --color-surface-hover: #f5f5f5; /* Hover state for surface elements */
+  --color-surface-active: #e0e0e0; /* Active state for surface */
+
+  /* Background */
   --color-background: var(--palette-offwhite); /* Page/app background */
+  --color-background-hover: #f0f0f0; /* Hover state for background */
+  --color-background-active: #e8e7e0; /* Active state for background */
+
+  /* Alternate background */
   --color-background-alt: #e8e7e0; /* Alternate background for sections */
+  --color-background-alt-hover: #dcdcd0; /* Hover state for alternate background */
+  --color-background-alt-active: #cfcfca; /* Active state for alternate background */
+
+  /* Muted */
   --color-muted: var(--palette-grey); /* For subdued text or placeholders */
+  --color-muted-hover: #808080; /* Hover state for muted text */
+  --color-muted-active: #555; /* Active state for muted */
+
+  /* High contrast */
   --color-high-contrast: #000; /* For high-contrast accessibility */
+  --color-high-contrast-hover: #333; /* Hover state for high-contrast */
+  --color-high-contrast-active: #111; /* Active state for high-contrast */
+
+  /* Border */
   --color-border: var(--palette-grey); /* Default border color */
+  --color-border-hover: #888; /* Hover state for borders */
+  --color-border-active: #555; /* Active state for borders */
   --color-border-rgb: 104, 104, 104; /* RGB for opacity utilities */
+
+  /* Primary light */
   --color-primary-light: #7c4dff;
+  --color-primary-light-hover: #651fff; /* Lighter shade for hover */
+  --color-primary-light-active: #4e1bff; /* Active state for primary-light */
+
+  /* Primary dark */
   --color-primary-dark: #301a60;
+  --color-primary-dark-hover: #1a0f3c; /* Darker shade for hover */
+  --color-primary-dark-active: #0f071d; /* Active state for primary-dark */
 
   /* ----------------------------------------------------------------------
    * Breakpoints (for documentation and future use)
@@ -450,7 +522,7 @@
    * ---------------------------------------------------------------------- */
   --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
-  --focus-ring: 0 0 0 3px rgb(80 58 168 / 30%); /* Subtle focus ring */
+  --focus-ring: 1px solid var(--color-primary-light); /* Subtle focus ring */
   --focus-shadow: 0 0 8px var(--color-primary); /* Enhanced focus effect */
   --reduced-motion: reduce; /* For prefers-reduced-motion */
   --high-contrast-outline: 3px solid #000; /* For high-contrast mode */

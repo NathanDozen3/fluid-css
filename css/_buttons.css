@@ -27,7 +27,7 @@
   transition-property: var(--transition-property-all);
   transition-duration: var(--transition-duration-fast);
   transition-timing-function: var(--transition-timing-ease);
-  margin-bottom: var(--spacing-md);
+  text-decoration: var(--text-decoration-none);
 }
 
 /* Button background utilities */

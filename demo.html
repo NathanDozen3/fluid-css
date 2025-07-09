@@ -10,11 +10,11 @@
 <body class="max-width-screen overflow-x-hidden">
   <header class="display-flex flex-wrap justify-content-between align-items-center padding-md background-color-surface scroll-behavior-smooth">
     <div class="font-size-xl font-weight-bold color-primary">Fluid CSS Framework</div>
-    <nav class="display-flex gap-md">
+    <nav class="display-flex gap-md flex-wrap">
       <a class="button background-color-primary color-base border-radius-md" href="#hero">Home</a>
-      <a class="button button-outline border-color-primary-light border-radius-md" href="#features">Features</a>
-      <a class="button button-outline border-color-primary-light border-radius-md" href="#documentation">Documentation</a>
-      <a class="button button-outline border-color-primary-light border-radius-md" href="#community">Community</a>
+      <a class="button background-color-surface border-color-primary-light border-radius-md" href="#features">Features</a>
+      <a class="button background-color-surface border-color-primary-light border-radius-md" href="#documentation">Documentation</a>
+      <a class="button background-color-surface border-color-primary-light border-radius-md" href="#community">Community</a>
     </nav>
   </header>
   <main>
@@ -33,7 +33,11 @@
       <p class="font-size-base margin-bottom-md">Craft stunning, pixel-perfect UIs with a vast array of atomic utility classes. Every design decision is granularly controlled, allowing for unparalleled customization without bloat.</p>
       <div class="display-flex flex-wrap gap-md margin-bottom-md">
         <button class="background-color-primary color-base border-radius-md focus-ring">Primary Action</button>
-        <button class="border-color-primary-light color-primary-light border-radius-md focus-ring">Outline Button</button>
+        <button class="background-color-secondary color-contrast border-radius-md focus-ring">Secondary Action</button>
+        <button class="background-color-tertiary color-contrast border-radius-md focus-ring">Tertiary Action</button>
+      </div>
+      <div class="display-flex flex-wrap gap-md margin-bottom-md">
+        <button class="background-color-surface color-primary-light border-color-primary-light border-radius-md focus-ring">Outline Button</button>
         <button class="background-color-info color-contrast border-radius-full">New Feature</button>
         <button class="background-color-success">Successfully updated your profile!</button>
       </div>
@@ -41,13 +45,19 @@
       <h3>Intuitive Forms & Interaction</h3>
       <p class="font-size-base margin-bottom-md">Build accessible, user-friendly forms with responsive inputs, clear labels, and subtle visual feedback. Each element is designed for optimal interaction and polish.</p>
       <form class="display-flex flex-column gap-md margin-bottom-lg">
-        <label for="name" class="font-size-base user-select-none">Your Name</label>
-        <input id="name" type="text" placeholder="e.g., Jane Doe" class="padding-sm border-radius-sm border-color-primary">
-        <label for="email" class="font-size-base user-select-none">Email Address</label>
-        <input id="email" type="email" placeholder="e.g., jane@example.com" class="padding-sm border-radius-sm border-color-primary">
+        <div class="display-flex flex-wrap gap-md">
+          <div class="flex-grow-1">
+            <label for="name" class="font-size-base user-select-none">Your Name</label>
+            <input id="name" type="text" placeholder="e.g., Jane Doe" class="width-full padding-sm border-radius-sm border-color-primary" autocomplete="on">
+          </div>
+          <div class="flex-grow-1">
+            <label for="email" class="font-size-base user-select-none">Email Address</label>
+            <input id="email" type="email" placeholder="e.g., jane@example.com" class="width-full padding-sm border-radius-sm border-color-primary" autocomplete="on">
+          </div>
+        </div>
         <label for="message" class="font-size-base user-select-none">Your Message</label>
         <textarea id="message" placeholder="Share your thoughts..." class="padding-sm border-radius-sm border-color-primary"></textarea>
-        <button class="button background-color-primary color-base border-radius-md focus-ring" type="submit">Send Inquiry</button>
+        <button class="button background-color-primary-dark color-base border-radius-md focus-ring" type="submit">Send Inquiry</button>
       </form>
 
       <h3>Vibrant Semantic Colors</h3>
@@ -66,9 +76,9 @@
       <h3>Uncompromising Accessibility</h3>
       <p class="font-size-base margin-bottom-md">Fluid CSS is built with accessibility at its core. Features like robust focus rings, screen-reader-only text, and non-selectable elements ensure your interfaces are inclusive and usable for everyone.</p>
       <div class="display-flex flex-wrap gap-md margin-bottom-lg">
-        <button class="button background-color-info color-contrast border-radius-md focus-ring user-select-none">Focusable Element</button>
-        <span class="visually-hidden background-color-background-alt padding-xs border-radius-sm">Hidden content for screen readers</span>
-        <div class="user-select-none background-color-muted color-base padding-md border-radius-md">Non-selectable text</div>
+        <button class="button background-color-info color-contrast padding-md border-radius-md focus-ring user-select-none">Focusable Element</button>
+        <span class="visually-hidden background-color-background-alt padding-md border-radius-sm">Hidden content for screen readers</span>
+        <button class="user-select-none cursor-default background-color-muted color-base padding-md border-radius-md">Non-selectable text</button>
       </div>
 
       <h3>Dynamic Animations & Transitions</h3>

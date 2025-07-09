@@ -4,12 +4,12 @@
  * ------------------------------------------------------------------------
  * Utility classes and helpers for improved accessibility, focus management,
  * skip links, visually hidden content, and reduced motion support.
- * Usage: Add .visually-hidden, .skip-link, .focus-ring, etc. to elements
+ * Usage: Add .visually-hidden, .skip-link, etc. to elements
  * to enhance accessibility for all users.
  * Example: <a href="#main" class="skip-link">Skip to content</a>
  * ======================================================================== */
 
-/* Accessibility (a11y) enhancements: focus, contrast, and helpers. */
+/* Accessibility (a11y) enhancements: helpers. */
 
 /* Screen Reader Only Utility
  * Usage: Hide content visually but keep it accessible to screen readers.
@@ -89,71 +89,24 @@
   color: var(--color-contrast);
 }
 
-/* Accessible link colors */
+/* Accessible link colors (Base link color, not hover/focus state) */
 a {
   color: var(--link-color);
   text-decoration: var(--text-decoration-underline);
 }
 
-/* High-contrast focus styles for all interactive elements */
-a,
-button,
-input,
-textarea,
-select,
-summary,
-[tabindex]:not([tabindex='-1']) {
-  outline: none;
-}
-
-a:hover,
-a:focus,
-a:focus-visible {
-  color: var(--link-color-hover);
-}
-
-/* Optional: fallback for browsers without :focus-visible */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus,
-summary:focus,
-[tabindex]:focus {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-outline-offset);
-}
-
-/* Focus ring utility for custom focusable elements */
-.focus-ring:focus {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-outline-offset);
-}
-
-/* Custom focus ring utility */
-.focus-ring-custom:focus {
-  box-shadow: var(--focus-shadow);
-  outline: none;
-}
-
-/* High-contrast outline utility */
+/* High-contrast outline utility (this is a general a11y helper) */
 .high-contrast-outline:focus {
   outline: var(--high-contrast-outline);
   outline-offset: var(--focus-outline-offset);
 }
 
-/* Disabled cursor utility */
+/* Disabled cursor utility (general a11y helper) */
 .cursor-disabled:disabled {
   cursor: var(--cursor-disabled);
 }
 
-/* Focus-visible utility for keyboard navigation */
-.focus-visible:focus-visible {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-outline-offset);
-}
-
-/* Reduced motion for users who prefer it */
+/* Reduced motion for users who prefer it (general a11y helper) */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -172,3 +125,9 @@ summary:focus,
  * Example: <div aria-live="polite"></div>
  * CSS cannot set ARIA attributes.
  * ------------------------------------------------------------------------ */
+
+button:focus,
+a:focus {
+  outline-offset: 1px;
+  outline: 1px solid var(--color-primary-light)
+}

@@ -21,6 +21,7 @@
 
 /* General utilities (display, visibility, etc.) */
 @import url('css/_utilities.css');
+@import url('css/_states.css');
 
 /* Styling utilities (forms, animations) */
 @import url('css/_borders.css');

@@ -1,0 +1,203 @@
+/*
+ * ========================================================================
+ * Fluid CSS Interactive States Utilities
+ * ------------------------------------------------------------------------
+ * Atomic utility classes and selectors for interactive UI states:
+ * :hover, :active, :focus, :focus-visible, :focus-within, and :target.
+ *
+ * Usage: Apply directly to elements or their containers to provide visual
+ * feedback during user interaction and improve accessibility.
+ *
+ * Examples:
+ * - <a class="button" href="#">Hover Me</a> (uses :hover, :focus)
+ * - <div class="form-group">...</div> (uses :focus-within)
+ * - <button class="button">Click Me</button> (uses :active)
+ * - <section id="target-section">...</section> (uses :target)
+ *
+ * All properties use variables from _variables.css for consistency.
+ * Each utility sets a single CSS property for atomic design where applicable.
+ * ======================================================================== */
+
+/* ------------------------------------------------------------------------
+ * 1. Focus States (:focus, :focus-visible)
+ * ------------------------------------------------------------------------ */
+
+/* General focus outline for all interactive elements */
+:focus {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Focus ring utility for custom focusable elements */
+.focus-ring:focus {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Focus-visible utility for keyboard navigation feedback */
+.focus-visible:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* ------------------------------------------------------------------------
+ * 2. Hover States (:hover)
+ * ------------------------------------------------------------------------ */
+
+/* Background color on hover */
+:where(a, button).background-color-surface-hover {
+  background-color: var(--color-surface-hover);
+}
+
+:where(a, button).background-color-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+:where(a, button).background-color-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+:where(a, button).background-color-tertiary:hover {
+  background-color: var(--color-tertiary-hover);
+}
+
+:where(a, button).background-color-primary-dark:hover {
+  background-color: var(--color-primary-dark-hover);
+}
+
+:where(a, button).background-color-success:hover {
+  background-color: var(--color-success-hover);
+}
+
+:where(a, button).background-color-warning:hover {
+  background-color: var(--color-warning-hover);
+}
+
+:where(a, button).background-color-error:hover {
+  background-color: var(--color-error-hover);
+}
+
+:where(a, button).background-color-info:hover {
+  background-color: var(--color-info-hover);
+}
+
+:where(a, button).background-color-surface:hover {
+  background-color: var(--color-surface-hover);
+}
+
+:where(a, button).background-color-background:hover {
+  background-color: var(--color-background-hover);
+}
+
+:where(a, button).background-color-background-alt:hover {
+  background-color: var(--color-background-alt-hover);
+}
+
+:where(a, button).background-color-muted:hover {
+  background-color: var(--color-muted-hover);
+}
+
+:where(a, button).background-color-high-contrast:hover {
+  background-color: var(--color-high-contrast-hover);
+}
+
+:where(a, button).background-color-border:hover {
+  background-color: var(--color-border-hover);
+}
+
+/* ------------------------------------------------------------------------
+ * 3. Active States (:active)
+ * ------------------------------------------------------------------------ */
+
+/* General button active feedback */
+button:not(.user-select-none):active,
+.button:not(.user-select-none):active {
+  transform: scale(0.98); /* Subtle pressed effect */
+  box-shadow: var(--shadow-sm); /* Slightly reduce shadow */
+}
+
+:where(a, button).background-color-primary:active {
+  background-color: var(--color-primary-active);
+}
+
+:where(a, button).background-color-secondary:active {
+  background-color: var(--color-secondary-active);
+}
+
+:where(a, button).background-color-tertiary:active {
+  background-color: var(--color-tertiary-active);
+}
+
+:where(a, button).background-color-primary-dark:active {
+  background-color: var(--color-primary-dark-active);
+}
+
+:where(a, button).background-color-base:active {
+  background-color: var(--color-base-active);
+}
+
+:where(a, button).background-color-success:active {
+  background-color: var(--color-success-active);
+}
+
+:where(a, button).background-color-warning:active {
+  background-color: var(--color-warning-active);
+}
+
+:where(a, button).background-color-error:active {
+  background-color: var(--color-error-active);
+}
+
+:where(a, button).background-color-info:active {
+  background-color: var(--color-info-active);
+}
+
+:where(a, button).background-color-surface:active {
+  background-color: var(--color-surface-active);
+}
+
+:where(a, button).background-color-background:active {
+  background-color: var(--color-background-active);
+}
+
+:where(a, button).background-color-background-alt:active {
+  background-color: var(--color-background-alt-active);
+}
+
+:where(a, button).background-color-muted:active {
+  background-color: var(--color-muted-active);
+}
+
+:where(a, button).background-color-high-contrast:active {
+  background-color: var(--color-high-contrast-active);
+}
+
+:where(a, button).background-color-border:active {
+  background-color: var(--color-border-active);
+}
+
+/* ------------------------------------------------------------------------
+ * 4. Focus-within State (:focus-within)
+ * ------------------------------------------------------------------------ */
+
+/* Highlight a container when any element inside it is focused */
+.form-group:focus-within {
+  outline: 1px solid var(--color-primary); /* Apply border or shadow to the group */
+  border-radius: var(--border-radius-md);
+
+  /* Example: add a subtle outline to the entire form group */
+}
+
+/* ------------------------------------------------------------------------
+ * 5. Target State (:target)
+ * ------------------------------------------------------------------------ */
+
+/* Highlight a section when it's the target of a URL fragment */
+:target {
+  background-color: var(
+    --color-background-alt
+  ); /* Highlight with alternate background */
+
+  padding: var(--spacing-md); /* Ensure padding for visibility */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for effect */
+}
