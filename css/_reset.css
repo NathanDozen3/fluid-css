@@ -89,6 +89,51 @@ h6 {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Ensure explicit font-sizes for headings nested in sectioning content */
+
+/* This prevents implied rank changes in future browser versions */
+section h1,
+article h1,
+aside h1,
+nav h1 {
+  font-size: var(--font-size-heading);
+}
+
+section h2,
+article h2,
+aside h2,
+nav h2 {
+  font-size: var(--font-size-xl);
+}
+
+section h3,
+article h3,
+aside h3,
+nav h3 {
+  font-size: var(--font-size-lg);
+}
+
+section h4,
+article h4,
+aside h4,
+nav h4 {
+  font-size: var(--font-size-base);
+}
+
+section h5,
+article h5,
+aside h5,
+nav h5 {
+  font-size: var(--font-size-sm);
+}
+
+section h6,
+article h6,
+aside h6,
+nav h6 {
+  font-size: var(--font-size-xs);
+}
+
 /* Paragraphs and inline text */
 p {
   font-family: var(--font-family-base);
