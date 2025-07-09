@@ -56,7 +56,7 @@
   --color-contrast-light: #444; /* Lighter contrast for secondary text */
   --color-primary: var(--palette-purple); /* Main brand/action color */
   --color-success: #27ae60; /* Success/positive */
-  --color-warning: #bf7500; /* Warning/attention */
+  --color-warning: #915c00; /* Warning/attention */
   --color-error: #b02b1d; /* Error/negative */
   --color-info: #3498db; /* Informational */
   --color-surface: var(--palette-white); /* Card/panel background */
