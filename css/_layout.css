@@ -77,6 +77,18 @@
 }
 
 /* Max-width utilities */
+.max-width-none {
+  max-width: var(--max-width-none);
+}
+
+.max-width-full {
+  max-width: var(--max-width-full);
+}
+
+.max-width-screen {
+  max-width: var(--max-width-screen);
+}
+
 .max-width-xs {
   max-width: var(--max-width-xs);
 }
@@ -107,6 +119,10 @@
 
 .max-width-container-narrow {
   max-width: var(--max-width-container-narrow);
+}
+
+.max-width-100 {
+  max-width: var(--max-width-100);
 }
 
 .max-width-200 {

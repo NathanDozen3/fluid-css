@@ -575,6 +575,10 @@
   /* ----------------------------------------------------------------------
    * Additional max-widths
    * ---------------------------------------------------------------------- */
+  --max-width-none: none; /* No maximum width */
+  --max-width-full: 100%; /* Full width */
+  --max-width-screen: 100vw; /* Full viewport width */
+  --max-width-100: 100px; /* For very small elements */
   --max-width-200: 200px; /* For small elements */
   --max-width-300: 300px; /* For medium elements */
   --max-width-400: 400px; /* For larger elements */
