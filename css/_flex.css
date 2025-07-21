@@ -12,11 +12,11 @@
 
 /* Flex direction utilities */
 .flex-row {
-  flex-direction: var(--flex-direction-row);
+  flex-direction: row;
 }
 
 .flex-column {
-  flex-direction: var(--flex-direction-column);
+  flex-direction: column;
 }
 
 /* Flex wrap utilities */
