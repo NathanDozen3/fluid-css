@@ -10,7 +10,7 @@
  * ========================================================================
  */
 
-@layer utilities {
+@layer layout {
   /* Width utilities */
   .width-full {
     width: var(--width-full);

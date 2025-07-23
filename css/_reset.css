@@ -8,7 +8,7 @@
  * Example: <body> ... </body>
  * ======================================================================== */
 
-@layer base {
+@layer reset {
   /* Reset and base styles */
   html {
     font-size: 100%;
@@ -32,7 +32,6 @@
   /* Headings */
   h1 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h1);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-heading);
     color: var(--color-contrast);
@@ -42,7 +41,6 @@
 
   h2 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h2);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-heading);
     color: var(--color-contrast);
@@ -52,7 +50,6 @@
 
   h3 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h3);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-heading);
     color: var(--color-contrast);
@@ -62,7 +59,6 @@
 
   h4 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h4);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-semibold);
     color: var(--color-contrast);
@@ -72,7 +68,6 @@
 
   h5 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h5);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-semibold);
     color: var(--color-contrast);
@@ -82,7 +77,6 @@
 
   h6 {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h6);
     line-height: var(--line-height-heading);
     font-weight: var(--font-weight-semibold);
     color: var(--color-contrast);
@@ -93,6 +87,7 @@
   /* Ensure explicit font-sizes for headings nested in sectioning content */
 
   /* This prevents implied rank changes in future browser versions */
+  h1,
   section h1,
   article h1,
   aside h1,
@@ -100,39 +95,44 @@
     font-size: var(--font-size-h1);
   }
 
+  h2,
   section h2,
   article h2,
   aside h2,
   nav h2 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-h2);
   }
 
+  h3,
   section h3,
   article h3,
   aside h3,
   nav h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-h3);
   }
 
+  h4,
   section h4,
   article h4,
   aside h4,
   nav h4 {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-h4);
   }
 
+  h5,
   section h5,
   article h5,
   aside h5,
   nav h5 {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-h5);
   }
 
+  h6,
   section h6,
   article h6,
   aside h6,
   nav h6 {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-h6);
   }
 
   /* Paragraphs and inline text */

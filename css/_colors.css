@@ -10,7 +10,7 @@
  * ========================================================================
  */
 
-@layer utilities {
+@layer colors {
   /* Text color utilities */
   .color-base {
     color: var(--color-base);

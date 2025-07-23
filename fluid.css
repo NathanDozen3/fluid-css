@@ -13,6 +13,9 @@
  * ========================================================================
  */
 
+
+@layer variables, reset, container, grid, flex, layout, spacing, typography, buttons, colors, borders, forms, utilities, states, animations, a11y, print;
+
 /* Core variables (must be first for dependency resolution) */
 @import url('css/_variables.css');
 
@@ -21,7 +24,6 @@
 
 /* General utilities (display, visibility, etc.) */
 @import url('css/_utilities.css');
-@import url('css/_states.css');
 
 /* Styling utilities (forms, animations) */
 @import url('css/_borders.css');
@@ -38,6 +40,7 @@
 /* Styling utilities (typography, colors) */
 @import url('css/_typography.css');
 @import url('css/_colors.css');
+@import url('css/_states.css');
 @import url('css/_animations.css');
 
 /* Accessibility and print overrides (must be last for precedence) */

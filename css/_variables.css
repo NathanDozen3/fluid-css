@@ -31,7 +31,7 @@ Example usage in CSS:
 ==========================================================================
 */
 
-@layer base {
+@layer root {
   /* CSS Variables and root custom properties
  *
  * This file centralizes all design tokens for the Fluid CSS framework.

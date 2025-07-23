@@ -9,7 +9,7 @@
  * Example: <a href="#main" class="skip-link">Skip to content</a>
  * ======================================================================== */
 
-@layer utilities {
+@layer a11y {
   /* Accessibility (a11y) enhancements: helpers. */
 
   /* Screen Reader Only Utility
@@ -98,12 +98,6 @@
     outline-offset: var(--focus-outline-offset);
     background: var(--color-warning);
     color: var(--color-contrast);
-  }
-
-  /* Accessible link colors (Base link color, not hover/focus state) */
-  a {
-    color: var(--link-color);
-    text-decoration: var(--text-decoration-underline);
   }
 
   /* High-contrast outline utility (this is a general a11y helper) */

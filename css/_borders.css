@@ -9,7 +9,7 @@
  * Each utility sets a single CSS property for atomic design.
  * ======================================================================== */
 
-@layer utilities {
+@layer borders {
   /* Button border width utilities */
   .border-width-none {
     border-width: var(--border-width-none);

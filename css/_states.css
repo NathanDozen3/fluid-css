@@ -18,7 +18,7 @@
  * Each utility sets a single CSS property for atomic design where applicable.
  * ======================================================================== */
 
-@layer utilities {
+@layer states {
   /* ------------------------------------------------------------------------
    * 1. Focus States (:focus, :focus-visible)
    * ------------------------------------------------------------------------ */

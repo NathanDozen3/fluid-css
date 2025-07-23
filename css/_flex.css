@@ -10,7 +10,7 @@
  * ========================================================================
  */
 
-@layer utilities {
+@layer flex {
   /* Flex direction utilities */
   .flex-row {
     flex-direction: row;

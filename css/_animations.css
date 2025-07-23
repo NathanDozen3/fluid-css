@@ -10,7 +10,7 @@
  * ========================================================================
  */
 
-@layer utilities {
+@layer animations {
   /* Transition utilities */
   .transition-property-all {
     transition-property: var(--transition-property);

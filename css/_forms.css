@@ -7,12 +7,11 @@
  * Example: <input type="text" /> <label for="field">Label</label>
  * ======================================================================== */
 
-@layer utilities {
+@layer forms {
   /* Form element styling */
   input,
   select,
-  textarea,
-  button {
+  textarea {
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);

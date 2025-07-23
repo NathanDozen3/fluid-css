@@ -8,7 +8,7 @@
  * Note: Breakpoint utilities (e.g., .container-md) can be added using --breakpoint-* tokens.
  * ======================================================================== */
 
-@layer utilities {
+@layer container {
   /* Container system */
   .container {
     width: clamp(

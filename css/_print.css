@@ -10,7 +10,7 @@
  * ========================================================================
  */
 
-@layer base {
+@layer print {
   @media print {
     /* Reset page margins and background */
     body {
