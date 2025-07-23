@@ -34,8 +34,12 @@
     padding: 0 var(--gutter-base);
   }
 
-  .container-fluid {
-    width: calc(100% - var(--gutter-base) * 2);
+  .container-wide {
+    width: clamp(
+      var(--container-min-width),
+      calc(var(--container-wide-width) - var(--gutter-base) * 2),
+      var(--container-wide-max-width)
+    );
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;

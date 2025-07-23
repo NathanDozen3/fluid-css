@@ -610,7 +610,7 @@
   }
 
   .overlay-dark::before {
-    background-color: var(--color-overlay);
+    background-color: var(--color-overlay-dark);
   }
 
   .overlay-light::before {

@@ -233,8 +233,10 @@ Example usage in CSS:
     --container-min-width: 320px; /* Minimum container width */
     --container-max-width: 1328px; /* Maximum container width */
     --container-narrow-max-width: 960px; /* Max width for narrow containers */
-    --container-width: 80vw; /* Default container width */
+    --container-wide-max-width: 1440px; /* Max width for wide containers */
+    --container-width: 70vw; /* Default container width */
     --container-narrow-width: 60vw; /* Default narrow container width */
+    --container-wide-width: 75vw; /* Default wide container width */
     --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
     --container-padding: var(--spacing-md); /* Default container padding */
 
@@ -493,8 +495,10 @@ Example usage in CSS:
     /* --------------------------------------------------------------------------
      * Overlay
      * -------------------------------------------------------------------------- */
-    --color-overlay: rgb(0 0 0 / 50%);
-    --color-overlay-light: rgb(255 255 255 / 30%);
+    --overlay-opacity: 0.5;
+    --color-overlay: rgb(0 0 0 / var(--overlay-opacity));
+    --color-overlay-light: rgb(255 255 255 / var(--overlay-opacity));
+    --color-overlay-dark: rgb(0 0 0 / var(--overlay-opacity));
 
     /* --------------------------------------------------------------------------
      * Border radius
@@ -589,17 +593,6 @@ Example usage in CSS:
     --z-200: 200;
     --z-300: 300;
     --z-auto: auto;
-
-    /* --------------------------------------------------------------------------
-     * Button and form states
-     * -------------------------------------------------------------------------- */
-    --btn-bg: var(--color-primary);
-    --btn-bg-hover: var(--color-success);
-    --btn-bg-disabled: var(--color-border);
-    --btn-text: var(--color-contrast);
-    --input-bg: var(--color-base);
-    --input-border: var(--color-border);
-    --input-focus: var(--color-primary);
 
     /* --------------------------------------------------------------------------
      * Component-specific tokens

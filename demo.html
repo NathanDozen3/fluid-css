@@ -18,11 +18,13 @@
     </nav>
   </header>
   <main>
-    <section id="hero" class="display-flex align-items-center justify-content-center text-align-center padding-lg height-screen background-gradient-primary scroll-behavior-smooth border-radius-md overlay-dark">
-      <div class="max-width-container-narrow">
-        <h1 class="color-base font-weight-bold text-transform-uppercase margin-bottom-md animation-fade-in">Unleash Your Design Potential with Fluid CSS</h1>
-        <p class="color-base font-size-lg margin-bottom-md text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Discover Fluid CSS: The lightweight, atomic framework meticulously crafted for rapid prototyping, responsive design, and inherently accessible interfaces. Simplify your workflow and build stunning UIs with unparalleled flexibility.</p>
-        <a href="#features" class="button background-color-primary-dark color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer text-decoration-none">Explore Core Features</a>
+    <section id="hero" class="display-flex align-items-center justify-content-center text-align-center padding-lg min-height-screen background-gradient-primary scroll-behavior-smooth border-radius-md overlay-dark">
+      <div class="max-width-container-narrow display-flex flex-column gap-md">
+        <h1 class="color-base font-weight-bold text-transform-uppercase animation-fade-in">Unleash Your Design Potential with Fluid CSS</h1>
+        <p class="color-base font-size-lg text-overflow-ellipsis max-width-600 margin-left-auto margin-right-auto">Discover Fluid CSS: The lightweight, atomic framework meticulously crafted for rapid prototyping, responsive design, and inherently accessible interfaces. Simplify your workflow and build stunning UIs with unparalleled flexibility.</p>
+        <div>
+          <a href="#features" class="button background-color-primary-dark color-base padding-md border-radius-md font-size-base font-weight-normal focus-ring transition-property-all transition-duration-fast cursor-pointer text-decoration-none">Explore Core Features</a>
+        </div>
       </div>
     </section>
     <section id="features" class="container padding-top-lg padding-bottom-lg">
@@ -44,7 +46,8 @@
 
       <h3>Intuitive Forms & Interaction</h3>
       <p class="font-size-base margin-bottom-md">Build accessible, user-friendly forms with responsive inputs, clear labels, and subtle visual feedback. Each element is designed for optimal interaction and polish.</p>
-      <form class="display-flex flex-column gap-md margin-bottom-lg">
+      <form class="display-flex flex-column gap-md margin-bottom-lg container-narrow background-color-surface padding-md border-radius-md">
+        <h3>Contact Us</h3>
         <div class="display-flex flex-wrap gap-md">
           <div class="flex-grow-1">
             <label for="name" class="font-size-base user-select-none">Your Name</label>
@@ -55,19 +58,30 @@
             <input id="email" type="email" placeholder="e.g., jane@example.com" class="width-full padding-sm border-radius-sm border-color-primary" autocomplete="on">
           </div>
         </div>
-        <label for="message" class="font-size-base user-select-none">Your Message</label>
-        <textarea id="message" placeholder="Share your thoughts..." class="padding-sm border-radius-sm border-color-primary"></textarea>
-        <button class="button background-color-primary-dark color-base border-radius-md focus-ring" type="submit">Send Inquiry</button>
+        <div class="flex-grow-1">
+          <label for="message" class="font-size-base user-select-none">Your Message</label>
+          <textarea id="message" placeholder="Share your thoughts..." class="width-full padding-sm border-radius-sm border-color-primary"></textarea>
+        </div>
+        <div class="display-flex justify-content-center">
+          <button class="button background-color-primary-dark color-base border-radius-md focus-ring" type="submit">Send Inquiry</button>
+        </div>
       </form>
 
       <h3>Vibrant Semantic Colors</h3>
       <p class="font-size-base margin-bottom-md">Leverage a powerful semantic color system for consistent theming across light and dark modes. Easily define UI roles and ensure visual harmony throughout your application.</p>
       <div class="display-flex flex-wrap gap-md margin-bottom-lg">
         <div class="background-color-primary color-base padding-md border-radius-lg white-space-nowrap">Primary Brand</div>
+        <div class="background-color-secondary color-contrast padding-md border-radius-lg white-space-nowrap">Secondary Accent</div>
+        <div class="background-color-tertiary color-contrast padding-md border-radius-lg white-space-nowrap">Tertiary Highlight</div>
+      </div>
+      <div class="display-flex flex-wrap gap-md margin-bottom-lg">
         <div class="background-color-success color-contrast padding-md border-radius-lg white-space-nowrap">Success State</div>
         <div class="background-color-warning color-base padding-md border-radius-lg white-space-nowrap">Warning Alert</div>
-        <div class="background-color-error color-base padding-md border-radius-lg white-space-nowrap">Error Message</div>
+        <div class="background-color-error color-base font-weight-bold padding-md border-radius-lg white-space-nowrap">Error Message</div>
         <div class="background-color-info color-contrast padding-md border-radius-lg white-space-nowrap">Info Callout</div>
+      </div>
+      <div class="display-flex flex-wrap gap-md margin-bottom-lg">
+        <div class="background-color-muted color-base padding-md border-radius-lg white-space-nowrap">Muted Element</div>
         <div class="background-color-surface color-contrast padding-md border-radius-lg white-space-nowrap">Surface Element</div>
         <div class="background-color-background color-contrast border-style-solid border-width-sm border-color-primary padding-md border-radius-lg white-space-nowrap">Page Background</div>
         <div class="background-color-border color-base padding-md border-radius-lg white-space-nowrap">Border Line</div>
@@ -122,14 +136,15 @@
         <div class="border-radius-full background-color-surface color-contrast padding-md">Full Radius</div>
       </div>
 
-      <h3>Responsive Utilities</h3>
-      <p class="font-size-base margin-bottom-md">Easily create responsive designs with utilities that adapt to any screen size. Control visibility, spacing, and alignment across breakpoints.</p>
+      <h3>Utility Classes</h3>
+      <p class="font-size-base margin-bottom-md">Fluid CSS provides atomic utility classes for display, alignment, spacing, and visibility. These classes let you quickly control layout and presentation for any element, on any screen size. For breakpoint-based responsiveness, use custom media queries or extend the framework as needed.</p>
       <div class="display-flex flex-wrap gap-md margin-bottom-lg">
-        <div class="flex-column text-center padding-md">Responsive Example</div>
+        <div class="flex-column text-align-center padding-md">Layout Example</div>
         <div class="display-none">This text is hidden on all screen sizes.</div>
-        <div class="display-block@sm">Visible on small screens and up</div>
-        <div class="display-block@md">Visible on medium screens and up</div>
-        <div class="display-block@lg">Visible on large screens and up</div>
+        <div class="display-block">Visible on all screen sizes</div>
+        <div class="display-none">Hidden on all screen sizes</div>
+        <div class="display-flex">Flex on all screens</div>
+        <div class="text-align-center">Centered text on all screens</div>
       </div>
 
       <h3>Accessibility Utilities</h3>

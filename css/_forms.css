@@ -43,7 +43,6 @@
 
   label {
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--spacing-sm);
     display: var(--display-block);
   }
 
