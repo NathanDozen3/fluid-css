@@ -9,152 +9,143 @@
  * Example: <a href="#main" class="skip-link">Skip to content</a>
  * ======================================================================== */
 
-/* Accessibility (a11y) enhancements: helpers. */
+@layer utilities {
+  /* Accessibility (a11y) enhancements: helpers. */
 
-/* Screen Reader Only Utility
- * Usage: Hide content visually but keep it accessible to screen readers.
- * Example: <span class="sr-only">Screen reader text</span>
- *
- * Alias: .visually-hidden (for developer familiarity)
- * ------------------------------------------------------------------------ */
-.sr-only,
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-/* ------------------------------------------------------------------------
- * Not Screen Reader Only Utility
- * Usage: Undo .sr-only/.visually-hidden for toggling visibility.
- * Example: <span class="not-sr-only">Visible text</span>
- * ------------------------------------------------------------------------ */
-.not-sr-only {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  overflow: visible !important;
-  clip: auto !important;
-  white-space: normal !important;
-  border: 0 !important;
-}
-
-/* ------------------------------------------------------------------------
- * Visually Hidden Focusable Helper
- * Usage: Accessibility helper for visually hidden but focusable elements.
- * ------------------------------------------------------------------------ */
-.visually-hidden-focusable:not(:focus, :active) {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-.visually-hidden-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-/* Accessibility skip link utility */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: var(--z-100);
-  background: var(--color-warning);
-  color: var(--color-contrast);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius-sm);
-  text-decoration: var(--text-decoration-none);
-}
-
-.skip-link:focus {
-  left: var(--spacing-sm);
-  top: var(--spacing-sm);
-  width: auto;
-  height: auto;
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-outline-offset);
-  background: var(--color-warning);
-  color: var(--color-contrast);
-}
-
-/* Accessible link colors (Base link color, not hover/focus state) */
-a {
-  color: var(--link-color);
-  text-decoration: var(--text-decoration-underline);
-}
-
-/* High-contrast outline utility (this is a general a11y helper) */
-.high-contrast-outline:focus {
-  outline: var(--high-contrast-outline);
-  outline-offset: var(--focus-outline-offset);
-}
-
-/* Disabled cursor utility (general a11y helper) */
-.cursor-disabled:disabled {
-  cursor: var(--cursor-disabled);
-}
-
-/* Reduced motion for users who prefer it (general a11y helper) */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ------------------------------------------------------------------------
- * ARIA Attribute Helpers (Note)
- * ------------------------------------------------------------------------
- * ARIA attributes such as aria-live, aria-hidden, aria-expanded, etc. must be set in HTML, not CSS.
- * Example: <div aria-live="polite"></div>
- * CSS cannot set ARIA attributes.
- * ------------------------------------------------------------------------ */
-
-button:focus,
-a:focus {
-  outline-offset: 1px;
-  outline: 1px solid var(--color-primary-light);
-}
-
-/* Focus Ring Enhancements */
-:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Responsive Utilities */
-@media (width <= 768px) {
-  .padding-md {
-    padding: var(--spacing-sm);
+  /* Screen Reader Only Utility
+   * Usage: Hide content visually but keep it accessible to screen readers.
+   * Example: <span class="sr-only">Screen reader text</span>
+   *
+   * Alias: .visually-hidden (for developer familiarity)
+   * ------------------------------------------------------------------------ */
+  .sr-only,
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
   }
 
-  .margin-md {
-    margin: var(--spacing-sm);
+  /* ------------------------------------------------------------------------
+   * Not Screen Reader Only Utility
+   * Usage: Undo .sr-only/.visually-hidden for toggling visibility.
+   * Example: <span class="not-sr-only">Visible text</span>
+   * ------------------------------------------------------------------------ */
+  .not-sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    border: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+   * Visually Hidden Focusable Helper
+   * Usage: Accessibility helper for visually hidden but focusable elements.
+   * ------------------------------------------------------------------------ */
+  .visually-hidden-focusable:not(:focus, :active) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .visually-hidden-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Accessibility skip link utility */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: var(--z-100);
+    background: var(--color-warning);
+    color: var(--color-contrast);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    text-decoration: var(--text-decoration-none);
+  }
+
+  .skip-link:focus {
+    left: var(--spacing-sm);
+    top: var(--spacing-sm);
+    width: auto;
+    height: auto;
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-outline-offset);
+    background: var(--color-warning);
+    color: var(--color-contrast);
+  }
+
+  /* Accessible link colors (Base link color, not hover/focus state) */
+  a {
+    color: var(--link-color);
+    text-decoration: var(--text-decoration-underline);
+  }
+
+  /* High-contrast outline utility (this is a general a11y helper) */
+  .high-contrast-outline:focus {
+    outline: var(--high-contrast-outline);
+    outline-offset: var(--focus-outline-offset);
+  }
+
+  /* Disabled cursor utility (general a11y helper) */
+  .cursor-disabled:disabled {
+    cursor: var(--cursor-disabled);
+  }
+
+  /* Reduced motion for users who prefer it (general a11y helper) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+   * ARIA Attribute Helpers (Note)
+   * ------------------------------------------------------------------------
+   * ARIA attributes such as aria-live, aria-hidden, aria-expanded, etc. must be set in HTML, not CSS.
+   * Example: <div aria-live="polite"></div>
+   * CSS cannot set ARIA attributes.
+   * ------------------------------------------------------------------------ */
+
+  button:focus,
+  a:focus {
+    outline-offset: 1px;
+    outline: 1px solid var(--color-primary-light);
+  }
+
+  /* Focus Ring Enhancements */
+  :focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }

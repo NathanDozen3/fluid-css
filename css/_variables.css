@@ -1,808 +1,811 @@
 /*
- * ========================================================================
- * Fluid CSS Design Tokens & Variables
- * ------------------------------------------------------------------------
- * Centralized CSS custom properties for color, spacing, typography, breakpoints, etc.
- * Usage: Reference these variables throughout all CSS for consistency.
- *
- * Color System for Designers:
- * ------------------------------------------------------------------------
- * 1. Palette tokens (e.g., --palette-purple, --palette-yellow) are the raw color values.
- *    - Use these only for mapping to semantic tokens below.
- *    - Do NOT use palette tokens directly in your CSS or design specs.
- *
- * 2. Semantic tokens (e.g., --color-primary, --color-surface, --color-error) are for all UI roles.
- *    - Use semantic tokens for backgrounds, text, borders, buttons, etc.
- *    - This enables easy theming, accessibility, and consistent usage across the system.
- *    - Example: Use var(--color-primary) for main brand/action elements, var(--color-surface) for cards/panels, var(--color-background) for page backgrounds.
- *
- * 3. To update a color system-wide, change the palette value or remap a semantic token.
- *    - For dark mode, override semantic tokens in the dark mode block.
- *
- * 4. Never use hard-coded color values in your CSS or design tokens. Always use semantic tokens.
- *
- * 5. For a full list of tokens and their intended roles, see the comments in this file and the README.
- *
- * Example usage in CSS:
- *   color: var(--color-primary);
- *   background: var(--color-surface);
- *   border-color: var(--color-border);
- * ========================================================================
- */
+/*
+==========================================================================
+Fluid CSS Design Tokens & Variables
+--------------------------------------------------------------------------
+Centralized CSS custom properties for color, spacing, typography, breakpoints, etc.
+Usage: Reference these variables throughout all CSS for consistency.
 
-/* CSS Variables and root custom properties
+Color System for Designers:
+--------------------------------------------------------------------------
+1. Palette tokens (e.g., --palette-purple, --palette-yellow) are the raw color values.
+   - Use these only for mapping to semantic tokens below.
+   - Do NOT use palette tokens directly in your CSS or design specs.
+
+2. Semantic tokens (e.g., --color-primary, --color-surface, --color-error) are for all UI roles.
+   - Use semantic tokens for backgrounds, text, borders, buttons, etc.
+   - This enables easy theming, accessibility, and consistent usage across the system.
+   - Example: Use var(--color-primary) for main brand/action elements, var(--color-surface) for cards/panels, var(--color-background) for page backgrounds.
+
+3. To update a color system-wide, change the palette value or remap a semantic token.
+   - For dark mode, override semantic tokens in the dark mode block.
+
+4. Never use hard-coded color values in your CSS or design tokens. Always use semantic tokens.
+
+5. For a full list of tokens and their intended roles, see the comments in this file and the README.
+
+Example usage in CSS:
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border-color: var(--color-border);
+==========================================================================
+*/
+
+@layer base {
+  /* CSS Variables and root custom properties
  *
  * This file centralizes all design tokens for the Fluid CSS framework.
  * Each section is commented for clarity and maintainability.
  */
-:root {
-  /* ----------------------------------------------------------------------
-   * Responsive Clamp Font Sizes (using designer-friendly vars)
-   * ---------------------------------------------------------------------- */
-  --font-size-h1: clamp(
-    var(--font-size-h1-mobile),
-    6vw,
-    var(--font-size-h1-desktop)
-  );
-  --font-size-h2: clamp(
-    var(--font-size-h2-mobile),
-    4vw,
-    var(--font-size-h2-desktop)
-  );
-  --font-size-h3: clamp(
-    var(--font-size-h3-mobile),
-    3vw,
-    var(--font-size-h3-desktop)
-  );
-  --font-size-h4: clamp(
-    var(--font-size-h4-mobile),
-    2.5vw,
-    var(--font-size-h4-desktop)
-  );
-  --font-size-h5: clamp(
-    var(--font-size-h5-mobile),
-    2vw,
-    var(--font-size-h5-desktop)
-  );
-  --font-size-h6: clamp(
-    var(--font-size-h6-mobile),
-    1.5vw,
-    var(--font-size-h6-desktop)
-  );
-  --font-size-p: clamp(
-    var(--font-size-p-mobile),
-    1.2vw,
-    var(--font-size-p-desktop)
-  );
-  --font-size-li: clamp(
-    var(--font-size-li-mobile),
-    1.2vw,
-    var(--font-size-li-desktop)
-  );
-  --font-size-xs: clamp(
-    var(--font-size-xs-mobile),
-    1vw,
-    var(--font-size-xs-desktop)
-  );
-  --font-size-sm: clamp(
-    var(--font-size-sm-mobile),
-    1.1vw,
-    var(--font-size-sm-desktop)
-  );
-  --font-size-lg: clamp(
-    var(--font-size-lg-mobile),
-    2vw,
-    var(--font-size-lg-desktop)
-  );
-  --font-size-xl: clamp(
-    var(--font-size-xl-mobile),
-    3vw,
-    var(--font-size-xl-desktop)
-  );
-  --font-size-caption: clamp(
-    var(--font-size-caption-mobile),
-    1vw,
-    var(--font-size-caption-desktop)
-  );
+  :root {
+    /* --------------------------------------------------------------------------
+     * Responsive Clamp Font Sizes (using designer-friendly vars)
+     * -------------------------------------------------------------------------- */
+    --font-size-h1: clamp(
+      var(--font-size-h1-mobile),
+      6vw,
+      var(--font-size-h1-desktop)
+    );
+    --font-size-h2: clamp(
+      var(--font-size-h2-mobile),
+      4vw,
+      var(--font-size-h2-desktop)
+    );
+    --font-size-h3: clamp(
+      var(--font-size-h3-mobile),
+      3vw,
+      var(--font-size-h3-desktop)
+    );
+    --font-size-h4: clamp(
+      var(--font-size-h4-mobile),
+      2.5vw,
+      var(--font-size-h4-desktop)
+    );
+    --font-size-h5: clamp(
+      var(--font-size-h5-mobile),
+      2vw,
+      var(--font-size-h5-desktop)
+    );
+    --font-size-h6: clamp(
+      var(--font-size-h6-mobile),
+      1.5vw,
+      var(--font-size-h6-desktop)
+    );
+    --font-size-p: clamp(
+      var(--font-size-p-mobile),
+      1.2vw,
+      var(--font-size-p-desktop)
+    );
+    --font-size-li: clamp(
+      var(--font-size-li-mobile),
+      1.2vw,
+      var(--font-size-li-desktop)
+    );
+    --font-size-xs: clamp(
+      var(--font-size-xs-mobile),
+      1vw,
+      var(--font-size-xs-desktop)
+    );
+    --font-size-sm: clamp(
+      var(--font-size-sm-mobile),
+      1.1vw,
+      var(--font-size-sm-desktop)
+    );
+    --font-size-lg: clamp(
+      var(--font-size-lg-mobile),
+      2vw,
+      var(--font-size-lg-desktop)
+    );
+    --font-size-xl: clamp(
+      var(--font-size-xl-mobile),
+      3vw,
+      var(--font-size-xl-desktop)
+    );
+    --font-size-caption: clamp(
+      var(--font-size-caption-mobile),
+      1vw,
+      var(--font-size-caption-desktop)
+    );
+
+    /* --------------------------------------------------------------------------
+     * Palette (raw color values, do not use directly in utilities)
+     * -------------------------------------------------------------------------- */
+    --palette-yellow: #ffee58;
+    --palette-purple: #503aa8;
+    --palette-pink: #f6cff4;
+    --palette-grey: #686868;
+    --palette-offwhite: #fbfaf3;
+    --palette-black: #111;
+    --palette-white: #fff;
+
+    /* --------------------------------------------------------------------------
+     * Semantic color tokens (use these everywhere)
+     * -------------------------------------------------------------------------- */
+
+    /* Base */
+    --color-base: var(--palette-white); /* Text on dark, surface backgrounds */
+    --color-base-hover: var(--palette-grey); /* Hover state for base text */
+    --color-base-active: var(--palette-black); /* Active state for base text */
+
+    /* Contrast */
+    --color-contrast: var(--palette-black); /* Text on light backgrounds */
+    --color-contrast-hover: #333; /* Darker contrast for hover states */
+    --color-contrast-active: #222; /* Active state for contrast text */
+
+    /* Lighter contrast */
+    --color-contrast-light: #444; /* Lighter contrast for secondary text */
+    --color-contrast-light-hover: #555; /* Hover state for lighter contrast */
+    --color-contrast-light-active: #666; /* Active state for lighter contrast */
+
+    /* Primary */
+    --color-primary: var(--palette-purple); /* Main brand/action color */
+    --color-primary-hover: #402a8f; /* Hover state for primary */
+    --color-primary-active: #301a60; /* Active state for primary (reusing primary-dark) */
+
+    /* Secondary */
+    --color-secondary: var(--palette-yellow); /* Secondary action color */
+    --color-secondary-hover: #e6d300; /* Hover state for secondary */
+    --color-secondary-active: #bfa800; /* Active state for secondary */
+
+    /* Tertiary */
+    --color-tertiary: var(--palette-pink); /* Tertiary action color */
+    --color-tertiary-hover: #e6b3d1; /* Hover state for tertiary */
+    --color-tertiary-active: #d18ab3; /* Active state for tertiary */
+
+    /* Success */
+    --color-success: #27ae60; /* Success/positive */
+    --color-success-hover: #219653; /* Hover state for success */
+    --color-success-active: #1e8449; /* Active state for success */
+
+    /* Warning */
+    --color-warning: #915c00; /* Warning/attention */
+    --color-warning-hover: #b77a00; /* Hover state for warning */
+    --color-warning-active: #7a4c00; /* Active state for warning */
+
+    /* Error */
+    --color-error: #b02b1d; /* Error/negative */
+    --color-error-hover: #a61b0c; /* Hover state for error */
+    --color-error-active: #912417; /* Active state for error */
+
+    /* Info */
+    --color-info: #3498db; /* Informational */
+    --color-info-hover: #2980b9; /* Hover state for info */
+    --color-info-active: #256dab; /* Active state for info */
+
+    /* Surface */
+    --color-surface: var(--palette-white); /* Card/panel background */
+    --color-surface-hover: #f5f5f5; /* Hover state for surface elements */
+    --color-surface-active: #e0e0e0; /* Active state for surface */
+
+    /* Background */
+    --color-background: var(--palette-offwhite); /* Page/app background */
+    --color-background-hover: #f0f0f0; /* Hover state for background */
+    --color-background-active: #e8e7e0; /* Active state for background */
+
+    /* Alternate background */
+    --color-background-alt: #e8e7e0; /* Alternate background for sections */
+    --color-background-alt-hover: #dcdcd0; /* Hover state for alternate background */
+    --color-background-alt-active: #cfcfca; /* Active state for alternate background */
+
+    /* Muted */
+    --color-muted: var(--palette-grey); /* For subdued text or placeholders */
+    --color-muted-hover: #808080; /* Hover state for muted text */
+    --color-muted-active: #555; /* Active state for muted */
+
+    /* High contrast */
+    --color-high-contrast: #000; /* For high-contrast accessibility */
+    --color-high-contrast-hover: #333; /* Hover state for high-contrast */
+    --color-high-contrast-active: #111; /* Active state for high-contrast */
+
+    /* Border */
+    --color-border: var(--palette-grey); /* Default border color */
+    --color-border-hover: #888; /* Hover state for borders */
+    --color-border-active: #555; /* Active state for borders */
+    --color-border-rgb: 104, 104, 104; /* RGB for opacity utilities */
+
+    /* Primary light */
+    --color-primary-light: #7c4dff;
+    --color-primary-light-hover: #651fff; /* Lighter shade for hover */
+    --color-primary-light-active: #4e1bff; /* Active state for primary-light */
+
+    /* Primary dark */
+    --color-primary-dark: #301a60;
+    --color-primary-dark-hover: #1a0f3c; /* Darker shade for hover */
+    --color-primary-dark-active: #0f071d; /* Active state for primary-dark */
+
+    /* --------------------------------------------------------------------------
+     * Breakpoints (for documentation and future use)
+     * -------------------------------------------------------------------------- */
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-xxl: 1440px; /* For ultra-wide screens */
+    --breakpoint-mobile: var(--breakpoint-xs); /* Alias for mobile-first */
+    --breakpoint-desktop: var(--breakpoint-lg); /* Alias for desktop */
+    --viewport-min: 100vw; /* Minimum viewport width */
+    --viewport-max: 1920px; /* Maximum viewport width for scaling */
+
+    /* --------------------------------------------------------------------------
+     * Container and layout
+     * -------------------------------------------------------------------------- */
+    --container-min-width: 320px; /* Minimum container width */
+    --container-max-width: 1328px; /* Maximum container width */
+    --container-narrow-max-width: 960px; /* Max width for narrow containers */
+    --container-width: 80vw; /* Default container width */
+    --container-narrow-width: 60vw; /* Default narrow container width */
+    --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
+    --container-padding: var(--spacing-md); /* Default container padding */
+
+    /* --------------------------------------------------------------------------
+     * Maximum heights (responsive with clamp)
+     * -------------------------------------------------------------------------- */
+    --max-height-sm: 300px; /* For constrained elements like modals */
+    --max-height-md: 500px; /* For medium elements */
+    --max-height-lg: 800px; /* For large elements */
+    --max-height-full: 100%; /* Full viewport height */
+    --max-height-screen: 100vh; /* Full viewport height for screen elements */
+
+    /* --------------------------------------------------------------------------
+     * Minimum heights (responsive with clamp)
+     * -------------------------------------------------------------------------- */
+    --min-height-sm: 200px; /* Minimum height for small elements */
+    --min-height-md: 400px; /* Minimum height for medium elements */
+    --min-height-lg: 600px; /* Minimum height for large elements */
+    --min-height-full: 100%; /* Full height for elements */
+    --min-height-screen: 100vh; /* Full viewport height for screen elements */
+
+    /* --------------------------------------------------------------------------
+     * Typography (responsive with clamp)
+     * -------------------------------------------------------------------------- */
+    --font-family-base:
+      'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
+
+    --font-family-heading: 'Merriweather', serif; /* Font for headings */
+    --font-family-monospace:
+      'Fira Code', 'Courier New', monospace; /* For code blocks */
+
+    /* --------------------------------------------------------------------------
+     * Designer-Friendly Font Sizes (Mobile & Desktop)
+     * -------------------------------------------------------------------------- */
+
+    /* Set these values to match your design system. */
+    --font-size-h1-mobile: 32px;
+    --font-size-h1-desktop: 48px;
+    --font-size-h2-mobile: 24px;
+    --font-size-h2-desktop: 36px;
+    --font-size-h3-mobile: 20px;
+    --font-size-h3-desktop: 28px;
+    --font-size-h4-mobile: 18px;
+    --font-size-h4-desktop: 22px;
+    --font-size-h5-mobile: 16px;
+    --font-size-h5-desktop: 18px;
+    --font-size-h6-mobile: 14px;
+    --font-size-h6-desktop: 16px;
+    --font-size-p-mobile: 16px;
+    --font-size-p-desktop: 18px;
+    --font-size-li-mobile: 16px;
+    --font-size-li-desktop: 18px;
+    --font-size-xs-mobile: 12px;
+    --font-size-xs-desktop: 14px;
+    --font-size-sm-mobile: 14px;
+    --font-size-sm-desktop: 16px;
+    --font-size-lg-mobile: 20px;
+    --font-size-lg-desktop: 24px;
+    --font-size-xl-mobile: 24px;
+    --font-size-xl-desktop: 32px;
+    --font-size-caption-mobile: 12px;
+    --font-size-caption-desktop: 14px;
+    --line-height-base: 1.6; /* Base line height */
+    --line-height-heading: 1.2; /* Heading line height */
+    --line-height-tight: 1.2; /* Tight line height */
+    --line-height-loose: 1.75; /* Loose line height */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-heading: 700;
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+    --text-align-left: left;
+    --text-align-center: center;
+    --text-align-right: right;
+    --text-align-justify: justify;
+
+    /* --------------------------------------------------------------------------
+     * Spacing (responsive with clamp)
+     * -------------------------------------------------------------------------- */
+    --spacing-0: 0;
+    --spacing-auto: auto; /* For margin: auto or other auto layouts */
+    --spacing-xs: clamp(4px, 0.4vw, 8px); /* Extra small spacing */
+    --spacing-sm: clamp(8px, 0.8vw, 16px); /* Small spacing */
+    --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
+    --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
+    --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
+    --spacing-negative-xs: clamp(
+      -8px,
+      -0.4vw,
+      -4px
+    ); /* Negative extra small spacing */
+
+    --spacing-negative-sm: clamp(
+      -16px,
+      -0.8vw,
+      -8px
+    ); /* Negative small spacing */
+
+    --gap-xs: clamp(4px, 0.4vw, 6px); /* For flex/grid gaps */
+    --gap-md: clamp(12px, 1.2vw, 16px); /* Medium gap for layouts */
+
+    /* --------------------------------------------------------------------------
+     * Grid
+     * -------------------------------------------------------------------------- */
+    --min-cols: 1;
+    --max-cols: 2;
+    --col-min-width: 320px;
+    --row: row;
+    --column: column;
+    --dense: dense;
+    --auto: auto;
+
+    /* --------------------------------------------------------------------------
+     * Display
+     * -------------------------------------------------------------------------- */
+    --display-none: none; /* For toggling visibility */
+    --display-block: block; /* For block-level layouts */
+    --display-inline: inline; /* For inline layouts */
+    --display-inline-block: inline-block; /* For inline-block layouts */
+    --display-flex: flex; /* For flexbox layouts */
+    --display-grid: grid; /* For grid layouts */
+    --display-inline-flex: inline-flex; /* For inline flexbox layouts */
+    --display-inline-grid: inline-grid; /* For inline grid layouts */
+    --display-table: table; /* For table layouts */
+    --display-table-row: table-row; /* For table row layouts */
+    --display-table-cell: table-cell; /* For table cell layouts */
+    --display-table-row-group: table-row-group; /* For table row group */
+    --display-table-header-group: table-header-group; /* For table header group */
+    --display-table-footer-group: table-footer-group; /* For table footer group */
+    --display-table-column: table-column; /* For table column */
+    --display-table-column-group: table-column-group; /* For table column group */
+    --display-table-caption: table-caption; /* For table caption */
+    --display-list-item: list-item; /* For list item layouts */
+    --display-contents: contents; /* For contents layouts */
+    --display-flow-root: flow-root; /* For flow-root layouts */
+    --display-auto: auto; /* For auto display behavior */
+
+    /* --------------------------------------------------------------------------
+     * Positioning
+     * -------------------------------------------------------------------------- */
+    --position-static: static;
+    --position-relative: relative;
+    --position-absolute: absolute;
+    --position-fixed: fixed;
+    --position-sticky: sticky;
+
+    /* --------------------------------------------------------------------------
+     * Alignment
+     * -------------------------------------------------------------------------- */
+    --align-items-start: start;
+    --align-items-center: center;
+    --align-items-end: end;
+    --align-items-baseline: baseline;
+    --align-items-stretch: stretch;
+
+    /* --------------------------------------------------------------------------
+     * Justification
+     * -------------------------------------------------------------------------- */
+    --justify-content-start: start;
+    --justify-content-center: center;
+    --justify-content-end: end;
+    --justify-content-between: space-between;
+    --justify-content-around: space-around;
+    --justify-content-evenly: space-evenly;
+    --justify-content-stretch: stretch;
+    --justify-self-left: left;
+    --justify-self-right: right;
+    --place-content-center: center;
+    --place-items-center: center;
+    --place-self-center: center;
+
+    /* --------------------------------------------------------------------------
+     * Flexbox
+     * -------------------------------------------------------------------------- */
+    --flex-direction-row: row;
+    --flex-direction-column: column;
+    --flex-wrap-wrap: wrap;
+    --flex-wrap-nowrap: nowrap;
+    --align-content-start: flex-start;
+    --align-content-end: flex-end;
+    --align-content-center: center;
+    --align-content-between: space-between;
+    --align-content-around: space-around;
+    --align-content-stretch: stretch;
+    --flex-grow-0: 0;
+    --flex-grow-1: 1;
+    --flex-shrink-0: 0;
+    --flex-shrink-1: 1;
+    --flex-basis-auto: auto;
+    --flex-basis-0: 0;
+    --order-0: 0;
+    --order-1: 1;
+    --order-2: 2;
+    --order-3: 3;
+    --order-first: -9999;
+    --order-last: 9999;
+
+    /* --------------------------------------------------------------------------
+     * Shadows
+     * -------------------------------------------------------------------------- */
+    --shadow-xs: 0 1px 1px rgb(0 0 0 / 3%);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
+    --shadow-md: 0 2px 8px rgb(0 0 0 / 10%);
+    --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
+    --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%);
+    --shadow-none: none;
+
+    /* --------------------------------------------------------------------------
+     * Text Shadows
+     * -------------------------------------------------------------------------- */
+    --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 50%);
+    --text-shadow-md: 0 2px 4px rgb(0 0 0 / 60%);
+    --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 70%);
+    --text-shadow-none: none;
+
+    /* --------------------------------------------------------------------------
+     * Opacity
+     * -------------------------------------------------------------------------- */
+    --opacity-0: 0;
+    --opacity-25: 0.25;
+    --opacity-50: 0.5;
+    --opacity-75: 0.75;
+    --opacity-80: 0.8;
+    --opacity-100: 1;
+
+    /* --------------------------------------------------------------------------
+     * Overflow
+     * -------------------------------------------------------------------------- */
+    --overflow-hidden: hidden;
+    --overflow-auto: auto;
+    --overflow-scroll: scroll;
+    --overflow-x-hidden: hidden;
+    --overflow-x-auto: auto;
+    --overflow-x-scroll: scroll;
+    --overflow-y-hidden: hidden;
+    --overflow-y-auto: auto;
+    --overflow-y-scroll: scroll;
+
+    /* --------------------------------------------------------------------------
+     * Background
+     * -------------------------------------------------------------------------- */
+    --background-size-cover: cover;
+    --background-size-contain: contain;
+    --background-position-center: center;
+    --background-position-top: top;
+    --background-position-bottom: bottom;
+    --background-repeat-no-repeat: no-repeat;
+    --background-repeat-repeat: repeat;
+    --background-attachment-fixed: fixed;
+    --background-attachment-scroll: scroll;
+
+    /* --------------------------------------------------------------------------
+     * Overlay
+     * -------------------------------------------------------------------------- */
+    --color-overlay: rgb(0 0 0 / 50%);
+    --color-overlay-light: rgb(255 255 255 / 30%);
+
+    /* --------------------------------------------------------------------------
+     * Border radius
+     * -------------------------------------------------------------------------- */
+    --border-radius-none: 0;
+    --border-radius-sm: clamp(2px, 0.2vw, 4px);
+    --border-radius-md: clamp(4px, 0.4vw, 8px);
+    --border-radius-lg: clamp(8px, 0.8vw, 16px);
+    --border-radius-full: 9999px;
+
+    /* --------------------------------------------------------------------------
+     * Border width
+     * -------------------------------------------------------------------------- */
+    --border-width-none: 0; /* No border */
+    --border-width-sm: clamp(1px, 0.1vw, 2px); /* Small border */
+    --border-width-md: clamp(2px, 0.2vw, 4px); /* Medium border */
+    --border-width-lg: clamp(4px, 0.4vw, 8px); /* Large border */
+    --border-width-xl: clamp(8px, 0.8vw, 16px); /* Extra large border */
+
+    /* --------------------------------------------------------------------------
+     * Border style
+     * -------------------------------------------------------------------------- */
+    --border-style-none: none; /* No border */
+    --border-style-solid: solid; /* Solid border */
+    --border-style-dashed: dashed; /* Dashed border */
+    --border-style-dotted: dotted; /* Dotted border */
+    --border-style-double: double; /* Double border */
+    --border-style-groove: groove; /* Grooved border */
+    --border-style-ridge: ridge; /* Ridged border */
+    --border-style-inset: inset; /* Inset border */
+    --border-style-outset: outset; /* Outset border */
+    --border-style-hidden: hidden; /* Hidden border */
+    --border-style-inherit: inherit; /* Inherit border style from parent */
+    --border-style-initial: initial; /* Initial border style */
+    --border-style-unset: unset; /* Unset border style */
+    --border-style-revert: revert; /* Revert border style to default */
+    --border-style-revert-layer: revert-layer; /* Revert border style to layer default */
+    --border-style-all: all; /* Apply all border styles */
+    --border-style-auto: auto; /* Auto border style */
+    --border-style-invisible: invisible; /* Invisible border */
+    --border-style-visible: visible; /* Visible border */
+
+    /* --------------------------------------------------------------------------
+     * Text overflow
+     * -------------------------------------------------------------------------- */
+    --text-overflow-ellipsis: ellipsis;
+    --text-overflow-clip: clip;
+
+    /* --------------------------------------------------------------------------
+     * Text decoration
+     * -------------------------------------------------------------------------- */
+    --text-decoration-underline: underline; /* For underlined text */
+    --text-decoration-none: none; /* For no text decoration */
+    --text-decoration-line-through: line-through; /* For strikethrough text */
+
+    /* --------------------------------------------------------------------------
+     * User select
+     * -------------------------------------------------------------------------- */
+    --user-select-none: none;
+    --user-select-auto: auto;
+    --user-select-all: all;
+
+    /* --------------------------------------------------------------------------
+     * White space
+     * -------------------------------------------------------------------------- */
+    --white-space-normal: normal;
+    --white-space-nowrap: nowrap;
+    --white-space-pre: pre;
+    --white-space-pre-wrap: pre-wrap;
+
+    /* --------------------------------------------------------------------------
+     * Vertical align
+     * -------------------------------------------------------------------------- */
+    --vertical-align-baseline: baseline;
+    --vertical-align-top: top;
+    --vertical-align-middle: middle;
+    --vertical-align-bottom: bottom;
+
+    /* --------------------------------------------------------------------------
+     * Scroll behavior
+     * -------------------------------------------------------------------------- */
+    --scroll-behavior-auto: auto;
+    --scroll-behavior-smooth: smooth;
+
+    /* --------------------------------------------------------------------------
+     * Z-index scale
+     * -------------------------------------------------------------------------- */
+    --z-0: 0;
+    --z-10: 10;
+    --z-50: 50;
+    --z-100: 100;
+    --z-200: 200;
+    --z-300: 300;
+    --z-auto: auto;
+
+    /* --------------------------------------------------------------------------
+     * Button and form states
+     * -------------------------------------------------------------------------- */
+    --btn-bg: var(--color-primary);
+    --btn-bg-hover: var(--color-success);
+    --btn-bg-disabled: var(--color-border);
+    --btn-text: var(--color-contrast);
+    --input-bg: var(--color-base);
+    --input-border: var(--color-border);
+    --input-focus: var(--color-primary);
+
+    /* --------------------------------------------------------------------------
+     * Component-specific tokens
+     * -------------------------------------------------------------------------- */
+    --badge-bg: var(--color-primary); /* Background for badges */
+    --badge-text: var(--color-base); /* Text for badges */
+    --alert-bg-success: rgb(39 174 96 / 10%); /* Success alert background */
+    --alert-border-success: var(--color-success); /* Success alert border */
+    --tooltip-bg: var(--color-contrast); /* Tooltip background */
+    --tooltip-text: var(--color-base); /* Tooltip text */
+    --dropdown-shadow: var(--shadow-md); /* Dropdown menu shadow */
+
+    /* --------------------------------------------------------------------------
+     * Accessibility
+     * -------------------------------------------------------------------------- */
+    --focus-outline: 2px solid var(--color-primary);
+    --focus-outline-offset: 2px;
+    --focus-ring: 1px solid var(--color-primary-light); /* Subtle focus ring */
+    --focus-shadow: 0 0 8px var(--color-primary); /* Enhanced focus effect */
+    --reduced-motion: reduce; /* For prefers-reduced-motion */
+    --high-contrast-outline: 3px solid #000; /* For high-contrast mode */
+    --link-color: var(--color-primary);
+    --link-color-hover: var(--color-border);
+
+    /* --------------------------------------------------------------------------
+     * Pointer events
+     * -------------------------------------------------------------------------- */
+    --pointer-events-none: none; /* For elements that should not receive pointer events */
+    --pointer-events-auto: auto; /* For elements that should receive pointer events */
+    --pointer-events-visible: visible; /* For elements that should be visible to pointer events */
+    --pointer-events-hidden: hidden; /* For elements that should not be visible to pointer events */
+    --pointer-events-all: all; /* For elements that should receive all pointer events */
+
+    /* --------------------------------------------------------------------------
+     * Isolation
+     * -------------------------------------------------------------------------- */
+    --isolation-isolate: isolate; /* For creating a new stacking context */
+    --isolation-auto: auto; /* For default stacking context behavior */
+    --isolation-visible: visible; /* For elements that should be visible in the stacking context */
+    --isolation-hidden: hidden; /* For elements that should not be visible in the stacking context */
+    --isolation-all: all; /* For elements that should receive all isolation properties */
+    --isolation-none: none; /* For elements that should not create a new stacking context */
+
+    /* --------------------------------------------------------------------------
+     * Cursor styles
+     * -------------------------------------------------------------------------- */
+    --cursor-disabled: not-allowed; /* For disabled elements */
+    --cursor-pointer: pointer; /* For interactive elements */
+    --cursor-default: default; /* For default cursor */
+    --cursor-grab: grab; /* For draggable elements */
+    --cursor-grabbing: grabbing; /* For elements being dragged */
+    --cursor-not-allowed: not-allowed; /* For elements that are disabled or not interactive */
+    --cursor-help: help; /* For elements that provide help or information */
+    --cursor-move: move; /* For elements that can be moved */
+    --cursor-text: text; /* For text input areas */
+    --cursor-crosshair: crosshair; /* For precise selection areas */
+
+    /* --------------------------------------------------------------------------
+     * Visibility and float
+     * -------------------------------------------------------------------------- */
+    --visibility-hidden: hidden; /* For elements that should not be visible */
+    --visibility-visible: visible; /* For elements that should be visible */
+    --float-left: left; /* For floating elements to the left */
+    --float-right: right; /* For floating elements to the right */
+    --float-none: none; /* For elements that should not float */
+
+    /* --------------------------------------------------------------------------
+     * Animation and transitions
+     * -------------------------------------------------------------------------- */
+    --transition-property: all;
+    --transition-duration: 0.2s;
+    --transition-duration-fast: 0.1s;
+    --transition-duration-slow: 0.4s;
+    --transition-delay: 0.1s; /* Default delay for transitions */
+    --transition-timing-function: ease-in-out;
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce effect */
+    --easing-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Elastic effect */
+    --animation-duration: 0.8s;
+    --animation-duration-fast: 0.4s;
+    --animation-duration-slow: 1.2s;
+    --animation-direction: normal;
+    --animation-fill-mode: forwards;
+    --animation-iteration-count: 1;
+    --animation-iteration-count-infinite: infinite;
+    --animation-fade: fade 0.5s ease-in-out;
+    --animation-slide: slide 0.6s ease-out;
+    --animation-spin: spin 1s linear infinite;
+    --animation-bounce: bounce 0.8s ease-in-out infinite;
+    --animation-pulse: pulse 1.5s ease-in-out infinite;
+
+    /* --------------------------------------------------------------------------
+     * Aspect ratios and media
+     * -------------------------------------------------------------------------- */
+    --aspect-ratio-square: 1 / 1; /* For square media */
+    --aspect-ratio-16-9: 16 / 9; /* For widescreen media */
+    --aspect-ratio-4-3: 4 / 3; /* For standard media */
+    --image-object-fit: cover; /* Default object-fit for images */
+    --video-max-height: 80vh; /* Max height for videos */
+
+    /* --------------------------------------------------------------------------
+     * Gradients
+     * -------------------------------------------------------------------------- */
+    --gradient-primary: linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-success)
+    );
+    --gradient-accent: linear-gradient(
+      90deg,
+      var(--color-warning),
+      var(--color-error)
+    );
+
+    /* --------------------------------------------------------------------------
+     * Fractional sizing
+     * -------------------------------------------------------------------------- */
+    --width-screen: 100vw; /* Full viewport width */
+    --width-full: 100%; /* Full width */
+    --width-auto: auto; /* Auto width */
+    --width-1-12: 8.3333%; /* 1/12 width */
+    --width-1-6: 16.6667%; /* 1/6 width */
+    --width-1-5: 20%; /* 1/5 width */
+    --width-1-4: 25%;
+    --width-1-3: 33.3333%;
+    --width-1-2: 50%;
+    --width-2-3: 66.6667%;
+    --width-3-4: 75%;
+    --height-screen: 100vh; /* Full viewport height */
+    --height-full: 100%; /* Full height */
+    --height-auto: auto; /* Auto height */
+    --height-1-12: 8.3333%; /* 1/12 height */
+    --height-1-6: 16.6667%; /* 1/6 height */
+    --height-1-5: 20%; /* 1/5 height */
+    --height-1-4: 25%;
+    --height-1-3: 33.3333%;
+    --height-1-2: 50%;
+    --height-2-3: 66.6667%;
+    --height-3-4: 75%;
+
+    /* --------------------------------------------------------------------------
+     * Additional max-widths
+     * -------------------------------------------------------------------------- */
+    --max-width-none: none; /* No maximum width */
+    --max-width-full: 100%; /* Full width */
+    --max-width-screen: 100vw; /* Full viewport width */
+    --max-width-100: 100px; /* For very small elements */
+    --max-width-200: 200px; /* For small elements */
+    --max-width-300: 300px; /* For medium elements */
+    --max-width-400: 400px; /* For larger elements */
+    --max-width-500: 500px; /* For extra large elements */
+    --max-width-600: 600px; /* For wide elements */
+    --max-width-700: 700px; /* For very wide elements */
+    --max-width-800: 800px; /* For ultra wide elements */
+    --max-width-900: 900px; /* For extremely wide elements */
+    --max-width-1000: 1000px; /* For super wide elements */
+    --max-width-xs: var(--breakpoint-xs); /* 480px */
+    --max-width-sm: var(--breakpoint-sm); /* 640px */
+    --max-width-md: var(--breakpoint-md); /* 768px */
+    --max-width-lg: var(--breakpoint-lg); /* 1024px */
+    --max-width-xl: var(--breakpoint-xl); /* 1280px */
+    --max-width-xxl: var(--breakpoint-xxl); /* 1440px */
+    --max-width-container: var(--container-max-width); /* 1328px */
+    --max-width-container-narrow: var(--container-narrow-max-width); /* 960px */
+
+    /* --------------------------------------------------------------------------
+     * List Styles
+     * -------------------------------------------------------------------------- */
+    --list-style-none: none;
+    --list-style-disc: disc;
+    --list-style-circle: circle;
+    --list-style-square: square;
+    --list-style-decimal: decimal;
+    --list-style-upper-alpha: upper-alpha;
+    --list-style-lower-alpha: lower-alpha;
+    --list-style-upper-roman: upper-roman;
+    --list-style-lower-roman: lower-roman;
+  }
 
   /* ----------------------------------------------------------------------
-   * Palette (raw color values, do not use directly in utilities)
-   * ---------------------------------------------------------------------- */
-  --palette-yellow: #ffee58;
-  --palette-purple: #503aa8;
-  --palette-pink: #f6cff4;
-  --palette-grey: #686868;
-  --palette-offwhite: #fbfaf3;
-  --palette-black: #111;
-  --palette-white: #fff;
-
-  /* ----------------------------------------------------------------------
-   * Semantic color tokens (use these everywhere)
-   * ---------------------------------------------------------------------- */
-
-  /* Base */
-  --color-base: var(--palette-white); /* Text on dark, surface backgrounds */
-  --color-base-hover: var(--palette-grey); /* Hover state for base text */
-  --color-base-active: var(--palette-black); /* Active state for base text */
-
-  /* Contrast */
-  --color-contrast: var(--palette-black); /* Text on light backgrounds */
-  --color-contrast-hover: #333; /* Darker contrast for hover states */
-  --color-contrast-active: #222; /* Active state for contrast text */
-
-  /* Lighter contrast */
-  --color-contrast-light: #444; /* Lighter contrast for secondary text */
-  --color-contrast-light-hover: #555; /* Hover state for lighter contrast */
-  --color-contrast-light-active: #666; /* Active state for lighter contrast */
-
-  /* Primary */
-  --color-primary: var(--palette-purple); /* Main brand/action color */
-  --color-primary-hover: #402a8f; /* Hover state for primary */
-  --color-primary-active: #301a60; /* Active state for primary (reusing primary-dark) */
-
-  /* Secondary */
-  --color-secondary: var(--palette-yellow); /* Secondary action color */
-  --color-secondary-hover: #e6d300; /* Hover state for secondary */
-  --color-secondary-active: #bfa800; /* Active state for secondary */
-
-  /* Tertiary */
-  --color-tertiary: var(--palette-pink); /* Tertiary action color */
-  --color-tertiary-hover: #e6b3d1; /* Hover state for tertiary */
-  --color-tertiary-active: #d18ab3; /* Active state for tertiary */
-
-  /* Success */
-  --color-success: #27ae60; /* Success/positive */
-  --color-success-hover: #219653; /* Hover state for success */
-  --color-success-active: #1e8449; /* Active state for success */
-
-  /* Warning */
-  --color-warning: #915c00; /* Warning/attention */
-  --color-warning-hover: #b77a00; /* Hover state for warning */
-  --color-warning-active: #7a4c00; /* Active state for warning */
-
-  /* Error */
-  --color-error: #b02b1d; /* Error/negative */
-  --color-error-hover: #a61b0c; /* Hover state for error */
-  --color-error-active: #912417; /* Active state for error */
-
-  /* Info */
-  --color-info: #3498db; /* Informational */
-  --color-info-hover: #2980b9; /* Hover state for info */
-  --color-info-active: #256dab; /* Active state for info */
-
-  /* Surface */
-  --color-surface: var(--palette-white); /* Card/panel background */
-  --color-surface-hover: #f5f5f5; /* Hover state for surface elements */
-  --color-surface-active: #e0e0e0; /* Active state for surface */
-
-  /* Background */
-  --color-background: var(--palette-offwhite); /* Page/app background */
-  --color-background-hover: #f0f0f0; /* Hover state for background */
-  --color-background-active: #e8e7e0; /* Active state for background */
-
-  /* Alternate background */
-  --color-background-alt: #e8e7e0; /* Alternate background for sections */
-  --color-background-alt-hover: #dcdcd0; /* Hover state for alternate background */
-  --color-background-alt-active: #cfcfca; /* Active state for alternate background */
-
-  /* Muted */
-  --color-muted: var(--palette-grey); /* For subdued text or placeholders */
-  --color-muted-hover: #808080; /* Hover state for muted text */
-  --color-muted-active: #555; /* Active state for muted */
-
-  /* High contrast */
-  --color-high-contrast: #000; /* For high-contrast accessibility */
-  --color-high-contrast-hover: #333; /* Hover state for high-contrast */
-  --color-high-contrast-active: #111; /* Active state for high-contrast */
-
-  /* Border */
-  --color-border: var(--palette-grey); /* Default border color */
-  --color-border-hover: #888; /* Hover state for borders */
-  --color-border-active: #555; /* Active state for borders */
-  --color-border-rgb: 104, 104, 104; /* RGB for opacity utilities */
-
-  /* Primary light */
-  --color-primary-light: #7c4dff;
-  --color-primary-light-hover: #651fff; /* Lighter shade for hover */
-  --color-primary-light-active: #4e1bff; /* Active state for primary-light */
-
-  /* Primary dark */
-  --color-primary-dark: #301a60;
-  --color-primary-dark-hover: #1a0f3c; /* Darker shade for hover */
-  --color-primary-dark-active: #0f071d; /* Active state for primary-dark */
-
-  /* ----------------------------------------------------------------------
-   * Breakpoints (for documentation and future use)
-   * ---------------------------------------------------------------------- */
-  --breakpoint-xs: 480px;
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-xxl: 1440px; /* For ultra-wide screens */
-  --breakpoint-mobile: var(--breakpoint-xs); /* Alias for mobile-first */
-  --breakpoint-desktop: var(--breakpoint-lg); /* Alias for desktop */
-  --viewport-min: 100vw; /* Minimum viewport width */
-  --viewport-max: 1920px; /* Maximum viewport width for scaling */
-
-  /* ----------------------------------------------------------------------
-   * Container and layout
-   * ---------------------------------------------------------------------- */
-  --container-min-width: 320px; /* Minimum container width */
-  --container-max-width: 1328px; /* Maximum container width */
-  --container-narrow-max-width: 960px; /* Max width for narrow containers */
-  --container-width: 80vw; /* Default container width */
-  --container-narrow-width: 60vw; /* Default narrow container width */
-  --gutter-base: clamp(8px, 0.75vw, 16px); /* Base gutter spacing */
-  --container-padding: var(--spacing-md); /* Default container padding */
-
-  /* ----------------------------------------------------------------------
-   * Maximum heights (responsive with clamp)
-   * ---------------------------------------------------------------------- */
-  --max-height-sm: 300px; /* For constrained elements like modals */
-  --max-height-md: 500px; /* For medium elements */
-  --max-height-lg: 800px; /* For large elements */
-  --max-height-full: 100%; /* Full viewport height */
-  --max-height-screen: 100vh; /* Full viewport height for screen elements */
-
-  /* ----------------------------------------------------------------------
-   * Minimum heights (responsive with clamp)
-   * ---------------------------------------------------------------------- */
-  --min-height-sm: 200px; /* Minimum height for small elements */
-  --min-height-md: 400px; /* Minimum height for medium elements */
-  --min-height-lg: 600px; /* Minimum height for large elements */
-  --min-height-full: 100%; /* Full height for elements */
-  --min-height-screen: 100vh; /* Full viewport height for screen elements */
-
-  /* ----------------------------------------------------------------------
-   * Typography (responsive with clamp)
-   * ---------------------------------------------------------------------- */
-  --font-family-base:
-    'Inter', -apple-system, blinkmacsystemfont, sans-serif; /* Default UI font */
-
-  --font-family-heading: 'Merriweather', serif; /* Font for headings */
-  --font-family-monospace:
-    'Fira Code', 'Courier New', monospace; /* For code blocks */
-
-  /* ----------------------------------------------------------------------
-   * Designer-Friendly Font Sizes (Mobile & Desktop)
-   * ---------------------------------------------------------------------- */
-
-  /* Set these values to match your design system. */
-  --font-size-h1-mobile: 32px;
-  --font-size-h1-desktop: 48px;
-  --font-size-h2-mobile: 24px;
-  --font-size-h2-desktop: 36px;
-  --font-size-h3-mobile: 20px;
-  --font-size-h3-desktop: 28px;
-  --font-size-h4-mobile: 18px;
-  --font-size-h4-desktop: 22px;
-  --font-size-h5-mobile: 16px;
-  --font-size-h5-desktop: 18px;
-  --font-size-h6-mobile: 14px;
-  --font-size-h6-desktop: 16px;
-  --font-size-p-mobile: 16px;
-  --font-size-p-desktop: 18px;
-  --font-size-li-mobile: 16px;
-  --font-size-li-desktop: 18px;
-  --font-size-xs-mobile: 12px;
-  --font-size-xs-desktop: 14px;
-  --font-size-sm-mobile: 14px;
-  --font-size-sm-desktop: 16px;
-  --font-size-lg-mobile: 20px;
-  --font-size-lg-desktop: 24px;
-  --font-size-xl-mobile: 24px;
-  --font-size-xl-desktop: 32px;
-  --font-size-caption-mobile: 12px;
-  --font-size-caption-desktop: 14px;
-  --line-height-base: 1.6; /* Base line height */
-  --line-height-heading: 1.2; /* Heading line height */
-  --line-height-tight: 1.2; /* Tight line height */
-  --line-height-loose: 1.75; /* Loose line height */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-heading: 700;
-  --letter-spacing-tight: -0.02em;
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.05em;
-  --text-align-left: left;
-  --text-align-center: center;
-  --text-align-right: right;
-  --text-align-justify: justify;
-
-  /* ----------------------------------------------------------------------
-   * Spacing (responsive with clamp)
-   * ---------------------------------------------------------------------- */
-  --spacing-0: 0;
-  --spacing-auto: auto; /* For margin: auto or other auto layouts */
-  --spacing-xs: clamp(4px, 0.4vw, 8px); /* Extra small spacing */
-  --spacing-sm: clamp(8px, 0.8vw, 16px); /* Small spacing */
-  --spacing-md: clamp(16px, 1.6vw, 24px); /* Medium spacing */
-  --spacing-lg: clamp(24px, 2.4vw, 32px); /* Large spacing */
-  --spacing-xl: clamp(32px, 3.2vw, 48px); /* Extra large spacing */
-  --spacing-negative-xs: clamp(
-    -8px,
-    -0.4vw,
-    -4px
-  ); /* Negative extra small spacing */
-
-  --spacing-negative-sm: clamp(
-    -16px,
-    -0.8vw,
-    -8px
-  ); /* Negative small spacing */
-
-  --gap-xs: clamp(4px, 0.4vw, 6px); /* For flex/grid gaps */
-  --gap-md: clamp(12px, 1.2vw, 16px); /* Medium gap for layouts */
-
-  /* ----------------------------------------------------------------------
-   * Grid
-   * ---------------------------------------------------------------------- */
-  --min-cols: 1;
-  --max-cols: 2;
-  --col-min-width: 320px;
-  --row: row;
-  --column: column;
-  --dense: dense;
-  --auto: auto;
-
-  /* ----------------------------------------------------------------------
-   * Display
-   * ---------------------------------------------------------------------- */
-  --display-none: none; /* For toggling visibility */
-  --display-block: block; /* For block-level layouts */
-  --display-inline: inline; /* For inline layouts */
-  --display-inline-block: inline-block; /* For inline-block layouts */
-  --display-flex: flex; /* For flexbox layouts */
-  --display-grid: grid; /* For grid layouts */
-  --display-inline-flex: inline-flex; /* For inline flexbox layouts */
-  --display-inline-grid: inline-grid; /* For inline grid layouts */
-  --display-table: table; /* For table layouts */
-  --display-table-row: table-row; /* For table row layouts */
-  --display-table-cell: table-cell; /* For table cell layouts */
-  --display-table-row-group: table-row-group; /* For table row group */
-  --display-table-header-group: table-header-group; /* For table header group */
-  --display-table-footer-group: table-footer-group; /* For table footer group */
-  --display-table-column: table-column; /* For table column */
-  --display-table-column-group: table-column-group; /* For table column group */
-  --display-table-caption: table-caption; /* For table caption */
-  --display-list-item: list-item; /* For list item layouts */
-  --display-contents: contents; /* For contents layouts */
-  --display-flow-root: flow-root; /* For flow-root layouts */
-  --display-auto: auto; /* For auto display behavior */
-
-  /* ----------------------------------------------------------------------
-   * Positioning
-   * ---------------------------------------------------------------------- */
-  --position-static: static;
-  --position-relative: relative;
-  --position-absolute: absolute;
-  --position-fixed: fixed;
-  --position-sticky: sticky;
-
-  /* ----------------------------------------------------------------------
-   * Alignment
-   * ---------------------------------------------------------------------- */
-  --align-items-start: start;
-  --align-items-center: center;
-  --align-items-end: end;
-  --align-items-baseline: baseline;
-  --align-items-stretch: stretch;
-
-  /* ----------------------------------------------------------------------
-   * Justification
-   * ---------------------------------------------------------------------- */
-  --justify-content-start: start;
-  --justify-content-center: center;
-  --justify-content-end: end;
-  --justify-content-between: space-between;
-  --justify-content-around: space-around;
-  --justify-content-evenly: space-evenly;
-  --justify-content-stretch: stretch;
-  --justify-self-left: left;
-  --justify-self-right: right;
-  --place-content-center: center;
-  --place-items-center: center;
-  --place-self-center: center;
-
-  /* ----------------------------------------------------------------------
-   * Flexbox
-   * ---------------------------------------------------------------------- */
-  --flex-direction-row: row;
-  --flex-direction-column: column;
-  --flex-wrap-wrap: wrap;
-  --flex-wrap-nowrap: nowrap;
-  --align-content-start: flex-start;
-  --align-content-end: flex-end;
-  --align-content-center: center;
-  --align-content-between: space-between;
-  --align-content-around: space-around;
-  --align-content-stretch: stretch;
-  --flex-grow-0: 0;
-  --flex-grow-1: 1;
-  --flex-shrink-0: 0;
-  --flex-shrink-1: 1;
-  --flex-basis-auto: auto;
-  --flex-basis-0: 0;
-  --order-0: 0;
-  --order-1: 1;
-  --order-2: 2;
-  --order-3: 3;
-  --order-first: -9999;
-  --order-last: 9999;
-
-  /* ----------------------------------------------------------------------
-   * Shadows
-   * ---------------------------------------------------------------------- */
-  --shadow-xs: 0 1px 1px rgb(0 0 0 / 3%);
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%);
-  --shadow-md: 0 2px 8px rgb(0 0 0 / 10%);
-  --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%);
-  --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%);
-  --shadow-none: none;
-
-  /* ----------------------------------------------------------------------
-   * Text Shadows
-   * ---------------------------------------------------------------------- */
-  --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 50%);
-  --text-shadow-md: 0 2px 4px rgb(0 0 0 / 60%);
-  --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 70%);
-  --text-shadow-none: none;
-
-  /* ----------------------------------------------------------------------
-   * Opacity
-   * ---------------------------------------------------------------------- */
-  --opacity-0: 0;
-  --opacity-25: 0.25;
-  --opacity-50: 0.5;
-  --opacity-75: 0.75;
-  --opacity-80: 0.8;
-  --opacity-100: 1;
-
-  /* ----------------------------------------------------------------------
-   * Overflow
-   * ---------------------------------------------------------------------- */
-  --overflow-hidden: hidden;
-  --overflow-auto: auto;
-  --overflow-scroll: scroll;
-  --overflow-x-hidden: hidden;
-  --overflow-x-auto: auto;
-  --overflow-x-scroll: scroll;
-  --overflow-y-hidden: hidden;
-  --overflow-y-auto: auto;
-  --overflow-y-scroll: scroll;
-
-  /* ----------------------------------------------------------------------
-   * Background
-   * ---------------------------------------------------------------------- */
-  --background-size-cover: cover;
-  --background-size-contain: contain;
-  --background-position-center: center;
-  --background-position-top: top;
-  --background-position-bottom: bottom;
-  --background-repeat-no-repeat: no-repeat;
-  --background-repeat-repeat: repeat;
-  --background-attachment-fixed: fixed;
-  --background-attachment-scroll: scroll;
-
-  /* ----------------------------------------------------------------------
-   * Overlay
-   * ---------------------------------------------------------------------- */
-  --color-overlay: rgb(0 0 0 / 50%);
-  --color-overlay-light: rgb(255 255 255 / 30%);
-
-  /* ----------------------------------------------------------------------
-   * Border radius
-   * ---------------------------------------------------------------------- */
-  --border-radius-none: 0;
-  --border-radius-sm: clamp(2px, 0.2vw, 4px);
-  --border-radius-md: clamp(4px, 0.4vw, 8px);
-  --border-radius-lg: clamp(8px, 0.8vw, 16px);
-  --border-radius-full: 9999px;
-
-  /* ----------------------------------------------------------------------
-   * Border width
-   * ---------------------------------------------------------------------- */
-  --border-width-none: 0; /* No border */
-  --border-width-sm: clamp(1px, 0.1vw, 2px); /* Small border */
-  --border-width-md: clamp(2px, 0.2vw, 4px); /* Medium border */
-  --border-width-lg: clamp(4px, 0.4vw, 8px); /* Large border */
-  --border-width-xl: clamp(8px, 0.8vw, 16px); /* Extra large border */
-
-  /* ----------------------------------------------------------------------
-   * Border style
-   * ---------------------------------------------------------------------- */
-  --border-style-none: none; /* No border */
-  --border-style-solid: solid; /* Solid border */
-  --border-style-dashed: dashed; /* Dashed border */
-  --border-style-dotted: dotted; /* Dotted border */
-  --border-style-double: double; /* Double border */
-  --border-style-groove: groove; /* Grooved border */
-  --border-style-ridge: ridge; /* Ridged border */
-  --border-style-inset: inset; /* Inset border */
-  --border-style-outset: outset; /* Outset border */
-  --border-style-hidden: hidden; /* Hidden border */
-  --border-style-inherit: inherit; /* Inherit border style from parent */
-  --border-style-initial: initial; /* Initial border style */
-  --border-style-unset: unset; /* Unset border style */
-  --border-style-revert: revert; /* Revert border style to default */
-  --border-style-revert-layer: revert-layer; /* Revert border style to layer default */
-  --border-style-all: all; /* Apply all border styles */
-  --border-style-auto: auto; /* Auto border style */
-  --border-style-invisible: invisible; /* Invisible border */
-  --border-style-visible: visible; /* Visible border */
-
-  /* ----------------------------------------------------------------------
-   * Text overflow
-   * ---------------------------------------------------------------------- */
-  --text-overflow-ellipsis: ellipsis;
-  --text-overflow-clip: clip;
-
-  /* ----------------------------------------------------------------------
-   * Text decoration
-   * ---------------------------------------------------------------------- */
-  --text-decoration-underline: underline; /* For underlined text */
-  --text-decoration-none: none; /* For no text decoration */
-  --text-decoration-line-through: line-through; /* For strikethrough text */
-
-  /* ----------------------------------------------------------------------
-   * User select
-   * ---------------------------------------------------------------------- */
-  --user-select-none: none;
-  --user-select-auto: auto;
-  --user-select-all: all;
-
-  /* ----------------------------------------------------------------------
-   * White space
-   * ---------------------------------------------------------------------- */
-  --white-space-normal: normal;
-  --white-space-nowrap: nowrap;
-  --white-space-pre: pre;
-  --white-space-pre-wrap: pre-wrap;
-
-  /* ----------------------------------------------------------------------
-   * Vertical align
-   * ---------------------------------------------------------------------- */
-  --vertical-align-baseline: baseline;
-  --vertical-align-top: top;
-  --vertical-align-middle: middle;
-  --vertical-align-bottom: bottom;
-
-  /* ----------------------------------------------------------------------
-   * Scroll behavior
-   * ---------------------------------------------------------------------- */
-  --scroll-behavior-auto: auto;
-  --scroll-behavior-smooth: smooth;
-
-  /* ----------------------------------------------------------------------
-   * Z-index scale
-   * ---------------------------------------------------------------------- */
-  --z-0: 0;
-  --z-10: 10;
-  --z-50: 50;
-  --z-100: 100;
-  --z-200: 200;
-  --z-300: 300;
-  --z-auto: auto;
-
-  /* ----------------------------------------------------------------------
-   * Button and form states
-   * ---------------------------------------------------------------------- */
-  --btn-bg: var(--color-primary);
-  --btn-bg-hover: var(--color-success);
-  --btn-bg-disabled: var(--color-border);
-  --btn-text: var(--color-contrast);
-  --input-bg: var(--color-base);
-  --input-border: var(--color-border);
-  --input-focus: var(--color-primary);
-
-  /* ----------------------------------------------------------------------
-   * Component-specific tokens
-   * ---------------------------------------------------------------------- */
-  --badge-bg: var(--color-primary); /* Background for badges */
-  --badge-text: var(--color-base); /* Text for badges */
-  --alert-bg-success: rgb(39 174 96 / 10%); /* Success alert background */
-  --alert-border-success: var(--color-success); /* Success alert border */
-  --tooltip-bg: var(--color-contrast); /* Tooltip background */
-  --tooltip-text: var(--color-base); /* Tooltip text */
-  --dropdown-shadow: var(--shadow-md); /* Dropdown menu shadow */
-
-  /* ----------------------------------------------------------------------
-   * Accessibility
-   * ---------------------------------------------------------------------- */
-  --focus-outline: 2px solid var(--color-primary);
-  --focus-outline-offset: 2px;
-  --focus-ring: 1px solid var(--color-primary-light); /* Subtle focus ring */
-  --focus-shadow: 0 0 8px var(--color-primary); /* Enhanced focus effect */
-  --reduced-motion: reduce; /* For prefers-reduced-motion */
-  --high-contrast-outline: 3px solid #000; /* For high-contrast mode */
-  --link-color: var(--color-primary);
-  --link-color-hover: var(--color-border);
-
-  /* ----------------------------------------------------------------------
-   * Pointer events
-   * ---------------------------------------------------------------------- */
-  --pointer-events-none: none; /* For elements that should not receive pointer events */
-  --pointer-events-auto: auto; /* For elements that should receive pointer events */
-  --pointer-events-visible: visible; /* For elements that should be visible to pointer events */
-  --pointer-events-hidden: hidden; /* For elements that should not be visible to pointer events */
-  --pointer-events-all: all; /* For elements that should receive all pointer events */
-
-  /* ----------------------------------------------------------------------
-   * Isolation
-   * ---------------------------------------------------------------------- */
-  --isolation-isolate: isolate; /* For creating a new stacking context */
-  --isolation-auto: auto; /* For default stacking context behavior */
-  --isolation-visible: visible; /* For elements that should be visible in the stacking context */
-  --isolation-hidden: hidden; /* For elements that should not be visible in the stacking context */
-  --isolation-all: all; /* For elements that should receive all isolation properties */
-  --isolation-none: none; /* For elements that should not create a new stacking context */
-
-  /* ----------------------------------------------------------------------
-   * Cursor styles
-   * ---------------------------------------------------------------------- */
-  --cursor-disabled: not-allowed; /* For disabled elements */
-  --cursor-pointer: pointer; /* For interactive elements */
-  --cursor-default: default; /* For default cursor */
-  --cursor-grab: grab; /* For draggable elements */
-  --cursor-grabbing: grabbing; /* For elements being dragged */
-  --cursor-not-allowed: not-allowed; /* For elements that are disabled or not interactive */
-  --cursor-help: help; /* For elements that provide help or information */
-  --cursor-move: move; /* For elements that can be moved */
-  --cursor-text: text; /* For text input areas */
-  --cursor-crosshair: crosshair; /* For precise selection areas */
-
-  /* ----------------------------------------------------------------------
-   * Visibility and float
-   * ---------------------------------------------------------------------- */
-  --visibility-hidden: hidden; /* For elements that should not be visible */
-  --visibility-visible: visible; /* For elements that should be visible */
-  --float-left: left; /* For floating elements to the left */
-  --float-right: right; /* For floating elements to the right */
-  --float-none: none; /* For elements that should not float */
-
-  /* ----------------------------------------------------------------------
-   * Animation and transitions
-   * ---------------------------------------------------------------------- */
-  --transition-property: all;
-  --transition-duration: 0.2s;
-  --transition-duration-fast: 0.1s;
-  --transition-duration-slow: 0.4s;
-  --transition-delay: 0.1s; /* Default delay for transitions */
-  --transition-timing-function: ease-in-out;
-  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce effect */
-  --easing-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Elastic effect */
-  --animation-duration: 0.8s;
-  --animation-duration-fast: 0.4s;
-  --animation-duration-slow: 1.2s;
-  --animation-direction: normal;
-  --animation-fill-mode: forwards;
-  --animation-iteration-count: 1;
-  --animation-iteration-count-infinite: infinite;
-  --animation-fade: fade 0.5s ease-in-out;
-  --animation-slide: slide 0.6s ease-out;
-  --animation-spin: spin 1s linear infinite;
-  --animation-bounce: bounce 0.8s ease-in-out infinite;
-  --animation-pulse: pulse 1.5s ease-in-out infinite;
-
-  /* ----------------------------------------------------------------------
-   * Aspect ratios and media
-   * ---------------------------------------------------------------------- */
-  --aspect-ratio-square: 1 / 1; /* For square media */
-  --aspect-ratio-16-9: 16 / 9; /* For widescreen media */
-  --aspect-ratio-4-3: 4 / 3; /* For standard media */
-  --image-object-fit: cover; /* Default object-fit for images */
-  --video-max-height: 80vh; /* Max height for videos */
-
-  /* ----------------------------------------------------------------------
-   * Gradients
-   * ---------------------------------------------------------------------- */
-  --gradient-primary: linear-gradient(
-    90deg,
-    var(--color-primary),
-    var(--color-success)
-  );
-  --gradient-accent: linear-gradient(
-    90deg,
-    var(--color-warning),
-    var(--color-error)
-  );
-
-  /* ----------------------------------------------------------------------
-   * Fractional sizing
-   * ---------------------------------------------------------------------- */
-  --width-screen: 100vw; /* Full viewport width */
-  --width-full: 100%; /* Full width */
-  --width-auto: auto; /* Auto width */
-  --width-1-12: 8.3333%; /* 1/12 width */
-  --width-1-6: 16.6667%; /* 1/6 width */
-  --width-1-5: 20%; /* 1/5 width */
-  --width-1-4: 25%;
-  --width-1-3: 33.3333%;
-  --width-1-2: 50%;
-  --width-2-3: 66.6667%;
-  --width-3-4: 75%;
-  --height-screen: 100vh; /* Full viewport height */
-  --height-full: 100%; /* Full height */
-  --height-auto: auto; /* Auto height */
-  --height-1-12: 8.3333%; /* 1/12 height */
-  --height-1-6: 16.6667%; /* 1/6 height */
-  --height-1-5: 20%; /* 1/5 height */
-  --height-1-4: 25%;
-  --height-1-3: 33.3333%;
-  --height-1-2: 50%;
-  --height-2-3: 66.6667%;
-  --height-3-4: 75%;
-
-  /* ----------------------------------------------------------------------
-   * Additional max-widths
-   * ---------------------------------------------------------------------- */
-  --max-width-none: none; /* No maximum width */
-  --max-width-full: 100%; /* Full width */
-  --max-width-screen: 100vw; /* Full viewport width */
-  --max-width-100: 100px; /* For very small elements */
-  --max-width-200: 200px; /* For small elements */
-  --max-width-300: 300px; /* For medium elements */
-  --max-width-400: 400px; /* For larger elements */
-  --max-width-500: 500px; /* For extra large elements */
-  --max-width-600: 600px; /* For wide elements */
-  --max-width-700: 700px; /* For very wide elements */
-  --max-width-800: 800px; /* For ultra wide elements */
-  --max-width-900: 900px; /* For extremely wide elements */
-  --max-width-1000: 1000px; /* For super wide elements */
-  --max-width-xs: var(--breakpoint-xs); /* 480px */
-  --max-width-sm: var(--breakpoint-sm); /* 640px */
-  --max-width-md: var(--breakpoint-md); /* 768px */
-  --max-width-lg: var(--breakpoint-lg); /* 1024px */
-  --max-width-xl: var(--breakpoint-xl); /* 1280px */
-  --max-width-xxl: var(--breakpoint-xxl); /* 1440px */
-  --max-width-container: var(--container-max-width); /* 1328px */
-  --max-width-container-narrow: var(--container-narrow-max-width); /* 960px */
-
-  /* ----------------------------------------------------------------------
-   * List Styles
-   * ---------------------------------------------------------------------- */
-  --list-style-none: none;
-  --list-style-disc: disc;
-  --list-style-circle: circle;
-  --list-style-square: square;
-  --list-style-decimal: decimal;
-  --list-style-upper-alpha: upper-alpha;
-  --list-style-lower-alpha: lower-alpha;
-  --list-style-upper-roman: upper-roman;
-  --list-style-lower-roman: lower-roman;
-}
-
-/* ----------------------------------------------------------------------
  * Dark mode overrides
  * ---------------------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-base: var(--palette-black); /* Text on light backgrounds */
-    --color-base-hover: #2a2a2a; /* Hover state for base text */
-    --color-contrast: var(--palette-white); /* Text on dark backgrounds */
-    --color-contrast-light: #d1d5db; /* Lighter contrast for secondary text */
-    --color-surface: #1a1a1a; /* Dark card/panel background */
-    --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
-    --color-background: #111; /* Dark page background */
-    --color-background-alt: #1f1f1f; /* Alternate dark background */
-    --color-border: #444; /* Dark border color */
-    --color-border-rgb: 68, 68, 68; /* RGB for dark mode opacity utilities */
-    --color-high-contrast: #fff; /* High-contrast for dark mode */
-    --btn-bg: var(--color-primary); /* Button background */
-    --btn-bg-hover: var(--color-success); /* Button hover background */
-    --btn-bg-disabled: #4a4a4a; /* Disabled button background */
-    --btn-text: var(--palette-white); /* Button text */
-    --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
-    --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
-    --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
-    --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
-    --text-shadow-md: 0 2px 4px rgb(0 0 0 / 80%);
-    --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 90%);
-    --color-overlay: rgb(0 0 0 / 70%);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-base: var(--palette-black); /* Text on light backgrounds */
+      --color-base-hover: #2a2a2a; /* Hover state for base text */
+      --color-contrast: var(--palette-white); /* Text on dark backgrounds */
+      --color-contrast-light: #d1d5db; /* Lighter contrast for secondary text */
+      --color-surface: #1a1a1a; /* Dark card/panel background */
+      --color-surface-hover: #2a2a2a; /* Hover state for dark surfaces */
+      --color-background: #111; /* Dark page background */
+      --color-background-alt: #1f1f1f; /* Alternate dark background */
+      --color-border: #444; /* Dark border color */
+      --color-border-rgb: 68, 68, 68; /* RGB for dark mode opacity utilities */
+      --color-high-contrast: #fff; /* High-contrast for dark mode */
+      --btn-bg: var(--color-primary); /* Button background */
+      --btn-bg-hover: var(--color-success); /* Button hover background */
+      --btn-bg-disabled: #4a4a4a; /* Disabled button background */
+      --btn-text: var(--palette-white); /* Button text */
+      --shadow-md: 0 2px 8px rgb(0 0 0 / 20%); /* Adjusted shadow for dark mode */
+      --shadow-sm: 0 1px 2px rgb(0 0 0 / 4%); /* Small shadow for dark mode */
+      --shadow-lg: 0 4px 16px rgb(0 0 0 / 16%); /* Large shadow for dark mode */
+      --shadow-xl: 0 8px 32px rgb(0 0 0 / 18%); /* Extra large shadow for dark mode */
+      --text-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
+      --text-shadow-md: 0 2px 4px rgb(0 0 0 / 80%);
+      --text-shadow-lg: 0 3px 6px rgb(0 0 0 / 90%);
+      --color-overlay: rgb(0 0 0 / 70%);
+    }
   }
 }

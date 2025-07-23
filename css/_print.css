@@ -10,304 +10,306 @@
  * ========================================================================
  */
 
-@media print {
-  /* Reset page margins and background */
-  body {
-    margin: var(--spacing-sm);
-    padding: var(--spacing-0);
-    background: var(--color-base);
-    color: var(--color-high-contrast);
-  }
-
-  /* Simplify layout for hero module */
-  .flex,
-  .inline-flex,
-  .display-flex,
-  .display-inline-flex {
-    display: block;
-  }
-
-  /* Center text for hero module */
-  .text-align-center {
-    text-align: var(--text-align-center);
-  }
-
-  /* Optimize typography for print */
-  .font-size-caption {
-    font-size: calc(var(--font-size-caption) * 1.1);
-  }
-
-  .font-size-xs {
-    font-size: calc(var(--font-size-xs) * 1.1);
-  }
-
-  .font-size-sm {
-    font-size: calc(var(--font-size-sm) * 1.1);
-  }
-
-  .font-size-base {
-    font-size: calc(var(--font-size-base) * 1.1);
-  }
-
-  .font-size-lg {
-    font-size: calc(var(--font-size-lg) * 1.1);
-  }
-
-  .font-size-xl {
-    font-size: calc(var(--font-size-xl) * 1.1);
-  }
-
-  .font-size-h6 {
-    font-size: calc(var(--font-size-h6) * 1.1);
-  }
-
-  .font-size-h5 {
-    font-size: calc(var(--font-size-h5) * 1.1);
-  }
-
-  .font-size-h4 {
-    font-size: calc(var(--font-size-h4) * 1.1);
-  }
-
-  .font-size-h3 {
-    font-size: calc(var(--font-size-h3) * 1.1);
-  }
-
-  .font-size-h2 {
-    font-size: calc(var(--font-size-h2) * 1.1);
-  }
-
-  .font-size-h1 {
-    font-size: calc(var(--font-size-h1) * 1.1);
-  }
-
-  /* Ensure high-contrast text */
-  .text-contrast,
-  .text-primary,
-  .text-success,
-  .text-warning,
-  .text-error,
-  .text-info,
-  .text-muted {
-    color: var(--color-high-contrast);
-  }
-
-  /* Remove non-essential elements */
-  .btn,
-  .focus-ring,
-  [class*='animation-'],
-  [class*='transition-'] {
-    display: none;
-  }
-
-  /* Remove shadows and gradients */
-  .text-shadow-sm,
-  .text-shadow-md,
-  .text-shadow-lg,
-  .shadow-sm,
-  .shadow-md,
-  .shadow-lg,
-  .shadow-xl {
-    text-shadow: none;
-    box-shadow: none;
-  }
-
-  .background-gradient-primary,
-  .background-gradient-accent,
-  .background-color-primary,
-  .background-color-success,
-  .background-color-warning,
-  .background-color-error,
-  .background-color-info {
-    background: var(--color-base);
-  }
-
-  /* Adjust spacing for print */
-  .padding-md,
-  .margin-bottom-md {
-    padding: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .gap-md {
-    margin-bottom: var(--spacing-sm);
-  }
-
-  /* Ensure containers and layout utilities fit on page */
-  .container,
-  .container-narrow,
-  .width-full,
-  .width-screen,
-  .max-width-xs,
-  .max-width-sm,
-  .max-width-md,
-  .max-width-lg,
-  .max-width-xl,
-  .max-width-xxl,
-  .max-width-container,
-  .max-width-container-narrow,
-  .max-width-200,
-  .max-width-300,
-  .max-width-600 {
-    width: 100%;
-    max-width: none;
-    padding: var(--spacing-sm);
-  }
-
-  .height-screen,
-  .max-height-screen,
-  .min-height-screen {
-    height: auto;
-    max-height: none;
-    min-height: auto;
-  }
-
-  /* Handle links: display URLs */
-  a[href]::after {
-    content: ' (' attr(href) ')';
-    font-size: var(--font-size-xs);
-    color: var(--color-high-contrast);
-    text-decoration: none;
-  }
-
-  /* Optimize images */
-  img {
-    max-width: 100%;
-    filter: grayscale(100%);
-  }
-
-  /* Handle overflow content */
-  .overflow-hidden,
-  .overflow-x-hidden,
-  .overflow-y-hidden,
-  .overflow-auto,
-  .overflow-x-auto,
-  .overflow-y-auto,
-  .overflow-scroll,
-  .overflow-x-scroll,
-  .overflow-y-scroll {
-    overflow: visible;
-  }
-
-  /* Handle background utilities */
-  .background-size-cover,
-  .background-size-contain,
-  .background-position-center,
-  .background-position-top,
-  .background-position-bottom,
-  .background-repeat-no-repeat,
-  .background-repeat-repeat,
-  .background-attachment-fixed,
-  .background-attachment-scroll,
-  .overlay-dark,
-  .overlay-light {
-    background: none;
-  }
-
-  /* Handle float and isolation */
-  .float-left,
-  .float-right,
-  .float-none {
-    float: none;
-  }
-
-  .isolate,
-  .isolation-auto {
-    isolation: auto;
-  }
-
-  /* Handle pointer-events */
-  .pointer-events-none,
-  .pointer-events-auto {
-    pointer-events: auto;
-  }
-
-  /* Handle new utilities */
-  .border-radius-none,
-  .border-radius-sm,
-  .border-radius-md,
-  .border-radius-lg,
-  .border-radius-full {
-    border-radius: var(--border-radius-none);
-  }
-
-  .text-overflow-ellipsis,
-  .text-overflow-clip {
-    text-overflow: clip;
-  }
-
-  .user-select-none,
-  .user-select-auto,
-  .user-select-all {
-    user-select: auto;
-  }
-
-  .white-space-normal,
-  .white-space-nowrap,
-  .white-space-pre,
-  .white-space-pre-wrap {
-    white-space: normal;
-  }
-
-  .vertical-align-baseline,
-  .vertical-align-top,
-  .vertical-align-middle,
-  .vertical-align-bottom {
-    vertical-align: baseline;
-  }
-
-  .scroll-behavior-auto,
-  .scroll-behavior-smooth {
-    scroll-behavior: auto;
-  }
-
-  .order-0,
-  .order-1,
-  .order-2,
-  .order-3,
-  .order-first,
-  .order-last {
-    order: var(--order-0);
-  }
-
-  /* Ensure tables fit on page */
-  table {
-    width: 100%;
-    page-break-inside: avoid;
-  }
-
-  /* Force page breaks for better layout */
-  section,
-  div,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    page-break-inside: avoid;
-    page-break-after: auto;
-  }
-
-  /* Disable animations for reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition: none !important;
+@layer base {
+  @media print {
+    /* Reset page margins and background */
+    body {
+      margin: var(--spacing-sm);
+      padding: var(--spacing-0);
+      background: var(--color-base);
+      color: var(--color-high-contrast);
     }
-  }
 
-  /* Add page margins and headers */
-  @page {
-    margin: var(--spacing-md);
-  }
+    /* Simplify layout for hero module */
+    .flex,
+    .inline-flex,
+    .display-flex,
+    .display-inline-flex {
+      display: block;
+    }
 
-  /* Optional: Add page number in footer */
-  @page :right {
-    @bottom-right {
-      content: 'Page ' counter(page);
+    /* Center text for hero module */
+    .text-align-center {
+      text-align: var(--text-align-center);
+    }
+
+    /* Optimize typography for print */
+    .font-size-caption {
+      font-size: calc(var(--font-size-caption) * 1.1);
+    }
+
+    .font-size-xs {
+      font-size: calc(var(--font-size-xs) * 1.1);
+    }
+
+    .font-size-sm {
+      font-size: calc(var(--font-size-sm) * 1.1);
+    }
+
+    .font-size-base {
+      font-size: calc(var(--font-size-base) * 1.1);
+    }
+
+    .font-size-lg {
+      font-size: calc(var(--font-size-lg) * 1.1);
+    }
+
+    .font-size-xl {
+      font-size: calc(var(--font-size-xl) * 1.1);
+    }
+
+    .font-size-h6 {
+      font-size: calc(var(--font-size-h6) * 1.1);
+    }
+
+    .font-size-h5 {
+      font-size: calc(var(--font-size-h5) * 1.1);
+    }
+
+    .font-size-h4 {
+      font-size: calc(var(--font-size-h4) * 1.1);
+    }
+
+    .font-size-h3 {
+      font-size: calc(var(--font-size-h3) * 1.1);
+    }
+
+    .font-size-h2 {
+      font-size: calc(var(--font-size-h2) * 1.1);
+    }
+
+    .font-size-h1 {
+      font-size: calc(var(--font-size-h1) * 1.1);
+    }
+
+    /* Ensure high-contrast text */
+    .text-contrast,
+    .text-primary,
+    .text-success,
+    .text-warning,
+    .text-error,
+    .text-info,
+    .text-muted {
+      color: var(--color-high-contrast);
+    }
+
+    /* Remove non-essential elements */
+    .btn,
+    .focus-ring,
+    [class*='animation-'],
+    [class*='transition-'] {
+      display: none;
+    }
+
+    /* Remove shadows and gradients */
+    .text-shadow-sm,
+    .text-shadow-md,
+    .text-shadow-lg,
+    .shadow-sm,
+    .shadow-md,
+    .shadow-lg,
+    .shadow-xl {
+      text-shadow: none;
+      box-shadow: none;
+    }
+
+    .background-gradient-primary,
+    .background-gradient-accent,
+    .background-color-primary,
+    .background-color-success,
+    .background-color-warning,
+    .background-color-error,
+    .background-color-info {
+      background: var(--color-base);
+    }
+
+    /* Adjust spacing for print */
+    .padding-md,
+    .margin-bottom-md {
+      padding: var(--spacing-sm);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .gap-md {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    /* Ensure containers and layout utilities fit on page */
+    .container,
+    .container-narrow,
+    .width-full,
+    .width-screen,
+    .max-width-xs,
+    .max-width-sm,
+    .max-width-md,
+    .max-width-lg,
+    .max-width-xl,
+    .max-width-xxl,
+    .max-width-container,
+    .max-width-container-narrow,
+    .max-width-200,
+    .max-width-300,
+    .max-width-600 {
+      width: 100%;
+      max-width: none;
+      padding: var(--spacing-sm);
+    }
+
+    .height-screen,
+    .max-height-screen,
+    .min-height-screen {
+      height: auto;
+      max-height: none;
+      min-height: auto;
+    }
+
+    /* Handle links: display URLs */
+    a[href]::after {
+      content: ' (' attr(href) ')';
       font-size: var(--font-size-xs);
       color: var(--color-high-contrast);
+      text-decoration: none;
+    }
+
+    /* Optimize images */
+    img {
+      max-width: 100%;
+      filter: grayscale(100%);
+    }
+
+    /* Handle overflow content */
+    .overflow-hidden,
+    .overflow-x-hidden,
+    .overflow-y-hidden,
+    .overflow-auto,
+    .overflow-x-auto,
+    .overflow-y-auto,
+    .overflow-scroll,
+    .overflow-x-scroll,
+    .overflow-y-scroll {
+      overflow: visible;
+    }
+
+    /* Handle background utilities */
+    .background-size-cover,
+    .background-size-contain,
+    .background-position-center,
+    .background-position-top,
+    .background-position-bottom,
+    .background-repeat-no-repeat,
+    .background-repeat-repeat,
+    .background-attachment-fixed,
+    .background-attachment-scroll,
+    .overlay-dark,
+    .overlay-light {
+      background: none;
+    }
+
+    /* Handle float and isolation */
+    .float-left,
+    .float-right,
+    .float-none {
+      float: none;
+    }
+
+    .isolate,
+    .isolation-auto {
+      isolation: auto;
+    }
+
+    /* Handle pointer-events */
+    .pointer-events-none,
+    .pointer-events-auto {
+      pointer-events: auto;
+    }
+
+    /* Handle new utilities */
+    .border-radius-none,
+    .border-radius-sm,
+    .border-radius-md,
+    .border-radius-lg,
+    .border-radius-full {
+      border-radius: var(--border-radius-none);
+    }
+
+    .text-overflow-ellipsis,
+    .text-overflow-clip {
+      text-overflow: clip;
+    }
+
+    .user-select-none,
+    .user-select-auto,
+    .user-select-all {
+      user-select: auto;
+    }
+
+    .white-space-normal,
+    .white-space-nowrap,
+    .white-space-pre,
+    .white-space-pre-wrap {
+      white-space: normal;
+    }
+
+    .vertical-align-baseline,
+    .vertical-align-top,
+    .vertical-align-middle,
+    .vertical-align-bottom {
+      vertical-align: baseline;
+    }
+
+    .scroll-behavior-auto,
+    .scroll-behavior-smooth {
+      scroll-behavior: auto;
+    }
+
+    .order-0,
+    .order-1,
+    .order-2,
+    .order-3,
+    .order-first,
+    .order-last {
+      order: var(--order-0);
+    }
+
+    /* Ensure tables fit on page */
+    table {
+      width: 100%;
+      page-break-inside: avoid;
+    }
+
+    /* Force page breaks for better layout */
+    section,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+
+    /* Disable animations for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Add page margins and headers */
+    @page {
+      margin: var(--spacing-md);
+    }
+
+    /* Optional: Add page number in footer */
+    @page :right {
+      @bottom-right {
+        content: 'Page ' counter(page);
+        font-size: var(--font-size-xs);
+        color: var(--color-high-contrast);
+      }
     }
   }
 }

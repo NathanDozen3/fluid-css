@@ -8,35 +8,37 @@
  * Note: Breakpoint utilities (e.g., .container-md) can be added using --breakpoint-* tokens.
  * ======================================================================== */
 
-/* Container system */
-.container {
-  width: clamp(
-    var(--container-min-width),
-    calc(var(--container-width) - var(--gutter-base) * 2),
-    var(--container-max-width)
-  );
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--gutter-base);
-}
+@layer utilities {
+  /* Container system */
+  .container {
+    width: clamp(
+      var(--container-min-width),
+      calc(var(--container-width) - var(--gutter-base) * 2),
+      var(--container-max-width)
+    );
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--gutter-base);
+  }
 
-.container-narrow {
-  width: clamp(
-    var(--container-min-width),
-    calc(var(--container-narrow-width) - var(--gutter-base) * 2),
-    var(--container-narrow-max-width)
-  );
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--gutter-base);
-}
+  .container-narrow {
+    width: clamp(
+      var(--container-min-width),
+      calc(var(--container-narrow-width) - var(--gutter-base) * 2),
+      var(--container-narrow-max-width)
+    );
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--gutter-base);
+  }
 
-.container-fluid {
-  width: calc(100% - var(--gutter-base) * 2);
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--gutter-base);
+  .container-fluid {
+    width: calc(100% - var(--gutter-base) * 2);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--gutter-base);
+  }
 }
