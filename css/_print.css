@@ -57,8 +57,28 @@
     font-size: calc(var(--font-size-xl) * 1.1);
   }
 
-  .font-size-heading {
-    font-size: calc(var(--font-size-heading) * 1.1);
+  .font-size-h6 {
+    font-size: calc(var(--font-size-h6) * 1.1);
+  }
+
+  .font-size-h5 {
+    font-size: calc(var(--font-size-h5) * 1.1);
+  }
+
+  .font-size-h4 {
+    font-size: calc(var(--font-size-h4) * 1.1);
+  }
+
+  .font-size-h3 {
+    font-size: calc(var(--font-size-h3) * 1.1);
+  }
+
+  .font-size-h2 {
+    font-size: calc(var(--font-size-h2) * 1.1);
+  }
+
+  .font-size-h1 {
+    font-size: calc(var(--font-size-h1) * 1.1);
   }
 
   /* Ensure high-contrast text */

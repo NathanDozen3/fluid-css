@@ -49,8 +49,28 @@
   font-size: var(--font-size-xl);
 }
 
-.font-size-heading {
-  font-size: var(--font-size-heading);
+.font-size-h6 {
+  font-size: var(--font-size-h6);
+}
+
+.font-size-h5 {
+  font-size: var(--font-size-h5);
+}
+
+.font-size-h4 {
+  font-size: var(--font-size-h4);
+}
+
+.font-size-h3 {
+  font-size: var(--font-size-h3);
+}
+
+.font-size-h2 {
+  font-size: var(--font-size-h2);
+}
+
+.font-size-h1 {
+  font-size: var(--font-size-h1);
 }
 
 /* Font weight utilities */

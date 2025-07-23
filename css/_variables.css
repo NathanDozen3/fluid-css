@@ -37,6 +37,75 @@
  */
 :root {
   /* ----------------------------------------------------------------------
+   * Responsive Clamp Font Sizes (using designer-friendly vars)
+   * ---------------------------------------------------------------------- */
+  --font-size-h1: clamp(
+    var(--font-size-h1-mobile),
+    6vw,
+    var(--font-size-h1-desktop)
+  );
+  --font-size-h2: clamp(
+    var(--font-size-h2-mobile),
+    4vw,
+    var(--font-size-h2-desktop)
+  );
+  --font-size-h3: clamp(
+    var(--font-size-h3-mobile),
+    3vw,
+    var(--font-size-h3-desktop)
+  );
+  --font-size-h4: clamp(
+    var(--font-size-h4-mobile),
+    2.5vw,
+    var(--font-size-h4-desktop)
+  );
+  --font-size-h5: clamp(
+    var(--font-size-h5-mobile),
+    2vw,
+    var(--font-size-h5-desktop)
+  );
+  --font-size-h6: clamp(
+    var(--font-size-h6-mobile),
+    1.5vw,
+    var(--font-size-h6-desktop)
+  );
+  --font-size-p: clamp(
+    var(--font-size-p-mobile),
+    1.2vw,
+    var(--font-size-p-desktop)
+  );
+  --font-size-li: clamp(
+    var(--font-size-li-mobile),
+    1.2vw,
+    var(--font-size-li-desktop)
+  );
+  --font-size-xs: clamp(
+    var(--font-size-xs-mobile),
+    1vw,
+    var(--font-size-xs-desktop)
+  );
+  --font-size-sm: clamp(
+    var(--font-size-sm-mobile),
+    1.1vw,
+    var(--font-size-sm-desktop)
+  );
+  --font-size-lg: clamp(
+    var(--font-size-lg-mobile),
+    2vw,
+    var(--font-size-lg-desktop)
+  );
+  --font-size-xl: clamp(
+    var(--font-size-xl-mobile),
+    3vw,
+    var(--font-size-xl-desktop)
+  );
+  --font-size-caption: clamp(
+    var(--font-size-caption-mobile),
+    1vw,
+    var(--font-size-caption-desktop)
+  );
+
+  /* ----------------------------------------------------------------------
    * Palette (raw color values, do not use directly in utilities)
    * ---------------------------------------------------------------------- */
   --palette-yellow: #ffee58;
@@ -195,13 +264,37 @@
   --font-family-monospace:
     'Fira Code', 'Courier New', monospace; /* For code blocks */
 
-  --font-size-caption: clamp(10px, 0.9vw, 11px); /* For captions or footnotes */
-  --font-size-xs: clamp(10px, 1vw, 12px); /* Extra small text */
-  --font-size-sm: clamp(12px, 1.2vw, 14px); /* Small text */
-  --font-size-base: clamp(16px, 1.4vw, 18px); /* Base text */
-  --font-size-lg: clamp(20px, 1.8vw, 24px); /* Large text */
-  --font-size-xl: clamp(24px, 2.8vw, 36px); /* Extra large text */
-  --font-size-heading: clamp(32px, 4vw, 48px); /* Heading text */
+  /* ----------------------------------------------------------------------
+   * Designer-Friendly Font Sizes (Mobile & Desktop)
+   * ---------------------------------------------------------------------- */
+
+  /* Set these values to match your design system. */
+  --font-size-h1-mobile: 32px;
+  --font-size-h1-desktop: 48px;
+  --font-size-h2-mobile: 24px;
+  --font-size-h2-desktop: 36px;
+  --font-size-h3-mobile: 20px;
+  --font-size-h3-desktop: 28px;
+  --font-size-h4-mobile: 18px;
+  --font-size-h4-desktop: 22px;
+  --font-size-h5-mobile: 16px;
+  --font-size-h5-desktop: 18px;
+  --font-size-h6-mobile: 14px;
+  --font-size-h6-desktop: 16px;
+  --font-size-p-mobile: 16px;
+  --font-size-p-desktop: 18px;
+  --font-size-li-mobile: 16px;
+  --font-size-li-desktop: 18px;
+  --font-size-xs-mobile: 12px;
+  --font-size-xs-desktop: 14px;
+  --font-size-sm-mobile: 14px;
+  --font-size-sm-desktop: 16px;
+  --font-size-lg-mobile: 20px;
+  --font-size-lg-desktop: 24px;
+  --font-size-xl-mobile: 24px;
+  --font-size-xl-desktop: 32px;
+  --font-size-caption-mobile: 12px;
+  --font-size-caption-desktop: 14px;
   --line-height-base: 1.6; /* Base line height */
   --line-height-heading: 1.2; /* Heading line height */
   --line-height-tight: 1.2; /* Tight line height */

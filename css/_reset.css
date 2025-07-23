@@ -31,7 +31,7 @@ body {
 /* Headings */
 h1 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size-h1);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-heading);
   color: var(--color-contrast);
@@ -41,7 +41,7 @@ h1 {
 
 h2 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-h2);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-heading);
   color: var(--color-contrast);
@@ -51,7 +51,7 @@ h2 {
 
 h3 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-h3);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-heading);
   color: var(--color-contrast);
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-h4);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-semibold);
   color: var(--color-contrast);
@@ -71,7 +71,7 @@ h4 {
 
 h5 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-h5);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-semibold);
   color: var(--color-contrast);
@@ -81,7 +81,7 @@ h5 {
 
 h6 {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-h6);
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-semibold);
   color: var(--color-contrast);
@@ -96,7 +96,7 @@ section h1,
 article h1,
 aside h1,
 nav h1 {
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size-h1);
 }
 
 section h2,
