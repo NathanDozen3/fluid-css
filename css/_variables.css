@@ -684,13 +684,33 @@ Example usage in CSS:
     --animation-pulse: pulse 1.5s ease-in-out infinite;
 
     /* --------------------------------------------------------------------------
-     * Aspect ratios and media
+     * Aspect ratios
      * -------------------------------------------------------------------------- */
     --aspect-ratio-square: 1 / 1; /* For square media */
     --aspect-ratio-16-9: 16 / 9; /* For widescreen media */
     --aspect-ratio-4-3: 4 / 3; /* For standard media */
-    --image-object-fit: cover; /* Default object-fit for images */
-    --video-max-height: 80vh; /* Max height for videos */
+    --aspect-ratio-3-2: 3 / 2; /* For classic media */
+    --aspect-ratio-21-9: 21 / 9; /* For ultra-widescreen media */
+    --aspect-ratio-2-1: 2 / 1; /* For panoramic media */
+    --aspect-ratio-1-2: 1 / 2; /* For vertical media */
+    --aspect-ratio-9-16: 9 / 16; /* For vertical widescreen media */
+    --aspect-ratio-3-4: 3 / 4; /* For vertical standard media */
+    --aspect-ratio-2-3: 2 / 3; /* For vertical classic media */
+    --aspect-ratio-9-21: 9 / 21; /* For vertical ultra-widescreen media */
+
+    /* --------------------------------------------------------------------------
+     * Object fit and position
+     * -------------------------------------------------------------------------- */
+    --object-fit-cover: cover; /* For images and videos */
+    --object-fit-contain: contain; /* For images and videos */
+    --object-fit-fill: fill; /* For images and videos */
+    --object-fit-none: none; /* For images and videos */
+    --object-fit-scale-down: scale-down; /* For images and videos */
+    --object-position-center: center; /* Centered object position */
+    --object-position-top: top; /* Top object position */
+    --object-position-bottom: bottom; /* Bottom object position */
+    --object-position-left: left; /* Left object position */
+    --object-position-right: right; /* Right object position */
 
     /* --------------------------------------------------------------------------
      * Gradients
