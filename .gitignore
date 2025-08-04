@@ -15,7 +15,7 @@
 !.stylelintrc
 !.prettierrc
 !CONTRIBUTING.md
-!demo.html
+!*.html
 !.huskyrc.js
 !.lintstagedrc
 !.nojekyll
