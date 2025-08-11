@@ -66,6 +66,10 @@
     background-color: var(--color-primary-dark-hover);
   }
 
+  :where(a, button).background-color-primary-light:hover {
+    background-color: var(--color-primary-light-hover);
+  }
+
   :where(a, button).background-color-success:hover {
     background-color: var(--color-success-hover);
   }
@@ -131,6 +135,10 @@
 
   :where(a, button).background-color-primary-dark:active {
     background-color: var(--color-primary-dark-active);
+  }
+
+  :where(a, button).background-color-primary-light:active {
+    background-color: var(--color-primary-light-active);
   }
 
   :where(a, button).background-color-base:active {

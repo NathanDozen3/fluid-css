@@ -14,7 +14,7 @@
  */
 
 
-@layer variables, reset, container, grid, flex, layout, spacing, typography, buttons, colors, borders, forms, utilities, states, animations, a11y, print;
+@layer variables, reset, container, grid, flex, layout, spacing, buttons, colors, borders, forms, typography, utilities, states, animations, a11y, print;
 
 /* Core variables (must be first for dependency resolution) */
 @import url('css/_variables.css');

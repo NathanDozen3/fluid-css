@@ -71,6 +71,11 @@ Example usage in CSS:
       1.5vw,
       var(--font-size-h6-desktop)
     );
+    --font-size-base: clamp(
+      var(--font-size-base-mobile),
+      1.2vw,
+      var(--font-size-base-desktop)
+    );
     --font-size-p: clamp(
       var(--font-size-p-mobile),
       1.2vw,
@@ -110,11 +115,16 @@ Example usage in CSS:
     /* --------------------------------------------------------------------------
      * Palette (raw color values, do not use directly in utilities)
      * -------------------------------------------------------------------------- */
+    --palette-red: #b02b1d;
+    --palette-orange: #915c00;
     --palette-yellow: #ffee58;
+    --palette-green: #27ae60;
+    --palette-blue: #3498db;
     --palette-purple: #503aa8;
     --palette-pink: #f6cff4;
     --palette-grey: #686868;
     --palette-offwhite: #fbfaf3;
+    --palette-cream: #e8e7e0;
     --palette-black: #111;
     --palette-white: #fff;
 
@@ -142,6 +152,16 @@ Example usage in CSS:
     --color-primary-hover: #402a8f; /* Hover state for primary */
     --color-primary-active: #301a60; /* Active state for primary (reusing primary-dark) */
 
+    /* Primary light */
+    --color-primary-light: #7c4dff;
+    --color-primary-light-hover: #651fff; /* Lighter shade for hover */
+    --color-primary-light-active: #4e1bff; /* Active state for primary-light */
+
+    /* Primary dark */
+    --color-primary-dark: #301a60;
+    --color-primary-dark-hover: #1a0f3c; /* Darker shade for hover */
+    --color-primary-dark-active: #0f071d; /* Active state for primary-dark */
+
     /* Secondary */
     --color-secondary: var(--palette-yellow); /* Secondary action color */
     --color-secondary-hover: #e6d300; /* Hover state for secondary */
@@ -153,22 +173,22 @@ Example usage in CSS:
     --color-tertiary-active: #d18ab3; /* Active state for tertiary */
 
     /* Success */
-    --color-success: #27ae60; /* Success/positive */
+    --color-success: var(--palette-green); /* Success/positive */
     --color-success-hover: #219653; /* Hover state for success */
     --color-success-active: #1e8449; /* Active state for success */
 
     /* Warning */
-    --color-warning: #915c00; /* Warning/attention */
+    --color-warning: var(--palette-orange); /* Warning/attention */
     --color-warning-hover: #b77a00; /* Hover state for warning */
     --color-warning-active: #7a4c00; /* Active state for warning */
 
     /* Error */
-    --color-error: #b02b1d; /* Error/negative */
+    --color-error: var(--palette-red); /* Error/negative */
     --color-error-hover: #a61b0c; /* Hover state for error */
     --color-error-active: #912417; /* Active state for error */
 
     /* Info */
-    --color-info: #3498db; /* Informational */
+    --color-info: var(--palette-blue); /* Informational */
     --color-info-hover: #2980b9; /* Hover state for info */
     --color-info-active: #256dab; /* Active state for info */
 
@@ -183,7 +203,10 @@ Example usage in CSS:
     --color-background-active: #e8e7e0; /* Active state for background */
 
     /* Alternate background */
-    --color-background-alt: #e8e7e0; /* Alternate background for sections */
+    --color-background-alt: var(
+      --palette-cream
+    ); /* Alternate background for sections */
+
     --color-background-alt-hover: #dcdcd0; /* Hover state for alternate background */
     --color-background-alt-active: #cfcfca; /* Active state for alternate background */
 
@@ -202,16 +225,6 @@ Example usage in CSS:
     --color-border-hover: #888; /* Hover state for borders */
     --color-border-active: #555; /* Active state for borders */
     --color-border-rgb: 104, 104, 104; /* RGB for opacity utilities */
-
-    /* Primary light */
-    --color-primary-light: #7c4dff;
-    --color-primary-light-hover: #651fff; /* Lighter shade for hover */
-    --color-primary-light-active: #4e1bff; /* Active state for primary-light */
-
-    /* Primary dark */
-    --color-primary-dark: #301a60;
-    --color-primary-dark-hover: #1a0f3c; /* Darker shade for hover */
-    --color-primary-dark-active: #0f071d; /* Active state for primary-dark */
 
     /* --------------------------------------------------------------------------
      * Breakpoints (for documentation and future use)
@@ -273,32 +286,34 @@ Example usage in CSS:
      * -------------------------------------------------------------------------- */
 
     /* Set these values to match your design system. */
-    --font-size-h1-mobile: 32px;
-    --font-size-h1-desktop: 48px;
-    --font-size-h2-mobile: 24px;
-    --font-size-h2-desktop: 36px;
-    --font-size-h3-mobile: 20px;
-    --font-size-h3-desktop: 28px;
-    --font-size-h4-mobile: 18px;
-    --font-size-h4-desktop: 22px;
-    --font-size-h5-mobile: 16px;
-    --font-size-h5-desktop: 18px;
-    --font-size-h6-mobile: 14px;
-    --font-size-h6-desktop: 16px;
-    --font-size-p-mobile: 16px;
-    --font-size-p-desktop: 18px;
-    --font-size-li-mobile: 16px;
-    --font-size-li-desktop: 18px;
-    --font-size-xs-mobile: 12px;
-    --font-size-xs-desktop: 14px;
-    --font-size-sm-mobile: 14px;
-    --font-size-sm-desktop: 16px;
-    --font-size-lg-mobile: 20px;
-    --font-size-lg-desktop: 24px;
-    --font-size-xl-mobile: 24px;
-    --font-size-xl-desktop: 32px;
-    --font-size-caption-mobile: 12px;
-    --font-size-caption-desktop: 14px;
+    --font-size-h1-mobile: 32px; /* H1: Page title (mobile) */
+    --font-size-h1-desktop: 48px; /* H1: Page title (desktop) */
+    --font-size-h2-mobile: 24px; /* H2: Section heading (mobile) */
+    --font-size-h2-desktop: 36px; /* H2: Section heading (desktop) */
+    --font-size-h3-mobile: 20px; /* H3: Subsection heading (mobile) */
+    --font-size-h3-desktop: 28px; /* H3: Subsection heading (desktop) */
+    --font-size-h4-mobile: 18px; /* H4: Minor heading (mobile) */
+    --font-size-h4-desktop: 22px; /* H4: Minor heading (desktop) */
+    --font-size-h5-mobile: 16px; /* H5: Small heading (mobile) */
+    --font-size-h5-desktop: 18px; /* H5: Small heading (desktop) */
+    --font-size-h6-mobile: 14px; /* H6: Caption/minor heading (mobile) */
+    --font-size-h6-desktop: 16px; /* H6: Caption/minor heading (desktop) */
+    --font-size-base-mobile: 16px; /* Base font size for body text (mobile) */
+    --font-size-base-desktop: 18px; /* Base font size for body text (desktop) */
+    --font-size-p-mobile: 16px; /* Paragraph text (mobile) */
+    --font-size-p-desktop: 18px; /* Paragraph text (desktop) */
+    --font-size-li-mobile: 16px; /* List item text (mobile) */
+    --font-size-li-desktop: 18px; /* List item text (desktop) */
+    --font-size-xs-mobile: 12px; /* Extra small text (mobile) */
+    --font-size-xs-desktop: 14px; /* Extra small text (desktop) */
+    --font-size-sm-mobile: 14px; /* Small text, labels, UI (mobile) */
+    --font-size-sm-desktop: 16px; /* Small text, labels, UI (desktop) */
+    --font-size-lg-mobile: 20px; /* Large text, callouts (mobile) */
+    --font-size-lg-desktop: 24px; /* Large text, callouts (desktop) */
+    --font-size-xl-mobile: 24px; /* Extra large text, hero (mobile) */
+    --font-size-xl-desktop: 32px; /* Extra large text, hero (desktop) */
+    --font-size-caption-mobile: 12px; /* Caption, footnote (mobile) */
+    --font-size-caption-desktop: 14px; /* Caption, footnote (desktop) */
     --line-height-base: 1.6; /* Base line height */
     --line-height-heading: 1.2; /* Heading line height */
     --line-height-tight: 1.2; /* Tight line height */
