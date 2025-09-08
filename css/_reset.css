@@ -180,9 +180,17 @@
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     color: var(--color-contrast);
-    list-style: none;
     padding-left: var(--spacing-0);
     margin-bottom: var(--spacing-md);
+    list-style-position: var(--list-style-position-inside);
+  }
+
+  ul {
+    list-style-type: var(--list-style-type-disc);
+  }
+
+  ol {
+    list-style-type: var(--list-style-type-decimal);
   }
 
   li {
@@ -214,8 +222,9 @@
     margin-top: var(--spacing-sm);
   }
 
-  /* Code */
+  /* Pre */
   pre {
+    display: var(--display-block);
     font-family: var(--font-family-monospace);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-base);
@@ -225,10 +234,13 @@
     margin-bottom: var(--spacing-md);
   }
 
+  /* Code */
   code {
+    background-color: var(--color-background);
+    padding: var(--spacing-xs);
     font-family: var(--font-family-monospace);
-    font-size: var(--font-size-sm);
     color: var(--color-contrast);
+    font-size: var(--font-size-sm);
   }
 
   /* Media */

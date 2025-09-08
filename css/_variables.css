@@ -203,10 +203,7 @@ Example usage in CSS:
     --color-background-active: #e8e7e0; /* Active state for background */
 
     /* Alternate background */
-    --color-background-alt: var(
-      --palette-cream
-    ); /* Alternate background for sections */
-
+    --color-background-alt: var(--palette-cream);
     --color-background-alt-hover: #dcdcd0; /* Hover state for alternate background */
     --color-background-alt-active: #cfcfca; /* Active state for alternate background */
 
@@ -795,15 +792,17 @@ Example usage in CSS:
     /* --------------------------------------------------------------------------
      * List Styles
      * -------------------------------------------------------------------------- */
-    --list-style-none: none;
-    --list-style-disc: disc;
-    --list-style-circle: circle;
-    --list-style-square: square;
-    --list-style-decimal: decimal;
-    --list-style-upper-alpha: upper-alpha;
-    --list-style-lower-alpha: lower-alpha;
-    --list-style-upper-roman: upper-roman;
-    --list-style-lower-roman: lower-roman;
+    --list-style-type-none: none;
+    --list-style-type-disc: disc;
+    --list-style-type-circle: circle;
+    --list-style-type-square: square;
+    --list-style-type-decimal: decimal;
+    --list-style-type-upper-alpha: upper-alpha;
+    --list-style-type-lower-alpha: lower-alpha;
+    --list-style-type-upper-roman: upper-roman;
+    --list-style-type-lower-roman: lower-roman;
+    --list-style-position-inside: inside;
+    --list-style-position-outside: outside;
   }
 
   /* ----------------------------------------------------------------------

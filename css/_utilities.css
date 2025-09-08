@@ -763,27 +763,6 @@
     scroll-behavior: var(--scroll-behavior-smooth);
   }
 
-  /* Max-width utilities */
-  .max-width-container {
-    max-width: var(--container-max-width);
-  }
-
-  .max-width-container-narrow {
-    max-width: var(--container-narrow-max-width);
-  }
-
-  .max-width-200 {
-    max-width: var(--max-width-200);
-  }
-
-  .max-width-300 {
-    max-width: var(--max-width-300);
-  }
-
-  .max-width-600 {
-    max-width: var(--max-width-600);
-  }
-
   /* Place utilities */
   .place-content-center {
     place-content: var(--place-content-center);
@@ -798,39 +777,39 @@
   }
 
   /* List style utilities */
-  .list-style-none {
-    list-style-type: var(--list-style-none);
+  .list-style-type-none {
+    list-style-type: var(--list-style-type-none);
   }
 
-  .list-style-disc {
-    list-style-type: var(--list-style-disc);
+  .list-style-type-disc {
+    list-style-type: var(--list-style-type-disc);
   }
 
-  .list-style-circle {
-    list-style-type: var(--list-style-circle);
+  .list-style-type-circle {
+    list-style-type: var(--list-style-type-circle);
   }
 
-  .list-style-square {
-    list-style-type: var(--list-style-square);
+  .list-style-type-square {
+    list-style-type: var(--list-style-type-square);
   }
 
-  .list-style-decimal {
-    list-style-type: var(--list-style-decimal);
+  .list-style-type-decimal {
+    list-style-type: var(--list-style-type-decimal);
   }
 
-  .list-style-upper-alpha {
-    list-style-type: var(--list-style-upper-alpha);
+  .list-style-type-upper-alpha {
+    list-style-type: var(--list-style-type-upper-alpha);
   }
 
-  .list-style-lower-alpha {
-    list-style-type: var(--list-style-lower-alpha);
+  .list-style-type-lower-alpha {
+    list-style-type: var(--list-style-type-lower-alpha);
   }
 
-  .list-style-upper-roman {
-    list-style-type: var(--list-style-upper-roman);
+  .list-style-type-upper-roman {
+    list-style-type: var(--list-style-type-upper-roman);
   }
 
-  .list-style-lower-roman {
-    list-style-type: var(--list-style-lower-roman);
+  .list-style-type-lower-roman {
+    list-style-type: var(--list-style-type-lower-roman);
   }
 }
