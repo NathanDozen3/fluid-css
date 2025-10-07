@@ -6,13 +6,13 @@
  * float, isolation, overflow, background, aspect ratio, pointer-events, border-radius,
  * text-overflow, user-select, white-space, vertical-align, scroll-behavior, max-width.
  * Usage: Combine utilities (e.g., .display-flex.position-relative.border-radius-md).
- * Example: <div class="display-block vis-visible border-radius-md max-width-container">Content</div>
+ * Example: <div class="display-block visibility-visible border-radius-md">Content</div>
  * All properties use variables from _variables.css for consistency.
  * Notes:
  * - Alignment and justification utilities are in _flex.css.
  * - Text shadow utilities are in _typography.css.
  * - Padding and margin utilities are in _spacing.css.
- * - Hero module support: .display-flex, .border-radius-md, .max-width-container, etc.
+ * - Hero module support: .display-flex, .border-radius-md, etc.
  * ========================================================================
  */
 

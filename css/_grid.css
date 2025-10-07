@@ -13,11 +13,6 @@
   /* -------------------------------------------------------------------------
    * 1. Grid Container
    * ------------------------------------------------------------------------- */
-  .grid {
-    display: var(--display-grid);
-    gap: var(--gap-md);
-  }
-
   .grid-cols {
     grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
     min-width: calc(var(--col-min-width) * var(--min-cols));
