@@ -29,7 +29,7 @@
   .grid-cols-1-to-2 {
     --min-cols: 1;
     --max-cols: 2;
-    --col-min-width: max(330px, calc( 50% - var(--gap-md) ));
+    --col-min-width: max(330px, calc(50% - var(--gap-md)));
   }
 
   .grid-cols-1-to-3 {
